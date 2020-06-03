@@ -54,32 +54,27 @@ Please refer to the [Appendix](#5-Appendix) to learn more details:
 The following perpetrator compounds were selected:
 
 - **Atazanavir** (UGT1A1 inhibitor)
-  - Model file and evaluation report (*release* **TODO**): TODO
-  - Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Atazanavir-Model/releases/tag/v1.1
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Atazanavir-Model/releases/tag/v1.1
   
 - **Mefenamic acid** (UGT1A9 inhibitor)
-  - Model file and evaluation report (*release* **TODO**): TODO
-  - Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Mefenamic-acid-Model/releases/tag/v1.1
-
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Mefenamic-acid-Model/releases/tag/v1.1
   
+
 
 The following sensitive substrates as victim drugs were selected:
 
 - **Raltegravir** (UGT1A1 substrate)
-  - Model file and evaluation report (*release* **TODO**): TODO
-  - Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Raltegravir-Model/releases/tag/v1.1
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Raltegravir-Model/releases/tag/v1.1
   
-- **Dapagliflozin** (UGT1A9 substrate)
-  - Model file and evaluation report (*release* **TODO**): TODO
-  - Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Dapagliflozin-Model/releases/tag/v1.1
-  
+- **Dapagliflozin** (UGT1A9 substrate):
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Dapagliflozin-Model/releases/tag/v1.1
 
 
 
 The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report. The respective data identifier (DataID) refers to the **ID** of the dataset in the [OSP PK database](https://github.com/Open-Systems-Pharmacology/Database-for-observed-data).
 ### Atazanavir - Raltegravir DDI
-The release of the repository containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Atazanavir-Raltegravir-DDI/releases/tag/v1.0.
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Atazanavir-Raltegravir-DDI/releases/tag/v1.1.
 
 The atazanavir / raltegravir interaction was evaluated using four clinical DDI studies ([Iwamoto 2008](#4-References), [Krishna 2008](#4-References), [Neely 2010](#4-References), [Zhu 2010](#4-References)).
 
@@ -94,8 +89,8 @@ The atazanavir / raltegravir interaction was evaluated using four clinical DDI s
 
 
 ### Mefenamic acid - Dapagliflozin DDI
-The release of the repository containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Mefenamic_acid-Dapagliflozin-DDI/releases/tag/v1.0.
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Mefenamic_acid-Dapagliflozin-DDI/releases/tag/v1.1.
 
 The mefenamic acid / dapagliflozin interaction was evaluated using 1 clinical DDI study ([Kasichayanula 2013](#4-References)).
 
