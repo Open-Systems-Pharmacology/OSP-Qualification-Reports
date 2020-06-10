@@ -137,16 +137,39 @@ GMFE (CMAX) = 1.103227
 |642   |Mefenamic Acid, 500 / 250 mg, PO, MD QID (4 days), with first dose ad loading dose|Dapagliflozin, PO|1.3277             |1.51              |0.87928           |1.1561              |1.13               |1.0231             |Kasichayanula 2013a|
 
 # 3 Concentration-Time Profiles
-The published DDI study between the respective perpetrator and victim drug was simulated and compared to observed data.
+The following section shows the correlations between observed and model-predicted AUC and C<sub>max</sub> ratios, respectively.
 
-[Section 3.1](#31-Atazanavir---Raltegravir-DDI) shows concentration time profiles of the four clinical studies between atazanavir and raltegravir ([Iwamoto 2008](#4-References), [Krishna 2008](#4-References), [Neely 2010](#4-References), [Zhu 2010](#4-References)).
+Specifically, the PBPK model performance for the PK parameters **AUC ratio (AUCR)** and **C<sub>max</sub> ratio (CMAXR)** is assessed via:
 
-[Section 3.2](#32-Mefenamic-acid---Dapagliflozin-DDI) shows concentration time profiles of the clinical study between mefenamic acid and dapagliflozin ([Kasichayanula 2013](#4-References)).
+- predicted (*Pred*) vs. observed (*Obs*) plots
+
+- *Pred*/*Obs* vs. *Obs* plots
+
+- geometric mean fold error (GMFE):
+  
+  ![GMFE equation](images/GFME_equation.PNG)
+  
+- number of AUCR and CMAXR falling within 2-fold error range and within the limits as suggested by [Guest et al. 2011](#4-References)
+  
+- detailed table of results for each study
+
+  
+
+In the plots,
+
+- the dotted lines denote 0.50–2.00 (2-fold) criterion,
+
+- the solid lines denote the limits as suggested by [Guest et al. 2011](#4-References),
+
+- the bold solid line denotes the unity line,
+
+- each color represents one combination of drugs,
+
+- squares represent studies with intravenous administration of the victim drug and circles represent studies with oral administration of the victim drug.
 
 
 
-
-
+***
 
 
 ## 3.1 Atazanavir - Raltegravir DDI
