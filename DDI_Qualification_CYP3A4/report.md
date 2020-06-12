@@ -88,7 +88,7 @@ This **qualification report** evaluates for the PBPK platform **PK-Sim** (as par
 
 To demonstrate the level of confidence, the predictive performance of the platform for this indented purpose is assessed via a network of PBPK models of selected index CYP3A4 DDI perpetrators (covering the range from strong induction to strong inhibition), and respective sensitive index CYP3A4 victim drugs and a comprehensive dataset from published clinical DDI studies. All PBPK models represent whole-body PBPK models, which allow dynamic DDI simulations in organs expressing CYP3A4. 
 
-The respective *qualification plan* to produce this *qualification report* is transparently documented and provided open-source (www.open-systems-pharmacology.org). The same applies for all presented PBPK models including *evaluation reports* on model building and evaluation of each model.
+The respective *qualification plan* to produce this *qualification report* is transparently documented and provided open-source (https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports). The same applies for all presented PBPK models including *evaluation reports* on model building and evaluation of each model (https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).
 
 *Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-CYP3A4-DDI-Network)).
 
@@ -239,9 +239,9 @@ The erythromycin-midazolam interaction was evaluated using five clinical DDI stu
 
 ### Erythromycin - Triazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Erythromycin-Alprazolam-DDI/releases/tag/v1.0.
+https://github.com/Open-Systems-Pharmacology/Erythromycin-Triazolam-DDI/releases/tag/v1.0.
 
-The erythromycin-alprazolam interaction was evaluated using two clinical DDI studies ([Greenblatt 1998](#4-References), [Phillips 1986](#4-References)).
+The erythromycin-triazolam interaction was evaluated using two clinical DDI studies ([Greenblatt 1998](#4-References), [Phillips 1986](#4-References)).
 
 
 
@@ -256,7 +256,7 @@ The erythromycin-alprazolam interaction was evaluated using two clinical DDI stu
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Alprazolam-DDI/releases/tag/v1.0.
 
-The fluvoxamine-alprazolam interaction was evaluated using one clinical DDI study quantifying the interaction following the first dose and in steady-state different doses ([Fleishaker 1994](#4-References)).
+The fluvoxamine-alprazolam interaction was evaluated using one clinical DDI study quantifying the interaction following the first dose and in steady-state ([Fleishaker 1994](#4-References)).
 
 
 
@@ -283,7 +283,7 @@ The fluvoxamine / midazolam interaction was evaluated using two clinical DDI stu
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Itraconazole-Alprazolam-DDI/releases/tag/v1.0.
 
-The Itraconazole / alprazolam interaction was evaluated using oneclinical DDI studies ([Yasui 1998](#4-References)).
+The itraconazole / alprazolam interaction was evaluated using one clinical DDI study ([Yasui 1998](#4-References)).
 
 
 
@@ -335,7 +335,7 @@ The itraconazole / triazolam interaction was evaluated using two clinical DDI st
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.0.
 
-The itraconazole / midazolam interaction was evaluated using two clinical DDI studies including 3 different clinical settings ([Backman 1994](#4-References), [Wang 2005](#4-References)).
+The verapamil / midazolam interaction was evaluated using two clinical DDI studies including 3 different clinical settings ([Backman 1994](#4-References), [Wang 2005](#4-References)).
 
 
 
@@ -388,7 +388,7 @@ The efavirenz-midazolam interaction was evaluated using two clinical DDI studies
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Rifampicin-Alfentanil-DDI/releases/tag/v1.0.
 
-The  rifampicin / midazolam interaction was evaluated using 5 clinical DDI studies including 16 different clinical settings ([Kharasch 1997](#4-References), [Kharasch 2004](#4-References), [Kharasch 2011](#4-References), [Kharasch 2011b](#4-References), [Phimmasone 2001](#4-References)).
+The  rifampicin / alfentanil interaction was evaluated using 5 clinical DDI studies including 16 different clinical settings ([Kharasch 1997](#4-References), [Kharasch 2004](#4-References), [Kharasch 2011](#4-References), [Kharasch 2011b](#4-References), [Phimmasone 2001](#4-References)).
 
 | DataID | Enzyme | Perpetrator / victim    | Study design                                                 | Comment                                                      | Clinical study                  |
 | ------ | ------ | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------- |
@@ -406,8 +406,9 @@ The  rifampicin / midazolam interaction was evaluated using 5 clinical DDI studi
 | 763    | CYP3A4 | Rifampicin / alfentanil | Rifampicin: **600** mg po once daily (6 doses)<br />Alfentanil: 1 mg **IV** single dose, **12** h after **5<sup>th</sup>** rifampicin dose | sequential administration of intravenous unlabeled alfentanil and oral deuterated alfentanil | [Kharasch 2011b](#4-References)  |
 | 771    | CYP3A4 | Rifampicin / alfentanil | Rifampicin: **600** mg po once daily (6 doses)<br />Alfentanil: 4 mg **PO** single dose, **15** h after **5<sup>th</sup>** rifampicin dose | sequential administration of intravenous unlabeled alfentanil and oral deuterated alfentanil | [Kharasch 2011b](#4-References)  |
 | 767    | CYP3A4 | Rifampicin / alfentanil | Rifampicin: **600** mg po once daily (6 doses)<br />Alfentanil: 1 mg **IV** single dose, **12** h after **6<sup>th</sup>** rifampicin dose | simultaneous administration of intravenous unlabeled alfentanil and oral deuterated alfentanil | [Kharasch 2011b](#4-References)  |
-| 775    | CYP3A4 | Rifampicin / alfentanil | Rifampicin: **600** mg po once daily (6 doses)<br />Alfentanil: 4 mg **PO** single dose, **12** h after **XX<sup>th</sup>** rifampicin dose | simultaneous administration of intravenous unlabeled alfentanil and oral deuterated alfentanil | [Kharasch 2011b](#4-References)  |
+| 775    | CYP3A4 | Rifampicin / alfentanil | Rifampicin: **600** mg po once daily (6 doses)<br />Alfentanil: 4 mg **PO** single dose, **12** h after **6<sup>th</sup>** rifampicin dose | simultaneous administration of intravenous unlabeled alfentanil and oral deuterated alfentanil | [Kharasch 2011b](#4-References)  |
 | 391    | CYP3A4 | Rifampicin / alfentanil | Rifampicin: **600** mg po once daily (5 doses)<br />Alfentanil: 15 µg/kg **IV** single dose, **11** h after **5<sup>th</sup>** rifampicin dose |                                                              | [Phimmasone 2001](#4-References) |
+
 ### Rifampicin - Alprazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Rifampicin-Alprazolam-DDI/releases/tag/v1.0.
@@ -1038,7 +1039,7 @@ GMFE (CMAX) = 1.183830
 |Points within 2-fold      |9     |100      |
 
 # 3 Concentration-Time Profiles
-The following section shows concentration time profiles of the simulated DDI studies in comparison to observed data (if available).
+The following section shows concentration time profiles of the victim drugs of the simulated DDI studies in comparison to observed data (if available).
 
 
 
