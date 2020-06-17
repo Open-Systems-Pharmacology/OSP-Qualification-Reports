@@ -3,11 +3,11 @@
 
 
 
-| Version                         | 1.1-OSP9.0                                                   |
+| Version                         | x.x-OSPy.y                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v1.1 |
-| OSP Version                     | 9.0                                                          |
-| Qualification Framework Version | 2.2                                                          |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/vx.x |
+| OSP Version                     | y.y                                                          |
+| Qualification Framework Version | z.z                                                          |
 
 
 
@@ -18,23 +18,18 @@ This qualification report is filed at:
 https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
 
 # Table of Contents
-  * [Chapter 1: Introduction to Pediatric Translation](#chapter-1-introduction-to-pediatric-translation)
-  * [Chapter 2: Pediatric translation qualification](#chapter-2-pediatric-translation-qualification)
-    * [Chapter 2.1: Amikacin PK Ratio tables and Figures](#chapter-21-amikacin-pk-ratio-tables-and-figures)
-    * [Chapter 2.2: Amikacin Concentration-Time profiles in Children](#chapter-22-amikacin-concentration-time-profiles-in-children)
-    * [Chapter 2.3: Vancomycin PK Ratio tables and Figures](#chapter-23-vancomycin-pk-ratio-tables-and-figures)
-    * [Chapter 2.4: Vancomycin Concentration-Time profiles in Children](#chapter-24-vancomycin-concentration-time-profiles-in-children)
-    * [Chapter 2.5: Pregabalin PK Ratio tables and Figures](#chapter-25-pregabalin-pk-ratio-tables-and-figures)
-    * [Chapter 2.6: Pregabalin Concentration-Time profiles in Children](#chapter-26-pregabalin-concentration-time-profiles-in-children)
-  * [Chapter 3: Adult PBPK model performance](#chapter-3-adult-pbpk-model-performance)
-    * [Chapter 3.1: Amikacin Input Tables](#chapter-31-amikacin-input-tables)
-    * [Chapter 3.3: Amikacin Concentration-Time profiles in Adults](#chapter-33-amikacin-concentration-time-profiles-in-adults)
-    * [Chapter 3.4: Vancomycin Input Tables](#chapter-34-vancomycin-input-tables)
-    * [Chapter 3.5: Vancomycin Diagnostics Plots](#chapter-35-vancomycin-diagnostics-plots)
-    * [Chapter 3.6: Vancomycin Concentration-Time profiles in Adults](#chapter-36-vancomycin-concentration-time-profiles-in-adults)
-    * [Chapter 3.7: Pregabalin Input Tables](#chapter-37-pregabalin-input-tables)
-    * [Chapter 3.8: Pregabalin Diagnostics Plots](#chapter-38-pregabalin-diagnostics-plots)
-    * [Chapter 3.9: Pregabalin Concentration-Time profiles in Adults](#chapter-39-pregabalin-concentration-time-profiles-in-adults)
+  * [Chapter 1: Introduction to Pediatric Translation](#chapter-1:-introduction-to-pediatric-translation)
+  * [Chapter 2: Pediatric translation qualification](#chapter-2:-pediatric-translation-qualification)
+    * [Chapter 2.1: Amikacin PK Ratio tables and Figures](#chapter-2.1:-amikacin-pk-ratio-tables-and-figures)
+    * [Chapter 2.2: Amikacin Concentration-Time profiles in Children](#chapter-2.2:-amikacin-concentration-time-profiles-in-children)
+    * [Chapter 2.3: Vancomycin PK Ratio tables and Figures](#chapter-2.3:-vancomycin-pk-ratio-tables-and-figures)
+    * [Chapter 2.4: Vancomycin Concentration-Time profiles in Children](#chapter-2.4:-vancomycin-concentration-time-profiles-in-children)
+  * [Chapter 3: Adult PBPK model performance](#chapter-3:-adult-pbpk-model-performance)
+    * [Chapter 3.1: Amikacin Input Tables](#chapter-3.1:-amikacin-input-tables)
+    * [Chapter 3.2: Amikacin Concentration-Time profiles in Adults](#chapter-3.2:-amikacin-concentration-time-profiles-in-adults)
+    * [Chapter 3.3: Vancomycin Input Tables](#chapter-3.3:-vancomycin-input-tables)
+    * [Chapter 3.4: Vancomycin Diagnostics Plots](#chapter-3.4:-vancomycin-diagnostics-plots)
+    * [Chapter 3.5: Vancomycin Concentration-Time profiles in Adults](#chapter-3.5:-vancomycin-concentration-time-profiles-in-adults)
 # Chapter 1: Introduction to Pediatric Translation
 The presented qualification report evaluates the predictive performance of the OSP suite to predict glomerular filtration rate (GFR)-mediated drug clearance in children.
 
@@ -45,14 +40,14 @@ Therefore, PBPK models of specific *in vivo* probe substances covering children 
 
 Using a developed and validated (adult) PBPK model for an *in vivo* probe substance, a pediatric PBPK model can be established for children by translating physiology, clearance processes (as parameterized in the adult model) and age-dependent protein binding including the variability therein.[[1](#reference)]
 
-The PBPK models are developed with clinical data of healthy adult subjects obtained from the literature, covering available dosing ranges for e.g. intravenous as well as oral administration, to capture both systemic clearance as well gut-wall metabolic clearance processes. For orally administered drugs, the same formulations that are used in children should ideally be included in the model for adults. Plasma concentrations following multiple-dose application, mass balance information and other clinical measurements need to be included for model development, if available. During model translation from adults to children for a specific substance, uncertainties in data-quality caused by impact of disease or the target study population, inaccurate in vitro assay-techniques regarding mass balance, as well as study differences may cause not being able to adequately predict the PK in children for all reported studies. 
+The PBPK models are developed with clinical data of healthy adult subjects obtained from the literature. Plasma concentrations following multiple-dose application, mass balance information and other clinical measurements need to be included for model development, if available. During model translation from adults to children for a specific substance, uncertainties in data-quality caused by impact of disease or the target study population, inaccurate in vitro assay-techniques regarding mass balance, as well as study differences may cause not being able to adequately predict the PK in children for all reported studies. 
 
 Prediction performance of the PBPK model for these probe substances in children are then shown by means of e.g. predicted versus observed clearance-ratio plots, of which the results support an adequate prediction of the ontogeny function for the application of PBPK model translation of adult PBPK to children.
 
 For qualification purpose, during the translation of adult PBPK to children the following assumptions and considerations were made: 
 
 - when translating an adult model to children, it was assumed that the metabolism and excretion pathways are qualitatively the same in children as in adults.
-- no further changes to input parameters other than those for the physiology and protein binding. All other parameters (e.g. lipophilicity, intestinal permeability, solubility) were kept unchanged. 
+- no further changes to input parameters other than those for the physiology and protein binding. All other parameters (e.g. lipophilicity) were kept unchanged. 
 
 ## Anthropometric and Physiological Information 
 
@@ -66,7 +61,6 @@ For the qualification of the GFR elimination of compounds, the following probe s
 
 - Amikacin [[4](#reference)]
 - Vancomycin [[5](#reference)]
-- Pregabalin [[6](#reference)]
 
 ### References
 
@@ -79,8 +73,6 @@ For the qualification of the GFR elimination of compounds, the following probe s
 [4] [Amikacin-Model, Whole-body PBPK model of Amikacin. https://github.com/Open-Systems-Pharmacology/Amikacin-Model](https://github.com/incei/Amikacin-Model)
 
 [5] [Vancomycin-Model, Whole-body PBPK model of Vancomycin. https://github.com/Open-Systems-Pharmacology/Amikacin-Model](https://github.com/incei/Vancomycin-Model)
-
-[6] [Pregabalin-Model, Whole-body PBPK model of Pregabalin. https://github.com/Open-Systems-Pharmacology/Pregabalin-Model](https://github.com/incei/Pregabalin-Model)
 # Chapter 2: Pediatric translation qualification
 ## Evaluation of Pediatric translation
 
@@ -97,15 +89,15 @@ The ratios of predicted over observed mean AUC or CL values from all compound we
 In the next sections the demographics as well as the evaluation results of the predictive performance of the specific compound PBPK models in children can be found.  
 
 
-![007_plotPKRatioCL.png](images/002_Chapter_2__Pediatric_translation_qualification/007_plotPKRatioCL.png)
+![005_plotPKRatioCL.png](images/002_Chapter_2__Pediatric_translation_qualification/005_plotPKRatioCL.png)
 
-GMFE (CL) = 1.237267 
+GMFE (CL) = 1.258017 
 
 |CL                    |Number|Ratio [%]|
 |---------------------:|-----:|--------:|
-|Points total          |55    |-        |
-|Points within 1.5 fold|46    |83.6364  |
-|Points within 2-fold  |54    |98.1818  |
+|Points total          |39    |-        |
+|Points within 1.5 fold|32    |82.0513  |
+|Points within 2-fold  |38    |97.4359  |
 
 |Study ID       |Age [y]  |BodyWeight [kg]|Predicted CL [ml/min/kg]|Observed CL [ml/min/kg]|Pred/Obs CL Ratio|
 |--------------:|--------:|--------------:|-----------------------:|----------------------:|----------------:|
@@ -148,22 +140,6 @@ GMFE (CL) = 1.237267
 |Schaad 1980    |3.917    |15.5           |0.47009                 |61.2428                |0.47009          |
 |Schaad 1980    |5.583    |20             |0.5881                  |59.0636                |0.5881           |
 |Schaad 1980    |7.583    |26.7           |0.57141                 |74.3584                |0.57141          |
-|Mann 2014      |15.7     |55.7           |0.90577                 |90.6                   |0.90577          |
-|Mann 2014      |13.7     |65.6           |0.98985                 |78.4                   |0.98985          |
-|Mann 2014      |14       |51.2           |0.946                   |85.9                   |0.946            |
-|Mann 2014      |15.5     |58.4           |1.1312                  |73.1                   |1.1312           |
-|Mann 2014      |9.3      |41.6           |1.0836                  |58.2                   |1.0836           |
-|Mann 2014      |9.7      |28.6           |1.1879                  |49.5                   |1.1879           |
-|Mann 2014      |10       |48.8           |0.96195                 |63.7                   |0.96195          |
-|Mann 2014      |9        |32.2           |1.7675                  |32.55                  |1.7675           |
-|Mann 2014      |2.9      |15.2           |0.88075                 |34.2                   |0.88075          |
-|Mann 2014      |4        |23.3           |0.94398                 |38.3                   |0.94398          |
-|Mann 2014      |3.9      |15.2           |1.5533                  |21.75                  |1.5533           |
-|Mann 2014      |3.9      |15.2           |1.1077                  |30.5                   |1.1077           |
-|Mann 2014      |1.2      |8.8            |1.2216                  |19                     |1.2216           |
-|Mann 2014      |1.4      |8.1            |1.3337                  |17.7                   |1.3337           |
-|Mann 2014      |0.7      |9              |1.0749                  |18.5                   |1.0749           |
-|Mann 2014      |0.6      |9              |1.3791                  |13.35                  |1.3791           |
 
 ## Chapter 2.1: Amikacin PK Ratio tables and Figures
 ### Amikacin model
@@ -284,125 +260,16 @@ Predicted versus observed plasma concentration-time profiles are listed below. O
 
 ![012_plotPopulationTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/004_Chapter_2_4__Vancomycin_Concentration-Time_profiles_in_Children/012_plotPopulationTimeProfile.png)
 
-## Chapter 2.5: Pregabalin PK Ratio tables and Figures
-### Pregabalin model
-
-Pregabalin PBPK predictions in children were evaluated using pharmacokinetic (PK) data reported in the following studies: 
-
-- Mann D, Liu J, Chew ML, Bockbrader H, Alvey CW, Zegarac E, Pellock J, Pitman VW. Safety, tolerability, and pharmacokinetics of pregabalin in children with refractory partial seizures: a phase 1, randomized controlled study. Epilepsia. 2014 Dec;55(12):1934-43. doi: 10.1111/epi.12830. Epub 2014 Nov 6.
-
-The pediatric PBPK model predicted the clearance values of pregabalin observed in pediatric studies reasonably across all available age groups, ranging from 7.2 months to 15.7 years old. The ratios of mean predicted over observed clearance values are illustrated in the table below as well as in the predicted versus observed clearance ratio plot, showing that all predictions in children were within 2-fold error of observed values.
-
-
-
-
-![001_plotPKRatioCL.png](images/002_Chapter_2__Pediatric_translation_qualification/005_Chapter_2_5__Pregabalin_PK_Ratio_tables_and_Figures/001_plotPKRatioCL.png)
-
-GMFE (CL) = 1.188110 
-
-|CL                    |Number|Ratio [%]|
-|---------------------:|-----:|--------:|
-|Points total          |16    |-        |
-|Points within 1.5 fold|14    |87.5     |
-|Points within 2-fold  |16    |100      |
-
-|Study ID |Age [y]|BodyWeight [kg]|Predicted CL [ml/min]|Observed CL [ml/min]|Pred/Obs CL Ratio|
-|--------:|------:|--------------:|--------------------:|-------------------:|----------------:|
-|Mann 2014|15.7   |55.7           |0.90577              |90.6                |0.90577          |
-|Mann 2014|13.7   |65.6           |0.98985              |78.4                |0.98985          |
-|Mann 2014|14     |51.2           |0.946                |85.9                |0.946            |
-|Mann 2014|15.5   |58.4           |1.1312               |73.1                |1.1312           |
-|Mann 2014|9.3    |41.6           |1.0836               |58.2                |1.0836           |
-|Mann 2014|9.7    |28.6           |1.1879               |49.5                |1.1879           |
-|Mann 2014|10     |48.8           |0.96195              |63.7                |0.96195          |
-|Mann 2014|9      |32.2           |1.7675               |32.55               |1.7675           |
-|Mann 2014|2.9    |15.2           |0.88075              |34.2                |0.88075          |
-|Mann 2014|4      |23.3           |0.94398              |38.3                |0.94398          |
-|Mann 2014|3.9    |15.2           |1.5533               |21.75               |1.5533           |
-|Mann 2014|3.9    |15.2           |1.1077               |30.5                |1.1077           |
-|Mann 2014|1.2    |8.8            |1.2216               |19                  |1.2216           |
-|Mann 2014|1.4    |8.1            |1.3337               |17.7                |1.3337           |
-|Mann 2014|0.7    |9              |1.0749               |18.5                |1.0749           |
-|Mann 2014|0.6    |9              |1.3791               |13.35               |1.3791           |
-
-## Chapter 2.6: Pregabalin Concentration-Time profiles in Children
-#### Concentration-Time Profiles
-
-Predicted versus observed plasma concentration-time profiles are listed below. Only simulations where observed data was available for comparison are shown.  Depending if the observed data were individual data or aggregated data, individual predictions or population predictions including variability are shown, respectively.
-![001_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/001_plotTimeProfile.png)
-
-![002_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/002_plotTimeProfile.png)
-
-![003_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/003_plotTimeProfile.png)
-
-![004_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/004_plotTimeProfile.png)
-
-![005_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/005_plotTimeProfile.png)
-
-![006_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/006_plotTimeProfile.png)
-
-![007_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/007_plotTimeProfile.png)
-
-![008_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/008_plotTimeProfile.png)
-
-![009_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/009_plotTimeProfile.png)
-
-![010_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/010_plotTimeProfile.png)
-
-![011_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/011_plotTimeProfile.png)
-
-![012_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/012_plotTimeProfile.png)
-
-![013_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/013_plotTimeProfile.png)
-
-![014_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/014_plotTimeProfile.png)
-
-![015_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/015_plotTimeProfile.png)
-
-![016_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/016_plotTimeProfile.png)
-
-![017_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/017_plotTimeProfile.png)
-
-![018_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/018_plotTimeProfile.png)
-
-![019_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/019_plotTimeProfile.png)
-
-![020_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/020_plotTimeProfile.png)
-
-![021_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/021_plotTimeProfile.png)
-
-![022_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/022_plotTimeProfile.png)
-
-![023_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/023_plotTimeProfile.png)
-
-![024_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/024_plotTimeProfile.png)
-
-![025_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/025_plotTimeProfile.png)
-
-![026_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/026_plotTimeProfile.png)
-
-![027_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/027_plotTimeProfile.png)
-
-![028_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/028_plotTimeProfile.png)
-
-![029_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/029_plotTimeProfile.png)
-
-![030_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/030_plotTimeProfile.png)
-
-![031_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/031_plotTimeProfile.png)
-
-![032_plotTimeProfile.png](images/002_Chapter_2__Pediatric_translation_qualification/006_Chapter_2_6__Pregabalin_Concentration-Time_profiles_in_Children/032_plotTimeProfile.png)
-
 # Chapter 3: Adult PBPK model performance
 ## Evaluation of Adult PBPK models
 
-The PBPK models of **amikacin**, **vancomycin**, and **pregabalin** were developed with clinical pharmacokinetic data covering at least administrations given in children. Plasma concentrations following intravenous administration, oral administration, multiple dose application, fractions excreted to urine or bile and other clinical measurements were included for model development whenever available. 
+The PBPK models of **amikacin**, and **vancomycin** were developed with clinical pharmacokinetic data covering at least administrations given in children. Plasma concentrations following intravenous administration, oral administration, multiple dose application, fractions excreted to urine or bile and other clinical measurements were included for model development whenever available. 
 
 
 ## Chapter 3.1: Amikacin Input Tables
 ### Amikacin adult PBPK model
 
-Amikacin is a semi-synthetic aminoglycoside antibiotic used for a number of bacterial infections. Amikacin is adminstred in several forms, including intravenous or intramuscular injection. The PBPK of Amikacin has been previously developed in PK-Sim using clinical studies in preterm-neonates. [1] Here we have evaluated its predictive performance of glomerular filtration rate (GFR) mediated clearance in adults and term born children. In this chapter we show that amikacin adequately described the pharmacokinetics of amikacin in adults.
+Amikacin is a semi-synthetic aminoglycoside antibiotic used for a number of bacterial infections. Amikacin is adminstered in several forms, including intravenous or intramuscular injection. The PBPK of Amikacin has been previously developed in PK-Sim using clinical studies in preterm-neonates. [1] Here we have evaluated its predictive performance of glomerular filtration rate (GFR) mediated clearance in adults and term born children. In this chapter we show that amikacin adequately described the pharmacokinetics of amikacin in adults, based on the PBPK model build and reported in preterm-neonates.
 
 The Amikacin model was evaluated in its performance in adults using data of the following  publication:
 
@@ -445,23 +312,23 @@ Name         | Value | Value Origin
 ------------ | -----:| -------------------------------
 GFR fraction |     1 | Publication-Claassen et al 2015
 
-## Chapter 3.3: Amikacin Concentration-Time profiles in Adults
+## Chapter 3.2: Amikacin Concentration-Time profiles in Adults
 #### Concentration-Time Profiles
 
 Simulated versus observed plasma concentration-time profiles of all data are listed below.
-![001_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_3__Amikacin_Concentration-Time_profiles_in_Adults/001_plotTimeProfile.png)
+![001_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_2__Amikacin_Concentration-Time_profiles_in_Adults/001_plotTimeProfile.png)
 
-![002_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_3__Amikacin_Concentration-Time_profiles_in_Adults/002_plotTimeProfile.png)
+![002_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_2__Amikacin_Concentration-Time_profiles_in_Adults/002_plotTimeProfile.png)
 
-![003_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_3__Amikacin_Concentration-Time_profiles_in_Adults/003_plotTimeProfile.png)
+![003_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_2__Amikacin_Concentration-Time_profiles_in_Adults/003_plotTimeProfile.png)
 
-![004_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_3__Amikacin_Concentration-Time_profiles_in_Adults/004_plotTimeProfile.png)
+![004_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_2__Amikacin_Concentration-Time_profiles_in_Adults/004_plotTimeProfile.png)
 
-![005_plotPopulationTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_3__Amikacin_Concentration-Time_profiles_in_Adults/005_plotPopulationTimeProfile.png)
+![005_plotPopulationTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_2__Amikacin_Concentration-Time_profiles_in_Adults/005_plotPopulationTimeProfile.png)
 
-![006_plotPopulationTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_3__Amikacin_Concentration-Time_profiles_in_Adults/006_plotPopulationTimeProfile.png)
+![006_plotPopulationTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/002_Chapter_3_2__Amikacin_Concentration-Time_profiles_in_Adults/006_plotPopulationTimeProfile.png)
 
-## Chapter 3.4: Vancomycin Input Tables
+## Chapter 3.3: Vancomycin Input Tables
 ### Vancomycin adult PBPK model
 
 Vancomycin is a glycopeptide antibiotic related to ristocetin that inhibits bacterial cell wall assembly and is used to treat a number of bacterial infections. It can be administered intravenously, as well as orally in case of diarrhea therapy. Vancomyin is mainly eliminated via glomerular filtration (GFR). A previous PBPK model for vancomycin using PK-Sim was reported by Radke et al. [1], with the dose fraction extreted unchanged into urine in adults beeing 90% with 10% hepatic elimination. Our final vancomycin model was rebuild that applies only GFR mediated clearance that adequately described the pharmacokinetics in adults. No further improvement of vancomycin pharmacokinetics could be determined after introducing hepatic clearance.
@@ -525,155 +392,37 @@ Lipophilicity (experiment)    | 2.45 Log Units |
 Plasma clearance              | 0.11 ml/min/kg |                                                                                                                      
 Specific clearance            | 0 1/min        | Parameter Identification-Parameter Identification-Value updated from 'Parameter Identification 3' on 2018-07-13 11:16
 
-## Chapter 3.5: Vancomycin Diagnostics Plots
+## Chapter 3.4: Vancomycin Diagnostics Plots
 ### Vancomycin adult PBPK model performance
 
 Below you find the input goodness-of-fit visual diagnostic plots for vancomycin PBPK model performance (observed versus individually simulated plasma concentration and weighted residuals versus time) of all adult data.
 
 
-![001_plotGOFMergedPredictedVsObserved.png](images/003_Chapter_3__Adult_PBPK_model_performance/004_Chapter_3_5__Vancomycin_Diagnostics_Plots/001_plotGOFMergedPredictedVsObserved.png)
+![001_plotGOFMergedPredictedVsObserved.png](images/003_Chapter_3__Adult_PBPK_model_performance/004_Chapter_3_4__Vancomycin_Diagnostics_Plots/001_plotGOFMergedPredictedVsObserved.png)
 
 GMFE = 1.108921 
 
-![003_plotGOFMergedResidualsOverTime.png](images/003_Chapter_3__Adult_PBPK_model_performance/004_Chapter_3_5__Vancomycin_Diagnostics_Plots/003_plotGOFMergedResidualsOverTime.png)
+![003_plotGOFMergedResidualsOverTime.png](images/003_Chapter_3__Adult_PBPK_model_performance/004_Chapter_3_4__Vancomycin_Diagnostics_Plots/003_plotGOFMergedResidualsOverTime.png)
 
 GMFE = 1.108921 
 
-## Chapter 3.6: Vancomycin Concentration-Time profiles in Adults
+## Chapter 3.5: Vancomycin Concentration-Time profiles in Adults
 #### Concentration-Time Profiles
 
 Simulated versus observed plasma concentration-time profiles of all data are listed below.
-![001_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/001_plotTimeProfile.png)
+![001_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/001_plotTimeProfile.png)
 
-![002_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/002_plotTimeProfile.png)
+![002_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/002_plotTimeProfile.png)
 
-![003_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/003_plotTimeProfile.png)
+![003_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/003_plotTimeProfile.png)
 
-![004_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/004_plotTimeProfile.png)
+![004_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/004_plotTimeProfile.png)
 
-![005_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/005_plotTimeProfile.png)
+![005_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/005_plotTimeProfile.png)
 
-![006_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/006_plotTimeProfile.png)
+![006_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/006_plotTimeProfile.png)
 
-![007_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/007_plotTimeProfile.png)
+![007_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/007_plotTimeProfile.png)
 
-![008_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_6__Vancomycin_Concentration-Time_profiles_in_Adults/008_plotTimeProfile.png)
-
-## Chapter 3.7: Pregabalin Input Tables
-### Pregabalin adult PBPK model
-
-Pregabalin is an anticonvulsant drug used for neuropathic pain, epilepsy and generalized anxiety disorder. It is only administered orally. It is reported with 90-99% of the dose fraction extreted unchanged into urine via GFR. [1] As reported by Zhou et al [1] pregabalin undergoes active tubular reabsorption via a transporters of which the ontogeny is unknown. Our final pregabalin model was built that applies only GFR mediated clearance that adequately described the pharmacokinetics in adults without further need of an active process. 
-
-The pregabalin model was developed using data of the following publications:
-
-- Bockbrader HN, Radulovic LL, Posvar EL, Strand JC, Alvey CW, Busch JA, Randinitis EJ, Corrigan BW, Haig GM, Boyd RA, Wesche DL. Clinical pharmacokinetics of pregabalin in healthy volunteers. J Clin Pharmacol. 2010 Aug;50(8):941-50. doi: 10.1177/0091270009352087. Epub 2010 Feb 10.
-(https://www.ncbi.nlm.nih.gov/pubmed/20147618)
-
-- Chew ML, Plotka A, Alvey CW, Pitman VW, Alebic-Kolbah T, Scavone JM, Bockbrader HN. Pharmacokinetics of pregabalin controlled-release in healthy volunteers: effect of food in five single-dose, randomized, clinical pharmacology studies. Clin Drug Investig. 2014 Sep;34(9):617-26. doi: 10.1007/s40261-014-0211-4. 
-(https://www.ncbi.nlm.nih.gov/pubmed/25078976)
-
-### References
-
-[1] Zhou W, Johnson TN2, Xu H, Cheung S3, Bui KH, Li J, Al-Huniti N, Zhou D. Predictive Performance of Physiologically Based Pharmacokinetic and Population Pharmacokinetic Modeling of Renally Cleared Drugs in Children. CPT Pharmacometrics Syst Pharmacol. 2016 Sep;5(9):475-83. doi: 10.1002/psp4.12101. Epub 2016 Aug 27.
-(https://www.ncbi.nlm.nih.gov/pubmed/27566992)
-
-The compound properties used for input are illustrated below.
-
-
-### Compound: Pregabalin
-
-#### Parameters
-
-Name                                             | Value                   | Value Origin                                      | Alternative | Default
------------------------------------------------- | ----------------------- | ------------------------------------------------- | ----------- | -------
-Solubility at reference pH                       | 100 mg/l                | Assumption                                        | Measurement | True   
-Reference pH                                     | 7                       | Assumption                                        | Measurement | True   
-Lipophilicity                                    | -1.4748548745 Log Units | Parameter Identification-Parameter Identification | LogP        | True   
-Fraction unbound (plasma, reference value)       | 1                       | Publication-Zhou 2016                             | Measurement | True   
-Specific intestinal permeability (transcellular) | 0.00096644681642 cm/min | Parameter Identification-Parameter Identification | Fit         | True   
-Is small molecule                                | Yes                     |                                                   |             |        
-Molecular weight                                 | 159.23 g/mol            | Publication-Zhou 2016                             |             |        
-Plasma protein binding partner                   | Albumin                 |                                                   |             |        
-#### Calculation methods
-
-Name                    | Value                   
------------------------ | ------------------------
-Partition coefficients  | Schmitt                 
-Cellular permeabilities | Charge dependent Schmitt
-#### Processes
-
-##### Systemic Process: Glomerular Filtration-Zhou 2016
-
-Species: Human
-###### Parameters
-
-Name         | Value | Value Origin               
------------- | -----:| ---------------------------
-GFR fraction |     1 | Publication-Other-Zhou 2016
-
-## Chapter 3.8: Pregabalin Diagnostics Plots
-### Pregabalin adult PBPK model performance
-
-Below you find the input goodness-of-fit visual diagnostic plots for alfentanil PBPK model performance (observed versus individually simulated plasma concentration and weighted residuals versus time) of all adult data.
-
-
-![001_plotGOFMergedPredictedVsObserved.png](images/003_Chapter_3__Adult_PBPK_model_performance/007_Chapter_3_8__Pregabalin_Diagnostics_Plots/001_plotGOFMergedPredictedVsObserved.png)
-
-GMFE = 1.311028 
-
-![003_plotGOFMergedResidualsOverTime.png](images/003_Chapter_3__Adult_PBPK_model_performance/007_Chapter_3_8__Pregabalin_Diagnostics_Plots/003_plotGOFMergedResidualsOverTime.png)
-
-GMFE = 1.311028 
-
-## Chapter 3.9: Pregabalin Concentration-Time profiles in Adults
-#### Concentration-Time Profiles
-
-Simulated versus observed plasma concentration-time profiles of all data are listed below.
-![001_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/001_plotTimeProfile.png)
-
-![002_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/002_plotTimeProfile.png)
-
-![003_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/003_plotTimeProfile.png)
-
-![004_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/004_plotTimeProfile.png)
-
-![005_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/005_plotTimeProfile.png)
-
-![006_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/006_plotTimeProfile.png)
-
-![007_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/007_plotTimeProfile.png)
-
-![008_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/008_plotTimeProfile.png)
-
-![009_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/009_plotTimeProfile.png)
-
-![010_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/010_plotTimeProfile.png)
-
-![011_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/011_plotTimeProfile.png)
-
-![012_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/012_plotTimeProfile.png)
-
-![013_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/013_plotTimeProfile.png)
-
-![014_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/014_plotTimeProfile.png)
-
-![015_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/015_plotTimeProfile.png)
-
-![016_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/016_plotTimeProfile.png)
-
-![017_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/017_plotTimeProfile.png)
-
-![018_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/018_plotTimeProfile.png)
-
-![019_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/019_plotTimeProfile.png)
-
-![020_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/020_plotTimeProfile.png)
-
-![021_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/021_plotTimeProfile.png)
-
-![022_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/022_plotTimeProfile.png)
-
-![023_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/023_plotTimeProfile.png)
-
-![024_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/008_Chapter_3_9__Pregabalin_Concentration-Time_profiles_in_Adults/024_plotTimeProfile.png)
+![008_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_performance/005_Chapter_3_5__Vancomycin_Concentration-Time_profiles_in_Adults/008_plotTimeProfile.png)
 
