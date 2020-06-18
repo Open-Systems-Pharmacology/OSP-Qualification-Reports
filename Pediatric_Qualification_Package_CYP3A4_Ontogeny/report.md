@@ -73,6 +73,24 @@ To qualify the OSP suite for the pediatric translation of the pharmacokinetics o
 [4] [Alfentanil-Model, Whole-body PBPK model of Alfentanil. https://github.com/Open-Systems-Pharmacology/Alfentanil-Model](https://github.com/incei/Alfentanil-Model)
 
 [5] [Sufentanil-Model, Whole-body PBPK model of Sufentanil. https://github.com/Open-Systems-Pharmacology/Sufentanil-Model](https://github.com/incei/Sufentanil-Model)
+
+# Chapter 2: Pediatric translation qualification results
+## Evaluation of Pediatric translation
+
+All pediatric translations are pure retrospective predictions, no pediatric pharmacokinetic studies were used to inform model parameters. All parameters necessary to model the pediatric populations, such as demographics (age, weight, height), as well as dosing formulation information were taken from the respective pediatrics studies from literature in order to evaluate their predictive performance. 
+
+The models were evaluated by ratio plots of area under the plasma concentration-time curve (AUC), or clearance (CL) values resulting from our predictions to the values observed during clinical studies, and by comparison of concentration-time profiles if available. As a quantitative measure of the descriptive and predictive performance of each model, the geometric mean fold error was calculated according to Eq. 1:
+
+Eq. 1: GMFE=10^((Σ|log10(pred PK parameter∕obs PK parameter)|)∕n)
+
+with GMFE = geometric mean fold error of all AUC or CL predictions of the respective model, pred PK parameter = predicted AUC or CL, obs PK parameter = observed AUC or CL, and n = number of observed values.
+
+The ratios of predicted over observed mean AUC or CL values from all compound were also plotted across all age groups in the figure below. As illustrated, most of the prediction were within the 0.5 to 2.0 range (2-fold error). 
+
+In the next sections the demographics as well as the evaluation results of the predictive performance of the specific compound PBPK models in children can be found.  
+
+
+
 ![001_plotPKRatioAUC.png](images/001_Chapter_1__Introduction_to_Pediatric_Translation_and_CYP3A4_Ontogeny_Qualification/001_plotPKRatioAUC.png)
 
 GMFE (AUC) = 1.254230 
@@ -124,22 +142,6 @@ GMFE (AUC) = 1.254230
 |Meistelman 1987   |4.5    |20             |1.1192                   |0.0041667               |1.1192            |
 |Meistelman 1987   |6.2    |23             |1.0098                   |0.0045455               |1.0098            |
 |Meistelman 1987   |4.9    |22             |0.65818                  |0.0074074               |0.65818           |
-
-# Chapter 2: Pediatric translation qualification results
-## Evaluation of Pediatric translation
-
-All pediatric translations are pure retrospective predictions, no pediatric pharmacokinetic studies were used to inform model parameters. All parameters necessary to model the pediatric populations, such as demographics (age, weight, height), as well as dosing formulation information were taken from the respective pediatrics studies from literature in order to evaluate their predictive performance. 
-
-The models were evaluated by ratio plots of area under the plasma concentration-time curve (AUC), or clearance (CL) values resulting from our predictions to the values observed during clinical studies, and by comparison of concentration-time profiles if available. As a quantitative measure of the descriptive and predictive performance of each model, the geometric mean fold error was calculated according to Eq. 1:
-
-Eq. 1: GMFE=10^((Σ|log10(pred PK parameter∕obs PK parameter)|)∕n)
-
-with GMFE = geometric mean fold error of all AUC or CL predictions of the respective model, pred PK parameter = predicted AUC or CL, obs PK parameter = observed AUC or CL, and n = number of observed values.
-
-The ratios of predicted over observed mean AUC or CL values from all compound were also plotted across all age groups in the figure below. As illustrated, most of the prediction were within the 0.5 to 2.0 range (2-fold error). 
-
-In the next sections the demographics as well as the evaluation results of the predictive performance of the specific compound PBPK models in children can be found.  
-
 
 ## Chapter 2.1: Sufentanil PK Ratio tables and Figures
 ### Sufentanil model
