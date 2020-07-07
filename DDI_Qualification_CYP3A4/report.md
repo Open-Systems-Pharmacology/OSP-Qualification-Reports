@@ -3,10 +3,10 @@
 
 
 
-| Version                         | 1.0-OSP9.0                                                   |
+| Version                         | 1.0-OSP9.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v1.0 |
-| OSP Version                     | 9.0                                                          |
+| OSP Version                     | 9.1                                                          |
 | Qualification Framework Version | 2.2                                                          |
 
 
@@ -531,9 +531,9 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.398725 
+GMFE (AUC) = 1.398739 
 
-GMFE (CMAX) = 1.370608 
+GMFE (CMAX) = 1.370621 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -557,7 +557,7 @@ GMFE (CMAX) = 1.370608
 |354   |Clarithromycin, 500 mg, PO, MD BID (4 days)                                                                                                                                                                                       |Midazolam, PO |5.871              |5.5556            |1.0568            |2.6201              |-                  |-                  |Markert 2013        |
 |1099  |Clarithromycin, 500 mg, PO, MD BID (5 days)                                                                                                                                                                                       |Midazolam, PO |7.8476             |4.84              |1.6214            |3.177               |2.69               |1.181              |Prueksaritanont 2017|
 |2030  |Clarithromycin, 500 mg, PO, MD BID (7 days)                                                                                                                                                                                       |Midazolam, PO |9.0373             |8                 |1.1297            |3.1442              |2.75               |1.1433             |Quinney 2008        |
-|2004  |Clarithromycin, 250 mg, PO, MD BID (3 days)                                                                                                                                                                                       |Midazolam, PO |1.4921             |1.9               |0.78531           |1.258               |1.75               |0.71885            |van Dyk 2018        |
+|2004  |Clarithromycin, 250 mg, PO, MD BID (3 days)                                                                                                                                                                                       |Midazolam, PO |1.4904             |1.9               |0.78442           |1.2571              |1.75               |0.71833            |van Dyk 2018        |
 |469   |Clarithromycin, 250 mg, PO, MD BID (5 days)                                                                                                                                                                                       |Midazolam, PO |2.3757             |3.5716            |0.66518           |1.5939              |2.44               |0.65325            |Yeates 1996         |
 |1102  |Clarithromycin, 500 mg, PO, MD OD (2 days)                                                                                                                                                                                        |Triazolam, PO |3.5766             |5.06              |0.70684           |2.0063              |1.968              |1.0194             |Greenblatt 1998a    |
 |779   |Erythromycin, 500 mg, PO, SD                                                                                                                                                                                                      |Alfentanil, IV|1.0294             |1.0262            |1.0031            |1                   |-                  |-                  |Bartkowski 1989     |
@@ -732,9 +732,9 @@ GMFE (CMAX) = 1.451894
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/001_Mechanism/003_Mechanism_based_Inactivation/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.271545 
+GMFE (AUC) = 1.271597 
 
-GMFE (CMAX) = 1.240603 
+GMFE (CMAX) = 1.240656 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -760,9 +760,9 @@ GMFE (CMAX) = 1.240603
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/001_Clarithromycin/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.257076 
+GMFE (AUC) = 1.257206 
 
-GMFE (CMAX) = 1.235171 
+GMFE (CMAX) = 1.235284 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -996,9 +996,9 @@ GMFE (CMAX) = 1.242657
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/003_Midazolam/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.413926 
+GMFE (AUC) = 1.413945 
 
-GMFE (CMAX) = 1.432132 
+GMFE (CMAX) = 1.432152 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
