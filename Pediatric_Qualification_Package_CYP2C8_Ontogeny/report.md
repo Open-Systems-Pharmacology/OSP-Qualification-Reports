@@ -4,11 +4,11 @@
 
 
 
-| Version                         | 1.1-OSP9.1                                                   |
+| Version                         | x.x-OSPy.y                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP2C8_Ontogeny/releases/tag/v1.1 |
-| OSP Version                     | 9.1                                                          |
-| Qualification Framework Version | 2.2                                                          |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP2C8_Ontogeny/releases/tag/vx.x |
+| OSP Version                     | y.y                                                          |
+| Qualification Framework Version | z.z                                                          |
 
 
 
@@ -18,14 +18,14 @@ This qualification report is filed at:
 
 https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
 # Table of Contents
-  * [Chapter 1: Introduction to Pediatric Translation](#chapter-1:-introduction-to-pediatric-translation)
-  * [Chapter 2: Pediatric translation qualification](#chapter-2:-pediatric-translation-qualification)
-    * [Chapter 2.1: Montelukast PK Ratio tables and Figures](#chapter-2.1:-montelukast-pk-ratio-tables-and-figures)
-    * [Chapter 2.2: Montelukast Concentration-Time profiles in Children](#chapter-2.2:-montelukast-concentration-time-profiles-in-children)
-  * [Chapter 3: Adult PBPK model performance](#chapter-3:-adult-pbpk-model-performance)
-    * [Chapter 3.1: Montelukast Input Tables](#chapter-3.1:-montelukast-input-tables)
-    * [Chapter 3.2: Montelukast Diagnostics Plots](#chapter-3.2:-montelukast-diagnostics-plots)
-    * [Chapter 3.3: Montelukast Concentration-Time profiles in Adults](#chapter-3.3:-montelukast-concentration-time-profiles-in-adults)
+  * [Chapter 1: Introduction to Pediatric Translation](#chapter-1-introduction-to-pediatric-translation)
+  * [Chapter 2: Pediatric translation qualification](#chapter-2-pediatric-translation-qualification)
+    * [Chapter 2.1: Montelukast PK Ratio tables and Figures](#chapter-21-montelukast-pk-ratio-tables-and-figures)
+    * [Chapter 2.2: Montelukast Concentration-Time profiles in Children](#chapter-22-montelukast-concentration-time-profiles-in-children)
+  * [Chapter 3: Adult PBPK model performance](#chapter-3-adult-pbpk-model-performance)
+    * [Chapter 3.1: Montelukast Input Tables](#chapter-31-montelukast-input-tables)
+    * [Chapter 3.2: Montelukast Diagnostics Plots](#chapter-32-montelukast-diagnostics-plots)
+    * [Chapter 3.3: Montelukast Concentration-Time profiles in Adults](#chapter-33-montelukast-concentration-time-profiles-in-adults)
 # Chapter 1: Introduction to Pediatric Translation
 The presented qualification report evaluates the predictive performance of the OSP suite to predict cytochrome P450 2C8 (CYP2C8)-mediated drug clearance in children.
 
