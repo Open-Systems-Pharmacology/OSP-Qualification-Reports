@@ -4,10 +4,10 @@
 
 
 
-| Version                         | 1.1-OSP9.0                                                   |
+| Version                         | 1.2-OSP9.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP3A4_Ontogeny/releases/tag/v1.1 |
-| OSP Version                     | 9.0                                                          |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP3A4_Ontogeny/releases/tag/v1.2 |
+| OSP Version                     | 9.1                                                          |
 | Qualification Framework Version | 2.2                                                          |
 
 
@@ -73,7 +73,6 @@ To qualify the OSP suite for the pediatric translation of the pharmacokinetics o
 [4] [Alfentanil-Model, Whole-body PBPK model of Alfentanil. https://github.com/Open-Systems-Pharmacology/Alfentanil-Model](https://github.com/incei/Alfentanil-Model)
 
 [5] [Sufentanil-Model, Whole-body PBPK model of Sufentanil. https://github.com/Open-Systems-Pharmacology/Sufentanil-Model](https://github.com/incei/Sufentanil-Model)
-
 # Chapter 2: Pediatric translation qualification results
 ## Evaluation of Pediatric translation
 
@@ -90,8 +89,7 @@ The ratios of predicted over observed mean AUC or CL values from all compound we
 In the next sections the demographics as well as the evaluation results of the predictive performance of the specific compound PBPK models in children can be found.  
 
 
-
-![001_plotPKRatioAUC.png](images/001_Chapter_1__Introduction_to_Pediatric_Translation_and_CYP3A4_Ontogeny_Qualification/001_plotPKRatioAUC.png)
+![005_plotPKRatioAUC.png](images/002_Chapter_2__Pediatric_translation_qualification_results/005_plotPKRatioAUC.png)
 
 GMFE (AUC) = 1.254230 
 
@@ -323,10 +321,30 @@ Intrinsic clearance | 9.6138746106 l/min | Parameter Identification-Parameter Id
 Below you find the input goodness-of-fit visual diagnostic plots for sufentanil PBPK model performance (observed versus individually simulated plasma concentration and weighted residuals versus time) of all adult data.
 
 
+![001_plotGOFMergedPredictedVsObserved.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/002_Chapter_3_2__Sufentanil_Diagnostics_Plots/001_plotGOFMergedPredictedVsObserved.png)
+
+GMFE = 1.402222 
+
+![003_plotGOFMergedResidualsOverTime.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/002_Chapter_3_2__Sufentanil_Diagnostics_Plots/003_plotGOFMergedResidualsOverTime.png)
+
+GMFE = 1.402222 
+
 ## Chapter 3.3: Sufentanil Concentration-Time profiles in Adults
 #### Concentration-Time Profiles
 
 Simulated versus observed plasma concentration-time profiles of all data are listed below.
+![001_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/003_Chapter_3_3__Sufentanil_Concentration-Time_profiles_in_Adults/001_plotTimeProfile.png)
+
+![002_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/003_Chapter_3_3__Sufentanil_Concentration-Time_profiles_in_Adults/002_plotTimeProfile.png)
+
+![003_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/003_Chapter_3_3__Sufentanil_Concentration-Time_profiles_in_Adults/003_plotTimeProfile.png)
+
+![004_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/003_Chapter_3_3__Sufentanil_Concentration-Time_profiles_in_Adults/004_plotTimeProfile.png)
+
+![005_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/003_Chapter_3_3__Sufentanil_Concentration-Time_profiles_in_Adults/005_plotTimeProfile.png)
+
+![006_plotTimeProfile.png](images/003_Chapter_3__Adult_PBPK_model_building_and_performance/003_Chapter_3_3__Sufentanil_Concentration-Time_profiles_in_Adults/006_plotTimeProfile.png)
+
 ## Chapter 3.4: Alfentanil Input Tables
 ### Alfentanil model
 

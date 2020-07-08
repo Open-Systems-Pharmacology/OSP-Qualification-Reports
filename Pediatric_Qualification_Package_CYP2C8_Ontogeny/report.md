@@ -4,10 +4,10 @@
 
 
 
-| Version                         | 1.1-OSP9.0                                                   |
+| Version                         | 1.1-OSP9.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP2C8_Ontogeny/releases/tag/v1.1 |
-| OSP Version                     | 9.0                                                          |
+| OSP Version                     | 9.1                                                          |
 | Qualification Framework Version | 2.2                                                          |
 
 
