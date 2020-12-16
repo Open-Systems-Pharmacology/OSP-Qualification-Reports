@@ -88,7 +88,7 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
     * [3.21 Rifampicin - Alprazolam DDI](#321-rifampicin---alprazolam-ddi)
     * [3.22 Rifampicin - Midazolam DDI](#322-rifampicin---midazolam-ddi)
     * [3.23 Rifampicin - Triazolam DDI](#323-rifampicin---triazolam-ddi)
-    * [3.23 Rifampicin - Verapamil DDI](#323-rifampicin---verapamil-ddi)
+    * [3.24 Rifampicin - Verapamil DDI](#324-rifampicin---verapamil-ddi)
   * [4 References](#4-references)
   * [5 Appendix](#5-appendix)
     * [5.1 Open Systems Pharmacology Suite (OSPS) Introduction](#51-open-systems-pharmacology-suite-osps-introduction)
@@ -102,7 +102,7 @@ This **qualification report** evaluates for the PBPK platform **PK-Sim** (as par
 
 To demonstrate the level of confidence, the predictive performance of the platform for this indented purpose is assessed via a network of PBPK models of selected index CYP3A4 DDI perpetrators (covering the range from strong induction to strong inhibition), and respective sensitive index CYP3A4 victim drugs and a comprehensive dataset from published clinical DDI studies. All PBPK models represent whole-body PBPK models, which allow dynamic DDI simulations in organs expressing CYP3A4. 
 
-The respective *qualification plan* to produce this *qualification report* is transparently provided open-source (https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports). The same applies for all presented PBPK models including *evaluation reports* on model building and evaluation of each model (https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).
+The respective *qualification plan* to produce this *qualification report* is transparently provided open-source (https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4). The same applies for all presented PBPK models including *evaluation reports* on model building and evaluation of each model (https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).
 
 *Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-CYP3A4-DDI-Network)).
 
@@ -1493,12 +1493,12 @@ The following section shows concentration time profiles of the victim drugs of t
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/023_3_23_Rifampicin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.23 Rifampicin - Verapamil DDI
+## 3.24 Rifampicin - Verapamil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_23_Rifampicin_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Rifampicin_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_23_Rifampicin_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Rifampicin_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
 
 # 4 References
 **Almond 2016** Almond LM, Mukadam S, Gardner I, Okialda K, Wong S, Hatley O, Tay S, Rowland-Yeo K, Jamei M, Rostami-Hodjegan A, Kenny JR. Prediction of Drug-Drug Interactions Arising from CYP3A induction Using a Physiologically Based Dynamic Model. Drug Metab Dispos. 2016 Jun;44(6):821-32.
