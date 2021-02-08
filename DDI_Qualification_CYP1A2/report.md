@@ -72,11 +72,11 @@ To qualify the developed models for the prediction of the CYP1A2 DDI potential o
 The following perpetrator compounds were selected: 
 
 - **Fluvoxamine** (strong CYP1A2 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v1.0
 - **Ethinylestradiol** (moderate CYP1A2 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Ethinylestradiol-Model/releases/tag/v1.0
 - **Mexiletine** (moderate CYP1A2 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Mexiletine-Model/releases/tag/v1.0
 
 
 The following sensitive CYP1A2 substrates as victim drugs were selected:
@@ -84,9 +84,9 @@ The following sensitive CYP1A2 substrates as victim drugs were selected:
 - **Caffeine**
   PK-Sim compound template
 - **Tizanidine**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Midazolam-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Tizanidine-Model/releases/tag/v1.0
 - **Mexiletine**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Mexiletine-Model/releases/tag/v1.0
 
 The following interaction studies were predicted and used to qualify/optimize the final network:
 
