@@ -67,28 +67,28 @@ To qualify the developed models for the prediction of the CYP2C19 DDI potential 
 The following perpetrator compounds were selected: 
 
 - **Fluvoxamine** (strong CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v1.0
 - **Omeprazole** (moderate CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.0
 - **Moclobemide** (moderate CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.0
 
 
 The following sensitive CYP2C19 substrates as victim drugs were selected:
 
 - **Omeprazole**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Midazolam-Model/releases/tag/v1.0
-- **S-mephenytoine**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Midazolam-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.0
+- **S-mephenytoin**
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/S-mephenytoin-Model/releases/tag/v1.0
 - **Moclobemide**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.0
 
 The following interaction studies were predicted and used to qualify/optimize the final network:
 
 - Strong CYP2C19 inhibition
 
   - Fluvoxamine - omeprazole
-  - Fluvoxamine - S-mephenytoine
+  - Fluvoxamine - S-mephenytoin
 - Moderate CYP2C19 inhibition
   - Omeprazole – moclobemide
   - Moclobemide - omeprazole
