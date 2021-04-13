@@ -24,11 +24,10 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
   * [3 Concentration-Time Profiles](#3-concentration-time-profiles)
     * [3.1 Tizanidine - Ethinylestradiol DDI](#31-tizanidine---ethinylestradiol-ddi)
     * [3.2 Caffeine - Fluvoxamine DDI](#32-caffeine---fluvoxamine-ddi)
-    * [3.2 Tizanidine - Fluvoxamine DDI](#32-tizanidine---fluvoxamine-ddi)
-    * [3.2 Tizanidine - Mexiletine DDI](#32-tizanidine---mexiletine-ddi)
-    * [3.2 Caffeine - Mexiletine DDI](#32-caffeine---mexiletine-ddi)
-    * [3.2 Mexiletine - Fluvoxamine DDI](#32-mexiletine---fluvoxamine-ddi)
-    * [3.2 Caffeine - Ethinylestradiol DDI](#32-caffeine---ethinylestradiol-ddi)
+    * [3.3 Tizanidine - Fluvoxamine DDI](#33-tizanidine---fluvoxamine-ddi)
+    * [3.4 Tizanidine - Mexiletine DDI](#34-tizanidine---mexiletine-ddi)
+    * [3.5 Caffeine - Mexiletine DDI](#35-caffeine---mexiletine-ddi)
+    * [3.6 Mexiletine - Fluvoxamine DDI](#36-mexiletine---fluvoxamine-ddi)
   * [4 Conclusion](#4-conclusion)
   * [5 References](#5-references)
   * [6 Appendix](#6-appendix)
@@ -37,7 +36,7 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
     * [6.3 Automatic (re)-qualification workflow](#63-automatic-re-qualification-workflow)
   * [7 Glossary](#7-glossary)
 # 1 Introduction
-
+                   
 
 ## 1.1 Objective
 This qualification report evaluates the developed PBPK drug-drug interactions (DDI) models network for the ability to perform simulations with the intended purpose to predict cytochrome P450 1A2 (**CYPA12**)-mediated DDI.
@@ -46,15 +45,15 @@ To demonstrate the level of confidence, the predictive performance of the platfo
 
 The respective *qualification plan* to produce this *qualification report* is transparently documented and provided open-source (https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports). The same applies for all presented PBPK models including *evaluation reports* on model building and evaluation of each model (https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).
 
-*Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-CYP2C19-DDI-Network)).
+*Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-CYP1A2-DDI-Network)).
 
 Please refer to the [Appendix](#6-Appendix) to learn more details:
 
-- An overview over the Open Systems Pharmacology Suite is given in chapter [Section 6.1](#61-Open-Systems-Pharmacology-Suite-(OSPS)-Introduction)
+- An overview over the Open Systems Pharmacology Suite is given in chapter [Section 6.1](#61-open-systems-pharmacology-suite-osps-introduction)
 
 - [Section 6.2](#62-Mathematical-Implementation-of-Drug-Drug-Interactions) shows the implementation of the underlying mathematical equations for drug-drug interactions in the OSP suite.
 
-- A detailed general description of the performed qualification workflow (*qualification plan*, *qualification report*, etc.) can be found in chapter [Section 6.3](#63-Automatic-(re)-qualification-workflow).
+- A detailed general description of the performed qualification workflow (*qualification plan*, *qualification report*, etc.) can be found in chapter [Section 6.3](#63-automatic-re-qualification-workflow).
 
   
 
@@ -258,14 +257,14 @@ GMFE (CMAX) = 1.221360
 
 |DataID|Perpetrator                       |Victim        |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference       |
 |-----:|---------------------------------:|-------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|---------------:|
-|50    |Ethinylestradiol, 20 mg, PO, NaN  |Tizanidine, PO|4.4138             |3.92              |1.126             |3.7512              |3.02               |1.2421             |Granfors 2005   |
-|60    |Fluvoxamine, 100 mg, PO, NaN      |Caffeine, PO  |10.0999            |7.16              |1.4106            |1.0791              |1.09               |0.99               |Jeppesen 1996   |
-|61    |Fluvoxamine, 100 mg, PO, NaN      |Caffeine, PO  |13.8499            |13.71             |1.0102            |1.3449              |1.4                |0.96065            |Culm-Merdek 2005|
-|70    |Fluvoxamine, 100 mg, PO, NaN      |Tizanidine, PO|39.2197            |33                |1.1885            |16.0045             |12.1               |1.3227             |Granfors 2004   |
-|80    |Mexiletine, 200 mg, PO, NaN       |Caffeine, PO  |1.6676             |2.83              |0.58924           |1.0001              |1.89               |0.52917            |Joeres 1987     |
-|90    |Mexiletine, 50 mg, PO, NaN        |Tizanidine, PO|2.4837             |3.42              |0.72624           |2.4179              |3.22               |0.75089            |Momo 2010       |
-|100   |Fluvoxamine, 50 mg, PO, NaN       |Mexiletine, PO|1.3081             |1.55              |0.84396           |1.081               |1.16               |0.93188            |Kusumoto 2001   |
-|110   |Ethinylestradiol, 0.03 mg, PO, NaN|Caffeine, PO  |3.7434             |2.13              |1.7575            |1.0835              |1.15               |0.94218            |Balogh 1995     |
+|6050  |Ethinylestradiol, 50 0, mg, PO,   |Tizanidine, PO|4.4138             |3.92              |1.126             |3.7512              |3.02               |1.2421             |Granfors 2005   |
+|6060  |Fluvoxamine, 49 00, mg, PO,       |Caffeine, PO  |10.0999            |7.16              |1.4106            |1.0791              |1.09               |0.99               |Jeppesen 1996   |
+|6061  |Fluvoxamine, 49 00, mg, PO,       |Caffeine, PO  |13.8499            |13.71             |1.0102            |1.3449              |1.4                |0.96065            |Culm-Merdek 2005|
+|6070  |Fluvoxamine, 49 00, mg, PO,       |Tizanidine, PO|39.2197            |33                |1.1885            |16.0045             |12.1               |1.3227             |Granfors 2004   |
+|6080  |Mexiletine, 50 00, mg, PO,        |Caffeine, PO  |1.6676             |2.83              |0.58924           |1.0001              |1.89               |0.52917            |Joeres 1987     |
+|6090  |Mexiletine, 53 0, mg, PO,         |Tizanidine, PO|2.4837             |3.42              |0.72624           |2.4179              |3.22               |0.75089            |Momo 2010       |
+|6100  |Fluvoxamine, 53 0, mg, PO,        |Mexiletine, PO|1.3081             |1.55              |0.84396           |1.081               |1.16               |0.93188            |Kusumoto 2001   |
+|6110  |Ethinylestradiol, 48 .03, mg, PO, |Caffeine, PO  |3.7434             |2.13              |1.7575            |1.0835              |1.15               |0.94218            |Balogh 1995     |
 
 # 3 Concentration-Time Profiles
 The following section shows concentration time profiles of the victim drugs of the simulated DDI studies in comparison to observed data.
@@ -274,42 +273,39 @@ The following section shows concentration time profiles of the victim drugs of t
 
 
 ## 3.1 Tizanidine - Ethinylestradiol DDI
-
+                   
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/001_3_1_Tizanidine_-_Ethinylestradiol_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.2 Caffeine - Fluvoxamine DDI
-
+                   
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/002_3_2_Caffeine_-_Fluvoxamine_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/002_3_2_Caffeine_-_Fluvoxamine_DDI/002_plotComparisonTimeProfile.png)
 
-## 3.2 Tizanidine - Fluvoxamine DDI
+## 3.3 Tizanidine - Fluvoxamine DDI
+                   
 
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Tizanidine_-_Fluvoxamine_DDI/001_plotComparisonTimeProfile.png)
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_2_Tizanidine_-_Fluvoxamine_DDI/001_plotComparisonTimeProfile.png)
+## 3.4 Tizanidine - Mexiletine DDI
+                   
 
-## 3.2 Tizanidine - Mexiletine DDI
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_4_Tizanidine_-_Mexiletine_DDI/001_plotComparisonTimeProfile.png)
 
+## 3.5 Caffeine - Mexiletine DDI
+                   
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_2_Tizanidine_-_Mexiletine_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_5_Caffeine_-_Mexiletine_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.2 Caffeine - Mexiletine DDI
+## 3.6 Mexiletine - Fluvoxamine DDI
+                   
 
-
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_2_Caffeine_-_Mexiletine_DDI/001_plotComparisonTimeProfile.png)
-
-## 3.2 Mexiletine - Fluvoxamine DDI
-
-
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_2_Mexiletine_-_Fluvoxamine_DDI/001_plotComparisonTimeProfile.png)
-
-## 3.2 Caffeine - Ethinylestradiol DDI
-
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Mexiletine_-_Fluvoxamine_DDI/001_plotComparisonTimeProfile.png)
 
 # 4 Conclusion
-The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and Cmax ratios confirmed that the developed PBPK models are well suited to characterize the CYP1A2 DDI network over the full range of reported DDI studies. The same Ki values could be used by the moderate CYP1A2 inhibitors EE (0.48 μM) and mexiletine (0.28 μM) with regards to all tested substrates (caffeine and tizanidine). For the strong inhibition of CYP1A2 by fluvoxamine, the same Ki value (2.97 nM) could be used for both caffeine and mexiletine as substrate. In contast, for tizanidine the Ki (0.9 nM) needed to be refitted to capture the data.
+The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and Cmax ratios confirmed that the developed PBPK models are well suited to characterize the CYP1A2 DDI network over the full range of reported DDI studies. The same Ki values could be used by the moderate CYP1A2 inhibitors EE (0.48 μM) and mexiletine (0.28 μM) with regards to all tested substrates (caffeine and tizanidine). For the strong inhibition of CYP1A2 by fluvoxamine, the same Ki value (2.97 nM) could be used for both caffeine and mexiletine as substrate. In contrast, for tizanidine the Ki (0.9 nM) needed to be refitted to capture the data.
 
 **Fluvoxamine** 
 
@@ -375,12 +371,12 @@ The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and C
 **Zhou 2009** Zhou, S-. F,., Yang, L-. P,., Zhou, Z-. W,., Liu, Y-. H,., & Chan, E. (2009). Insights into the Substrate Specificity, Inhibitors, Regulationsubstrate specificity, inhibitors, regulation, and Polymorphismspolymorphisms and the Clinical Impactclinical impact of Human Cytochromehuman cytochrome P450 1A2. The *AAPS J*. 2009;journal, 11(3):), 481-494.
 
 # 6 Appendix
-
+                   
 
 ## 6.1 Open Systems Pharmacology Suite (OSPS) Introduction
 Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#References-for-OSPS-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
 
-Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](##References-for-OSPS-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#References-for-OSPS-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#References-for-OSPS-introduction)] or that of Rodgers and Rowland [[5-7](##References-for-OSPS-introduction)]. 
+Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#References-for-OSPS-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#References-for-OSPS-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#References-for-OSPS-introduction)] or that of Rodgers and Rowland [[5-7](#References-for-OSPS-introduction)]. 
 
 Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#References-for-OSPS-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#References-for-OSPS-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#References-for-OSPS-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
 
