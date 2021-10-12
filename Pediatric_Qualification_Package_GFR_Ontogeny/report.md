@@ -46,7 +46,7 @@ For qualification purpose, during the translation of adult PBPK to children the 
 
 ## Anthropometric and Physiological Information 
 
-Regarding the age-dependencies of the relevant anthropometric (height, weight) and physiological parameters (e.g. blood flows, organ volumes, binding protein concentrations, hematocrit, cardiac output) in children was gathered from the literature and has been previously published [[2](3-references)]. The information was incorporated into PK-Sim® and was used as default values for the simulations in children.
+Regarding the age-dependencies of the relevant anthropometric (height, weight) and physiological parameters (e.g. blood flows, organ volumes, binding protein concentrations, hematocrit, cardiac output) in children was gathered from the literature and has been previously published [[2](#3-references)]. The information was incorporated into PK-Sim® and was used as default values for the simulations in children.
 
 The  applied ontogeny and variability of plasma proteins that are integrated into PK-Sim® for translation to children are described in the publicly available ‘PK-Sim® Ontogeny Database Version 7.3' [[Ontogeny Database](#3-references)] or otherwise referenced for the specific process.
 
