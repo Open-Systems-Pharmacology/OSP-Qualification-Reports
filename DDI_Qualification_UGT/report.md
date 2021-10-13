@@ -5,7 +5,7 @@
 
 | Version                         | 1.2-OSP10.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/vx.x |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/v1.2 |
 | OSP Version                     | 10.0                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
@@ -18,19 +18,19 @@ This qualification report is filed at:
 https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
 # Table of Contents
   * [1 Introduction](#1-introduction)
-    * [1.1 Objective](#1.1-objective)
-    * [1.2 UGT DDI Network](#1.2-ugt-ddi-network)
+    * [1.1 Objective](#11-objective)
+    * [1.2 UGT DDI Network](#12-ugt-ddi-network)
       * [Atazanavir - Raltegravir DDI](#atazanavir---raltegravir-ddi)
       * [Mefenamic acid - Dapagliflozin DDI](#mefenamic-acid---dapagliflozin-ddi)
   * [2 Qualification of Use Case UGT-mediated DDI](#2-qualification-of-use-case-ugt-mediated-ddi)
   * [3 Concentration-Time Profiles](#3-concentration-time-profiles)
-    * [3.1 Atazanavir - Raltegravir DDI](#3.1-atazanavir---raltegravir-ddi)
-    * [3.2 Mefenamic acid - Dapagliflozin DDI](#3.2-mefenamic-acid---dapagliflozin-ddi)
+    * [3.1 Atazanavir - Raltegravir DDI](#31-atazanavir---raltegravir-ddi)
+    * [3.2 Mefenamic acid - Dapagliflozin DDI](#32-mefenamic-acid---dapagliflozin-ddi)
   * [4 References](#4-references)
   * [5 Appendix](#5-appendix)
-    * [5.1 Open Systems Pharmacology Suite (OSPS) Introduction](#5.1-open-systems-pharmacology-suite-(osps)-introduction)
-    * [5.2 Mathematical Implementation of Drug-Drug Interactions](#5.2-mathematical-implementation-of-drug-drug-interactions)
-    * [5.3 Automatic (re)-qualification workflow](#5.3-automatic-(re)-qualification-workflow)
+    * [5.1 Open Systems Pharmacology Suite (OSPS) Introduction](#51-open-systems-pharmacology-suite-osps-introduction)
+    * [5.2 Mathematical Implementation of Drug-Drug Interactions](#52-mathematical-implementation-of-drug-drug-interactions)
+    * [5.3 Automatic (re)-qualification workflow](#53-automatic-re-qualification-workflow)
 # 1 Introduction
                    
 
