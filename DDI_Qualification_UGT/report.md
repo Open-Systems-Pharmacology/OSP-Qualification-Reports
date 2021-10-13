@@ -3,11 +3,11 @@
 
 
 
-| Version                         | 1.1-OSP9.1                                                   |
+| Version                         | 1.2-OSP10.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/v1.1 |
-| OSP Version                     | 9.1                                                          |
-| Qualification Framework Version | 2.2                                                          |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/vx.x |
+| OSP Version                     | 10.0                                                          |
+| Qualification Framework Version | 2.3                                                          |
 
 
 
@@ -18,19 +18,19 @@ This qualification report is filed at:
 https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
 # Table of Contents
   * [1 Introduction](#1-introduction)
-    * [1.1 Objective](#11-objective)
-    * [1.2 UGT DDI Network](#12-ugt-ddi-network)
+    * [1.1 Objective](#1.1-objective)
+    * [1.2 UGT DDI Network](#1.2-ugt-ddi-network)
       * [Atazanavir - Raltegravir DDI](#atazanavir---raltegravir-ddi)
       * [Mefenamic acid - Dapagliflozin DDI](#mefenamic-acid---dapagliflozin-ddi)
   * [2 Qualification of Use Case UGT-mediated DDI](#2-qualification-of-use-case-ugt-mediated-ddi)
   * [3 Concentration-Time Profiles](#3-concentration-time-profiles)
-    * [3.1 Atazanavir - Raltegravir DDI](#31-atazanavir---raltegravir-ddi)
-    * [3.2 Mefenamic acid - Dapagliflozin DDI](#32-mefenamic-acid---dapagliflozin-ddi)
+    * [3.1 Atazanavir - Raltegravir DDI](#3.1-atazanavir---raltegravir-ddi)
+    * [3.2 Mefenamic acid - Dapagliflozin DDI](#3.2-mefenamic-acid---dapagliflozin-ddi)
   * [4 References](#4-references)
   * [5 Appendix](#5-appendix)
-    * [5.1 Open Systems Pharmacology Suite (OSPS) Introduction](#51-open-systems-pharmacology-suite-osps-introduction)
-    * [5.2 Mathematical Implementation of Drug-Drug Interactions](#52-mathematical-implementation-of-drug-drug-interactions)
-    * [5.3 Automatic (re)-qualification workflow](#53-automatic-re-qualification-workflow)
+    * [5.1 Open Systems Pharmacology Suite (OSPS) Introduction](#5.1-open-systems-pharmacology-suite-(osps)-introduction)
+    * [5.2 Mathematical Implementation of Drug-Drug Interactions](#5.2-mathematical-implementation-of-drug-drug-interactions)
+    * [5.3 Automatic (re)-qualification workflow](#5.3-automatic-(re)-qualification-workflow)
 # 1 Introduction
                    
 
@@ -41,15 +41,15 @@ To demonstrate the level of confidence the predictive performance of the platfor
 
 The respective *qualification plan* to produce this *qualification report* is transparently documented and provided open-source (www.open-systems-pharmacology.org). The same applies for all presented PBPK models including *evaluation reports* on model building and evaluation of each model.
 
-*Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-UGT-DDI-Network)).
+*Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-ugt-ddi-network)).
 
-Please refer to the [Appendix](#5-Appendix) to learn more details:
+Please refer to the [Appendix](#5-appendix) to learn more details:
 
-- An overview over the Open Systems Pharmacology Suite is given in chapter [Section 5.1](#51-Open-Systems-Pharmacology-Suite-(OSPS)-Introduction)
+- An overview over the Open Systems Pharmacology Suite is given in chapter [Section 5.1](#51-open-systems-pharmacology-suite-osps-introduction)
 
-- [Section 5.2](#52-Mathematical-Implementation-of-Drug-Drug-Interactions) shows the implementation of the underlying mathematical equations for drug-drug interactions in the OSP suite.
+- [Section 5.2](#52-mathematical-implementation-of-drug-drug-interactions) shows the implementation of the underlying mathematical equations for drug-drug interactions in the OSP suite.
 
-- A detailed general description of the performed qualification workflow (*qualification plan*, *qualification report*, etc.) can be found in chapter [Section 5.3](#53-Automatic-(re)-qualification-workflow).
+- A detailed general description of the performed qualification workflow (*qualification plan*, *qualification report*, etc.) can be found in chapter [Section 5.3](#53-automatic-re-qualification-workflow).
 ## 1.2 UGT DDI Network
 The following perpetrator compounds were selected:
 
@@ -58,13 +58,12 @@ The following perpetrator compounds were selected:
   
 - **Mefenamic acid** (UGT1A9 inhibitor)
   Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Mefenamic-acid-Model/releases/tag/v1.1
-  
 
 
 The following sensitive substrates as victim drugs were selected:
 
 - **Raltegravir** (UGT1A1 substrate)
-  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Raltegravir-Model/releases/tag/v1.1
+  Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Raltegravir-Model/releases/tag/v1.2
   
 - **Dapagliflozin** (UGT1A9 substrate):
   Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Dapagliflozin-Model/releases/tag/v1.1
@@ -76,29 +75,29 @@ The published DDI studies between the respective perpetrators and victim drugs w
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Atazanavir-Raltegravir-DDI/releases/tag/v1.1.
 
-The atazanavir / raltegravir interaction was evaluated using four clinical DDI studies ([Iwamoto 2008](#4-References), [Krishna 2008](#4-References), [Neely 2010](#4-References), [Zhu 2010](#4-References)).
+The atazanavir / raltegravir interaction was evaluated using four clinical DDI studies ([Iwamoto 2008](#4-references), [Krishna 2008](#4-references), [Neely 2010](#4-references), [Zhu 2010](#4-references)).
 
 
 
 | DataID | Enzyme | Perpetrator / victim     | Study design                                                 | Clinical study                 |
 | ------ | ------ | ------------------------ | ------------------------------------------------------------ | ------------------------------ |
-| 571    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 400 mg once daily dosing<br />Raltegravir: 100 mg single dose on day 7 simultaneous with the 7th dose of atazanavir | [Iwamoto 2008](#4-References)  |
-| 575    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 400 mg once daily dosing<br />Raltegravir: 1200 mg single dose on day 7 simultaneous with the 7th dose of atazanavir | [Krishna 2008,](#4-References) |
-| 573    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 400 mg once daily dosing<br />Raltegravir: 400 mg once daily dosing (control phase 400 mg twice daily)<br />DDI assessment on day 8 | [Neely 2010](#4-References)    |
-| 579    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 300 mg twice daily dosing<br />Raltegravir: 400 mg twice daily dosing <br />DDI assessment on day 27 | [Zhu 2010](#4-References)      |
+| 571    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 400 mg once daily dosing<br />Raltegravir: 100 mg single dose on day 7 simultaneous with the 7th dose of atazanavir | [Iwamoto 2008](#4-references)  |
+| 575    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 400 mg once daily dosing<br />Raltegravir: 1200 mg single dose on day 7 simultaneous with the 7th dose of atazanavir | [Krishna 2008,](#4-references) |
+| 573    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 400 mg once daily dosing<br />Raltegravir: 400 mg once daily dosing (control phase 400 mg twice daily)<br />DDI assessment on day 8 | [Neely 2010](#4-references)    |
+| 579    | UGT1A1 | Atazanavir / raltegravir | Atazanavir: 300 mg twice daily dosing<br />Raltegravir: 400 mg twice daily dosing <br />DDI assessment on day 27 | [Zhu 2010](#4-references)      |
 
 
 ### Mefenamic acid - Dapagliflozin DDI
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Mefenamic_acid-Dapagliflozin-DDI/releases/tag/v1.1.
 
-The mefenamic acid / dapagliflozin interaction was evaluated using 1 clinical DDI study ([Kasichayanula 2013](#4-References)).
+The mefenamic acid / dapagliflozin interaction was evaluated using 1 clinical DDI study ([Kasichayanula 2013](#4-references)).
 
 
 
 | DataID | Enzyme | Perpetrator / victim           | Study design                                                 | Clinical study                      |
 | ------ | ------ | ------------------------------ | ------------------------------------------------------------ | ----------------------------------- |
-| 642    | UGT1A9 | Mefenamic acid / dapagliflozin | Mefenamic acid: 500 mg loading dose, followed by 8 doses of 250 mg mefenamic acid every 6 hours<br />Dapagliflozin: 10 mg single dose on day 2 simultaneous with the 5th dose of mefenamic acid (24 hours after the first mefenamic acid dose) | [Kasichayanula 2013](#4-References) |
+| 642    | UGT1A9 | Mefenamic acid / dapagliflozin | Mefenamic acid: 500 mg loading dose, followed by 8 doses of 250 mg mefenamic acid every 6 hours<br />Dapagliflozin: 10 mg single dose on day 2 simultaneous with the 5th dose of mefenamic acid (24 hours after the first mefenamic acid dose) | [Kasichayanula 2013](#4-references) |
 
 
 # 2 Qualification of Use Case UGT-mediated DDI
@@ -112,9 +111,9 @@ The mefenamic acid / dapagliflozin interaction was evaluated using 1 clinical DD
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.138014 
+GMFE (AUC) = 1.137938 
 
-GMFE (CMAX) = 1.103227 
+GMFE (CMAX) = 1.102996 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -130,10 +129,10 @@ GMFE (CMAX) = 1.103227
 
 |DataID|Perpetrator                                                                       |Victim           |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference          |
 |-----:|---------------------------------------------------------------------------------:|----------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|------------------:|
-|571   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4687             |1.72              |0.85389           |1.3545              |1.53               |0.88529            |Iwamoto 2008       |
-|575   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4199             |1.67              |0.85022           |1.3294              |1.16               |1.146              |Krishna 2016       |
-|573   |Atazanavir, 400 mg, PO, MD OD (8 days)                                            |Raltegravir, PO  |1.4384             |1.72              |0.83626           |1.1161              |1.37               |0.8147             |Neely 2010         |
-|579   |Atazanavir, 400 mg, PO, MD BID (14 days)                                          |Raltegravir, PO  |1.5651             |1.536             |1.0189            |1.3867              |1.394              |0.99475            |Zhu 2010           |
+|571   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4686             |1.72              |0.85385           |1.3544              |1.53               |0.88524            |Iwamoto 2008       |
+|575   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4198             |1.67              |0.85015           |1.3293              |1.16               |1.1459             |Krishna 2016       |
+|573   |Atazanavir, 400 mg, PO, MD OD (8 days)                                            |Raltegravir, PO  |1.4393             |1.72              |0.83682           |1.1171              |1.37               |0.81539            |Neely 2010         |
+|579   |Atazanavir, 400 mg, PO, MD BID (14 days)                                          |Raltegravir, PO  |1.5654             |1.536             |1.0191            |1.3869              |1.394              |0.99493            |Zhu 2010           |
 |642   |Mefenamic Acid, 500 / 250 mg, PO, MD QID (4 days), with first dose ad loading dose|Dapagliflozin, PO|1.3277             |1.51              |0.87928           |1.1561              |1.13               |1.0231             |Kasichayanula 2013a|
 
 # 3 Concentration-Time Profiles
@@ -149,7 +148,7 @@ Specifically, the PBPK model performance for the PK parameters **AUC ratio (AUCR
   
   ![GMFE equation](images/GFME_equation.PNG)
   
-- number of AUCR and CMAXR falling within 2-fold error range and within the limits as suggested by [Guest et al. 2011](#4-References)
+- number of AUCR and CMAXR falling within 2-fold error range and within the limits as suggested by [Guest et al. 2011](#4-references)
   
 - detailed table of results for each study
 
@@ -159,7 +158,7 @@ In the plots,
 
 - the dotted lines denote 0.50–2.00 (2-fold) criterion,
 
-- the solid lines denote the limits as suggested by [Guest et al. 2011](#4-References),
+- the solid lines denote the limits as suggested by [Guest et al. 2011](#4-references),
 
 - the bold solid line denotes the unity line,
 
@@ -217,7 +216,7 @@ individuals. Antiviral therapy. 2010;15(8):1107-14.
 ## 5.1 Open Systems Pharmacology Suite (OSPS) Introduction
 Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#References-for-OSPS-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
 
-Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](##References-for-OSPS-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#References-for-OSPS-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#References-for-OSPS-introduction)] or that of Rodgers and Rowland [[5-7](##References-for-OSPS-introduction)]. 
+Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#References-for-OSPS-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#References-for-OSPS-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#References-for-OSPS-introduction)] or that of Rodgers and Rowland [[5-7](#References-for-OSPS-introduction)]. 
 
 Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#References-for-OSPS-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#References-for-OSPS-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#References-for-OSPS-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
 
