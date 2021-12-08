@@ -3,9 +3,9 @@
 
 
 
-| Version                         | 1.2-OSP10.0                                                   |
+| Version                         | 1.3-OSP10.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v1.2 |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v1.3 |
 | OSP Version                     | 10.0                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
@@ -44,6 +44,9 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
       * [Rifampicin - Midazolam DDI](#rifampicin---midazolam-ddi)
       * [Rifampicin - Triazolam DDI](#rifampicin---triazolam-ddi)
       * [Rifampicin - Verapamil DDI](#rifampicin---verapamil-ddi)
+      * [Fluconazole - Alfentanil DDI](#fluconazole---alfentanil-ddi)
+      * [Fluconazole - Midazolam DDI](#fluconazole---midazolam-ddi)
+      * [Fluconazole - Triazolam DDI](#fluconazole---triazolam-ddi)
   * [2 Qualification of Use Case CYP3A4-mediated DDI](#2-qualification-of-use-case-cyp3a4-mediated-ddi)
     * [Mechanism](#mechanism)
       * [Induction](#induction)
@@ -54,6 +57,7 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
       * [Clarithromycin](#clarithromycin)
       * [Efavirenz](#efavirenz)
       * [Erythromycin](#erythromycin)
+      * [Fluconazole](#fluconazole)
       * [Fluvoxamine](#fluvoxamine)
       * [Itraconazole](#itraconazole)
       * [Rifampicin](#rifampicin)
@@ -89,6 +93,9 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
     * [3.22 Rifampicin - Midazolam DDI](#322-rifampicin---midazolam-ddi)
     * [3.23 Rifampicin - Triazolam DDI](#323-rifampicin---triazolam-ddi)
     * [3.24 Rifampicin - Verapamil DDI](#324-rifampicin---verapamil-ddi)
+    * [3.12 Fluconazole - Alfentanil DDI](#312-fluconazole---alfentanil-ddi)
+    * [3.13 Fluconazole - Midazolam DDI](#313-fluconazole---midazolam-ddi)
+    * [3.14 Fluconazole - Triazolam DDI](#314-fluconazole---triazolam-ddi)
   * [4 References](#4-references)
   * [5 Appendix](#5-appendix)
     * [5.1 Open Systems Pharmacology Suite (OSPS) Introduction](#51-open-systems-pharmacology-suite-osps-introduction)
@@ -135,6 +142,8 @@ The following perpetrator compounds were selected:
   Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v1.1
 - **Verapamil** (moderate CYP3A4 inhibitor)
   Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.2
+- **Fluconazole** (moderate CYP3A4 inhibitor)
+  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Fluconazole-Model/releases/tag/v1.0
 - **Erythromycin** (moderate CYP3A4 inhibitor)
   Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v1.2
 - **Clarithromycin** (strong CYP3A4 inhibitor)
@@ -606,6 +615,52 @@ The  rifampicin / verapamil interaction was evaluated using 1 clinical DDI study
 
 
 
+### Fluconazole - Alfentanil DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Fluconazole-Alfentanil-DDI/releases/tag/v1.0.
+
+The fluconazole-alfentanil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Palkama 1998](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
+| 1398  | CYP3A4 | Fluconazole / alfentanil | Fluconazole: 400 mg iv infusion for 60 min single administration<br />Alfentanil: 0.02 mg/kg iv infusion, 1 hour after start of fluconazole dosing |  | [Palkama 1998](#4-references) |
+| 1399 | CYP3A4 | Fluconazole / alfentanil | Fluconazole: 400 mg po single administration<br />Alfentanil: 0.02 mg/kg iv infusion, 1 hour after the fluconazole dose |  | [Palkama 1998](#4-references) |
+
+
+### Fluconazole - Midazolam DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Fluconazole-Midazolam-DDI/releases/tag/v1.0.
+
+The fluconazole-midazolam interaction was evaluated using two clinical DDI studies quantifying the interaction following 5 different dosing regimens ([Ahonen 1997](#4-references), [Olkkola 1996](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
+| 1392   | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg iv infusion for 60 min <br />Midazolam: 7.5 mg po single dose, 1 hour after start of fluconazole dosing |                                                              | [Ahonen 1997](#4-references) |
+| 1393  | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po<br />Midazolam: 7.5 mg po single dose, 1 hour after the fluconazole dose |                                                              | [Ahonen 1997](#4-references) |
+| 380 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 7.5 mg po, 2 hours after the day 1 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
+| 381 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 0.05 mg/kg iv infusion, 2 hours after the day 4 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
+| 381 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 7.5 mg po, 2 hours after the day 6 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
+
+
+### Fluconazole - Triazolam DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Fluconazole-Triazolam-DDI/releases/tag/v1.0.
+
+The fluconazole-triazolam interaction was evaluated using a single clinical DDI study quantifying the interaction following three different dosing regimens ([Varhe 1996](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
+| 1394  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 50 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
+| 1395  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 100 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
+| 1396  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 200 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
+
+
 # 2 Qualification of Use Case CYP3A4-mediated DDI
 The following section shows the correlations between observed and model-predicted AUC and C<sub>max</sub> ratios, respectively.
 
@@ -650,21 +705,21 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.424485 
+GMFE (AUC) = 1.400947 
 
-GMFE (CMAX) = 1.372257 
+GMFE (CMAX) = 1.350117 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |143   |-        |
-|Points within Guest et al.|99    |69.2308  |
-|Points within 2-fold      |122   |85.3147  |
+|Points total              |153   |-        |
+|Points within Guest et al.|109   |71.2418  |
+|Points within 2-fold      |132   |86.2745  |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |93    |-        |
-|Points within Guest et al.|53    |56.9892  |
-|Points within 2-fold      |83    |89.2473  |
+|Points total              |102   |-        |
+|Points within Guest et al.|61    |59.8039  |
+|Points within 2-fold      |92    |90.1961  |
 
 |DataID|Perpetrator                                                                                                                                                                                                                       |Victim                  |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference            |
 |-----:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-----------------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|--------------------:|
@@ -811,6 +866,16 @@ GMFE (CMAX) = 1.372257
 |1004  |Rifampicin, 600 mg, PO, MD OD (5 days)                                                                                                                                                                                            |Triazolam, PO           |0.033262           |0.051             |0.65219           |0.11483             |0.12414            |0.92505            |Villikka 1997        |
 |2056  |Rifampicin, 600 mg, PO, MD OD (13 days)                                                                                                                                                                                           |Verapamil, IV           |0.84443            |0.81865           |1.0315            |0.97765             |-                  |-                  |Barbarash 1988       |
 |2058  |Rifampicin, 600 mg, PO, MD OD (15 days)                                                                                                                                                                                           |Verapamil, PO           |0.1068             |0.06511           |1.6403            |0.14856             |0.036961           |4.0195             |Barbarash 1988       |
+|1398  |Fluconazole, 400 mg, IV, SD                                                                                                                                                                                                       |Alfentanil, IV          |2.2141             |2.07              |1.0696            |1.0123              |1.2                |0.84357            |Palkama 1998         |
+|1399  |Fluconazole, 400 mg, PO, SD                                                                                                                                                                                                       |Alfentanil, IV          |2.1087             |1.97              |1.0704            |1.0079              |1.04               |0.96911            |Palkama 1998         |
+|1392  |Fluconazole, 400 mg, IV, SD                                                                                                                                                                                                       |Midazolam, PO           |3.1245             |3.08              |1.0145            |2.089               |1.786              |1.1696             |Ahonen 1997          |
+|1393  |Fluconazole, 400 mg, PO, SD                                                                                                                                                                                                       |Midazolam, PO           |3.4149             |3.41              |1.0014            |2.1886              |2.296              |0.95324            |Ahonen 1997          |
+|380   |Fluconazole, 400 mg, PO, SD                                                                                                                                                                                                       |Midazolam, PO           |2.7119             |2.5               |1.0847            |2.1899              |2.5                |0.87595            |Olkkola 1996         |
+|382   |Fluconazole, 400/200 mg, PO, MD OD (6 days)                                                                                                                                                                                       |Midazolam, PO           |4.2031             |3.6               |1.1675            |2.2455              |1.7                |1.3209             |Olkkola 1996         |
+|381   |Fluconazole, 400/200 mg, PO, MD OD (4 days)                                                                                                                                                                                       |Midazolam, IV           |2.1349             |2.0408            |1.0461            |0.31654             |-                  |-                  |Olkkola 1996         |
+|1394  |Fluconazole, 50 mg, PO, MD for 4 days                                                                                                                                                                                             |Triazolam, PO           |1.7898             |1.587             |1.1278            |1.3731              |1.467              |0.93601            |Varhe 1996c          |
+|1395  |Fluconazole, 100 mg, PO, MD for 4 days                                                                                                                                                                                            |Triazolam, PO           |2.7151             |1.99              |1.3644            |1.7603              |1.4                |1.2574             |Varhe 1996c          |
+|1396  |Fluconazole, 200 mg, PO, MD for 4 days                                                                                                                                                                                            |Triazolam, PO           |4.1404             |3.652             |1.1337            |2.1572              |2.33               |0.92586            |Varhe 1996c          |
 
 ## Mechanism
 
@@ -876,21 +941,21 @@ GMFE (CMAX) = 1.238747
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/001_Mechanism/003_Reversible_Inhibition/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.531253 
+GMFE (AUC) = 1.428278 
 
-GMFE (CMAX) = 1.288713 
+GMFE (CMAX) = 1.250146 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |37    |-        |
-|Points within Guest et al.|18    |48.6486  |
-|Points within 2-fold      |30    |81.0811  |
+|Points total              |47    |-        |
+|Points within Guest et al.|28    |59.5745  |
+|Points within 2-fold      |40    |85.1064  |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |27    |-        |
-|Points within Guest et al.|19    |70.3704  |
-|Points within 2-fold      |26    |96.2963  |
+|Points total              |36    |-        |
+|Points within Guest et al.|27    |75       |
+|Points within 2-fold      |35    |97.2222  |
 
 ## Perpetrator
 
@@ -998,15 +1063,41 @@ GMFE (CMAX) = 1.231034
 |Points within Guest et al.|4     |50       |
 |Points within 2-fold      |8     |100      |
 
+### Fluconazole
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluconazole/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluconazole/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluconazole/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluconazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.103944 
+
+GMFE (CMAX) = 1.141234 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |10    |-        |
+|Points within Guest et al.|10    |100      |
+|Points within 2-fold      |10    |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |9     |-        |
+|Points within Guest et al.|8     |88.8889  |
+|Points within 2-fold      |9     |100      |
+
 ### Fluvoxamine
 
-![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluvoxamine/001_plotDDIRatioAUCPredictedVsObserved.png)
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Fluvoxamine/001_plotDDIRatioAUCPredictedVsObserved.png)
 
-![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluvoxamine/002_plotDDIRatioAUCResidualsVsObserved.png)
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Fluvoxamine/002_plotDDIRatioAUCResidualsVsObserved.png)
 
-![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluvoxamine/003_plotDDIRatioCMAXPredictedVsObserved.png)
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Fluvoxamine/003_plotDDIRatioCMAXPredictedVsObserved.png)
 
-![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/005_Fluvoxamine/004_plotDDIRatioCMAXResidualsVsObserved.png)
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Fluvoxamine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
 GMFE (AUC) = 1.420918 
 
@@ -1026,13 +1117,13 @@ GMFE (CMAX) = 1.425108
 
 ### Itraconazole
 
-![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Itraconazole/001_plotDDIRatioAUCPredictedVsObserved.png)
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Itraconazole/001_plotDDIRatioAUCPredictedVsObserved.png)
 
-![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Itraconazole/002_plotDDIRatioAUCResidualsVsObserved.png)
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Itraconazole/002_plotDDIRatioAUCResidualsVsObserved.png)
 
-![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Itraconazole/003_plotDDIRatioCMAXPredictedVsObserved.png)
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Itraconazole/003_plotDDIRatioCMAXPredictedVsObserved.png)
 
-![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/006_Itraconazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Itraconazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
 GMFE (AUC) = 1.665948 
 
@@ -1052,13 +1143,13 @@ GMFE (CMAX) = 1.278854
 
 ### Rifampicin
 
-![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Rifampicin/001_plotDDIRatioAUCPredictedVsObserved.png)
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Rifampicin/001_plotDDIRatioAUCPredictedVsObserved.png)
 
-![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Rifampicin/002_plotDDIRatioAUCResidualsVsObserved.png)
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Rifampicin/002_plotDDIRatioAUCResidualsVsObserved.png)
 
-![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Rifampicin/003_plotDDIRatioCMAXPredictedVsObserved.png)
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Rifampicin/003_plotDDIRatioCMAXPredictedVsObserved.png)
 
-![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/007_Rifampicin/004_plotDDIRatioCMAXResidualsVsObserved.png)
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Rifampicin/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
 GMFE (AUC) = 1.516563 
 
@@ -1078,13 +1169,13 @@ GMFE (CMAX) = 1.488840
 
 ### Verapamil
 
-![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Verapamil/001_plotDDIRatioAUCPredictedVsObserved.png)
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/009_Verapamil/001_plotDDIRatioAUCPredictedVsObserved.png)
 
-![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Verapamil/002_plotDDIRatioAUCResidualsVsObserved.png)
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/009_Verapamil/002_plotDDIRatioAUCResidualsVsObserved.png)
 
-![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Verapamil/003_plotDDIRatioCMAXPredictedVsObserved.png)
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/009_Verapamil/003_plotDDIRatioCMAXPredictedVsObserved.png)
 
-![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/008_Verapamil/004_plotDDIRatioCMAXResidualsVsObserved.png)
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/009_Verapamil/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
 GMFE (AUC) = 1.479577 
 
@@ -1114,21 +1205,21 @@ GMFE (CMAX) = 1.366143
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/001_Alfentanil/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.306209 
+GMFE (AUC) = 1.283748 
 
-GMFE (CMAX) = 1.326174 
+GMFE (CMAX) = 1.292220 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |21    |-        |
-|Points within Guest et al.|16    |76.1905  |
-|Points within 2-fold      |20    |95.2381  |
+|Points total              |23    |-        |
+|Points within Guest et al.|18    |78.2609  |
+|Points within 2-fold      |22    |95.6522  |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |12    |-        |
-|Points within Guest et al.|3     |25       |
-|Points within 2-fold      |12    |100      |
+|Points total              |14    |-        |
+|Points within Guest et al.|4     |28.5714  |
+|Points within 2-fold      |14    |100      |
 
 ### Alprazolam
 
@@ -1166,21 +1257,21 @@ GMFE (CMAX) = 1.276210
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/003_Midazolam/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.445732 
+GMFE (AUC) = 1.423771 
 
-GMFE (CMAX) = 1.427443 
+GMFE (CMAX) = 1.408956 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |96    |-        |
-|Points within Guest et al.|67    |69.7917  |
-|Points within 2-fold      |78    |81.25    |
+|Points total              |101   |-        |
+|Points within Guest et al.|72    |71.2871  |
+|Points within 2-fold      |83    |82.1782  |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |58    |-        |
-|Points within Guest et al.|34    |58.6207  |
-|Points within 2-fold      |49    |84.4828  |
+|Points total              |62    |-        |
+|Points within Guest et al.|38    |61.2903  |
+|Points within 2-fold      |53    |85.4839  |
 
 ### Triazolam
 
@@ -1192,21 +1283,21 @@ GMFE (CMAX) = 1.427443
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/004_Triazolam/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.540106 
+GMFE (AUC) = 1.470581 
 
-GMFE (CMAX) = 1.183528 
+GMFE (CMAX) = 1.173707 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |13    |-        |
-|Points within Guest et al.|8     |61.5385  |
-|Points within 2-fold      |11    |84.6154  |
+|Points total              |16    |-        |
+|Points within Guest et al.|11    |68.75    |
+|Points within 2-fold      |14    |87.5     |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
-|Points total              |13    |-        |
-|Points within Guest et al.|11    |84.6154  |
-|Points within 2-fold      |13    |100      |
+|Points total              |16    |-        |
+|Points within Guest et al.|14    |87.5     |
+|Points within 2-fold      |16    |100      |
 
 ### Verapamil
 
@@ -1522,6 +1613,27 @@ The following section shows concentration time profiles of the victim drugs of t
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Rifampicin_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
 
+## 3.12 Fluconazole - Alfentanil DDI
+                   
+
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/025_3_12_Fluconazole_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
+
+## 3.13 Fluconazole - Midazolam DDI
+                   
+
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_13_Fluconazole_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_13_Fluconazole_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_13_Fluconazole_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_13_Fluconazole_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
+
+## 3.14 Fluconazole - Triazolam DDI
+                   
+
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/027_3_14_Fluconazole_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
+
 # 4 References
 **Almond 2016** Almond LM, Mukadam S, Gardner I, Okialda K, Wong S, Hatley O, Tay S, Rowland-Yeo K, Jamei M, Rostami-Hodjegan A, Kenny JR. Prediction of Drug-Drug Interactions Arising from CYP3A induction Using a Physiologically Based Dynamic Model. Drug Metab Dispos. 2016 Jun;44(6):821-32.
 
@@ -1636,6 +1748,26 @@ The following section shows concentration time profiles of the victim drugs of t
 **Greenblatt 1998** Greenblatt, D. J., von Moltke, L. L., Harmatz, J. S., Counihan, M., Graf, J. A., Durol, A. L. B., ... & Shader, R. I. (1998). Inhibition of triazolam clearance by macrolide antimicrobial agents: in vitro correlates and dynamic consequences. *Clinical Pharmacology & Therapeutics*, *64*(3), 278-285.
 
 **Phillips 1986** Phillips, J. P., Antal, E. J., & Smith, R. B. (1986). A pharmacokinetic drug interaction between erythromycin and triazolam. *Journal of clinical psychopharmacology*, *6*(5), 297-299.
+
+
+
+## Fluconazole-Alfentanil-DDI
+
+**Palkama 1998** Palkama, V. J., Isohanni, M. H., Neuvonen, P. J., & Olkkola, K. T. (1998). The effect of intravenous and oral fluconazole on the pharmacokinetics and pharmacodynamics of intravenous alfentanil. *Anesthesia & Analgesia*, *87*(1), 190-194.
+
+
+
+## Fluconazole-Midazolam-DDI
+
+**Ahonen 1997** Ahonen, J., Olkkola, K. T., & Neuvonen, P. J. (1997). Effect of route of administration of fluconazole on the interaction between fluconazole and midazolam. *European journal of clinical pharmacology*, *51*(5), 415-419.
+
+**Olkkola 1996** Olkkola, K. T., Ahonen, J., & Neuvonen, P. J. (1996). The effect of the systemic antimycotics, itraconazole and fluconazole, on the pharmacokinetics and pharmacodynamics of intravenous and oral midazolam. *Anesthesia & Analgesia*, *82*(3), 511-516.
+
+
+
+## Fluconazole-Triazolam-DDI
+
+**Varhe 1996** Varhe, A., Olkkola, K. T., & Neuvonen, P. J. (1996). Effect of fluconazole dose on the extent of fluconazole‐triazolam interaction. *British journal of clinical pharmacology*, *42*(4), 465-470.
 
 
 
@@ -1796,11 +1928,11 @@ The following section shows concentration time profiles of the victim drugs of t
                    
 
 ## 5.1 Open Systems Pharmacology Suite (OSPS) Introduction
-Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#References-for-OSPS-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
+Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#references-for-osps-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
 
-Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#References-for-OSPS-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#References-for-OSPS-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#References-for-OSPS-introduction)] or that of Rodgers and Rowland [[5-7](#References-for-OSPS-introduction)]. 
+Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#references-for-osps-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#references-for-osps-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#references-for-osps-introduction)] or that of Rodgers and Rowland [[5-7](#references-for-osps-introduction)]. 
 
-Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#References-for-OSPS-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#References-for-OSPS-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#References-for-OSPS-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
+Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#references-for-osps-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#references-for-osps-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#references-for-osps-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
 
 
 **Figure** **1: Structure of the Whole Body PBPK Model integrated in PK-Sim®**
