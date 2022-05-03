@@ -1,9 +1,9 @@
 # CYP2C19 DDI Qualification
 
-| Version                         | 1.0-OSP9.1 |
+| Version                         | 1.2-OSP10.0 |
 | ------------------------------- | ---------- |
-| OSP Version                     | 9.1        |
-| Qualification Framework Version | 2.2        |
+| OSP Version                     | 10.0        |
+| Qualification Framework Version | 2.3        |
 
 
 
@@ -19,6 +19,14 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
       * [S-Mephenytoin - Fluvoxamine DDI](#s-mephenytoin---fluvoxamine-ddi)
       * [Moclobemide - Omeprazole DDI](#moclobemide---omeprazole-ddi)
   * [2 Qualification of Use Case CYP2C19-mediated DDI](#2-qualification-of-use-case-cyp2c19-mediated-ddi)
+    * [Perpetrator](#perpetrator)
+      * [Fluvoxamine](#fluvoxamine)
+      * [Moclobemide](#moclobemide)
+      * [Omeprazole](#omeprazole)
+    * [Victim](#victim)
+      * [Moclobemide](#moclobemide)
+      * [Omeprazole](#omeprazole)
+      * [S-Mephenytoin](#s-mephenytoin)
   * [3 Concentration-Time Profiles](#3-concentration-time-profiles)
     * [3.1 Omeprazole - Moclobemide DDI](#31-omeprazole---moclobemide-ddi)
     * [3.2 Omeprazole - Fluvoxamine DDI](#32-omeprazole---fluvoxamine-ddi)
@@ -50,38 +58,33 @@ Please refer to the [Appendix](#6-Appendix) to learn more details:
 - [Section 6.2](#62-Mathematical-Implementation-of-Drug-Drug-Interactions) shows the implementation of the underlying mathematical equations for drug-drug interactions in the OSP suite.
 
 - A detailed general description of the performed qualification workflow (*qualification plan*, *qualification report*, etc.) can be found in chapter [Section 6.3](#63-automatic-re-qualification-workflow).
-
-  
-
-
-
 ## 1.2 CYP2C19 DDI Network
-CYP2C19 is an important enzyme for the metabolism of about 10% of therapeutical drugs, including proton pump inhibitors (PPIs, e.g., omeprazole), antidepressants (e.g., imipramine), anticonvulsants (phenytoin, S-mephenytoin), hypnotics and sedatives (e.g., phenobarbital), antimalarial (proguanil), antiretroviral (nelfinavir), antifungal (voriconazole), and antiplatelet drugs (clopidogrel) ([Goldstein 2001](#5-References),  [Desta 2002](#5-References)). Genetic polymorphism exists for CYP2C19 expression, with approximately 3%–5% of European and 15%–20% of Asian populations being poor metabolizers with no CYP2C19 activity  ([Goldstein 2001](#5-References),  [Bertilsson 1995](#5-References)). Based on the metabolic capacity of CYP2C19, individuals can be divided into four categories: extensive metabolizers (EMs) carrying normal alleles, intermediate metabolizers (IMs) carrying one defective allele, poor metabolizers (PMs) carrying two defective alleles, and ultra-rapid metabolizers (UMs) homozygous for alleles which increase the CYP2C19 expression or activity higher than in EMs. Well-known substrates of CYP2C19 are mephenytoin, omeprazole, and moclobemide.
+CYP2C19 is an important enzyme for the metabolism of about 10% of therapeutical drugs, including proton pump inhibitors (PPIs, e.g., omeprazole), antidepressants (e.g., imipramine), anticonvulsants (phenytoin, S-mephenytoin), hypnotics and sedatives (e.g., phenobarbital), antimalarial (proguanil), antiretroviral (nelfinavir), antifungal (voriconazole), and antiplatelet drugs (clopidogrel) ([Goldstein 2001](#5-references),  [Desta 2002](#5-references)). Genetic polymorphism exists for CYP2C19 expression, with approximately 3%–5% of European and 15%–20% of Asian populations being poor metabolizers with no CYP2C19 activity  ([Goldstein 2001](#5-references),  [Bertilsson 1995](#5-references)). Based on the metabolic capacity of CYP2C19, individuals can be divided into four categories: extensive metabolizers (EMs) carrying normal alleles, intermediate metabolizers (IMs) carrying one defective allele, poor metabolizers (PMs) carrying two defective alleles, and ultra-rapid metabolizers (UMs) homozygous for alleles which increase the CYP2C19 expression or activity higher than in EMs. Well-known substrates of CYP2C19 are mephenytoin, omeprazole, and moclobemide.
 
 Like other CYPs, CYP2C19 is subject to induction and/or inhibition by a number of compounds, which can result in significant drug interactions in clinical practice.
 
-The U.S. Food and Drug Administration (FDA) lists several perpetrator and victim drugs of interactions in the CYP2C19 network ([Goldstein 2001](#5-References)). For instance, omeprazole is a sensitive index substrate for CYP2C19, and fluvoxamine is listed as a strong clinical index inhibitor for CYP2C19 pathway.
+The U.S. Food and Drug Administration (FDA) lists several perpetrator and victim drugs of interactions in the CYP2C19 network ([Goldstein 2001](#5-references)). For instance, omeprazole is a sensitive index substrate for CYP2C19, and fluvoxamine is listed as a strong clinical index inhibitor for CYP2C19 pathway.
 
 To qualify the developed models for the prediction of the CYP2C19 DDI potential of new drugs, a set of verified PBPK models of index perpetrators and respective CYP2C19 DDI victim drugs is specified to set up a CYP2C19-mediated DDI modeling network.
 
 The following perpetrator compounds were selected: 
 
 - **Fluvoxamine** (strong CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **altv1.0**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/altv1.0
 - **Omeprazole** (moderate CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.1
 - **Moclobemide** (moderate CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.1
 
 
 The following sensitive CYP2C19 substrates as victim drugs were selected:
 
 - **Omeprazole**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.1
 - **S-Mephenytoin**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/S-Mephenytoin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/S-Mephenytoin-Model/releases/tag/v1.1
 - **Moclobemide**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.1
 
 The following interaction studies were predicted and used to qualify/optimize the final network:
 
@@ -98,67 +101,67 @@ The following interaction studies were predicted and used to qualify/optimize th
 **Figure** **1: CYP2C19 DDI modeling network**
 ![DDI CYP2C19 network](images/DDI_CYP2C19_Compound_Network.png)
 
-The Ki values used to predict the interactions are listed in [Table 1](#Table 1).
+The Ki values used to predict the interactions are listed in [Table 1](#table-1).
 
 | **Inhibitor category** | **Inhibitor** | **Substrate**  | **Ki**                                                       | **Reference**                                                |
 | ---------------------- | ------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Strong CYP2C19         | Fluvoxamine   | Omeprazole     | 3.6 nM                                                       | [Iga 2016](#5-References)                                    |
-|                        |               | S-Mephenytoin | 2.6 nM                                                       | [Iga 2016](#5-References)                                    |
+| Strong CYP2C19         | Fluvoxamine   | Omeprazole     | 3.6 nM                                                       | [Iga 2016](#5-references)                                    |
+|                        |               | S-Mephenytoin | 2.6 nM                                                       | [Iga 2016](#5-references)                                    |
 | Moderate CYP2C19       | Moclobemide   | Omeprazole     | 203.83 µM<sup>1</sup><br />TDI 94.85 µM                      | Fit                                                          |
-|                        | Omeprazole    | Moclobemide    | S-ome: 3.1 µM<br />TDI 0.3 µM<br />R-ome: 5.3 µM<br />TDI 1.6 µM | [Liu 2005](#5-References)<br />[Wu 2014](#5-References)<br />[Liu 2005](#5-References)<br />[Wu 2014](#5-References) |
+|                        | Omeprazole    | Moclobemide    | S-ome: 3.1 µM<br />TDI 0.3 µM<br />R-ome: 5.3 µM<br />TDI 1.6 µM | [Liu 2005](#5-references)<br />[Wu 2014](#5-references)<br />[Liu 2005](#5-references)<br />[Wu 2014](#5-references) |
 
-**Table 1:**<a name="Table 1"></a> Ki values used in CYP2C19 DDI network. <sup>1</sup>Literature value = 204 µM
+**Table 1:**<a name="table-1"></a> Ki values used in CYP2C19 DDI network. <sup>1</sup>Literature value = 204 µM
 
 The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report.
 ### Omeprazole - Moclobemide DDI
-The omeprazole-moclobemide interaction was evaluated using clinical DDI studies listed in [Table 2](#Table 2).
+The omeprazole-moclobemide interaction was evaluated using clinical DDI studies listed in [Table 2](#table-2).
 
 | **Source**                | **Route** | **Dose [mg] /** **Schedule \*** | **Pop.** | **Sex** | **N** | **Form.** | **Comment**       |
 | ------------------------- | --------- | ------------------------------- | -------- | ------- | ----- | --------- | ----------------- |
-| [Cho 2002](#5-References) | p.o       | 20                              | HV asian | -       | -     | capsule   | EM +/-moclobemide |
-| [Cho 2002](#5-References) | p.o       | 20                              | HV asian | -       | -     | capsule   | PM +/-moclobemide |
+| [Cho 2002](#5-references) | p.o       | 20                              | HV asian | -       | -     | capsule   | EM +/-moclobemide |
+| [Cho 2002](#5-references) | p.o       | 20                              | HV asian | -       | -     | capsule   | PM +/-moclobemide |
 
-**Table 2:**<a name="Table 2"></a> Literature sources of clinical concentration data of omeprazole used for DDI prediction qualification with moclobemide. *-: respective information was not provided in the literature source; \*:single dose unless otherwise specified; EM: extensive metabolizers; PM: poor metabolizers*
+**Table 2:**<a name="table-2"></a> Literature sources of clinical concentration data of omeprazole used for DDI prediction qualification with moclobemide. *-: respective information was not provided in the literature source; \*:single dose unless otherwise specified; EM: extensive metabolizers; PM: poor metabolizers*
 
 A dynamical DDI simulation with moclobemide and omeprazole was conducted and compared to literature data. Both compounds act as CYP2C19 inhibitors and victims. The predefined typical Japanese subject (age = 30 y, weight = 61.87 kg, height = 168.99 cm, BMI = 21.67 kg/m2) was used with CYP3A4, CYP2C19, CYP2D6 and CYP1A2 expressions from RT PCR database in PK-Sim and adapted CYP2C19 expression in gut (see evaluation report of omeprazole for more details). Additional enzyme "FMO (other)" was added and expressed in liver only.
 
-In [Cho 2002](#5-References), sixteen volunteers, of whom eight were extensive metabolizers (EM) and eight were poor metabolizers (PM) for CYP2C19, received oral doses of 40 mg omeprazole with or without 300 mg moclobemide co-administration. 
+In [Cho 2002](#5-references), sixteen volunteers, of whom eight were extensive metabolizers (EM) and eight were poor metabolizers (PM) for CYP2C19, received oral doses of 40 mg omeprazole with or without 300 mg moclobemide co-administration. 
 
 The pharmacokinetic change of omeprazole, omeprazole sulphone and 5-hydroxyomeprazole concentrations were assessed to test for an interaction between omeprazole and moclobemide.
 ### Omeprazole - Fluvoxamine DDI
-The omeprazole-fluvoxamine interaction was evaluated using clinical DDI studies listed in [Table 3](#Table 3).
+The omeprazole-fluvoxamine interaction was evaluated using clinical DDI studies listed in [Table 3](#table-3).
 
 | **Source**                           | **Route** | **Dose [mg] /** **Schedule \*** | **Pop.**    | **Sex** | **N** | **Form.** | **Comment**          |
 | ------------------------------------ | --------- | ------------------------------- | ----------- | ------- | ----- | --------- | -------------------- |
-| [Yasui-Furukori 2004](#5-References) | p.o.      | 40                              | HV japanese | M - F   | 6     | omepral   | hmEM +/- fluvoxamine |
-| [Yasui-Furukori 2004](#5-References) | p.o.      | 40                              | HV japanese | M - F   | 6     | omepral   | PM +/- fluvoxamine   |
+| [Yasui-Furukori 2004](#5-references) | p.o.      | 40                              | HV japanese | M - F   | 6     | omepral   | hmEM +/- fluvoxamine |
+| [Yasui-Furukori 2004](#5-references) | p.o.      | 40                              | HV japanese | M - F   | 6     | omepral   | PM +/- fluvoxamine   |
 
-**Table 3:**<a name="Table 3"></a> Literature sources of clinical concentration data of omeprazole used for DDI prediction qualification with fluvoxamine. *\*:single dose unless otherwise specified; hmEM: homozygous extensive metabolizers; PM: poor metabolizers*
+**Table 3:**<a name="table-3"></a> Literature sources of clinical concentration data of omeprazole used for DDI prediction qualification with fluvoxamine. *\*:single dose unless otherwise specified; hmEM: homozygous extensive metabolizers; PM: poor metabolizers*
 
-A dynamical DDI simulation with fluvoxamine as CYP2C19 inhibitor and omeprazole as victim was conducted and compared to literature data. The predefined typical Japanese subject (age = 30 y, weight = 61.87 kg, height = 168.99 cm, BMI = 21.67 kg/m2) was used with CYP3A4, CYP2C19, CYP2D6 and CYP1A2 expression from RT PCR database in PK-Sim and adapted CYP2C19 expression in gut (see evaluation report of omeprazole for more details). Additional enzyme "FMO (other)" was added and expressed in liver only. The Ki value of 3.6 nmol/l for the inhibition of CYP2C19 by fluvoxamine was selected in agreement with literature data ([Iga 2016](#5-References)).
+A dynamical DDI simulation with fluvoxamine as CYP2C19 inhibitor and omeprazole as victim was conducted and compared to literature data. The predefined typical Japanese subject (age = 30 y, weight = 61.87 kg, height = 168.99 cm, BMI = 21.67 kg/m2) was used with CYP3A4, CYP2C19, CYP2D6 and CYP1A2 expression from RT PCR database in PK-Sim and adapted CYP2C19 expression in gut (see evaluation report of omeprazole for more details). Additional enzyme "FMO (other)" was added and expressed in liver only. The Ki value of 3.6 nmol/l for the inhibition of CYP2C19 by fluvoxamine was selected in agreement with literature data ([Iga 2016](#5-references)).
 
-In [Yasui-Furukori 2004](#5-References), eighteen volunteers, of whom six were homozygous extensive metabolizers (hmEMs), six were heterozygous EMs (htEMs) and six were poor metabolizers (PMs) for CYP2C19, received two six-day courses of either daily 50 mg fluvoxamine (split in 25 mg twice daily) or placebo in a randomized fashion with a single oral 40 mg dose of omeprazole on day six in both cases. Plasma concentrations of omeprazole and its metabolites, 5-hydroxyomeprazole, omeprazole sulphone, and fluvoxamine were monitored up to 8 h after the dosing.
+In [Yasui-Furukori 2004](#5-references), eighteen volunteers, of whom six were homozygous extensive metabolizers (hmEMs), six were heterozygous EMs (htEMs) and six were poor metabolizers (PMs) for CYP2C19, received two six-day courses of either daily 50 mg fluvoxamine (split in 25 mg twice daily) or placebo in a randomized fashion with a single oral 40 mg dose of omeprazole on day six in both cases. Plasma concentrations of omeprazole and its metabolites, 5-hydroxyomeprazole, omeprazole sulphone, and fluvoxamine were monitored up to 8 h after the dosing.
 
 ### S-Mephenytoin - Fluvoxamine DDI
-The S-mephenytoin-fluvoxamine interaction was evaluated using clinical DDI studies listed in [Table 4](#Table 4).
+The S-mephenytoin-fluvoxamine interaction was evaluated using clinical DDI studies listed in [Table 4](#table-4).
 
 | **Source**                | **Route** | **Dose [mg]/**  **Schedule \*** | **Pop.** | **Sex** | **N** | **Form.** | **Comment**                                                  |
 | ------------------------- | --------- | ------------------------------- | -------- | ------- | ----- | --------- | ------------------------------------------------------------ |
-| [Yao 2003](#5-References) | p.o.      | 100 mg s.d.                     | HV       | m/f     | 12    | -         | S-mephenytoin, with  and without Fluvoxamine MD of 37.5, 62.5 and 87.5 mg/day |
+| [Yao 2003](#5-references) | p.o.      | 100 mg s.d.                     | HV       | m/f     | 12    | -         | S-mephenytoin, with  and without Fluvoxamine MD of 37.5, 62.5 and 87.5 mg/day |
 
-**Table 4:**<a name="Table 4"></a> Literature sources of clinical concentration data of S-mephenytoin used for DDI prediction qualification with fluvoxamine. *-: respective information was not provided in the literature source; \*:single dose unless otherwise specified*
+**Table 4:**<a name="table-4"></a> Literature sources of clinical concentration data of S-mephenytoin used for DDI prediction qualification with fluvoxamine. *-: respective information was not provided in the literature source; \*:single dose unless otherwise specified*
 
 A dynamical DDI simulation with fluvoxamine was used to predict the effect of a strong CYP2C19 inhibitor on S-mephenytoin exposure. The predefined “Standard European Male for DDI” individual (age = 30 y, weight = 73 kg, height = 176 cm, BMI = 23.57 kg/m2) with adapted CYP2C19 expression in gut (see evaluation report of omeprazole for more details) was used. Ki value of 2.6 nmol/l for the inhibition of CYP2C19 was selected.
 
-Predictions were compared to clinical results from [Yao 2003](#5-References), where the effect of different fluvoxamine doses in S-Mephenytoin was investigated. 100 mg S-mephenytoin were administered after 7 days of placebo or fluvoxamine treatment (27.5, 45.8, or 64.1 mg).
+Predictions were compared to clinical results from [Yao 2003](#5-references), where the effect of different fluvoxamine doses in S-Mephenytoin was investigated. 100 mg S-mephenytoin were administered after 7 days of placebo or fluvoxamine treatment (27.5, 45.8, or 64.1 mg).
 ### Moclobemide - Omeprazole DDI
-The moclobemide-omeprazole interaction was evaluated using clinical DDI studies listed in [Table 5](#Table 5).
+The moclobemide-omeprazole interaction was evaluated using clinical DDI studies listed in [Table 5](#table-5).
 
 | **Source**               | **Route** | **Dose [mg]/**  **Schedule \*** | **Pop.** | **Sex** | **N** | **Form.** | **Comment**       |
 | ------------------------ | --------- | ------------------------------- | -------- | ------- | ----- | --------- | ----------------- |
-| [Yu 2001](#5-References) | p.o       | 300 s.d.                        | HV-Asian | m       | 8     | tablet    | EM +/- omeprazole |
+| [Yu 2001](#5-references) | p.o       | 300 s.d.                        | HV-Asian | m       | 8     | tablet    | EM +/- omeprazole |
 
-**Table 5:**<a name="Table 5"></a> Literature sources of clinical concentration data of moclobemide used for DDI prediction qualification omeprazole. *\*:single dose unless otherwise specified; EM: extensive metabolizers*
+**Table 5:**<a name="table-5"></a> Literature sources of clinical concentration data of moclobemide used for DDI prediction qualification omeprazole. *\*:single dose unless otherwise specified; EM: extensive metabolizers*
 
 A dynamical DDI simulation with moclobemide and omeprazole was conducted and compared to literature data. Both compounds act as CYP2C19 inhibitors and victims. 300 mg moclobemide with or without a single dose of 40 mg omeprazole (racemate, i.e. 20 mg S-omeprazole and 20 mg R-omeprazole) was simulated. The predefined typical Japanese subject (age = 30 y, weight = 61.87 kg, height = 168.99 cm, BMI = 21.67 kg/m2) was used with CYP3A4, CYP2C19, CYP2D6 and CYP1A2 expressions from RT PCR database in PK-Sim and adapted CYP2C19 expression in gut (see evaluation report of omeprazole for more details). Additional enzyme "FMO (other)" was added and expressed in liver only.
 # 2 Qualification of Use Case CYP2C19-mediated DDI
@@ -174,7 +177,7 @@ Specifically, the PBPK model performance for the PK parameters **AUC ratio (AUCR
   
   ![GMFE equation](images/GFME_equation.PNG)
   
-- number of AUCR and CMAXR falling within 2-fold error range and within the limits as suggested by [Guest et al. 2011](#5-References)
+- number of AUCR and CMAXR falling within 2-fold error range and within the limits as suggested by [Guest et al. 2011](#5-references)
   
 - detailed table of results for each study
 
@@ -183,7 +186,7 @@ In the plots,
 
 - the dotted lines denote 0.50–2.00 (2-fold) criterion,
 
-- the solid lines denote the limits as suggested by [Guest et al. 2011](#5-References),
+- the solid lines denote the limits as suggested by [Guest et al. 2011](#5-references),
 
 - the bold solid line denotes the unity line,
 
@@ -201,9 +204,9 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.252723 
+GMFE (AUC) = 1.252720 
 
-GMFE (CMAX) = 1.173696 
+GMFE (CMAX) = 1.173693 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -217,16 +220,176 @@ GMFE (CMAX) = 1.173696
 |Points within Guest et al.|4     |50       |
 |Points within 2-fold      |8     |100      |
 
-|DataID|Perpetrator                  |Victim            |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference          |
-|-----:|----------------------------:|-----------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|------------------:|
-|6010  |Fluvoxamine, 53 0, mg, PO,   |Omeprazole, PO    |2.5885             |5.34              |0.48474           |1.9814              |3.48               |0.56937            |Yasui-Furukori 2004|
-|6011  |Fluvoxamine, 53 0, mg, PO,   |Omeprazole, PO    |0.99972            |1.21              |0.82621           |1.0009              |1.12               |0.89367            |Yasui-Furukori 2004|
-|6020  |Moclobemide, 51 00, mg, PO,  |Omeprazole, PO    |1.5319             |2.05              |0.74725           |1.252               |1.67               |0.74972            |Cho 2002           |
-|6021  |Moclobemide, 51 00, mg, PO,  |Omeprazole, PO    |1                  |1.16              |0.86207           |1.0003              |0.97               |1.0312             |Cho 2002           |
-|6030  |Fluvoxamine, 50 7.5, mg, PO, |S-Mephenytoine, PO|3.8495             |4.64              |0.82964           |2.1351              |2.12               |1.0071             |Yao 2003           |
-|6031  |Fluvoxamine, 52 5.8, mg, PO, |S-Mephenytoine, PO|6.336              |6.7               |0.94567           |2.492               |2.4                |1.0383             |Yao 2003           |
-|6032  |Fluvoxamine, 54 4.1, mg, PO, |S-Mephenytoine, PO|8.0763             |9.89              |0.81661           |2.633               |2.42               |1.088              |Yao 2003           |
-|6040  |Omeprazole, 52 0, mg, PO,    |Moclobemide, PO   |1.3133             |1.31              |1.0025            |0.94797             |1.11               |0.85403            |Yu 2001            |
+|DataID|Perpetrator                  |Victim           |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference          |
+|-----:|----------------------------:|----------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|------------------:|
+|11050 |Fluvoxamine, 53 0, mg, PO,   |Omeprazole, PO   |2.5885             |5.34              |0.48474           |1.9815              |3.48               |0.56939            |Yasui-Furukori 2004|
+|11052 |Fluvoxamine, 53 0, mg, PO,   |Omeprazole, PO   |0.99972            |1.21              |0.82621           |1.0009              |1.12               |0.89367            |Yasui-Furukori 2004|
+|11048 |Moclobemide, 51 00, mg, PO,  |Omeprazole, PO   |1.5319             |2.05              |0.74726           |1.252               |1.67               |0.74972            |Cho 2002           |
+|11049 |Moclobemide, 51 00, mg, PO,  |Omeprazole, PO   |1                  |1.16              |0.86207           |1.0003              |0.97               |1.0312             |Cho 2002           |
+|15001 |Fluvoxamine, 50 7.5, mg, PO, |S-Mephenytoin, PO|3.8497             |4.64              |0.82968           |2.1351              |2.12               |1.0071             |Yao 2003           |
+|15002 |Fluvoxamine, 52 5.8, mg, PO, |S-Mephenytoin, PO|6.3358             |6.7               |0.94565           |2.492               |2.4                |1.0383             |Yao 2003           |
+|15003 |Fluvoxamine, 54 4.1, mg, PO, |S-Mephenytoin, PO|8.0761             |9.89              |0.81659           |2.6329              |2.42               |1.088              |Yao 2003           |
+|10027 |Omeprazole, 52 0, mg, PO,    |Moclobemide , PO |1.3133             |1.31              |1.0025            |0.94797             |1.11               |0.85402            |Yu 2001            |
+
+## Perpetrator
+
+### Fluvoxamine
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.312654 
+
+GMFE (CMAX) = 1.174608 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |5     |-        |
+|Points within Guest et al.|3     |60       |
+|Points within 2-fold      |4     |80       |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |5     |-        |
+|Points within Guest et al.|3     |60       |
+|Points within 2-fold      |5     |100      |
+
+### Moclobemide
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.245928 
+
+GMFE (CMAX) = 1.172793 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |2     |-        |
+|Points within Guest et al.|1     |50       |
+|Points within 2-fold      |2     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |2     |-        |
+|Points within Guest et al.|1     |50       |
+|Points within 2-fold      |2     |100      |
+
+### Omeprazole
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.002524 
+
+GMFE (CMAX) = 1.170928 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|1     |100      |
+|Points within 2-fold      |1     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|0     |0        |
+|Points within 2-fold      |1     |100      |
+
+## Victim
+
+### Moclobemide
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.002524 
+
+GMFE (CMAX) = 1.170928 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|1     |100      |
+|Points within 2-fold      |1     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|0     |0        |
+|Points within 2-fold      |1     |100      |
+
+### Omeprazole
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.403122 
+
+GMFE (CMAX) = 1.282222 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |4     |-        |
+|Points within Guest et al.|1     |25       |
+|Points within 2-fold      |3     |75       |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |4     |-        |
+|Points within Guest et al.|1     |25       |
+|Points within 2-fold      |4     |100      |
+
+### S-Mephenytoin
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.159984 
+
+GMFE (CMAX) = 1.043962 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |3     |-        |
+|Points within Guest et al.|3     |100      |
+|Points within 2-fold      |3     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |3     |-        |
+|Points within Guest et al.|3     |100      |
+|Points within 2-fold      |3     |100      |
 
 # 3 Concentration-Time Profiles
 The following section shows concentration time profiles of the victim drugs of the simulated DDI studies in comparison to observed data.
@@ -293,7 +456,7 @@ The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and C
 
 **Desta 2002** Desta, Z,., Zhao, X,., Shin, J,. G., & Flockhart DA., D. A. (2002). Clinical Significancesignificance of the Cytochromecytochrome P450 2C19 Genetic Polymorphism. *Clin*genetic polymorphism. Clinical pharmacokinetics,  *Pharmacokinet*. 2002;41(12):), 913-958.
 
-**FDA** U.S. Food and Drug Administration. Drug development and drug interactions: table of substrates, inhibitors and inducers. <Website fda.gov/Drugs/DevelopmentApprovalProcess/DevelopmentResources/DrugInteractionsLabeling/ucm093664.html (2017). Accessed 04 March 2019.
+**FDA** U.S. Food and Drug Administration. Drug development and drug interactions: table of substrates, inhibitors and inducers. <Website https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers (2017). Accessed 04 March 2019.
 
 **Goldstein 2001** Goldstein JA., J. A. (2001). Clinical relevance of genetic polymorphisms in the human CYP2C subfamily. *Br J Clin Pharmacol*. 2001;British journal of clinical pharmacology, 52(4):), 349-355.
 
@@ -314,11 +477,11 @@ The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and C
                    
 
 ## 6.1 Open Systems Pharmacology Suite (OSPS) Introduction
-Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#References-for-OSPS-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
+Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#references-for-osps-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
 
-Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#References-for-OSPS-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#References-for-OSPS-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#References-for-OSPS-introduction)] or that of Rodgers and Rowland [[5-7](#References-for-OSPS-introduction)]. 
+Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#references-for-osps-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#references-for-osps-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#references-for-osps-introduction)] or that of Rodgers and Rowland [[5-7](#references-for-osps-introduction)]. 
 
-Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#References-for-OSPS-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#References-for-OSPS-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#References-for-OSPS-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
+Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#references-for-osps-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#references-for-osps-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#references-for-osps-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
 
 
 **Figure** **1: Structure of the Whole Body PBPK Model integrated in PK-Sim®**
