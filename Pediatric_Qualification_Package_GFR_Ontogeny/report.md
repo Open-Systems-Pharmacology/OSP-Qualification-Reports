@@ -3,12 +3,11 @@
 
 
 
-| Version                         | 1.2-OSP10.0                                                  |
+| Version                         | 1.3-OSP11.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v1.2 |
-| OSP Version                     | 10.0                                                         |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v1.3 |
+| OSP Version                     | 11.0                                                          |
 | Qualification Framework Version | 2.3                                                          |
-
 
 
 
@@ -29,12 +28,12 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
 # 1 Introduction to Pediatric Translation
 The presented qualification report evaluates the predictive performance of the OSP suite to predict glomerular filtration rate (GFR)-mediated drug clearance in children.
 
-Therefore, PBPK models of specific *in vivo* probe substances covering children aged below 6 months up to adolescents were built and evaluated. All models are whole-body PBPK models, allowing for pediatric translation in all organs. The qualification report demonstrates the level of confidence of the OSP suite with regard to reliable PBPK predictions of age related GFR-mediated drug clearance during model-informed drug development. The presented PBPK models as well as the respective qualification plan and qualification report are provided open-source and transparently documented (https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny). 
+Therefore, PBPK models of specific *in vivo* probe substances covering children aged below 6 months up to adolescents were built and evaluated. All models are whole-body PBPK models, allowing for dynamic pediatric translation in all organs. The qualification report demonstrates the level of confidence of the OSP suite with regard to reliable PBPK predictions of age related GFR-mediated drug clearance during model-informed drug development. The presented PBPK models as well as the respective qualification plan and qualification report are provided open-source and transparently documented (https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny). 
 
 
 ## Translation of Adult PBPK to Children
 
-Using a developed and validated (adult) PBPK model for an *in vivo* probe substance, a pediatric PBPK model can be established for children at different ages by translating physiology, clearance processes (as parameterized in the adult model) and age-dependent protein binding including the variability therein.[[Maharaj 2013](#3-references)] 
+Using a developed and validated (adult) PBPK model for an *in vivo* probe substance, a pediatric PBPK model can be established for children by translating physiology, clearance processes (as parameterized in the adult model) and age-dependent protein binding including the variability therein.[[Maharaj 2013](#3-references)]
 
 The PBPK models are developed with clinical data of healthy adult subjects obtained from the literature. Plasma concentrations following multiple-dose application, mass balance information and other clinical measurements need to be included for model development, if available. During model translation from adults to children for a specific substance, uncertainties in data-quality caused by impact of disease or the target study population, inaccurate in vitro assay-techniques regarding mass balance, as well as study differences may cause not being able to adequately predict the PK in children for all reported studies. 
 
@@ -47,19 +46,16 @@ For qualification purpose, during the translation of adult PBPK to children the 
 
 ## Anthropometric and Physiological Information 
 
-Regarding the age-dependencies of the relevant anthropometric (height, weight) and physiological parameters (e.g. blood flows, organ volumes, binding protein concentrations, hematocrit, cardiac output) in children was gathered from the literature and has been previously published. [[Edginton 2006](#3-references)] The information was incorporated into PK-Sim® and was used as default values for the simulations in children.
+Regarding the age-dependencies of the relevant anthropometric (height, weight) and physiological parameters (e.g. blood flows, organ volumes, binding protein concentrations, hematocrit, cardiac output) in children was gathered from the literature and has been previously published [[2](#3-references)]. The information was incorporated into PK-Sim® and was used as default values for the simulations in children.
 
 The  applied ontogeny and variability of plasma proteins that are integrated into PK-Sim® for translation to children are described in the publicly available ‘PK-Sim® Ontogeny Database Version 7.3' [[Ontogeny Database](#3-references)] or otherwise referenced for the specific process.
 
 ### Qualification of **GFR ontogeny**
 
-For the qualification of the GFR elimination of compounds, the following probe substances were included:
+For the qualification of the GFR elimination of compounds, the following probe substances was included:
 
 - Amikacin [[Amikacin-Model](#3-references)]
 - Vancomycin [[Vancomycin-Model](#3-references)]
-
-The adult PBPK model reports and the corresponding PK-Sim project files are filed at: https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library/
-
 
 # 2 Pediatric translation qualification
 ## Evaluation of Pediatric translation
@@ -190,9 +186,7 @@ GMFE (CL) = 1.219861
 ## 2.2 Amikacin Concentration-Time profiles in Children
 #### Concentration-Time Profiles
 
-For Amikacin, there were no reported plasma concentration-time data available from literature. Therefore only a comparison of predicted versus observed PK-parameters was made to evaluate the predictive performance of the Amikacin PBPK model in children. [[Section 2.1](#21-amikacin-pk-ratio-tables-and-figures)]
-
-
+Predicted versus observed plasma concentration-time profiles are listed below. Only simulations where observed data was available for comparison are shown.  Depending if the observed data were individual data or aggregated data, individual predictions or population predictions including variability are shown, respectively.
 ## 2.3 Vancomycin PK Ratio tables and Figures
 ### Vancomycin model
 
