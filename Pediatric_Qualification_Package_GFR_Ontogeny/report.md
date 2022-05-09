@@ -189,7 +189,7 @@ GMFE (CL) = 1.219861
 ## 2.2 Amikacin Concentration-Time profiles in Children
 #### Concentration-Time Profiles
 
-Predicted versus observed plasma concentration-time profiles are listed below. Only simulations where observed data was available for comparison are shown.  Depending if the observed data were individual data or aggregated data, individual predictions or population predictions including variability are shown, respectively.
+For Amikacin, there were no reported plasma concentration-time data available from literature. Therefore only a comparison of predicted versus observed PK-parameters was made to evaluate the predictive performance of the Amikacin PBPK model in children. [[Section 2.1](#21-amikacin-pk-ratio-tables-and-figures)]
 ## 2.3 Vancomycin PK Ratio tables and Figures
 ### Vancomycin model
 
