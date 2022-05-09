@@ -25,6 +25,14 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
       * [S-Mephenytoin - Fluvoxamine DDI](#s-mephenytoin---fluvoxamine-ddi)
       * [Moclobemide - Omeprazole DDI](#moclobemide---omeprazole-ddi)
   * [2 Qualification of Use Case CYP2C19-mediated DDI](#2-qualification-of-use-case-cyp2c19-mediated-ddi)
+    * [Perpetrator](#perpetrator)
+      * [Fluvoxamine](#fluvoxamine)
+      * [Moclobemide](#moclobemide)
+      * [Omeprazole](#omeprazole)
+    * [Victim](#victim)
+      * [Moclobemide](#moclobemide)
+      * [Omeprazole](#omeprazole)
+      * [S-Mephenytoin](#s-mephenytoin)
   * [3 Concentration-Time Profiles](#3-concentration-time-profiles)
     * [3.1 Omeprazole - Moclobemide DDI](#31-omeprazole---moclobemide-ddi)
     * [3.2 Omeprazole - Fluvoxamine DDI](#32-omeprazole---fluvoxamine-ddi)
@@ -73,21 +81,21 @@ To qualify the developed models for the prediction of the CYP2C19 DDI potential 
 The following perpetrator compounds were selected: 
 
 - **Fluvoxamine** (strong CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **alt_v1.0**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/alt_v1.0
 - **Omeprazole** (moderate CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.1
 - **Moclobemide** (moderate CYP2C19 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.1
 
 
 The following sensitive CYP2C19 substrates as victim drugs were selected:
 
 - **Omeprazole**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Omeprazole-Model/releases/tag/v1.1
 - **S-Mephenytoin**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/S-Mephenytoin-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/S-Mephenytoin-Model/releases/tag/v1.1
 - **Moclobemide**
-  Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.0
+  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Moclobemide-Model/releases/tag/v1.1
 
 The following interaction studies were predicted and used to qualify/optimize the final network:
 
@@ -233,6 +241,166 @@ GMFE (CMAX) = 1.173692
 |15002 |Fluvoxamine, 45.8 mg, PO, |S-Mephenytoin, PO|6.336              |6.7               |0.94567           |2.492               |2.4                |1.0383             |Yao 2003           |
 |15003 |Fluvoxamine, 64.1 mg, PO, |S-Mephenytoin, PO|8.076              |9.89              |0.81658           |2.6329              |2.42               |1.088              |Yao 2003           |
 |10027 |Omeprazole, 40 mg, PO,    |Moclobemide , PO |1.3133             |1.31              |1.0025            |0.94799             |1.11               |0.85404            |Yu 2001            |
+
+## Perpetrator
+
+### Fluvoxamine
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.312656 
+
+GMFE (CMAX) = 1.174613 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |5     |-        |
+|Points within Guest et al.|3     |60       |
+|Points within 2-fold      |4     |80       |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |5     |-        |
+|Points within Guest et al.|3     |60       |
+|Points within 2-fold      |5     |100      |
+
+### Moclobemide
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.245930 
+
+GMFE (CMAX) = 1.172789 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |2     |-        |
+|Points within Guest et al.|1     |50       |
+|Points within 2-fold      |2     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |2     |-        |
+|Points within Guest et al.|1     |50       |
+|Points within 2-fold      |2     |100      |
+
+### Omeprazole
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.002530 
+
+GMFE (CMAX) = 1.170904 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|1     |100      |
+|Points within 2-fold      |1     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|0     |0        |
+|Points within 2-fold      |1     |100      |
+
+## Victim
+
+### Moclobemide
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.002530 
+
+GMFE (CMAX) = 1.170904 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|1     |100      |
+|Points within 2-fold      |1     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |1     |-        |
+|Points within Guest et al.|0     |0        |
+|Points within 2-fold      |1     |100      |
+
+### Omeprazole
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.403132 
+
+GMFE (CMAX) = 1.282224 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |4     |-        |
+|Points within Guest et al.|1     |25       |
+|Points within 2-fold      |3     |75       |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |4     |-        |
+|Points within Guest et al.|1     |25       |
+|Points within 2-fold      |4     |100      |
+
+### S-Mephenytoin
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.159976 
+
+GMFE (CMAX) = 1.043965 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |3     |-        |
+|Points within Guest et al.|3     |100      |
+|Points within 2-fold      |3     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |3     |-        |
+|Points within Guest et al.|3     |100      |
+|Points within 2-fold      |3     |100      |
 
 # 3 Concentration-Time Profiles
 The following section shows concentration time profiles of the victim drugs of the simulated DDI studies in comparison to observed data.
