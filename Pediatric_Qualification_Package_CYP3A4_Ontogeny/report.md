@@ -4,10 +4,10 @@
 
 
 
-| Version                         | 1.3-OSP10.0                                                  |
+| Version                         | 1.4-OSP11.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP3A4_Ontogeny/releases/tag/v1.3 |
-| OSP Version                     | 10.0                                                         |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP3A4_Ontogeny/releases/tag/v1.4 |
+| OSP Version                     | 11.0                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
 
@@ -57,9 +57,6 @@ To qualify the OSP suite for the pediatric translation of the pharmacokinetics o
 - Alfentanil [[Alfentanil-Model](#3-references)]
 
 - Sufentanil [[Sufentanil-Model](#3-references)]
-
-The adult PBPK model reports and the corresponding PK-Sim project files are filed at: https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library/
-
 
 # 2 Pediatric translation qualification results
 ## Evaluation of Pediatric translation
@@ -117,7 +114,7 @@ GMFE (AUC) = 1.248221
 |den Hollander 1992|0.92   |6.149          |17.7933                  |15.9                    |1.1191            |
 |den Hollander 1992|1.3    |10.4           |21.2314                  |24.3                    |0.87372           |
 |den Hollander 1992|9      |25.6           |19.4014                  |11.3                    |1.7169            |
-|den Hollander 1992|3.5    |14.4           |18.8753                  |18.6                    |1.0148            |
+|den Hollander 1992|3.5    |14.4           |18.8752                  |18.6                    |1.0148            |
 |den Hollander 1992|5.5    |19.5           |18.9084                  |20.7                    |0.91345           |
 |den Hollander 1992|3.5    |18.5           |20.4828                  |22.7                    |0.90233           |
 |Meistelman 1987   |4.7    |20             |0.0040913                |0.0058824               |0.69552           |
@@ -220,7 +217,7 @@ GMFE (AUC) = 1.244097
 |den Hollander 1992|0.92   |6.149          |17.7933                 |15.9                   |1.1191            |
 |den Hollander 1992|1.3    |10.4           |21.2314                 |24.3                   |0.87372           |
 |den Hollander 1992|9      |25.6           |19.4014                 |11.3                   |1.7169            |
-|den Hollander 1992|3.5    |14.4           |18.8753                 |18.6                   |1.0148            |
+|den Hollander 1992|3.5    |14.4           |18.8752                 |18.6                   |1.0148            |
 |den Hollander 1992|5.5    |19.5           |18.9084                 |20.7                   |0.91345           |
 |den Hollander 1992|3.5    |18.5           |20.4828                 |22.7                   |0.90233           |
 |Meistelman 1987   |4.7    |20             |0.0040913               |0.0058824              |0.69552           |
