@@ -1,9 +1,15 @@
 # CYP1A2 DDI Qualification
 
-| Version                         | 1.2-OSP10.0 |
-| ------------------------------- | ---------- |
-| OSP Version                     | 10.0        |
-| Qualification Framework Version | 2.3        |
+
+
+
+| Version                         | 1.2-OSP11.0                                                   |
+| ------------------------------- | ------------------------------------------------------------ |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP1A2/releases/tag/v1.2 |
+| OSP Version                     | 11.0                                                          |
+| Qualification Framework Version | 2.3                                                          |
+
+
 
 
 
@@ -250,9 +256,9 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.396315 
+GMFE (AUC) = 1.396312 
 
-GMFE (CMAX) = 1.219298 
+GMFE (CMAX) = 1.219248 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -266,16 +272,16 @@ GMFE (CMAX) = 1.219298
 |Points within Guest et al.|7     |87.5     |
 |Points within 2-fold      |8     |100      |
 
-|DataID|Perpetrator                       |Victim        |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference       |
-|-----:|---------------------------------:|-------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|---------------:|
-|14002 |Ethinylestradiol, 50 0, mg, PO,   |Tizanidine, PO|4.4138             |3.92              |1.126             |3.7512              |3.02               |1.2421             |Granfors 2005   |
-|14004 |Fluvoxamine, 49 00, mg, PO,       |Caffeine, PO  |10.0997            |7.16              |1.4106            |1.0791              |1.09               |0.98999            |Jeppesen 1996   |
-|14006 |Fluvoxamine, 49 00, mg, PO,       |Caffeine, PO  |13.8497            |13.71             |1.0102            |1.3449              |1.4                |0.96065            |Culm-Merdek 2005|
-|13017 |Fluvoxamine, 49 00, mg, PO,       |Tizanidine, PO|39.2197            |33                |1.1885            |16.0045             |12.1               |1.3227             |Granfors 2004   |
-|14008 |Mexiletine, 50 00, mg, PO,        |Caffeine, PO  |1.6676             |2.83              |0.58924           |1.0001              |1.89               |0.52917            |Joeres 1987     |
-|13018 |Mexiletine, 53 0, mg, PO,         |Tizanidine, PO|2.4837             |3.42              |0.72624           |2.4179              |3.22               |0.75089            |Momo 2010       |
-|14010 |Fluvoxamine, 53 0, mg, PO,        |Mexiletine, PO|1.3081             |1.55              |0.84396           |1.081               |1.16               |0.93188            |Kusumoto 2001   |
-|6110  |Ethinylestradiol, 48 .03, mg, PO, |Caffeine, PO  |5.8294             |2.13              |2.7368            |1.0983              |1.15               |0.95502            |Balogh 1995     |
+|DataID|Perpetrator                    |Victim        |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference       |
+|-----:|------------------------------:|-------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|---------------:|
+|14002 |Ethinylestradiol, 20 mg, PO,   |Tizanidine, PO|4.4136             |3.92              |1.1259            |3.751               |3.02               |1.2421             |Granfors 2005   |
+|14004 |Fluvoxamine, 100 mg, PO,       |Caffeine, PO  |10.1               |7.16              |1.4106            |1.0794              |1.09               |0.99028            |Jeppesen 1996   |
+|14006 |Fluvoxamine, 100 mg, PO,       |Caffeine, PO  |13.8497            |13.71             |1.0102            |1.3449              |1.4                |0.96065            |Culm-Merdek 2005|
+|13017 |Fluvoxamine, 100 mg, PO,       |Tizanidine, PO|39.2197            |33                |1.1885            |16.0045             |12.1               |1.3227             |Granfors 2004   |
+|14008 |Mexiletine, 200 mg, PO,        |Caffeine, PO  |1.6676             |2.83              |0.58924           |1.0001              |1.89               |0.52917            |Joeres 1987     |
+|13018 |Mexiletine, 50 mg, PO,         |Tizanidine, PO|2.4837             |3.42              |0.72624           |2.4179              |3.22               |0.75089            |Momo 2010       |
+|14010 |Fluvoxamine, 50 mg, PO,        |Mexiletine, PO|1.3081             |1.55              |0.84396           |1.081               |1.16               |0.93188            |Kusumoto 2001   |
+|6110  |Ethinylestradiol, 0.03 mg, PO, |Caffeine, PO  |5.8295             |2.13              |2.7368            |1.0983              |1.15               |0.95502            |Balogh 1995     |
 
 ## Perpetrator
 
@@ -289,9 +295,9 @@ GMFE (CMAX) = 1.219298
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/001_Perpetrator/001_Ethinylestradiol/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.755445 
+GMFE (AUC) = 1.755403 
 
-GMFE (CMAX) = 1.140449 
+GMFE (CMAX) = 1.140423 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -315,9 +321,9 @@ GMFE (CMAX) = 1.140449
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/001_Perpetrator/002_Fluvoxamine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.190193 
+GMFE (AUC) = 1.190201 
 
-GMFE (CMAX) = 1.105288 
+GMFE (CMAX) = 1.105209 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -341,9 +347,9 @@ GMFE (CMAX) = 1.105288
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/001_Perpetrator/003_Mexiletine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.528666 
+GMFE (AUC) = 1.528665 
 
-GMFE (CMAX) = 1.586401 
+GMFE (CMAX) = 1.586400 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -369,9 +375,9 @@ GMFE (CMAX) = 1.586401
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/002_Victim/001_Caffeine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.603936 
+GMFE (AUC) = 1.603950 
 
-GMFE (CMAX) = 1.201017 
+GMFE (CMAX) = 1.200931 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -397,7 +403,7 @@ GMFE (CMAX) = 1.201017
 
 GMFE (AUC) = 1.184895 
 
-GMFE (CMAX) = 1.073103 
+GMFE (CMAX) = 1.073104 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -421,9 +427,9 @@ GMFE (CMAX) = 1.073103
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/002_Victim/003_Tizanidine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.225971 
+GMFE (AUC) = 1.225948 
 
-GMFE (CMAX) = 1.298217 
+GMFE (CMAX) = 1.298197 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -515,7 +521,7 @@ The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and C
 
 **Culm-Merdek 2005** Culm-Merdek KE, Von Moltke LL, Harmatz JS, Greenblatt DJ. Fluvoxamine impairs single-dose caffeine clearance without altering caffeine pharmacodynamics. Br J Clin Pharmacol. 2005;60(5):486-493.
 
-**FDA** U.S. Food and Drug Administration. Drug development and drug interactions: table of substrates, inhibitors and inducers. <Website https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers (2017). Accessed 04 March 2019.
+**FDA** U.S. Food and Drug Administration. Drug development and drug interactions: table of substrates, inhibitors and inducers. Website: https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers (2020). Accessed 06 May 2022.
 
 **Goldstein 2001** Goldstein JA., J. A. (2001). Clinical relevance of genetic polymorphisms in the human CYP2C subfamily. *Br J Clin Pharmacol*. 2001;British journal of clinical pharmacology, 52(4):), 349-355.
 
@@ -539,7 +545,7 @@ The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and C
 
 **Wei 1999** Wei X, Dai R, Zhai S, Thummel KE, Friedman FK, Vestal RE. Inhibition of human liver cytochrome P-450 1A2 by the class IB antiarrhythmics mexiletine, lidocaine, and tocainide. *J Pharmacol Exp Ther*. 1999;289(2):853-858.
 
-**Zhou 2009** Zhou, S-. F,., Yang, L-. P,., Zhou, Z-. W,., Liu, Y-. H,., & Chan, E. (2009). Insights into the Substrate Specificity, Inhibitors, Regulationsubstrate specificity, inhibitors, regulation, and Polymorphismspolymorphisms and the Clinical Impactclinical impact of Human Cytochromehuman cytochrome P450 1A2. The *AAPS J*. 2009;journal, 11(3):), 481-494.
+**Zhou 2009** Zhou SF, Yang LP, Zhou ZW, Liu YH, Chan E. Insights into the substrate specificity, inhibitors, regulation, and polymorphisms and the clinical impact of human cytochrome P450 1A2. AAPS J. 2009 Sep;11(3):481-94. doi: 10.1208/s12248-009-9127-y. Epub 2009 Jul 10. PMID: 19590965; PMCID: PMC2758120.
 
 # 6 Appendix
                    
@@ -690,7 +696,7 @@ The automated execution of the described workflow can be triggered to assess re-
 | q.d.    | Once daily (quaque diem)                                     |
 | SD      | Single Dose                                                  |
 | SE      | Standard error                                               |
-| s.d.SPC | Single doseSummary of Product Characteristics                |
+| s.d.SPC | Single dose Summary of Product Characteristics                |
 | SD      | Standard deviation                                           |
 | TDI     | Time dependent inhibition                                    |
 | t.i.d   | Three times a day (ter in die)                               |

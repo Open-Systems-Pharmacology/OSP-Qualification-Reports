@@ -3,10 +3,10 @@
 
 
 
-| Version                         | 1.2-OSP10.0                                                   |
+| Version                         | 1.3-OSP11.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/v1.2 |
-| OSP Version                     | 10.0                                                          |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/v1.3 |
+| OSP Version                     | 11.0                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
 
@@ -101,41 +101,6 @@ The mefenamic acid / dapagliflozin interaction was evaluated using 1 clinical DD
 
 
 # 2 Qualification of Use Case UGT-mediated DDI
-                   
-
-![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/001_plotDDIRatioAUCPredictedVsObserved.png)
-
-![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/002_plotDDIRatioAUCResidualsVsObserved.png)
-
-![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/003_plotDDIRatioCMAXPredictedVsObserved.png)
-
-![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
-
-GMFE (AUC) = 1.137938 
-
-GMFE (CMAX) = 1.102996 
-
-|AUC                       |Number|Ratio [%]|
-|-------------------------:|-----:|--------:|
-|Points total              |5     |-        |
-|Points within Guest et al.|5     |100      |
-|Points within 2-fold      |5     |100      |
-
-|CMAX                      |Number|Ratio [%]|
-|-------------------------:|-----:|--------:|
-|Points total              |5     |-        |
-|Points within Guest et al.|4     |80       |
-|Points within 2-fold      |5     |100      |
-
-|DataID|Perpetrator                                                                       |Victim           |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference          |
-|-----:|---------------------------------------------------------------------------------:|----------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|------------------:|
-|571   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4686             |1.72              |0.85385           |1.3544              |1.53               |0.88524            |Iwamoto 2008       |
-|575   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4198             |1.67              |0.85015           |1.3293              |1.16               |1.1459             |Krishna 2016       |
-|573   |Atazanavir, 400 mg, PO, MD OD (8 days)                                            |Raltegravir, PO  |1.4393             |1.72              |0.83682           |1.1171              |1.37               |0.81539            |Neely 2010         |
-|579   |Atazanavir, 400 mg, PO, MD BID (14 days)                                          |Raltegravir, PO  |1.5654             |1.536             |1.0191            |1.3869              |1.394              |0.99493            |Zhu 2010           |
-|642   |Mefenamic Acid, 500 / 250 mg, PO, MD QID (4 days), with first dose ad loading dose|Dapagliflozin, PO|1.3277             |1.51              |0.87928           |1.1561              |1.13               |1.0231             |Kasichayanula 2013a|
-
-# 3 Concentration-Time Profiles
 The following section shows the correlations between observed and model-predicted AUC and C<sub>max</sub> ratios, respectively.
 
 Specifically, the PBPK model performance for the PK parameters **AUC ratio (AUCR)** and **C<sub>max</sub> ratio (CMAXR)** is assessed via:
@@ -169,6 +134,47 @@ In the plots,
 
 
 ***
+
+
+![001_plotDDIRatioAUCPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/001_plotDDIRatioAUCPredictedVsObserved.png)
+
+![002_plotDDIRatioAUCResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/002_plotDDIRatioAUCResidualsVsObserved.png)
+
+![003_plotDDIRatioCMAXPredictedVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/003_plotDDIRatioCMAXPredictedVsObserved.png)
+
+![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
+
+GMFE (AUC) = 1.137874 
+
+GMFE (CMAX) = 1.102917 
+
+|AUC                       |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |5     |-        |
+|Points within Guest et al.|5     |100      |
+|Points within 2-fold      |5     |100      |
+
+|CMAX                      |Number|Ratio [%]|
+|-------------------------:|-----:|--------:|
+|Points total              |5     |-        |
+|Points within Guest et al.|4     |80       |
+|Points within 2-fold      |5     |100      |
+
+|DataID|Perpetrator                                                                       |Victim           |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference          |
+|-----:|---------------------------------------------------------------------------------:|----------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|------------------:|
+|571   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4686             |1.72              |0.85385           |1.3544              |1.53               |0.88524            |Iwamoto 2008       |
+|575   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4205             |1.67              |0.85057           |1.33                |1.16               |1.1466             |Krishna 2016       |
+|573   |Atazanavir, 400 mg, PO, MD OD (8 days)                                            |Raltegravir, PO  |1.4397             |1.72              |0.83705           |1.1175              |1.37               |0.81568            |Neely 2010         |
+|579   |Atazanavir, 400 mg, PO, MD BID (14 days)                                          |Raltegravir, PO  |1.5661             |1.536             |1.0196            |1.3877              |1.394              |0.9955             |Zhu 2010           |
+|642   |Mefenamic Acid, 500 / 250 mg, PO, MD QID (4 days), with first dose ad loading dose|Dapagliflozin, PO|1.3277             |1.51              |0.87928           |1.1561              |1.13               |1.0231             |Kasichayanula 2013a|
+
+# 3 Concentration-Time Profiles
+The published DDI study between the respective perpetrator and victim drug was simulated and compared to observed data.
+
+[Section 3.1](#31-atazanavir---raltegravir-ddi) shows concentration time profiles of raltegravir for the four clinical studies between atazanavir and raltegravir ([Iwamoto 2008](#4-references), [Krishna 2008](#4-references), [Neely 2010](#4-references), [Zhu 2010](#4-references)).
+
+[Section 3.2](#32-mefenamic-acid---dapagliflozin-ddi) shows concentration time profiles of dapagliflozin of the clinical study between mefenamic acid and dapagliflozin ([Kasichayanula 2013](#4-references)).
+
 
 
 ## 3.1 Atazanavir - Raltegravir DDI
@@ -214,11 +220,11 @@ individuals. Antiviral therapy. 2010;15(8):1107-14.
                    
 
 ## 5.1 Open Systems Pharmacology Suite (OSPS) Introduction
-Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#References-for-OSPS-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
+Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#references-for-osps-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
 
-Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#References-for-OSPS-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#References-for-OSPS-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#References-for-OSPS-introduction)] or that of Rodgers and Rowland [[5-7](#References-for-OSPS-introduction)]. 
+Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#references-for-osps-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#references-for-osps-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#references-for-osps-introduction)] or that of Rodgers and Rowland [[5-7](#references-for-osps-introduction)]. 
 
-Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#References-for-OSPS-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#References-for-OSPS-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#References-for-OSPS-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
+Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#references-for-osps-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#references-for-osps-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#references-for-osps-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
 
 
 **Figure** **1: Structure of the Whole Body PBPK Model integrated in PK-Sim®**
