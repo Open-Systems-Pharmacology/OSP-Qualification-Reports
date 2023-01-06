@@ -2,11 +2,10 @@
 
 
 
-
-| Version                         | 1.2-OSP11.0                                                   |
+| Version                         | 1.2-OSP11.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP1A2/releases/tag/v1.2 |
-| OSP Version                     | 11.0                                                          |
+| OSP Version                     | 11.1                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
 
@@ -463,8 +462,6 @@ The following section shows concentration time profiles of the victim drugs of t
 
 ## 3.3 Tizanidine - Fluvoxamine DDI
                    
-
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Tizanidine_-_Fluvoxamine_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.4 Tizanidine - Mexiletine DDI
                    
