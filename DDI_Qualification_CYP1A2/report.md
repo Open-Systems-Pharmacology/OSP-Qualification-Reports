@@ -463,6 +463,8 @@ The following section shows concentration time profiles of the victim drugs of t
 ## 3.3 Tizanidine - Fluvoxamine DDI
                    
 
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Tizanidine_-_Fluvoxamine_DDI/001_plotComparisonTimeProfile.png)
+
 ## 3.4 Tizanidine - Mexiletine DDI
                    
 
