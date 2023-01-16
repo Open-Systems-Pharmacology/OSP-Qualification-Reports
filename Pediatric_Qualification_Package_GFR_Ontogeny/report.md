@@ -3,10 +3,10 @@
 
 
 
-| Version                         | 1.3-OSP11.0                                                   |
+| Version                         | 1.3-OSP11.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v1.3 |
-| OSP Version                     | 11.0                                                          |
+| OSP Version                     | 11.1                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
 
@@ -190,6 +190,8 @@ GMFE (CL) = 1.219861
 #### Concentration-Time Profiles
 
 For Amikacin, there were no reported plasma concentration-time data available from literature. Therefore only a comparison of predicted versus observed PK-parameters was made to evaluate the predictive performance of the Amikacin PBPK model in children. [[Section 2.1](#21-amikacin-pk-ratio-tables-and-figures)]
+
+
 ## 2.3 Vancomycin PK Ratio tables and Figures
 ### Vancomycin model
 
