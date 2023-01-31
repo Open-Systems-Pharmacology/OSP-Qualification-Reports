@@ -4,10 +4,10 @@
 
 
 
-| Version                         | 1.4-OSP11.0                                                   |
+| Version                         | 1.4-OSP11.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP3A4_Ontogeny/releases/tag/v1.4 |
-| OSP Version                     | 11.0                                                          |
+| OSP Version                     | 11.1                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
 
@@ -57,6 +57,9 @@ To qualify the OSP suite for the pediatric translation of the pharmacokinetics o
 - Alfentanil [[Alfentanil-Model](#3-references)]
 
 - Sufentanil [[Sufentanil-Model](#3-references)]
+
+The adult PBPK model reports and the corresponding PK-Sim project files are filed at: https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library/
+
 
 # 2 Pediatric translation qualification results
 ## Evaluation of Pediatric translation
