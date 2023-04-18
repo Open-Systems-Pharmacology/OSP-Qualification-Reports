@@ -3,10 +3,10 @@
 
 
 
-| Version                         | 1.3-OSP11.1                                                   |
+| Version                         | 1.3-OSP11.2                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v1.3 |
-| OSP Version                     | 11.1                                                          |
+| OSP Version                     | 11.2                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
 
@@ -75,58 +75,6 @@ The ratios of predicted over observed mean AUC or CL values from all compound we
 
 In the next sections the demographics as well as the evaluation results of the predictive performance of the specific compound PBPK models in children can be found.  
 
-
-![005_plotPKRatioCL.png](images/002_2_Pediatric_translation_qualification/005_plotPKRatioCL.png)
-
-GMFE (CL) = 1.258017 
-
-|CL                    |Number|Ratio [%]|
-|---------------------:|-----:|--------:|
-|Points total          |39    |-        |
-|Points within 1.5 fold|32    |82.0513  |
-|Points within 2-fold  |38    |97.4359  |
-
-|Study ID       |Age [y]  |BodyWeight [kg]|Predicted CL [ml/min/kg]|Observed CL [ml/min/kg]|Pred/Obs CL Ratio|
-|--------------:|--------:|--------------:|-----------------------:|----------------------:|----------------:|
-|Vogelstein 1977|15       |77             |1.2386                  |1.74                   |0.71181          |
-|Vogelstein 1977|15       |62.5           |1.3748                  |1.44                   |0.95476          |
-|Vogelstein 1977|9        |21.5           |2.1428                  |2.56                   |0.83703          |
-|Vogelstein 1977|13       |51             |1.3754                  |1.35                   |1.0188           |
-|Vogelstein 1977|12       |27.1902        |2.4773                  |2.64                   |0.93839          |
-|Vogelstein 1977|7        |27.4           |1.7874                  |2.19                   |0.81617          |
-|Vogelstein 1977|4        |14             |2.4482                  |4.22                   |0.58013          |
-|Vogelstein 1977|6        |17.3           |2.4921                  |2.63                   |0.94756          |
-|Vogelstein 1977|6        |15.5           |2.6032                  |4.26                   |0.61107          |
-|Vogelstein 1977|7        |15.9           |2.7463                  |2.3                    |1.1941           |
-|Vogelstein 1977|14       |39.5           |1.8313                  |1.91                   |0.95879          |
-|Vogelstein 1977|10       |32.8           |1.9309                  |2.3                    |0.83954          |
-|Vogelstein 1977|14       |45.5           |1.8002                  |2.23                   |0.80729          |
-|Vogelstein 1977|11       |35.2           |1.9073                  |2.58                   |0.73927          |
-|Vogelstein 1977|13       |27.7           |2.2178                  |2.86                   |0.77547          |
-|Vogelstein 1977|8        |20.8           |2.4815                  |2.88                   |0.86162          |
-|Vogelstein 1977|6        |15.5           |2.5751                  |3.31                   |0.77799          |
-|Vogelstein 1977|13       |49             |1.428                   |1.88                   |0.75956          |
-|Vogelstein 1977|7        |20.6           |2.3606                  |2.06                   |1.1459           |
-|Vogelstein 1977|16       |35.0809        |2.2115                  |2.47                   |0.89535          |
-|Treluyer 2002  |0.013333 |3.5867         |0.070272                |0.053                  |1.3259           |
-|Treluyer 2002  |0.04     |3.76           |0.080791                |0.073                  |1.1067           |
-|Treluyer 2002  |0.065833 |3.9279         |0.092732                |0.095                  |0.97612          |
-|Treluyer 2002  |0.079167 |4.0146         |0.099088                |0.106                  |0.9348           |
-|Treluyer 2002  |0.10583  |4.1879         |0.11119                 |0.118                  |0.94232          |
-|Treluyer 2002  |0.14583  |4.4479         |0.12642                 |0.12                   |1.0535           |
-|Treluyer 2002  |0.51583  |6.8529         |0.14655                 |0.127                  |1.1539           |
-|Treluyer 2002  |0.7675   |8.4888         |0.14415                 |0.15                   |0.96098          |
-|Treluyer 2002  |2.0242   |12.3044        |0.13469                 |0.181                  |0.74412          |
-|Treluyer 2002  |4.0608   |16.8869        |0.12606                 |0.19                   |0.66347          |
-|Treluyer 2002  |6.085    |21.821         |0.12142                 |0.196                  |0.6195           |
-|Treluyer 2002  |7.09     |24.434         |0.12008                 |0.177                  |0.67841          |
-|Belfayol 1996  |7        |23.5           |46.5991                 |56.3                   |0.82769          |
-|Schaad 1980    |0.0071184|3.07           |4.0924                  |3.6416                 |1.1238           |
-|Schaad 1980    |0.25833  |4.9            |10.5784                 |8.0925                 |1.3072           |
-|Schaad 1980    |0.35833  |5.2            |11.9254                 |14.0462                |0.84901          |
-|Schaad 1980    |3.917    |15.5           |28.7895                 |61.2428                |0.47009          |
-|Schaad 1980    |5.583    |20             |34.7354                 |59.0636                |0.5881           |
-|Schaad 1980    |7.583    |26.7           |42.4893                 |74.3584                |0.57141          |
 
 ## 2.1 Amikacin PK Ratio tables and Figures
 ### Amikacin model
