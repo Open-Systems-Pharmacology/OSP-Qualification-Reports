@@ -3,9 +3,9 @@
 
 
 
-| Version                         | 1.4-OSP11.2                                                   |
+| Version                         | 1.5-OSP11.2                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v1.4 |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v1.5 |
 | OSP Version                     | 11.2                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
@@ -181,7 +181,7 @@ The published DDI studies between the respective perpetrators and victim drugs w
 
 ### Cimetidine - Alfentanil DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Cimetidine-Alfentanil-DDI/releases/tag/v1.1.
+https://github.com/Open-Systems-Pharmacology/Cimetidine-Alfentanil-DDI/releases/tag/v1.2.
 
 The cimetidine-alfentanil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Kienlen 1993](#4-references)).
 
@@ -194,7 +194,7 @@ The cimetidine-alfentanil interaction was evaluated using a single clinical DDI 
 
 ### Cimetidine - Alprazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Cimetidine-Alprazolam-DDI/releases/tag/v1.1.
+https://github.com/Open-Systems-Pharmacology/Cimetidine-Alprazolam-DDI/releases/tag/v1.2.
 
 The cimetidine-alprazolam interaction was evaluated using two clinical DDI studies quantifying the interaction following two different dosing regimens ([Pourbaix 1985](#4-references), [Abernethy 1983](#4-references)).
 
@@ -208,7 +208,7 @@ The cimetidine-alprazolam interaction was evaluated using two clinical DDI studi
 
 ### Cimetidine - Midazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Cimetidine-Midazolam-DDI/releases/tag/v1.1.
+https://github.com/Open-Systems-Pharmacology/Cimetidine-Midazolam-DDI/releases/tag/v1.2.
 
 The cimetidine-midazolam interaction was evaluated using five clinical DDI studies quantifying the interaction following six different dosing regimens ([Elliott 1984](#4-references), [Fee 1987](#4-references), [Greenblatt 1986](#4-references), [Martinez 1999](#4-references), [Salonen 1986](#4-references)).
 
@@ -226,7 +226,7 @@ The cimetidine-midazolam interaction was evaluated using five clinical DDI studi
 
 ### Cimetidine - Triazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Cimetidine-Triazolam-DDI/releases/tag/v1.1.
+https://github.com/Open-Systems-Pharmacology/Cimetidine-Triazolam-DDI/releases/tag/v1.2.
 
 The cimetidine-triazolam interaction was evaluated using four clinical DDI studies quantifying the interaction following four different dosing regimens ([Pourbaix 1985](#4-references), [Abernethy 1983](#4-references), [Cox 1986](#4-references), [Friedman 1988](#4-references)).
 
@@ -242,7 +242,7 @@ The cimetidine-triazolam interaction was evaluated using four clinical DDI studi
 
 ### Cimetidine - Verapamil DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Cimetidine-Verapamil-DDI/releases/tag/v1.1.
+https://github.com/Open-Systems-Pharmacology/Cimetidine-Verapamil-DDI/releases/tag/v1.2.
 
 The cimetidine-verapamil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Smith 1984](#4-references)).
 
@@ -705,39 +705,39 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.400949 
+GMFE (AUC) = 1.391422 
 
-GMFE (CMAX) = 1.350118 
+GMFE (CMAX) = 1.348898 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |153   |-        |
-|Points within Guest et al.|109   |71.2418  |
-|Points within 2-fold      |132   |86.2745  |
+|Points within Guest et al.|110   |71.8954  |
+|Points within 2-fold      |134   |87.5817  |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |102   |-        |
-|Points within Guest et al.|61    |59.8039  |
+|Points within Guest et al.|59    |57.8431  |
 |Points within 2-fold      |92    |90.1961  |
 
 |DataID|Perpetrator                                                                                                                                                                                                                       |Victim                  |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference             |
 |-----:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-----------------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|---------------------:|
-|1344  |Cimetidine, 1200 mg, IV, MD OD (2 days)                                                                                                                                                                                           |Alfentanil, IV          |1.1005             |2.8031            |0.39259           |1.0067              |-                  |-                  |Kienlen 1993          |
-|1332  |Cimetidine, 300 mg, PO, MD QID (1 day)                                                                                                                                                                                            |Alprazolam, PO          |1.0071             |1.581             |0.63703           |1.0024              |1.0323             |0.97108            |Abernethy 1983        |
-|1340  |Cimetidine, 200/400 mg, PO, (200mg): MD TID (17 days); (400mg): OD (17 days)                                                                                                                                                      |Alprazolam, PO          |1.0148             |1.7279            |0.58732           |1.0083              |1.8187             |0.55443            |Pourbaix 1985         |
-|1319  |Cimetidine, 300 mg, PO, MD QID (2 days)                                                                                                                                                                                           |Midazolam, IV           |1.0091             |0.89256           |1.1305            |1.0001              |-                  |-                  |Greenblatt 1986       |
-|1321  |Cimetidine, 300 mg, PO, MD QID (2 days)                                                                                                                                                                                           |Midazolam, PO           |1.0497             |1.1329            |0.92657           |1.0312              |1.0556             |0.97689            |Greenblatt 1986       |
-|1322  |Cimetidine, 800 mg, PO, SD                                                                                                                                                                                                        |Midazolam, PO           |1.1872             |1.4973            |0.7929            |1.1184              |-                  |-                  |Martinez 1999         |
-|1324  |Cimetidine, 400 mg, PO, MD: BID (1 day), OD (1 day)                                                                                                                                                                               |Midazolam, PO           |1.0649             |1.3456            |0.79137           |1.0292              |-                  |-                  |Fee 1987              |
-|1326  |Cimetidine, 400 mg, PO, SD                                                                                                                                                                                                        |Midazolam, PO           |1.0223             |1.3649            |0.74899           |1.0209              |1.3732             |0.74344            |Salonen 1986          |
-|1346  |Cimetidine, 200/400 mg, PO, (200mg): MD TID (1 day), OD (1 day); (400mg): OD (1 day)                                                                                                                                              |Midazolam, PO           |1.0072             |2.016             |0.49959           |1.0063              |2.3833             |0.42223            |Elliott 1984          |
-|1334  |Cimetidine, 300 mg, PO, MD QID (1 day)                                                                                                                                                                                            |Triazolam, PO           |1.2187             |1.5429            |0.78992           |1.1597              |1.2041             |0.96316            |Abernethy 1983        |
-|1336  |Cimetidine, 300 mg, PO, MD QID (2 days)                                                                                                                                                                                           |Triazolam, PO           |1.2202             |1.323             |0.92231           |1.1598              |1.3902             |0.83426            |Friedman 1988         |
-|1342  |Cimetidine, 200/400 mg, PO, (200mg): MD TID (17 days); (400mg): OD (17 days)                                                                                                                                                      |Triazolam, PO           |1.2621             |2.2013            |0.57334           |1.191               |1.5109             |0.78826            |Pourbaix 1985         |
-|1338  |Cimetidine, 300 mg, PO, MD QID (1 day)                                                                                                                                                                                            |Triazolam, intraduodenal|1.1431             |1.5455            |0.73968           |1.087               |1.3509             |0.80463            |Cox 1986              |
-|1328  |Cimetidine, 300 mg, PO, MD QID (9 days)                                                                                                                                                                                           |Verapamil, IV           |1.0025             |0.70769           |1.4166            |1                   |0.95924            |1.0425             |Smith 1984            |
-|1330  |Cimetidine, 300 mg, PO, MD QID (9 days)                                                                                                                                                                                           |Verapamil, PO           |1.2595             |1.3697            |0.91958           |1.2168              |1.1333             |1.0736             |Smith 1984            |
+|1344  |Cimetidine, 1200 mg, IV, MD OD (2 days)                                                                                                                                                                                           |Alfentanil, IV          |1.5337             |2.8031            |0.54713           |1.02                |-                  |-                  |Kienlen 1993          |
+|1332  |Cimetidine, 300 mg, PO, MD QID (1 day)                                                                                                                                                                                            |Alprazolam, PO          |1.0537             |1.581             |0.66648           |1.0166              |1.0323             |0.98481            |Abernethy 1983        |
+|1340  |Cimetidine, 200/400 mg, PO, (200mg): MD TID (17 days); (400mg): OD (17 days)                                                                                                                                                      |Alprazolam, PO          |1.12               |1.7279            |0.64821           |1.0661              |1.8187             |0.58622            |Pourbaix 1985         |
+|1319  |Cimetidine, 300 mg, PO, MD QID (2 days)                                                                                                                                                                                           |Midazolam, IV           |1.0773             |0.89256           |1.2069            |1.0008              |-                  |-                  |Greenblatt 1986       |
+|1321  |Cimetidine, 300 mg, PO, MD QID (2 days)                                                                                                                                                                                           |Midazolam, PO           |1.3737             |1.1329            |1.2126            |1.2276              |1.0556             |1.163              |Greenblatt 1986       |
+|1322  |Cimetidine, 800 mg, PO, SD                                                                                                                                                                                                        |Midazolam, PO           |1.8818             |1.4973            |1.2567            |1.5031              |-                  |-                  |Martinez 1999         |
+|1324  |Cimetidine, 400 mg, PO, MD: BID (1 day), OD (1 day)                                                                                                                                                                               |Midazolam, PO           |1.3817             |1.3456            |1.0268            |1.1835              |-                  |-                  |Fee 1987              |
+|1326  |Cimetidine, 400 mg, PO, SD                                                                                                                                                                                                        |Midazolam, PO           |1.1679             |1.3649            |0.85567           |1.1607              |1.3732             |0.84521            |Salonen 1986          |
+|1346  |Cimetidine, 200/400 mg, PO, (200mg): MD TID (1 day), OD (1 day); (400mg): OD (1 day)                                                                                                                                              |Midazolam, PO           |1.0634             |2.016             |0.52745           |1.0544              |2.3833             |0.4424             |Elliott 1984          |
+|1334  |Cimetidine, 300 mg, PO, MD QID (1 day)                                                                                                                                                                                            |Triazolam, PO           |1.8049             |1.5429            |1.1698            |1.5227              |1.2041             |1.2646             |Abernethy 1983        |
+|1336  |Cimetidine, 300 mg, PO, MD QID (2 days)                                                                                                                                                                                           |Triazolam, PO           |1.8244             |1.323             |1.379             |1.5229              |1.3902             |1.0955             |Friedman 1988         |
+|1342  |Cimetidine, 200/400 mg, PO, (200mg): MD TID (17 days); (400mg): OD (17 days)                                                                                                                                                      |Triazolam, PO           |1.8976             |2.2013            |0.86204           |1.6023              |1.5109             |1.0605             |Pourbaix 1985         |
+|1338  |Cimetidine, 300 mg, PO, MD QID (1 day)                                                                                                                                                                                            |Triazolam, intraduodenal|1.6103             |1.5455            |1.042             |1.4062              |1.3509             |1.0409             |Cox 1986              |
+|1328  |Cimetidine, 300 mg, PO, MD QID (9 days)                                                                                                                                                                                           |Verapamil, IV           |1.0218             |0.70769           |1.4439            |1.0001              |0.95924            |1.0426             |Smith 1984            |
+|1330  |Cimetidine, 300 mg, PO, MD QID (9 days)                                                                                                                                                                                           |Verapamil, PO           |1.7064             |1.3697            |1.2458            |1.6004              |1.1333             |1.4121             |Smith 1984            |
 |175   |Clarithromycin, 500 mg, PO, MD BID (7 days)                                                                                                                                                                                       |Midazolam, IV           |3.072              |2.6667            |1.152             |1.2413              |-                  |-                  |Gorski 1998           |
 |2027  |Clarithromycin, 500 mg, PO, MD BID (7 days)                                                                                                                                                                                       |Midazolam, IV           |3.0345             |3.2               |0.94828           |1.2413              |1.1724             |1.0587             |Quinney 2008          |
 |173   |Clarithromycin, 500 mg, PO, MD BID (7 days)                                                                                                                                                                                       |Midazolam, PO           |9.2129             |7.1429            |1.2898            |3.0765              |-                  |-                  |Gorski 1998           |
@@ -941,20 +941,20 @@ GMFE (CMAX) = 1.238745
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/001_Mechanism/003_Reversible_Inhibition/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.428276 
+GMFE (AUC) = 1.396900 
 
-GMFE (CMAX) = 1.250150 
+GMFE (CMAX) = 1.246952 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |47    |-        |
-|Points within Guest et al.|28    |59.5745  |
-|Points within 2-fold      |40    |85.1064  |
+|Points within Guest et al.|29    |61.7021  |
+|Points within 2-fold      |42    |89.3617  |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |36    |-        |
-|Points within Guest et al.|27    |75       |
+|Points within Guest et al.|25    |69.4444  |
 |Points within 2-fold      |35    |97.2222  |
 
 ## Perpetrator
@@ -969,20 +969,20 @@ GMFE (CMAX) = 1.250150
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/002_Perpetrator/001_Cimetidine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.411777 
+GMFE (AUC) = 1.316858 
 
-GMFE (CMAX) = 1.265247 
+GMFE (CMAX) = 1.254685 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |15    |-        |
-|Points within Guest et al.|6     |40       |
-|Points within 2-fold      |13    |86.6667  |
+|Points within Guest et al.|7     |46.6667  |
+|Points within 2-fold      |15    |100      |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |11    |-        |
-|Points within Guest et al.|7     |63.6364  |
+|Points within Guest et al.|5     |45.4545  |
 |Points within 2-fold      |10    |90.9091  |
 
 ### Clarithromycin
@@ -1205,7 +1205,7 @@ GMFE (CMAX) = 1.366144
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/001_Alfentanil/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.283749 
+GMFE (AUC) = 1.265356 
 
 GMFE (CMAX) = 1.292222 
 
@@ -1213,7 +1213,7 @@ GMFE (CMAX) = 1.292222
 |-------------------------:|-----:|--------:|
 |Points total              |23    |-        |
 |Points within Guest et al.|18    |78.2609  |
-|Points within 2-fold      |22    |95.6522  |
+|Points within 2-fold      |23    |100      |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -1231,9 +1231,9 @@ GMFE (CMAX) = 1.292222
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/002_Alprazolam/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.399653 
+GMFE (AUC) = 1.377462 
 
-GMFE (CMAX) = 1.276214 
+GMFE (CMAX) = 1.263554 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -1257,15 +1257,15 @@ GMFE (CMAX) = 1.276214
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/003_Midazolam/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.423775 
+GMFE (AUC) = 1.420724 
 
-GMFE (CMAX) = 1.408962 
+GMFE (CMAX) = 1.407886 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |101   |-        |
-|Points within Guest et al.|72    |71.2871  |
-|Points within 2-fold      |83    |82.1782  |
+|Points within Guest et al.|73    |72.2772  |
+|Points within 2-fold      |84    |83.1683  |
 
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -1283,9 +1283,9 @@ GMFE (CMAX) = 1.408962
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/004_Triazolam/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.470574 
+GMFE (AUC) = 1.424736 
 
-GMFE (CMAX) = 1.173696 
+GMFE (CMAX) = 1.155557 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -1296,7 +1296,7 @@ GMFE (CMAX) = 1.173696
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |16    |-        |
-|Points within Guest et al.|14    |87.5     |
+|Points within Guest et al.|13    |81.25    |
 |Points within 2-fold      |16    |100      |
 
 ### Verapamil
@@ -1309,9 +1309,9 @@ GMFE (CMAX) = 1.173696
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP3A4-mediated_DDI/003_Victim/005_Verapamil/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.270599 
+GMFE (AUC) = 1.320815 
 
-GMFE (CMAX) = 1.650804 
+GMFE (CMAX) = 1.808759 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -1322,7 +1322,7 @@ GMFE (CMAX) = 1.650804
 |CMAX                      |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
 |Points total              |3     |-        |
-|Points within Guest et al.|1     |33.3333  |
+|Points within Guest et al.|0     |0        |
 |Points within 2-fold      |2     |66.6667  |
 
 # 3 Concentration-Time Profiles
