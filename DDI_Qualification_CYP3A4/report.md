@@ -3,11 +3,11 @@
 
 
 
-| Version                         | x.x-OSPy.y                                                   |
+| Version                         | 1.5-OSP11.2                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/vx.x |
-| OSP Version                     | y.y                                                          |
-| Qualification Framework Version | z.z                                                          |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v1.5 |
+| OSP Version                     | 11.2                                                          |
+| Qualification Framework Version | 2.3                                                          |
 
 
 
@@ -20,39 +20,39 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
   * [1 Introduction](#1-introduction)
     * [1.1 Objective](#11-objective)
     * [1.2 CYP3A4 DDI Network](#12-cyp3a4-ddi-network)
+      * [Carbamazepine - Alprazolam DDI](#carbamazepine---alprazolam-ddi)
+      * [Carbamazepine - Efavirenz DDI](#carbamazepine---efavirenz-ddi)
+      * [Carbamazepine - Midazolam DDI](#carbamazepine---midazolam-ddi)
       * [Cimetidine - Alfentanil DDI](#cimetidine---alfentanil-ddi)
       * [Cimetidine - Alprazolam DDI](#cimetidine---alprazolam-ddi)
+      * [Cimetidine - Carbamazepine DDI](#cimetidine---carbamazepine-ddi)
       * [Cimetidine - Midazolam DDI](#cimetidine---midazolam-ddi)
       * [Cimetidine - Triazolam DDI](#cimetidine---triazolam-ddi)
       * [Cimetidine - Verapamil DDI](#cimetidine---verapamil-ddi)
       * [Clarithromycin - Midazolam DDI](#clarithromycin---midazolam-ddi)
       * [Clarithromycin - Triazolam DDI](#clarithromycin---triazolam-ddi)
+      * [Efavirenz - Alfentanil-DDI](#efavirenz---alfentanil-ddi)
+      * [Efavirenz - Carbamazepine DDI](#efavirenz---carbamazepine-ddi)
+      * [Efavirenz - Midazolam DDI](#efavirenz---midazolam-ddi)
       * [Erythromycin - Alfentanil DDI](#erythromycin---alfentanil-ddi)
       * [Erythromycin - Alprazolam DDI](#erythromycin---alprazolam-ddi)
+      * [Erythromycin - Carbamazepine DDI](#erythromycin---carbamazepine-ddi)
       * [Erythromycin - Midazolam DDI](#erythromycin---midazolam-ddi)
       * [Erythromycin - Triazolam DDI](#erythromycin---triazolam-ddi)
+      * [Fluconazole - Alfentanil DDI](#fluconazole---alfentanil-ddi)
+      * [Fluconazole - Midazolam DDI](#fluconazole---midazolam-ddi)
+      * [Fluconazole - Triazolam DDI](#fluconazole---triazolam-ddi)
       * [Fluvoxamine - Alprazolam DDI](#fluvoxamine---alprazolam-ddi)
       * [Fluvoxamine - Midazolam DDI](#fluvoxamine---midazolam-ddi)
       * [Itraconazole - Alprazolam DDI](#itraconazole---alprazolam-ddi)
       * [Itraconazole - Midazolam DDI](#itraconazole---midazolam-ddi)
       * [Itraconazole - Triazolam DDI](#itraconazole---triazolam-ddi)
-      * [Verapamil - Midazolam DDI](#verapamil---midazolam-ddi)
-      * [Efavirenz - Alfentanil-DDI](#efavirenz---alfentanil-ddi)
-      * [Efavirenz - Midazolam DDI](#efavirenz---midazolam-ddi)
       * [Rifampicin - Alfentanil DDI](#rifampicin---alfentanil-ddi)
       * [Rifampicin - Alprazolam DDI](#rifampicin---alprazolam-ddi)
       * [Rifampicin - Midazolam DDI](#rifampicin---midazolam-ddi)
       * [Rifampicin - Triazolam DDI](#rifampicin---triazolam-ddi)
       * [Rifampicin - Verapamil DDI](#rifampicin---verapamil-ddi)
-      * [Fluconazole - Alfentanil DDI](#fluconazole---alfentanil-ddi)
-      * [Fluconazole - Midazolam DDI](#fluconazole---midazolam-ddi)
-      * [Fluconazole - Triazolam DDI](#fluconazole---triazolam-ddi)
-      * [Carbamazepine - Alprazolam DDI](#carbamazepine---alprazolam-ddi)
-      * [Carbamazepine - Midazolam DDI](#carbamazepine---midazolam-ddi)
-      * [Carbamazepine - Efavirenz DDI](#carbamazepine---efavirenz-ddi)
-      * [Erythromycin - Carbamazepine DDI](#erythromycin---carbamazepine-ddi)
-      * [Cimetidine - Carbamazepine DDI](#cimetidine---carbamazepine-ddi)
-      * [Efavirenz - Carbamazepine DDI](#efavirenz---carbamazepine-ddi)
+      * [Verapamil - Midazolam DDI](#verapamil---midazolam-ddi)
   * [2 Qualification of Use Case CYP3A4-mediated DDI](#2-qualification-of-use-case-cyp3a4-mediated-ddi)
     * [Mechanism](#mechanism)
       * [Induction](#induction)
@@ -78,39 +78,39 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
       * [Triazolam](#triazolam)
       * [Verapamil](#verapamil)
   * [3 Concentration-Time Profiles](#3-concentration-time-profiles)
-    * [3.1 Cimetidine - Alfentanil DDI](#31-cimetidine---alfentanil-ddi)
-    * [3.2 Cimetidine - Alprazolam DDI](#32-cimetidine---alprazolam-ddi)
-    * [3.3 Cimetidine - Midazolam DDI](#33-cimetidine---midazolam-ddi)
-    * [3.4 Cimetidine - Triazolam DDI](#34-cimetidine---triazolam-ddi)
-    * [3.5 Cimetidine - Verapamil DDI](#35-cimetidine---verapamil-ddi)
-    * [3.6 Clarithromycin - Midazolam DDI](#36-clarithromycin---midazolam-ddi)
-    * [3.7 Clarithromycin - Triazolam DDI](#37-clarithromycin---triazolam-ddi)
-    * [3.8 Erythromycin - Alfentanil DDI](#38-erythromycin---alfentanil-ddi)
-    * [3.9 Erythromycin - Alprazolam DDI](#39-erythromycin---alprazolam-ddi)
-    * [3.10 Erythromycin - Midazolam DDI](#310-erythromycin---midazolam-ddi)
-    * [3.11 Erythromycin - Triazolam DDI](#311-erythromycin---triazolam-ddi)
-    * [3.12 Fluvoxamine - Alprazolam DDI](#312-fluvoxamine---alprazolam-ddi)
-    * [3.13 Fluvoxamine - Midazolam DDI](#313-fluvoxamine---midazolam-ddi)
-    * [3.14 Itraconazole - Alprazolam DDI](#314-itraconazole---alprazolam-ddi)
-    * [3.15 Itraconazole - Midazolam DDI](#315-itraconazole---midazolam-ddi)
-    * [3.16 Itraconazole - Triazolam DDI](#316-itraconazole---triazolam-ddi)
-    * [3.17 Verapamil - Midazolam DDI](#317-verapamil---midazolam-ddi)
-    * [3.18 Efavirenz - Alfentanil DDI](#318-efavirenz---alfentanil-ddi)
-    * [3.19 Efavirenz - Midazolam DDI](#319-efavirenz---midazolam-ddi)
-    * [3.20 Rifampicin - Alfentanil DDI](#320-rifampicin---alfentanil-ddi)
-    * [3.21 Rifampicin - Alprazolam DDI](#321-rifampicin---alprazolam-ddi)
-    * [3.22 Rifampicin - Midazolam DDI](#322-rifampicin---midazolam-ddi)
-    * [3.23 Rifampicin - Triazolam DDI](#323-rifampicin---triazolam-ddi)
-    * [3.24 Rifampicin - Verapamil DDI](#324-rifampicin---verapamil-ddi)
-    * [3.25 Fluconazole - Alfentanil DDI](#325-fluconazole---alfentanil-ddi)
-    * [3.26 Fluconazole - Midazolam DDI](#326-fluconazole---midazolam-ddi)
-    * [3.27 Fluconazole - Triazolam DDI](#327-fluconazole---triazolam-ddi)
-    * [3.28 Carbamazepine - Alprazolam DDI](#328-carbamazepine---alprazolam-ddi)
-    * [3.29 Carbamazepine - Midazolam DDI](#329-carbamazepine---midazolam-ddi)
-    * [3.30 Carbamazepine - Efavirenz DDI](#330-carbamazepine---efavirenz-ddi)
-    * [3.31 Erythromycin - Carbamazepine DDI](#331-erythromycin---carbamazepine-ddi)
-    * [3.32 Cimetidine - Carbamazepine DDI](#332-cimetidine---carbamazepine-ddi)
-    * [3.33 Efavirenz - Carbamazepine DDI](#333-efavirenz---carbamazepine-ddi)
+    * [3.1 Carbamazepine - Alprazolam DDI](#31-carbamazepine---alprazolam-ddi)
+    * [3.2 Carbamazepine - Efavirenz DDI](#32-carbamazepine---efavirenz-ddi)
+    * [3.3 Carbamazepine - Midazolam DDI](#33-carbamazepine---midazolam-ddi)
+    * [3.4 Cimetidine - Alfentanil DDI](#34-cimetidine---alfentanil-ddi)
+    * [3.5 Cimetidine - Alprazolam DDI](#35-cimetidine---alprazolam-ddi)
+    * [3.6 Cimetidine - Carbamazepine DDI](#36-cimetidine---carbamazepine-ddi)
+    * [3.7 Cimetidine - Midazolam DDI](#37-cimetidine---midazolam-ddi)
+    * [3.8 Cimetidine - Triazolam DDI](#38-cimetidine---triazolam-ddi)
+    * [3.9 Cimetidine - Verapamil DDI](#39-cimetidine---verapamil-ddi)
+    * [3.10 Clarithromycin - Midazolam DDI](#310-clarithromycin---midazolam-ddi)
+    * [3.11 Clarithromycin - Triazolam DDI](#311-clarithromycin---triazolam-ddi)
+    * [3.12 Efavirenz - Alfentanil DDI](#312-efavirenz---alfentanil-ddi)
+    * [3.13 Efavirenz - Carbamazepine DDI](#313-efavirenz---carbamazepine-ddi)
+    * [3.14 Efavirenz - Midazolam DDI](#314-efavirenz---midazolam-ddi)
+    * [3.15 Erythromycin - Alfentanil DDI](#315-erythromycin---alfentanil-ddi)
+    * [3.16 Erythromycin - Alprazolam DDI](#316-erythromycin---alprazolam-ddi)
+    * [3.17 Erythromycin - Carbamazepine DDI](#317-erythromycin---carbamazepine-ddi)
+    * [3.18 Erythromycin - Midazolam DDI](#318-erythromycin---midazolam-ddi)
+    * [3.19 Erythromycin - Triazolam DDI](#319-erythromycin---triazolam-ddi)
+    * [3.20 Fluconazole - Alfentanil DDI](#320-fluconazole---alfentanil-ddi)
+    * [3.21 Fluconazole - Midazolam DDI](#321-fluconazole---midazolam-ddi)
+    * [3.22 Fluconazole - Triazolam DDI](#322-fluconazole---triazolam-ddi)
+    * [3.23 Fluvoxamine - Alprazolam DDI](#323-fluvoxamine---alprazolam-ddi)
+    * [3.24 Fluvoxamine - Midazolam DDI](#324-fluvoxamine---midazolam-ddi)
+    * [3.25 Itraconazole - Alprazolam DDI](#325-itraconazole---alprazolam-ddi)
+    * [3.26 Itraconazole - Midazolam DDI](#326-itraconazole---midazolam-ddi)
+    * [3.27 Itraconazole - Triazolam DDI](#327-itraconazole---triazolam-ddi)
+    * [3.28 Rifampicin - Alfentanil DDI](#328-rifampicin---alfentanil-ddi)
+    * [3.29 Rifampicin - Alprazolam DDI](#329-rifampicin---alprazolam-ddi)
+    * [3.30 Rifampicin - Midazolam DDI](#330-rifampicin---midazolam-ddi)
+    * [3.31 Rifampicin - Triazolam DDI](#331-rifampicin---triazolam-ddi)
+    * [3.32 Rifampicin - Verapamil DDI](#332-rifampicin---verapamil-ddi)
+    * [3.33 Verapamil - Midazolam DDI](#333-verapamil---midazolam-ddi)
   * [4 References](#4-references)
   * [5 Appendix](#5-appendix)
     * [5.1 Open Systems Pharmacology Suite (OSPS) Introduction](#51-open-systems-pharmacology-suite-osps-introduction)
@@ -148,19 +148,19 @@ The following perpetrator compounds were selected:
 - **Rifampicin** (strong CYP3A4 inducer)
   Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.2
 - **Carbamazepine** (moderate CYP3A4 inducer)
-  Model snapshot and evaluation plan (*release* **v1.2**): [Release Model snapshot and evaluation plan version 1.2 · Open-Systems-Pharmacology/Carbamazepine-Model · GitHub](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v1.2)
+  Model snapshot and evaluation plan (*release* **v1.3**): [https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v1.3](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v1.3)
 - **Efavirenz** (moderate CYP3A4 inducer)
   Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Efavirenz-Model/releases/tag/v1.1
 - **Cimetidine** (weak CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Cimetidine-Model/releases/tag/v1.1
+  Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Cimetidine-Model/releases/tag/v1.2
 - **Fluvoxamine** (weak/moderate CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v1.1
+  Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v1.2
 - **Verapamil** (moderate CYP3A4 inhibitor)
   Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.2
 - **Fluconazole** (moderate CYP3A4 inhibitor)
   Model snapshot and evaluation plan (*release* **v1.0**): https://github.com/Open-Systems-Pharmacology/Fluconazole-Model/releases/tag/v1.0
 - **Erythromycin** (moderate CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v1.2
+  Model snapshot and evaluation plan (*release* **v1.3**): https://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v1.3
 - **Clarithromycin** (strong CYP3A4 inhibitor)
   Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Clarithromycin-Model/releases/tag/v1.2
 - **Itraconazole** including metabolites (strong CYP3A4 inhibitor)
@@ -185,6 +185,38 @@ The following sensitive CYP3A4 substrates as victim drugs were selected:
 <sub>The arrows indicate where at least one clinical DDI study between the two connected substances was available and included in the model network. Red indicates inhibition and green indicates induction as the primary type of interaction. Thin arrows indicate weak, mid-thick arrows moderate and thick arrows strong CYP3A4 modulation by the perpetrator.</sub>
 
 The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report. The respective data identifier (DataID) refers to the **ID** of the dataset in the [OSP PK database](https://github.com/Open-Systems-Pharmacology/Database-for-observed-data).
+
+### Carbamazepine - Alprazolam DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.0
+
+The carbamazepine-alprazolam interaction was evaluated using one clinical DDI study ([Furukori 1998](#4-references)).
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                                                                                          | Clinical study                 |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| 1457   | CYP3A4 | Carbamazepine / alprazolam | Carbamazepine: 100 mg po TID for 10 days<br />Alprazolam: 0.8 mg po single dose, 2 hours after the 22<sup>nd</sup> carbamazepine dose | [Furukori 1998](#4-references) |
+
+### Carbamazepine - Efavirenz DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.0
+
+The carbamazepine-efavirenz interaction was evaluated using one clinical DDI study ([Ji 2008](#4-references)).
+
+| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                                        | Clinical study           |
+| ------ | ------ | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| 959    | CYP3A4 | Carbamazepine / efavirenz | Study Arm 1:<br />Carbamazepine (starting with the 15<sup>th</sup> dose of efavirenz): 200 mg po QD for 3 days, followed by 200 mg po BID for 3 days, followed by 400 mg po QD for 16 days<br />Efavirenz: 600 mg po QD for 35 days | [Ji 2008](#4-references) |
+
+### Carbamazepine - Midazolam DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0
+
+The carbamazepine-midazolam interaction was evaluated using three clinical DDI studies ([Lutz 2018](#4-references), [Kanefendt 2023](#4-references)).
+
+| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                        | Clinical study                  |
+| ------ | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| 1460   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po BID for 22 days<br />Midazolam: 2 mg po single dose, concomitantly with the 49<sup>th</sup> carbamazepine dose | [Lutz 2018](#4-references)      |
+| 943    | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po for 17 days<br />Midazolam: 1 mg po single dose, 10 hours after the 26<sup>th</sup> carbamazepine dose         | [Kanefendt 2023](#4-references) |
+| 1133   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po for 18 days<br />Midazolam: 1 mg po single dose, 12 hours after the 28<sup>th</sup> carbamazepine dose         | [Kanefendt 2023](#4-references) |
 
 ### Cimetidine - Alfentanil DDI
 The release of the snapshot containing the respective simulations can be found here:
@@ -212,6 +244,16 @@ The cimetidine-alprazolam interaction was evaluated using two clinical DDI studi
 | 1340    | CYP3A4 | Cimetidine / alprazolam | Cimetidine: 200 mg po TID and 400 mg at bedtime over two weeks<br />Alprazolam: 0.5 mg po OD in the second week concomitantly with morning dose |                                                              | [Pourbaix 1985](#4-references)          |
 | 1332    | CYP3A4 | Cimetidine / alprazolam | Cimetidine: 300 mg po QID (4 times)<br />Alprazolam: 1 mg po single dose concomitantly with cimetidine dose at 12 h |                                                              | [Abernethy 1983](#4-references)          |
 
+
+### Cimetidine - Carbamazepine DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Cimetidine-Carbamazepine-DDI/releases/tag/v1.1
+
+The cimetidine-carbamazepine interaction was evaluated using one clinical DDI study ([Dalton 1985](#4-references)).
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                                                                                          | Comment | Clinical study               |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------- |
+| 900    | CYP3A4 | Cimetidine / carbamazepine | Cimetidine: 300 mg po QID for 9 days<br />Carbamazepine: 600 mg po single dose, one hour before the 9<sup>th</sup> dose of cimetidine |         | [Dalton 1985](#4-references) |
 
 ### Cimetidine - Midazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
@@ -296,6 +338,54 @@ The clarithromycin-triazolam interaction was evaluated using one clinical DDI st
 | 1102   | CYP3A4 | Clarithromycin / triazolam | Clarithromycin: 500 mg po twice daily at irregular time intervals for 2 days<br />Triazolam: 0.125 mg po single dose, 1 hour after the 3<sup>rd</sup> clarithromycin dose | [Greenblatt 1998a](#4-references) |
 
 
+### Efavirenz - Alfentanil-DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Efavirenz-Alfentanil-DDI/releases/tag/v1.1.
+
+The efavirenz-alfentanil interaction was evaluated using one clinical DDI study that includes iv and oral administration of alfentanil ([Kharasch 2012](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim   | Study design                                                 | Comment | Clinical study                 |
+| ------ | ------ | ---------------------- | ------------------------------------------------------------ | ------- | ------------------------------ |
+| 801    | CYP3A4 | Efavirenz / alfentanil | Efavirenz: 600 mg po OD for 20 days<br />Alfentanil: 43 µg/kg po single dose, 1/2 hour after the 15<sup>th</sup> efavirenz dose |         | [Kharasch 2012](#4-references) |
+| 803    | CYP3A4 | Efavirenz / alfentanil | Efavirenz: 600 mg po OD for 20 days<br />Alfentanil: 15 µg/kg iv single dose, 1/2 hour after the 16<sup>th</sup> efavirenz dose |         | [Kharasch 2012](#4-references) |
+
+
+
+### Efavirenz - Carbamazepine DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Efavirenz-Carbamazepine-DDI/releases/tag/v1.0
+
+The efavirenz-carbamazepine interaction was evaluated using one clinical DDI study ([Ji 2008](#4-references)).
+
+| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                                            | Clinical study           |
+| ------ | ------ | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| 961    | CYP3A4 | Efavirenz / carbamazepine | Study Arm 2:<br />Efavirenz (starting with the 25<sup>th</sup> dose of carbamazepine): 600 mg po QD for 14 days<br />Carbamazepine: 200 mg po QD for 3 days, followed by 200 mg po BID for 3 days, followed by 400 mg po QD for 30 days | [Ji 2008](#4-references) |
+
+### Efavirenz - Midazolam DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Efavirenz-Midazolam-DDI/releases/tag/v1.2
+
+The efavirenz-midazolam interaction was evaluated using two clinical DDI studies, one using single dose and one using one multiple dose administration of efavirenz ([Katzenmaier 2010](#4-references), [Mikus 2017](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim  | Study design                                                 | Comment | Clinical study                    |
+| ------ | ------ | --------------------- | ------------------------------------------------------------ | ------- | --------------------------------- |
+| 2041   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po OD over 14 days<br />Midazolam: 3 mg po single dose on day 14 together with efavirenz dose |         | [Katzenmaier 2010](#4-references) |
+| 2044   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 12 hours (**day 1**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2045   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 18 hours (**day 1**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2047   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 132 hours (**day 6**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2048   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 138 hours (**day 6**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2049   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 252 hours (**day 11**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2050   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 258 hours (**day 11**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2051   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 372 hours (**day 16**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2052   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 378 hours (**day 16**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2053   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 516 hours (***day 22**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+| 2054   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 522 hours (**day 22**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
+
+
 ### Erythromycin - Alfentanil DDI
 The release of the snapshot containing the respective simulations can be found here:
 https://github.com/Open-Systems-Pharmacology/Erythromycin-Alfentanil-DDI/releases/tag/v1.2
@@ -324,6 +414,19 @@ The erythromycin-alprazolam interaction was evaluated using one clinical DDI stu
 | 777    | CYP3A4 | Erythromycin / alprazolam | Erythromycin: 400 mg po TID for 10 days (filmcoated tablet containing erythromycin stearate)<br />Alprazolam: 0.8 mg po single dose, 2 hours after the 22<sup>nd</sup> erythromycin dose | [Yasui 1996](#4-references) |
 
 
+
+### Erythromycin - Carbamazepine DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Erythromycin-Carbamazepine-DDI/releases/tag/v1.1
+
+The erythromycin-carbamazepine interaction was evaluated using three clinical DDI studies ([Barzaghi 1987](#4-references), [Miles 1989](#4-references), [Wong 1983](#4-references)).
+
+| DataID | Enzyme | Perpetrator / victim         | Study design                                                                                                                                             | Clinical study                 |
+| ------ | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| 465    | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 500 mg po TID for 10 days<br />Carbamazepine: 400 mg po single dose, administered on the 7<sup>th</sup> day of treatment with erythromycin | [Barzaghi 1987](#4-references) |
+| 1157   | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 250 mg po QID for 3 days, starting on day 15 of carbamazepine administration<br />Carbamazepine: 300 mg po QD for 17 days                  | [Miles 1989](#4-references)    |
+| 1158   | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 250 mg po QID for 3 days, starting on day 15 of carbamazepine administration<br />Carbamazepine: 400 mg po QD for 17 days                  | [Miles 1989](#4-references)    |
+| 1154   | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 250 mg po QID for 8 days<br />Carbamazepine: 400 mg po single dose, administered on the 6<sup>th</sup> day of treatment with erythromycin  | [Wong 1983](#4-references)     |
 
 ### Erythromycin - Midazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
@@ -359,6 +462,52 @@ The erythromycin-triazolam interaction was evaluated using two clinical DDI stud
 | 781    | CYP3A4 | Erythromycin / triazolam | Erythromycin: 500 mg po twice daily for 2 days<br />Triazolam: 0.125 mg po single dose, 1 hour after the 3<sup>rd</sup> erythromycin dose | [Greenblatt 1998](#4-references) |
 | 757    | CYP3A4 | Erythromycin / triazolam | Erythromycin: 333 mg po TID for 3 days<br />Triazolam: 0.5 mg po single dose, together with the last erythromycin dose | [Phillips 1986](#4-references)   |
 
+
+
+### Fluconazole - Alfentanil DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Fluconazole-Alfentanil-DDI/releases/tag/v1.0.
+
+The fluconazole-alfentanil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Palkama 1998](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
+| 1398  | CYP3A4 | Fluconazole / alfentanil | Fluconazole: 400 mg iv infusion for 60 min single administration<br />Alfentanil: 0.02 mg/kg iv infusion, 1 hour after start of fluconazole dosing |  | [Palkama 1998](#4-references) |
+| 1399 | CYP3A4 | Fluconazole / alfentanil | Fluconazole: 400 mg po single administration<br />Alfentanil: 0.02 mg/kg iv infusion, 1 hour after the fluconazole dose |  | [Palkama 1998](#4-references) |
+
+
+### Fluconazole - Midazolam DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Fluconazole-Midazolam-DDI/releases/tag/v1.0.
+
+The fluconazole-midazolam interaction was evaluated using two clinical DDI studies quantifying the interaction following 5 different dosing regimens ([Ahonen 1997](#4-references), [Olkkola 1996](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
+| 1392   | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg iv infusion for 60 min <br />Midazolam: 7.5 mg po single dose, 1 hour after start of fluconazole dosing |                                                              | [Ahonen 1997](#4-references) |
+| 1393  | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po<br />Midazolam: 7.5 mg po single dose, 1 hour after the fluconazole dose |                                                              | [Ahonen 1997](#4-references) |
+| 380 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 7.5 mg po, 2 hours after the day 1 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
+| 381 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 0.05 mg/kg iv infusion, 2 hours after the day 4 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
+| 381 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 7.5 mg po, 2 hours after the day 6 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
+
+
+### Fluconazole - Triazolam DDI
+The release of the snapshot containing the respective simulations can be found here:
+https://github.com/Open-Systems-Pharmacology/Fluconazole-Triazolam-DDI/releases/tag/v1.0.
+
+The fluconazole-triazolam interaction was evaluated using a single clinical DDI study quantifying the interaction following three different dosing regimens ([Varhe 1996](#4-references)).
+
+
+
+| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
+| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
+| 1394  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 50 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
+| 1395  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 100 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
+| 1396  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 200 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
 
 
 ### Fluvoxamine - Alprazolam DDI
@@ -438,59 +587,6 @@ The itraconazole / triazolam interaction was evaluated using two clinical DDI st
 | 1080 | CYP3A4 | Itraconazole / triazolam | Itraconazole: **200** mg po single dose (capsule fed)<br />triazolam: 0.25 mg **po** single dose, **12 hours** after itraconazole dose | itraconazole dose was taken with a snack, 3 hours fasting before triazolam administration | [Neuvonen 1996](#4-references) |
 | 1081 | CYP3A4 | Itraconazole / triazolam | Itraconazole: **200** mg po single dose (capsule fed)<br />triazolam: 0.25 mg **po** single dose, **24 hours** after itraconazole dose | itraconazole dose was taken with a snack, 3 hours fasting before triazolam administration | [Neuvonen 1996](#4-references) |
 | 1029 | CYP3A4 | Itraconazole / triazolam | Itraconazole: **200** mg po once daily (4 doses, capsule fasted)<br />triazolam: 0.25 mg **po** single dose, 1 hour after **4<sup>th</sup>** itraconazole dose |                                                              | [Varhe 1994](#4-references) |
-
-
-### Verapamil - Midazolam DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.2
-
-The verapamil / midazolam interaction was evaluated using two clinical DDI studies including 3 different clinical settings ([Backman 1994](#4-references), [Wang 2005](#4-references)).
-
-
-
-| DataID | Enzyme | Perpetrator / victim     | Study design                                                 | Comment                                                      | Clinical study                         |
-| ------ | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------------------------- | -------------------------------------- |
-| 1108 | CYP3A4 | Verapamil / midazolam | Verapamil: **80** mg po three times a day (5 doses)<br />Midazolam: 15 mg **po** single dose, 1 hours after **4<sup>th</sup>** verapamil dose |                                                              | [Backman 1994](#4-references) |
-| 1111 | CYP3A4 | Verapamil / midazolam | Verapamil: **240** mg po once daily (7 doses, sustained release)<br />Midazolam: 0.05 mg/kg **iv** single dose, 24 hours after the **7<sup>th</sup>** verapamil dose |         | [Wang 2005](#4-references) |
-| 1116   | CYP3A4 | Verapamil / midazolam | Verapamil: **240** mg po once daily (7 doses, sustained release)<br />Midazolam: 4 mg/kg **po** single dose, 48 hours after the **7<sup>th</sup>** verapamil dose |         | [Wang 2005](#4-references) |
-
-
-### Efavirenz - Alfentanil-DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Efavirenz-Alfentanil-DDI/releases/tag/v1.1.
-
-The efavirenz-alfentanil interaction was evaluated using one clinical DDI study that includes iv and oral administration of alfentanil ([Kharasch 2012](#4-references)).
-
-
-
-| DataID | Enzyme | Perpetrator / victim   | Study design                                                 | Comment | Clinical study                 |
-| ------ | ------ | ---------------------- | ------------------------------------------------------------ | ------- | ------------------------------ |
-| 801    | CYP3A4 | Efavirenz / alfentanil | Efavirenz: 600 mg po OD for 20 days<br />Alfentanil: 43 µg/kg po single dose, 1/2 hour after the 15<sup>th</sup> efavirenz dose |         | [Kharasch 2012](#4-references) |
-| 803    | CYP3A4 | Efavirenz / alfentanil | Efavirenz: 600 mg po OD for 20 days<br />Alfentanil: 15 µg/kg iv single dose, 1/2 hour after the 16<sup>th</sup> efavirenz dose |         | [Kharasch 2012](#4-references) |
-
-
-
-### Efavirenz - Midazolam DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Efavirenz-Midazolam-DDI/releases/tag/v1.2
-
-The efavirenz-midazolam interaction was evaluated using two clinical DDI studies, one using single dose and one using one multiple dose administration of efavirenz ([Katzenmaier 2010](#4-references), [Mikus 2017](#4-references)).
-
-
-
-| DataID | Enzyme | Perpetrator / victim  | Study design                                                 | Comment | Clinical study                    |
-| ------ | ------ | --------------------- | ------------------------------------------------------------ | ------- | --------------------------------- |
-| 2041   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po OD over 14 days<br />Midazolam: 3 mg po single dose on day 14 together with efavirenz dose |         | [Katzenmaier 2010](#4-references) |
-| 2044   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 12 hours (**day 1**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2045   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 18 hours (**day 1**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2047   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 132 hours (**day 6**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2048   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 138 hours (**day 6**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2049   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 252 hours (**day 11**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2050   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 258 hours (**day 11**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2051   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 372 hours (**day 16**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2052   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 378 hours (**day 16**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2053   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 4 mg po single dose, 516 hours (***day 22**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
-| 2054   | CYP3A4 | Efavirenz / midazolam | Efavirenz: 400 mg po SD on day 1<br />Midazolam: 2 mg iv single dose, 522 hours (**day 22**) after efavirenz dose |         | [Mikus 2017](#4-references)       |
 
 
 ### Rifampicin - Alfentanil DDI
@@ -622,116 +718,20 @@ The  rifampicin / verapamil interaction was evaluated using 1 clinical DDI study
 
 
 
-### Fluconazole - Alfentanil DDI
+### Verapamil - Midazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Fluconazole-Alfentanil-DDI/releases/tag/v1.0.
+https://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.2
 
-The fluconazole-alfentanil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Palkama 1998](#4-references)).
-
-
-
-| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
-| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
-| 1398  | CYP3A4 | Fluconazole / alfentanil | Fluconazole: 400 mg iv infusion for 60 min single administration<br />Alfentanil: 0.02 mg/kg iv infusion, 1 hour after start of fluconazole dosing |  | [Palkama 1998](#4-references) |
-| 1399 | CYP3A4 | Fluconazole / alfentanil | Fluconazole: 400 mg po single administration<br />Alfentanil: 0.02 mg/kg iv infusion, 1 hour after the fluconazole dose |  | [Palkama 1998](#4-references) |
-
-
-### Fluconazole - Midazolam DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Fluconazole-Midazolam-DDI/releases/tag/v1.0.
-
-The fluconazole-midazolam interaction was evaluated using two clinical DDI studies quantifying the interaction following 5 different dosing regimens ([Ahonen 1997](#4-references), [Olkkola 1996](#4-references)).
+The verapamil / midazolam interaction was evaluated using two clinical DDI studies including 3 different clinical settings ([Backman 1994](#4-references), [Wang 2005](#4-references)).
 
 
 
-| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
-| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
-| 1392   | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg iv infusion for 60 min <br />Midazolam: 7.5 mg po single dose, 1 hour after start of fluconazole dosing |                                                              | [Ahonen 1997](#4-references) |
-| 1393  | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po<br />Midazolam: 7.5 mg po single dose, 1 hour after the fluconazole dose |                                                              | [Ahonen 1997](#4-references) |
-| 380 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 7.5 mg po, 2 hours after the day 1 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
-| 381 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 0.05 mg/kg iv infusion, 2 hours after the day 4 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
-| 381 | CYP3A4 | Fluconazole / midazolam | Fluconazole: 400 mg po QD  (day 1) then 200 mg QD for 5 days <br />Midazolam: 7.5 mg po, 2 hours after the day 6 fluconazole dose |                                                              | [Olkkola 1996](#4-references) |
+| DataID | Enzyme | Perpetrator / victim     | Study design                                                 | Comment                                                      | Clinical study                         |
+| ------ | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------------------------- | -------------------------------------- |
+| 1108 | CYP3A4 | Verapamil / midazolam | Verapamil: **80** mg po three times a day (5 doses)<br />Midazolam: 15 mg **po** single dose, 1 hours after **4<sup>th</sup>** verapamil dose |                                                              | [Backman 1994](#4-references) |
+| 1111 | CYP3A4 | Verapamil / midazolam | Verapamil: **240** mg po once daily (7 doses, sustained release)<br />Midazolam: 0.05 mg/kg **iv** single dose, 24 hours after the **7<sup>th</sup>** verapamil dose |         | [Wang 2005](#4-references) |
+| 1116   | CYP3A4 | Verapamil / midazolam | Verapamil: **240** mg po once daily (7 doses, sustained release)<br />Midazolam: 4 mg/kg **po** single dose, 48 hours after the **7<sup>th</sup>** verapamil dose |         | [Wang 2005](#4-references) |
 
-
-### Fluconazole - Triazolam DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Fluconazole-Triazolam-DDI/releases/tag/v1.0.
-
-The fluconazole-triazolam interaction was evaluated using a single clinical DDI study quantifying the interaction following three different dosing regimens ([Varhe 1996](#4-references)).
-
-
-
-| DataID | Enzyme | Perpetrator / victim       | Study design                                                 | Comment                                                      | Clinical study                        |
-| ------ | ------ | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
-| 1394  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 50 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
-| 1395  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 100 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
-| 1396  | CYP3A4 | Fluconazole / triazolam | Fluconazole: 200 mg po QD for 4 days<br />Triazolam: 0.25 mg po single dose, 1 hour after last fluconazole dose |                                                              | [Varhe 1996](#4-references) |
-
-
-### Carbamazepine - Alprazolam DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.0
-
-The carbamazepine-alprazolam interaction was evaluated using one clinical DDI study ([Furukori 1998](#4-references)).
-
-| DataID | Enzyme | Perpetrator / victim       | Study design                                                                                                                          | Clinical study                 |
-| ------ | ------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| 1457   | CYP3A4 | Carbamazepine / alprazolam | Carbamazepine: 100 mg po TID for 10 days<br />Alprazolam: 0.8 mg po single dose, 2 hours after the 22<sup>nd</sup> carbamazepine dose | [Furukori 1998](#4-references) |
-
-### Carbamazepine - Midazolam DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0
-
-The carbamazepine-midazolam interaction was evaluated using three clinical DDI studies ([Lutz 2018](#4-references), [Kanefendt 2023](#4-references)).
-
-| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                        | Clinical study                  |
-| ------ | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| 1460   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po BID for 22 days<br />Midazolam: 2 mg po single dose, concomitantly with the 49<sup>th</sup> carbamazepine dose | [Lutz 2018](#4-references)      |
-| 943    | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po for 17 days<br />Midazolam: 1 mg po single dose, 10 hours after the 26<sup>th</sup> carbamazepine dose         | [Kanefendt 2023](#4-references) |
-| 1133   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po for 18 days<br />Midazolam: 1 mg po single dose, 12 hours after the 28<sup>th</sup> carbamazepine dose         | [Kanefendt 2023](#4-references) |
-
-### Carbamazepine - Efavirenz DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.0
-
-The carbamazepine-efavirenz interaction was evaluated using one clinical DDI study ([Ji 2008](#4-references)).
-
-| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                                        | Clinical study           |
-| ------ | ------ | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| 959    | CYP3A4 | Carbamazepine / efavirenz | Study Arm 1:<br />Carbamazepine (starting with the 15<sup>th</sup> dose of efavirenz): 200 mg po QD for 3 days, followed by 200 mg po BID for 3 days, followed by 400 mg po QD for 16 days<br />Efavirenz: 600 mg po QD for 35 days | [Ji 2008](#4-references) |
-
-### Erythromycin - Carbamazepine DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Erythromycin-Carbamazepine-DDI/releases/tag/v1.1
-
-The erythromycin-carbamazepine interaction was evaluated using three clinical DDI studies ([Barzaghi 1987](#4-references), [Miles 1989](#4-references), [Wong 1983](#4-references)).
-
-| DataID | Enzyme | Perpetrator / victim         | Study design                                                                                                                                             | Clinical study                 |
-| ------ | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| 465    | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 500 mg po TID for 10 days<br />Carbamazepine: 400 mg po single dose, administered on the 7<sup>th</sup> day of treatment with erythromycin | [Barzaghi 1987](#4-references) |
-| 1157   | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 250 mg po QID for 3 days, starting on day 15 of carbamazepine administration<br />Carbamazepine: 300 mg po QD for 17 days                  | [Miles 1989](#4-references)    |
-| 1158   | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 250 mg po QID for 3 days, starting on day 15 of carbamazepine administration<br />Carbamazepine: 400 mg po QD for 17 days                  | [Miles 1989](#4-references)    |
-| 1154   | CYP3A4 | Erythromycin / carbamazepine | Erythromycin: 250 mg po QID for 8 days<br />Carbamazepine: 400 mg po single dose, administered on the 6<sup>th</sup> day of treatment with erythromycin  | [Wong 1983](#4-references)     |
-
-### Cimetidine - Carbamazepine DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Cimetidine-Carbamazepine-DDI/releases/tag/v1.1
-
-The cimetidine-carbamazepine interaction was evaluated using one clinical DDI study ([Dalton 1985](#4-references)).
-
-| DataID | Enzyme | Perpetrator / victim       | Study design                                                                                                                          | Comment | Clinical study               |
-| ------ | ------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------- |
-| 900    | CYP3A4 | Cimetidine / carbamazepine | Cimetidine: 300 mg po QID for 9 days<br />Carbamazepine: 600 mg po single dose, one hour before the 9<sup>th</sup> dose of cimetidine |         | [Dalton 1985](#4-references) |
-
-### Efavirenz - Carbamazepine DDI
-The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Efavirenz-Carbamazepine-DDI/releases/tag/v1.0
-
-The efavirenz-carbamazepine interaction was evaluated using one clinical DDI study ([Ji 2008](#4-references)).
-
-| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                                            | Clinical study           |
-| ------ | ------ | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| 961    | CYP3A4 | Efavirenz / carbamazepine | Study Arm 2:<br />Efavirenz (starting with the 25<sup>th</sup> dose of carbamazepine): 600 mg po QD for 14 days<br />Carbamazepine: 200 mg po QD for 3 days, followed by 200 mg po BID for 3 days, followed by 400 mg po QD for 30 days | [Ji 2008](#4-references) |
 
 # 2 Qualification of Use Case CYP3A4-mediated DDI
 The following section shows the correlations between observed and model-predicted AUC and C<sub>max</sub> ratios, respectively.
@@ -1492,350 +1492,350 @@ The following section shows concentration time profiles of the victim drugs of t
 
 
 
-## 3.1 Cimetidine - Alfentanil DDI
+## 3.1 Carbamazepine - Alprazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/001_3_1_Cimetidine_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/001_3_1_Carbamazepine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.2 Cimetidine - Alprazolam DDI
+## 3.2 Carbamazepine - Efavirenz DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/002_3_2_Cimetidine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/002_3_2_Carbamazepine_-_Efavirenz_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/002_3_2_Cimetidine_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
-
-## 3.3 Cimetidine - Midazolam DDI
+## 3.3 Carbamazepine - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Cimetidine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Carbamazepine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Cimetidine_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Carbamazepine_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Cimetidine_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Carbamazepine_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
 
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Cimetidine_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
-
-![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Cimetidine_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
-
-![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Cimetidine_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
-
-## 3.4 Cimetidine - Triazolam DDI
+## 3.4 Cimetidine - Alfentanil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_4_Cimetidine_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_4_Cimetidine_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_4_Cimetidine_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
-
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_4_Cimetidine_-_Triazolam_DDI/003_plotComparisonTimeProfile.png)
-
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_4_Cimetidine_-_Triazolam_DDI/004_plotComparisonTimeProfile.png)
-
-## 3.5 Cimetidine - Verapamil DDI
+## 3.5 Cimetidine - Alprazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_5_Cimetidine_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_5_Cimetidine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_5_Cimetidine_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_5_Cimetidine_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
 
-## 3.6 Clarithromycin - Midazolam DDI
+## 3.6 Cimetidine - Carbamazepine DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Cimetidine_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
-
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
-
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
-
-![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
-
-![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
-
-![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/007_plotComparisonTimeProfile.png)
-
-![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/008_plotComparisonTimeProfile.png)
-
-![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/009_plotComparisonTimeProfile.png)
-
-![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Clarithromycin_-_Midazolam_DDI/010_plotComparisonTimeProfile.png)
-
-## 3.7 Clarithromycin - Triazolam DDI
+## 3.7 Cimetidine - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Clarithromycin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.8 Erythromycin - Alfentanil DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
+
+![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
+
+![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
+
+## 3.8 Cimetidine - Triazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Erythromycin_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Cimetidine_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Erythromycin_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Cimetidine_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
 
-## 3.9 Erythromycin - Alprazolam DDI
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Cimetidine_-_Triazolam_DDI/003_plotComparisonTimeProfile.png)
+
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Cimetidine_-_Triazolam_DDI/004_plotComparisonTimeProfile.png)
+
+## 3.9 Cimetidine - Verapamil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/009_3_9_Erythromycin_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/009_3_9_Cimetidine_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.10 Erythromycin - Midazolam DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/009_3_9_Cimetidine_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
+
+## 3.10 Clarithromycin - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Erythromycin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Erythromycin_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Erythromycin_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
 
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Erythromycin_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
 
-![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Erythromycin_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
+![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
 
-![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Erythromycin_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
+![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
 
-## 3.11 Erythromycin - Triazolam DDI
+![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/007_plotComparisonTimeProfile.png)
+
+![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/008_plotComparisonTimeProfile.png)
+
+![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/009_plotComparisonTimeProfile.png)
+
+![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/010_plotComparisonTimeProfile.png)
+
+## 3.11 Clarithromycin - Triazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/011_3_11_Erythromycin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/011_3_11_Clarithromycin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/011_3_11_Erythromycin_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
-
-## 3.12 Fluvoxamine - Alprazolam DDI
+## 3.12 Efavirenz - Alfentanil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/012_3_12_Fluvoxamine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/012_3_12_Efavirenz_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/012_3_12_Fluvoxamine_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/012_3_12_Efavirenz_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
 
-## 3.13 Fluvoxamine - Midazolam DDI
+## 3.13 Efavirenz - Carbamazepine DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/013_3_13_Fluvoxamine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/013_3_13_Efavirenz_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/013_3_13_Fluvoxamine_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
-
-## 3.14 Itraconazole - Alprazolam DDI
+## 3.14 Efavirenz - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/014_3_14_Itraconazole_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/014_3_14_Efavirenz_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.15 Itraconazole - Midazolam DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/014_3_14_Efavirenz_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/014_3_14_Efavirenz_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+
+## 3.15 Erythromycin - Alfentanil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Erythromycin_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Erythromycin_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
-
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
-
-![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
-
-![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
-
-![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/007_plotComparisonTimeProfile.png)
-
-![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/008_plotComparisonTimeProfile.png)
-
-![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Itraconazole_-_Midazolam_DDI/009_plotComparisonTimeProfile.png)
-
-## 3.16 Itraconazole - Triazolam DDI
+## 3.16 Erythromycin - Alprazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/016_3_16_Itraconazole_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/016_3_16_Erythromycin_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/016_3_16_Itraconazole_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
-
-## 3.17 Verapamil - Midazolam DDI
+## 3.17 Erythromycin - Carbamazepine DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Verapamil_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Erythromycin_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Verapamil_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Erythromycin_-_Carbamazepine_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Verapamil_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Erythromycin_-_Carbamazepine_DDI/003_plotComparisonTimeProfile.png)
 
-## 3.18 Efavirenz - Alfentanil DDI
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Erythromycin_-_Carbamazepine_DDI/004_plotComparisonTimeProfile.png)
+
+![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Erythromycin_-_Carbamazepine_DDI/005_plotComparisonTimeProfile.png)
+
+## 3.18 Erythromycin - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Efavirenz_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Efavirenz_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
 
-## 3.19 Efavirenz - Midazolam DDI
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
+
+![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
+
+![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
+
+## 3.19 Erythromycin - Triazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/019_3_19_Efavirenz_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/019_3_19_Erythromycin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/019_3_19_Efavirenz_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/019_3_19_Erythromycin_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/019_3_19_Efavirenz_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
-
-## 3.20 Rifampicin - Alfentanil DDI
+## 3.20 Fluconazole - Alfentanil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Fluconazole_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
-
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/003_plotComparisonTimeProfile.png)
-
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/004_plotComparisonTimeProfile.png)
-
-![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/005_plotComparisonTimeProfile.png)
-
-![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/006_plotComparisonTimeProfile.png)
-
-![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/007_plotComparisonTimeProfile.png)
-
-![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/008_plotComparisonTimeProfile.png)
-
-![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/009_plotComparisonTimeProfile.png)
-
-![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Rifampicin_-_Alfentanil_DDI/010_plotComparisonTimeProfile.png)
-
-## 3.21 Rifampicin - Alprazolam DDI
+## 3.21 Fluconazole - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Rifampicin_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Fluconazole_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Rifampicin_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Fluconazole_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Rifampicin_-_Alprazolam_DDI/003_plotComparisonTimeProfile.png)
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Fluconazole_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
 
-## 3.22 Rifampicin - Midazolam DDI
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Fluconazole_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
+
+## 3.22 Fluconazole - Triazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Fluconazole_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
-
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
-
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
-
-![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
-
-![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
-
-![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/007_plotComparisonTimeProfile.png)
-
-![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/008_plotComparisonTimeProfile.png)
-
-![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/009_plotComparisonTimeProfile.png)
-
-![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/010_plotComparisonTimeProfile.png)
-
-![011_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/011_plotComparisonTimeProfile.png)
-
-![012_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/012_plotComparisonTimeProfile.png)
-
-![013_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/013_plotComparisonTimeProfile.png)
-
-![014_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/014_plotComparisonTimeProfile.png)
-
-![015_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/015_plotComparisonTimeProfile.png)
-
-![016_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/016_plotComparisonTimeProfile.png)
-
-![017_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/017_plotComparisonTimeProfile.png)
-
-![018_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/018_plotComparisonTimeProfile.png)
-
-![019_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/019_plotComparisonTimeProfile.png)
-
-![020_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/020_plotComparisonTimeProfile.png)
-
-![021_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/021_plotComparisonTimeProfile.png)
-
-![022_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/022_plotComparisonTimeProfile.png)
-
-![023_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/023_plotComparisonTimeProfile.png)
-
-![024_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/024_plotComparisonTimeProfile.png)
-
-![025_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/025_plotComparisonTimeProfile.png)
-
-![026_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/026_plotComparisonTimeProfile.png)
-
-![027_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/027_plotComparisonTimeProfile.png)
-
-![028_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Rifampicin_-_Midazolam_DDI/028_plotComparisonTimeProfile.png)
-
-## 3.23 Rifampicin - Triazolam DDI
+## 3.23 Fluvoxamine - Alprazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/023_3_23_Rifampicin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/023_3_23_Fluvoxamine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.24 Rifampicin - Verapamil DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/023_3_23_Fluvoxamine_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
+
+## 3.24 Fluvoxamine - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Rifampicin_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Fluvoxamine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Rifampicin_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Fluvoxamine_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
 
-## 3.25 Fluconazole - Alfentanil DDI
+## 3.25 Itraconazole - Alprazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/025_3_25_Fluconazole_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/025_3_25_Itraconazole_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.26 Fluconazole - Midazolam DDI
+## 3.26 Itraconazole - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Fluconazole_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Fluconazole_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Fluconazole_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
 
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Fluconazole_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
 
-## 3.27 Fluconazole - Triazolam DDI
+![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
+
+![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
+
+![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/007_plotComparisonTimeProfile.png)
+
+![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/008_plotComparisonTimeProfile.png)
+
+![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/009_plotComparisonTimeProfile.png)
+
+## 3.27 Itraconazole - Triazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/027_3_27_Fluconazole_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/027_3_27_Itraconazole_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.28 Carbamazepine - Alprazolam DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/027_3_27_Itraconazole_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
+
+## 3.28 Rifampicin - Alfentanil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Carbamazepine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.29 Carbamazepine - Midazolam DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
+
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/003_plotComparisonTimeProfile.png)
+
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/004_plotComparisonTimeProfile.png)
+
+![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/005_plotComparisonTimeProfile.png)
+
+![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/006_plotComparisonTimeProfile.png)
+
+![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/007_plotComparisonTimeProfile.png)
+
+![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/008_plotComparisonTimeProfile.png)
+
+![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/009_plotComparisonTimeProfile.png)
+
+![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/010_plotComparisonTimeProfile.png)
+
+## 3.29 Rifampicin - Alprazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Carbamazepine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Rifampicin_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Carbamazepine_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Rifampicin_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
 
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Carbamazepine_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Rifampicin_-_Alprazolam_DDI/003_plotComparisonTimeProfile.png)
 
-## 3.30 Carbamazepine - Efavirenz DDI
+## 3.30 Rifampicin - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Carbamazepine_-_Efavirenz_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.31 Erythromycin - Carbamazepine DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
+
+![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
+
+![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/005_plotComparisonTimeProfile.png)
+
+![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
+
+![007_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/007_plotComparisonTimeProfile.png)
+
+![008_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/008_plotComparisonTimeProfile.png)
+
+![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/009_plotComparisonTimeProfile.png)
+
+![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/010_plotComparisonTimeProfile.png)
+
+![011_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/011_plotComparisonTimeProfile.png)
+
+![012_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/012_plotComparisonTimeProfile.png)
+
+![013_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/013_plotComparisonTimeProfile.png)
+
+![014_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/014_plotComparisonTimeProfile.png)
+
+![015_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/015_plotComparisonTimeProfile.png)
+
+![016_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/016_plotComparisonTimeProfile.png)
+
+![017_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/017_plotComparisonTimeProfile.png)
+
+![018_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/018_plotComparisonTimeProfile.png)
+
+![019_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/019_plotComparisonTimeProfile.png)
+
+![020_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/020_plotComparisonTimeProfile.png)
+
+![021_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/021_plotComparisonTimeProfile.png)
+
+![022_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/022_plotComparisonTimeProfile.png)
+
+![023_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/023_plotComparisonTimeProfile.png)
+
+![024_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/024_plotComparisonTimeProfile.png)
+
+![025_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/025_plotComparisonTimeProfile.png)
+
+![026_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/026_plotComparisonTimeProfile.png)
+
+![027_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/027_plotComparisonTimeProfile.png)
+
+![028_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/028_plotComparisonTimeProfile.png)
+
+## 3.31 Rifampicin - Triazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/031_3_31_Erythromycin_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/031_3_31_Rifampicin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
-![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/031_3_31_Erythromycin_-_Carbamazepine_DDI/002_plotComparisonTimeProfile.png)
-
-![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/031_3_31_Erythromycin_-_Carbamazepine_DDI/003_plotComparisonTimeProfile.png)
-
-![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/031_3_31_Erythromycin_-_Carbamazepine_DDI/004_plotComparisonTimeProfile.png)
-
-![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/031_3_31_Erythromycin_-_Carbamazepine_DDI/005_plotComparisonTimeProfile.png)
-
-## 3.32 Cimetidine - Carbamazepine DDI
+## 3.32 Rifampicin - Verapamil DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/032_3_32_Cimetidine_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/032_3_32_Rifampicin_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
 
-## 3.33 Efavirenz - Carbamazepine DDI
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/032_3_32_Rifampicin_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
+
+## 3.33 Verapamil - Midazolam DDI
                    
 
-![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/033_3_33_Efavirenz_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
+![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/033_3_33_Verapamil_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
+
+![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/033_3_33_Verapamil_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
+
+![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/033_3_33_Verapamil_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
 
 # 4 References
 **Almond 2016** Almond LM, Mukadam S, Gardner I, Okialda K, Wong S, Hatley O, Tay S, Rowland-Yeo K, Jamei M, Rostami-Hodjegan A, Kenny JR. Prediction of Drug-Drug Interactions Arising from CYP3A induction Using a Physiologically Based Dynamic Model. Drug Metab Dispos. 2016 Jun;44(6):821-32.
