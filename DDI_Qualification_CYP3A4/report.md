@@ -117,7 +117,7 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
     * [5.2 Mathematical Implementation of Drug-Drug Interactions](#52-mathematical-implementation-of-drug-drug-interactions)
     * [5.3 Automatic (re)-qualification workflow](#53-automatic-re-qualification-workflow)
 # 1 Introduction
-                   
+
 
 ## 1.1 Objective
 This **qualification report** evaluates for the PBPK platform **PK-Sim** (as part of the open systems pharmacology (OSP) suite) the ability to perform simulations with the intended purpose to predict cytochrome P450 3A4 (**CYP3A4**)-mediated drug-drug interactions (**DDI**).
@@ -148,7 +148,7 @@ The following perpetrator compounds were selected:
 - **Rifampicin** (strong CYP3A4 inducer)
   Model snapshot and evaluation plan (*release* **v1.2**): https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v1.2
 - **Carbamazepine** (moderate CYP3A4 inducer)
-  Model snapshot and evaluation plan (*release* **v1.3**): [https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v1.3](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v1.3)
+  Model snapshot and evaluation plan (*release* **v1.3**): https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v1.3
 - **Efavirenz** (moderate CYP3A4 inducer)
   Model snapshot and evaluation plan (*release* **v1.1**): https://github.com/Open-Systems-Pharmacology/Efavirenz-Model/releases/tag/v1.1
 - **Cimetidine** (weak CYP3A4 inhibitor)
@@ -184,11 +184,11 @@ The following sensitive CYP3A4 substrates as victim drugs were selected:
 
 <sub>The arrows indicate where at least one clinical DDI study between the two connected substances was available and included in the model network. Red indicates inhibition and green indicates induction as the primary type of interaction. Thin arrows indicate weak, mid-thick arrows moderate and thick arrows strong CYP3A4 modulation by the perpetrator.</sub>
 
-The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report. The respective data identifier (DataID) refers to the **ID** of the dataset in the [OSP PK database](https://github.com/Open-Systems-Pharmacology/Database-for-observed-data).
+The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report. The respective data identifier (DataID) refers to the **ID** of the dataset in the OSP PK database, version 1.5 (https://github.com/Open-Systems-Pharmacology/Database-for-observed-data/releases/tag/v1.5).
 
 ### Carbamazepine - Alprazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.0
+https://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.1
 
 The carbamazepine-alprazolam interaction was evaluated using one clinical DDI study ([Furukori 1998](#4-references)).
 
@@ -198,7 +198,7 @@ The carbamazepine-alprazolam interaction was evaluated using one clinical DDI st
 
 ### Carbamazepine - Efavirenz DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.0
+https://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.1
 
 The carbamazepine-efavirenz interaction was evaluated using one clinical DDI study ([Ji 2008](#4-references)).
 
@@ -720,7 +720,7 @@ The  rifampicin / verapamil interaction was evaluated using 1 clinical DDI study
 
 ### Verapamil - Midazolam DDI
 The release of the snapshot containing the respective simulations can be found here:
-https://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.2
+https://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.3
 
 The verapamil / midazolam interaction was evaluated using two clinical DDI studies including 3 different clinical settings ([Backman 1994](#4-references), [Wang 2005](#4-references)).
 
@@ -1493,17 +1493,17 @@ The following section shows concentration time profiles of the victim drugs of t
 
 
 ## 3.1 Carbamazepine - Alprazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/001_3_1_Carbamazepine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.2 Carbamazepine - Efavirenz DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/002_3_2_Carbamazepine_-_Efavirenz_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.3 Carbamazepine - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Carbamazepine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1512,24 +1512,24 @@ The following section shows concentration time profiles of the victim drugs of t
 ![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/003_3_3_Carbamazepine_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
 
 ## 3.4 Cimetidine - Alfentanil DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/004_3_4_Cimetidine_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.5 Cimetidine - Alprazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_5_Cimetidine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/005_3_5_Cimetidine_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.6 Cimetidine - Carbamazepine DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/006_3_6_Cimetidine_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.7 Cimetidine - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1544,7 +1544,7 @@ The following section shows concentration time profiles of the victim drugs of t
 ![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/007_3_7_Cimetidine_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
 
 ## 3.8 Cimetidine - Triazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Cimetidine_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1555,14 +1555,14 @@ The following section shows concentration time profiles of the victim drugs of t
 ![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/008_3_8_Cimetidine_-_Triazolam_DDI/004_plotComparisonTimeProfile.png)
 
 ## 3.9 Cimetidine - Verapamil DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/009_3_9_Cimetidine_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/009_3_9_Cimetidine_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.10 Clarithromycin - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1585,24 +1585,24 @@ The following section shows concentration time profiles of the victim drugs of t
 ![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/010_3_10_Clarithromycin_-_Midazolam_DDI/010_plotComparisonTimeProfile.png)
 
 ## 3.11 Clarithromycin - Triazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/011_3_11_Clarithromycin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.12 Efavirenz - Alfentanil DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/012_3_12_Efavirenz_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/012_3_12_Efavirenz_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.13 Efavirenz - Carbamazepine DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/013_3_13_Efavirenz_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.14 Efavirenz - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/014_3_14_Efavirenz_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1611,19 +1611,19 @@ The following section shows concentration time profiles of the victim drugs of t
 ![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/014_3_14_Efavirenz_-_Midazolam_DDI/003_plotComparisonTimeProfile.png)
 
 ## 3.15 Erythromycin - Alfentanil DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Erythromycin_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/015_3_15_Erythromycin_-_Alfentanil_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.16 Erythromycin - Alprazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/016_3_16_Erythromycin_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.17 Erythromycin - Carbamazepine DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Erythromycin_-_Carbamazepine_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1636,7 +1636,7 @@ The following section shows concentration time profiles of the victim drugs of t
 ![005_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/017_3_17_Erythromycin_-_Carbamazepine_DDI/005_plotComparisonTimeProfile.png)
 
 ## 3.18 Erythromycin - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1651,19 +1651,19 @@ The following section shows concentration time profiles of the victim drugs of t
 ![006_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/018_3_18_Erythromycin_-_Midazolam_DDI/006_plotComparisonTimeProfile.png)
 
 ## 3.19 Erythromycin - Triazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/019_3_19_Erythromycin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/019_3_19_Erythromycin_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.20 Fluconazole - Alfentanil DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/020_3_20_Fluconazole_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.21 Fluconazole - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Fluconazole_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1674,31 +1674,31 @@ The following section shows concentration time profiles of the victim drugs of t
 ![004_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/021_3_21_Fluconazole_-_Midazolam_DDI/004_plotComparisonTimeProfile.png)
 
 ## 3.22 Fluconazole - Triazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/022_3_22_Fluconazole_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.23 Fluvoxamine - Alprazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/023_3_23_Fluvoxamine_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/023_3_23_Fluvoxamine_-_Alprazolam_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.24 Fluvoxamine - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Fluvoxamine_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/024_3_24_Fluvoxamine_-_Midazolam_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.25 Itraconazole - Alprazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/025_3_25_Itraconazole_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.26 Itraconazole - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1719,14 +1719,14 @@ The following section shows concentration time profiles of the victim drugs of t
 ![009_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/026_3_26_Itraconazole_-_Midazolam_DDI/009_plotComparisonTimeProfile.png)
 
 ## 3.27 Itraconazole - Triazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/027_3_27_Itraconazole_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/027_3_27_Itraconazole_-_Triazolam_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.28 Rifampicin - Alfentanil DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1749,7 +1749,7 @@ The following section shows concentration time profiles of the victim drugs of t
 ![010_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/028_3_28_Rifampicin_-_Alfentanil_DDI/010_plotComparisonTimeProfile.png)
 
 ## 3.29 Rifampicin - Alprazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Rifampicin_-_Alprazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1758,7 +1758,7 @@ The following section shows concentration time profiles of the victim drugs of t
 ![003_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/029_3_29_Rifampicin_-_Alprazolam_DDI/003_plotComparisonTimeProfile.png)
 
 ## 3.30 Rifampicin - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -1817,19 +1817,19 @@ The following section shows concentration time profiles of the victim drugs of t
 ![028_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/030_3_30_Rifampicin_-_Midazolam_DDI/028_plotComparisonTimeProfile.png)
 
 ## 3.31 Rifampicin - Triazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/031_3_31_Rifampicin_-_Triazolam_DDI/001_plotComparisonTimeProfile.png)
 
 ## 3.32 Rifampicin - Verapamil DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/032_3_32_Rifampicin_-_Verapamil_DDI/001_plotComparisonTimeProfile.png)
 
 ![002_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/032_3_32_Rifampicin_-_Verapamil_DDI/002_plotComparisonTimeProfile.png)
 
 ## 3.33 Verapamil - Midazolam DDI
-                   
+
 
 ![001_plotComparisonTimeProfile.png](images/003_3_Concentration-Time_Profiles/033_3_33_Verapamil_-_Midazolam_DDI/001_plotComparisonTimeProfile.png)
 
@@ -2103,22 +2103,21 @@ The following section shows concentration time profiles of the victim drugs of t
 **Wang 2005** Wang Y,  Jin Y, Hilligoss  JK, Ho H, Hamman MA, Hu Z, Gorski JD, Hall SD. Effect of CYP3A5 genotype on the extent of CYP3A inhibition by verapamil. Clin Pharmacol Ther. 2005; 77(2):P3.
 
 # 5 Appendix
-                   
+
 
 ## 5.1 Open Systems Pharmacology Suite (OSPS) Introduction
-Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#references-for-osps-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in **Figure 1**.
+Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [[1](#references-osps-introduction)].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in [**Figure Appendix-1**](#figure-appendix-1).
 
-Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#references-for-osps-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#references-for-osps-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#references-for-osps-introduction)] or that of Rodgers and Rowland [[5-7](#references-for-osps-introduction)]. 
+Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [[2](#references-osps-introduction)] organ partition coefficients (tissue-to-plasma partition coefficients) [[3,4](#references-osps-introduction)], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [[3,4](#references-osps-introduction)] or that of Rodgers and Rowland [[5-7](#references-osps-introduction)]. 
 
-Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#references-for-osps-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#references-for-osps-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#references-for-osps-introduction)] or the OSP Suite homepage (<https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts>).
+Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [[2](#references-osps-introduction)]), with the user-defined body weight and height and ethnicity of the individual [[8](#references-osps-introduction)]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [[2,4,8,9](#references-osps-introduction)] or the OSP Suite homepage ([https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts](https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts)).
 
-
-**Figure** **1: Structure of the Whole Body PBPK Model integrated in PK-Sim®**
-
+<a id="figure-appendix-1"></a>
 ![generic PBPK model](images/PK-Sim_PBPK_generic_model_scheme.png)
 
+**Figure** **Appendix-1: Structure of the Whole Body PBPK Model integrated in PK-Sim®**
 
-
+<a id="references-osps-introduction"></a>
 
 ## References for OSPS introduction
 
@@ -2140,29 +2139,21 @@ Physiological databases included in the software incorporate the dependencies of
 
 [9] [Willmann S, Lippert J, Sevestre M, Solodenko J, Fois F, Schmitt W. PK-Sim®: a physiologically based pharmacokinetic ‘whole-body’ model. Biosilico 2003.1(4):121-24.](https://www.sciencedirect.com/science/article/pii/S1478538203023424?via%3Dihub)
 
-
 ## 5.2 Mathematical Implementation of Drug-Drug Interactions
-
-
 **DDI modeling: Competitive inhibition** 
 
-A detailed representation of the mathematical implementation of competitive enzyme inhibition  can be found in the OSP manual [here](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#competitive-inhibition-simple-setting-with-one-inhibitor).
-
-
+A detailed representation of the mathematical implementation of competitive enzyme inhibition can be found in the OSP manual ([https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#competitive-inhibition-simple-setting-with-one-inhibitor](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#competitive-inhibition-simple-setting-with-one-inhibitor)).
 
 **DDI modeling: Mechanism-based inhibition**
 
-A detailed representation of the mathematical implementation of mechanism-based enzyme inhibition  can be found in the OSP manual [here](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#irreversible-inhibition).
-
-
+A detailed representation of the mathematical implementation of mechanism-based enzyme inhibition can be found in the OSP manual ([https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#irreversible-inhibition](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#irreversible-inhibition)).
 
 **DDI modeling: Induction**
 
-A detailed representation of the mathematical implementation of enzyme induction can be found in the OSP manual [here](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#enzyme-induction).
-
+A detailed representation of the mathematical implementation of enzyme induction can be found in the OSP manual ([https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#enzyme-induction](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#enzyme-induction)).
 
 ## 5.3 Automatic (re)-qualification workflow
-[Open Systems Pharmacology](http://www.open-systems-pharmacology.org) provides a dynamic landscape of model repositories and a database of observed clinical data. Additionally, a technical framework to assess confidence of a specific intended use has been developed (qualification runner and reporting engine). This framework allows for an automatic (re)-qualification workflow of the OSP suite, comprising the following steps (**Figure 1**):
+Open Systems Pharmacology ([https://www.open-systems-pharmacology.org/](http://www.open-systems-pharmacology.org)) provides a dynamic landscape of model repositories and a database of observed clinical data. Additionally, a technical framework to assess confidence of a specific intended use has been developed (qualification runner and reporting engine). This framework allows for an automatic (re)-qualification workflow of the OSP suite, comprising the following steps [**Figure Appendix-2**](#figure-appendix-2):
 
 - PBPK model development and verification with observed data,
 
@@ -2172,14 +2163,12 @@ A detailed representation of the mathematical implementation of enzyme induction
 
 - Qualification report generation.
 
-  
-
-**Figure 1: OSP suite automatic (re)-qualification workflow**
+<a id="figure-appendix-2"></a>
 ![OSP qualification workflow](images/OSP_Qualification_Workflow_1.png)
 
+**Figure Appendix-2: OSP suite automatic (re)-qualification workflow**
 
-
-In a first step, the respective qualification scenario is saved in a special qualification repository on [GitHub](https://github.com/Open-Systems-Pharmacology/). This qualification scenario repository contains a detailed qualification plan that links and combines respective models and data to address the use case that shall be qualified. Therefore, the qualification plan consists of: 
+In a first step, the respective qualification scenario is saved in a special qualification repository on OSP GitHub ([https://github.com/Open-Systems-Pharmacology/](https://github.com/Open-Systems-Pharmacology/)). This qualification scenario repository contains a detailed qualification plan that links and combines respective models and data to address the use case that shall be qualified. Therefore, the qualification plan consists of: 
 
 - PK-Sim project files,
 - Additional model building steps (if applicable),
@@ -2188,19 +2177,14 @@ In a first step, the respective qualification scenario is saved in a special qua
 - Qualification scenario description text modules
 - Detailed report settings to describe the generation of charts and qualification measures. 
 
-PK-Sim projects, observed data sets, and qualification scenario text modules are deposited in distinct repositories and are referenced by the qualification plan (**Figure 2**).
+PK-Sim projects, observed data sets, and qualification scenario text modules are deposited in distinct repositories and are referenced by the qualification plan ([**Figure Appendix-3**](#figure-appendix-3)).
 
-
-
-**Figure 2: Qualification scenario repository landscape on GitHub**
+<a id="figure-appendix-3"></a>
 ![OSP qualification workflow detail](images/OSP_Qualification_Workflow_2.png)
 
+**Figure Appendix-3: Qualification scenario repository landscape on GitHub**
 
-
-In a second step the [qualification runner](https://github.com/Open-Systems-Pharmacology/QualificationRunner) processes the qualification plan, i.e. all project parts are exported and prepared for the [reporting engine](https://github.com/Open-Systems-Pharmacology/Reporting-Engine). The reporting engine provides a validated environment (currently implemented in MATLAB®, a transfer to R is in development) for model execution and finally generates the qualification report. This report contains the evaluation of the individual PBPK models with observed data (i.e. standard goodness of fit plots, visual predictive checks) and a comprehensive qualification of the specific use case assessing the predictive performance of the OSP suite by means of a predefined set of qualification measures and charts. 
+In a second step the qualification runner ([https://github.com/Open-Systems-Pharmacology/QualificationRunner](https://github.com/Open-Systems-Pharmacology/QualificationRunner)) processes the qualification plan, i.e. all project parts are exported and prepared for the reporting engine ([https://github.com/Open-Systems-Pharmacology/Reporting-Engine](https://github.com/Open-Systems-Pharmacology/Reporting-Engine)). The reporting engine provides a validated environment (implemented in R) for model execution and finally generates the qualification report. This report contains the evaluation of the individual PBPK models with observed data (i.e. standard goodness of fit plots, visual predictive checks) and a comprehensive qualification of the specific use case assessing the predictive performance of the OSP suite by means of a predefined set of qualification measures and charts. 
 
 The automated execution of the described workflow can be triggered to assess re-qualification in case new data, changes in model structure or parameterization, or new OSP suite releases arise.
-
-
-
 
