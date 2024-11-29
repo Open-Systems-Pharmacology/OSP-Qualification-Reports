@@ -2,10 +2,10 @@
 
 
 
-| Version                         | 1.2-OSP11.2                                                   |
+| Version                         | 1.2-OSP11.3                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP1A2/releases/tag/v1.2 |
-| OSP Version                     | 11.2                                                          |
+| OSP Version                     | 11.3                                                          |
 | Qualification Framework Version | 2.3                                                          |
 
 
