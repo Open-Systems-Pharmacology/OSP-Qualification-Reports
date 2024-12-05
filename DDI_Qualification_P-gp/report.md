@@ -73,7 +73,7 @@ To demonstrate the level of confidence, the predictive performance of the platfo
 
 The respective *qualification plan* to produce this *qualification report* is transparently provided open-source (https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp). The same applies for all presented PBPK models including *evaluation reports* on model building and evaluation of each model (https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).
 
-*Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-P-gp-ddi-network)).
+*Evaluation reports* including descriptions on model building and detailed evaluations of the included models are documented separately (see [Section 1.2](#12-pgp-ddi-network)).
 
 Please refer to the [Appendix](#5-appendix) to learn more details:
 
