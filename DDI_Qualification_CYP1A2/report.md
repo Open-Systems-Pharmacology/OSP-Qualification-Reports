@@ -2,11 +2,11 @@
 
 
 
-| Version                         | 1.2-OSP11.3                                                   |
+| Version                         | 1.2-OSP12.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP1A2/releases/tag/v1.2 |
-| OSP Version                     | 11.3                                                          |
-| Qualification Framework Version | 2.3                                                          |
+| OSP Version                     | 12.0                                                          |
+| Qualification Framework Version | 3.3                                                          |
 
 
 
@@ -255,9 +255,9 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.396312 
+GMFE (AUC) = 1.396306 
 
-GMFE (CMAX) = 1.219248 
+GMFE (CMAX) = 1.219247 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -275,7 +275,7 @@ GMFE (CMAX) = 1.219248
 |-----:|------------------------------:|-------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|---------------:|
 |14002 |Ethinylestradiol, 20 mg, PO,   |Tizanidine, PO|4.4136             |3.92              |1.1259            |3.751               |3.02               |1.2421             |Granfors 2005   |
 |14004 |Fluvoxamine, 100 mg, PO,       |Caffeine, PO  |10.1               |7.16              |1.4106            |1.0794              |1.09               |0.99028            |Jeppesen 1996   |
-|14006 |Fluvoxamine, 100 mg, PO,       |Caffeine, PO  |13.8497            |13.71             |1.0102            |1.3449              |1.4                |0.96065            |Culm-Merdek 2005|
+|14006 |Fluvoxamine, 100 mg, PO,       |Caffeine, PO  |13.8491            |13.71             |1.0101            |1.3449              |1.4                |0.96065            |Culm-Merdek 2005|
 |13017 |Fluvoxamine, 100 mg, PO,       |Tizanidine, PO|39.2197            |33                |1.1885            |16.0045             |12.1               |1.3227             |Granfors 2004   |
 |14008 |Mexiletine, 200 mg, PO,        |Caffeine, PO  |1.6676             |2.83              |0.58924           |1.0001              |1.89               |0.52917            |Joeres 1987     |
 |13018 |Mexiletine, 50 mg, PO,         |Tizanidine, PO|2.4837             |3.42              |0.72624           |2.4179              |3.22               |0.75089            |Momo 2010       |
@@ -294,9 +294,9 @@ GMFE (CMAX) = 1.219248
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/001_Perpetrator/001_Ethinylestradiol/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.755403 
+GMFE (AUC) = 1.755407 
 
-GMFE (CMAX) = 1.140423 
+GMFE (CMAX) = 1.140424 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -320,9 +320,9 @@ GMFE (CMAX) = 1.140423
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/001_Perpetrator/002_Fluvoxamine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.190201 
+GMFE (AUC) = 1.190190 
 
-GMFE (CMAX) = 1.105209 
+GMFE (CMAX) = 1.105210 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -348,7 +348,7 @@ GMFE (CMAX) = 1.105209
 
 GMFE (AUC) = 1.528665 
 
-GMFE (CMAX) = 1.586400 
+GMFE (CMAX) = 1.586395 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -374,9 +374,9 @@ GMFE (CMAX) = 1.586400
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP1A2-mediated_DDI/002_Victim/001_Caffeine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.603950 
+GMFE (AUC) = 1.603937 
 
-GMFE (CMAX) = 1.200931 
+GMFE (CMAX) = 1.200930 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
