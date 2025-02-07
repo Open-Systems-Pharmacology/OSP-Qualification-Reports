@@ -3,11 +3,11 @@
 
 
 
-| Version                         | 1.3-OSP11.3                                                   |
+| Version                         | 1.3-OSP12.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/v1.3 |
-| OSP Version                     | 11.3                                                          |
-| Qualification Framework Version | 2.3                                                          |
+| OSP Version                     | 12.0                                                          |
+| Qualification Framework Version | 3.3                                                          |
 
 
 
@@ -144,9 +144,9 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_UGT-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.137874 
+GMFE (AUC) = 1.137940 
 
-GMFE (CMAX) = 1.102917 
+GMFE (CMAX) = 1.102869 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -162,10 +162,10 @@ GMFE (CMAX) = 1.102917
 
 |DataID|Perpetrator                                                                       |Victim           |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference          |
 |-----:|---------------------------------------------------------------------------------:|----------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|------------------:|
-|571   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4686             |1.72              |0.85385           |1.3544              |1.53               |0.88524            |Iwamoto 2008       |
-|575   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4205             |1.67              |0.85057           |1.33                |1.16               |1.1466             |Krishna 2016       |
-|573   |Atazanavir, 400 mg, PO, MD OD (8 days)                                            |Raltegravir, PO  |1.4397             |1.72              |0.83705           |1.1175              |1.37               |0.81568            |Neely 2010         |
-|579   |Atazanavir, 400 mg, PO, MD BID (14 days)                                          |Raltegravir, PO  |1.5661             |1.536             |1.0196            |1.3877              |1.394              |0.9955             |Zhu 2010           |
+|571   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4689             |1.72              |0.854             |1.3547              |1.53               |0.88543            |Iwamoto 2008       |
+|575   |Atazanavir, 400 mg, PO, MD OD (9 days)                                            |Raltegravir, PO  |1.4198             |1.67              |0.85018           |1.3293              |1.16               |1.146              |Krishna 2016       |
+|573   |Atazanavir, 400 mg, PO, MD OD (8 days)                                            |Raltegravir, PO  |1.4394             |1.72              |0.83687           |1.1172              |1.37               |0.81546            |Neely 2010         |
+|579   |Atazanavir, 400 mg, PO, MD BID (14 days)                                          |Raltegravir, PO  |1.5658             |1.536             |1.0194            |1.3874              |1.394              |0.99524            |Zhu 2010           |
 |642   |Mefenamic Acid, 500 / 250 mg, PO, MD QID (4 days), with first dose ad loading dose|Dapagliflozin, PO|1.3277             |1.51              |0.87928           |1.1561              |1.13               |1.0231             |Kasichayanula 2013a|
 
 # 3 Concentration-Time Profiles
