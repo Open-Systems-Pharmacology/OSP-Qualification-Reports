@@ -1,13 +1,17 @@
+
+
+
+
 # P-gp DDI Qualification
 
 
 
 
-| Version                         | 1.0-OSP11.3                                                   |
+| Version                         | 1.0-OSP12.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/v1.0 |
-| OSP Version                     | 11.3                                                          |
-| Qualification Framework Version | 3.2                                                          |
+| OSP Version                     | 12.0                                                          |
+| Qualification Framework Version | 3.3                                                          |
 
 
 
