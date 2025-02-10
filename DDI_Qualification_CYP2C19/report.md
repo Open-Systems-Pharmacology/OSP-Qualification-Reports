@@ -2,11 +2,11 @@
 
 
 
-| Version                         | 1.2-OSP11.3                                                   |
+| Version                         | 1.2-OSP12.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP2C19/releases/tag/v1.2 |
-| OSP Version                     | 11.3                                                          |
-| Qualification Framework Version | 2.3                                                          |
+| OSP Version                     | 12.0                                                          |
+| Qualification Framework Version | 3.3                                                          |
 
 
 
@@ -209,9 +209,9 @@ In the plots,
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.252722 
+GMFE (AUC) = 1.252709 
 
-GMFE (CMAX) = 1.173692 
+GMFE (CMAX) = 1.173694 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -227,14 +227,14 @@ GMFE (CMAX) = 1.173692
 
 |DataID|Perpetrator               |Victim           |Predicted AUC Ratio|Observed AUC Ratio|Pred/Obs AUC Ratio|Predicted CMAX Ratio|Observed CMAX Ratio|Pred/Obs CMAX Ratio|Reference          |
 |-----:|-------------------------:|----------------:|------------------:|-----------------:|-----------------:|-------------------:|------------------:|------------------:|------------------:|
-|11050 |Fluvoxamine, 50 mg, PO,   |Omeprazole, PO   |2.5885             |5.34              |0.48473           |1.9815              |3.48               |0.56938            |Yasui-Furukori 2004|
+|11050 |Fluvoxamine, 50 mg, PO,   |Omeprazole, PO   |2.5886             |5.34              |0.48475           |1.9815              |3.48               |0.5694             |Yasui-Furukori 2004|
 |11052 |Fluvoxamine, 50 mg, PO,   |Omeprazole, PO   |0.99972            |1.21              |0.82621           |1.0009              |1.12               |0.89367            |Yasui-Furukori 2004|
-|11048 |Moclobemide, 300 mg, PO,  |Omeprazole, PO   |1.5319             |2.05              |0.74726           |1.252               |1.67               |0.74972            |Cho 2002           |
+|11048 |Moclobemide, 300 mg, PO,  |Omeprazole, PO   |1.5318             |2.05              |0.74724           |1.252               |1.67               |0.74972            |Cho 2002           |
 |11049 |Moclobemide, 300 mg, PO,  |Omeprazole, PO   |1                  |1.16              |0.86207           |1.0003              |0.97               |1.0312             |Cho 2002           |
-|15001 |Fluvoxamine, 27.5 mg, PO, |S-Mephenytoin, PO|3.8498             |4.64              |0.82969           |2.1352              |2.12               |1.0071             |Yao 2003           |
+|15001 |Fluvoxamine, 27.5 mg, PO, |S-Mephenytoin, PO|3.8498             |4.64              |0.82971           |2.1352              |2.12               |1.0072             |Yao 2003           |
 |15002 |Fluvoxamine, 45.8 mg, PO, |S-Mephenytoin, PO|6.336              |6.7               |0.94567           |2.492               |2.4                |1.0383             |Yao 2003           |
-|15003 |Fluvoxamine, 64.1 mg, PO, |S-Mephenytoin, PO|8.076              |9.89              |0.81658           |2.6329              |2.42               |1.088              |Yao 2003           |
-|10027 |Omeprazole, 40 mg, PO,    |Moclobemide , PO |1.3133             |1.31              |1.0025            |0.94799             |1.11               |0.85404            |Yu 2001            |
+|15003 |Fluvoxamine, 64.1 mg, PO, |S-Mephenytoin, PO|8.0763             |9.89              |0.81661           |2.6329              |2.42               |1.088              |Yao 2003           |
+|10027 |Omeprazole, 40 mg, PO,    |Moclobemide , PO |1.3133             |1.31              |1.0025            |0.94797             |1.11               |0.85403            |Yu 2001            |
 
 ## Perpetrator
 
@@ -248,9 +248,9 @@ GMFE (CMAX) = 1.173692
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/001_Fluvoxamine/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.312656 
+GMFE (AUC) = 1.312631 
 
-GMFE (CMAX) = 1.174613 
+GMFE (CMAX) = 1.174610 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -274,9 +274,9 @@ GMFE (CMAX) = 1.174613
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/002_Moclobemide/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.245930 
+GMFE (AUC) = 1.245941 
 
-GMFE (CMAX) = 1.172789 
+GMFE (CMAX) = 1.172792 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -300,9 +300,9 @@ GMFE (CMAX) = 1.172789
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/001_Perpetrator/003_Omeprazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.002530 
+GMFE (AUC) = 1.002524 
 
-GMFE (CMAX) = 1.170904 
+GMFE (CMAX) = 1.170920 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -328,9 +328,9 @@ GMFE (CMAX) = 1.170904
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/001_Moclobemide/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.002530 
+GMFE (AUC) = 1.002524 
 
-GMFE (CMAX) = 1.170904 
+GMFE (CMAX) = 1.170920 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -354,9 +354,9 @@ GMFE (CMAX) = 1.170904
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/002_Omeprazole/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.403132 
+GMFE (AUC) = 1.403125 
 
-GMFE (CMAX) = 1.282224 
+GMFE (CMAX) = 1.282217 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
@@ -380,9 +380,9 @@ GMFE (CMAX) = 1.282224
 
 ![004_plotDDIRatioCMAXResidualsVsObserved.png](images/002_2_Qualification_of_Use_Case_CYP2C19-mediated_DDI/002_Victim/003_S_Mephenytoin/004_plotDDIRatioCMAXResidualsVsObserved.png)
 
-GMFE (AUC) = 1.159976 
+GMFE (AUC) = 1.159954 
 
-GMFE (CMAX) = 1.043965 
+GMFE (CMAX) = 1.043971 
 
 |AUC                       |Number|Ratio [%]|
 |-------------------------:|-----:|--------:|
