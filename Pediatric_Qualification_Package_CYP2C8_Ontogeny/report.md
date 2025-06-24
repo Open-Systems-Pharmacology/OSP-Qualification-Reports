@@ -1,33 +1,28 @@
 # Pediatric Qualification Package: CYP2C8 Ontogeny
 
-
-
-
-
-| Version                         | 1.3-OSP12.0                                                   |
+| Version                         | 1.0-OSP12.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP2C8_Ontogeny/releases/tag/v1.3 |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP2C8_Ontogeny/releases/tag/v1.0 |
 | OSP Version                     | 12.0                                                          |
 | Qualification Framework Version | 3.3                                                          |
-
-
-
-
 
 This qualification report is filed at:
 
 https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
+
 # Table of Contents
-  * [1 Introduction to Pediatric Translation](#1-introduction-to-pediatric-translation)
-  * [2 Pediatric translation qualification](#2-pediatric-translation-qualification)
-    * [2.1 Montelukast PK Ratio tables and Figures](#21-montelukast-pk-ratio-tables-and-figures)
-    * [2.2 Montelukast Concentration-Time profiles in Children](#22-montelukast-concentration-time-profiles-in-children)
-  * [3 References](#3-references)
-# 1 Introduction to Pediatric Translation
+
+ * [1 Introduction to Pediatric Translation](#introduction)
+ * [2 Pediatric translation qualification](#pediatric-translation-qualification)
+   * [2.1 Montelukast PK Ratio tables and Figures](#montelukast-pk-ratios)
+   * [2.2 Montelukast Concentration-Time profiles in Children](#montelukast-ct-profiles-in-children)
+ * [3 References](#main-references)
+
+# 1 Introduction to Pediatric Translation<a id="introduction"></a>
+
 The presented qualification report evaluates the predictive performance of the OSP suite to predict cytochrome P450 2C8 (CYP2C8)-mediated drug clearance in children.
 
 Therefore, PBPK models of specific *in vivo* probe substances covering children aged below 6 months up to adolescents were built and evaluated. All models are whole-body PBPK models, allowing for pediatric translation in organs expressing CYP2C8. The qualification report demonstrates the level of confidence of the OSP suite with regard to reliable PBPK predictions of age-related CYP2C8-mediated drug clearance during model-informed drug development. The presented PBPK models as well as the respective qualification plan and qualification report are provided open-source and transparently documented (https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP2C8_Ontogeny). 
-
 
 ## Translation of Adult PBPK to Children
 
@@ -56,19 +51,15 @@ To qualify the OSP suite for the pediatric translation of the pharmacokinetics o
 
 The adult PBPK model report and the corresponding PK-Sim project file are filed at: https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library/
 
+# 2 Pediatric translation qualification<a id="pediatric-translation-qualification"></a>
 
-# 2 Pediatric translation qualification
 ## Evaluation of Pediatric translation
 
 All pediatric translations are pure retrospective predictions, no pediatric pharmacokinetic studies were used to inform model parameters. All parameters necessary to model the pediatric populations, such as demographics (age, weight, height), as well as dosing formulation information were taken from the respective pediatrics studies from literature in order to evaluate their predictive performance. 
 
 The models were evaluated by ratio plots of area under the plasma concentration-time curve (AUC), or clearance (CL) values resulting from our predictions to the values observed during clinical studies, and by comparison of concentration-time profiles if available. As a quantitative measure of the descriptive and predictive performance of each model, the geometric mean fold error was calculated according to Eq. 1:
 
-
-
 Eq. 1: GMFE=10^((Σ|log10(pred PK parameter∕obs PK parameter)|)∕n)
-
-
 
 with GMFE = geometric mean fold error of all AUC or CL predictions of the respective model, pred PK parameter = predicted AUC or CL, obs PK parameter = observed AUC or CL, and n = number of observed values.
 
@@ -76,77 +67,107 @@ The ratios of predicted over observed mean AUC or CL values from all compound we
 
 In the next sections the demographics as well as the evaluation results of the predictive performance of the specific compound PBPK models in children can be found.  
 
+<a id="figure-2-1"></a>
 
-![003_plotPKRatioAUC.png](images/002_2_Pediatric_translation_qualification/003_plotPKRatioAUC.png)
+![](images/002_section_pediatric-translation-qualification/1_pk_ratio_plot_AUC.png)
 
-GMFE (AUC) = 1.403890 
+**Figure 2-1: Overall predictivity of the montelukast PBPK model as an in vivo marker of CYP2C8 mediated clearance. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
 
-|AUC                   |Number|Ratio [%]|
-|---------------------:|-----:|--------:|
-|Points total          |56    |-        |
-|Points within 1.5 fold|36    |64.2857  |
-|Points within 2-fold  |50    |89.2857  |
+<br>
+<br>
 
-|Study ID    |Age [y] |BodyWeight [kg]|Predicted AUC [ng*h/ml]|Observed AUC [ng*h/ml]|Pred/Obs AUC Ratio|
-|-----------:|-------:|--------------:|----------------------:|---------------------:|-----------------:|
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |30336.98              |0.68717           |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |29350.14              |0.71027           |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |19481.8               |1.0701            |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |15271.04              |1.3651            |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |14152.63              |1.473             |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |19490.31              |0.51544           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |17384.8               |0.57786           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |16069.03              |0.62518           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |14555.88              |0.69017           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |12845.36              |0.78208           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |10016.44              |1.003             |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |10024.69              |0.87804           |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |8774.445              |1.0031            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |6998.658              |1.2577            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |5419.723              |1.6241            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |5024.989              |1.7517            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |3709.209              |2.373             |
-|Kearns 2008 |0.33333 |5.6667         |8681.5686              |9835.066              |0.88272           |
-|Kearns 2008 |0.33333 |5.6667         |8681.5686              |6941.125              |1.2507            |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |10369.89              |0.83884           |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |9843.322              |0.88372           |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |6488.084              |1.3407            |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |3791.252              |2.2944            |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |3462.049              |2.5126            |
-|Kearns 2008 |0.5     |6.75           |9614.0968              |6167.911              |1.5587            |
-|Kearns 2008 |0.58333 |7.2917         |9805.1413              |11833.5               |0.82859           |
-|Kearns 2008 |0.66667 |7.8333         |9987.5036              |10986.76              |0.90905           |
-|Kearns 2008 |0.66667 |7.8333         |9987.5036              |10394.92              |0.96081           |
-|Kearns 2008 |0.66667 |7.8333         |9987.5036              |8289.154              |1.2049            |
-|Kearns 2008 |0.75    |8.375          |10137.9117             |10534.24              |0.96238           |
-|Kearns 2008 |0.75    |8.375          |10137.9117             |4612.969              |2.1977            |
-|Kearns 2008 |0.83333 |8.9167         |10286.7318             |3897.288              |2.6395            |
-|Kearns 2008 |0.91667 |9.4583         |10426.5538             |15879.4               |0.65661           |
-|Kearns 2008 |0.91667 |9.4583         |10426.5538             |13116.26              |0.79493           |
-|Kearns 2008 |0.91667 |9.4583         |10426.5538             |5155.535              |2.0224            |
-|Kearns 2008 |1       |10             |10563.8727             |18848.16              |0.56047           |
-|Kearns 2008 |1       |10             |10563.8727             |7334.827              |1.4402            |
-|Kearns 2008 |1       |10             |10563.8727             |5690.103              |1.8565            |
-|Kearns 2008 |1.1667  |10.375         |10779.5171             |6167.137              |1.7479            |
-|Kearns 2008 |1.4167  |10.9375        |11130.8847             |11060.03              |1.0064            |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |15221.25              |0.74402           |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |8642.352              |1.3104            |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |7392.36               |1.532             |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |5945.002              |1.9049            |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |14374.25              |0.79478           |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |11940.31              |0.9568            |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |11414                 |1.0009            |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |10558.23              |1.082             |
-|Kearns 2008 |1.75    |11.6875        |11520.1486             |12013.84              |0.95891           |
-|Kearns 2008 |1.75    |11.6875        |11520.1486             |9250.706              |1.2453            |
-|Friesen 2004|11.9    |40.55          |4428.2714              |4387.2                |1.0094            |
-|Knorr 1999  |7       |26             |3480.9747              |2929                  |1.1885            |
-|Knorr 2001  |4       |17             |3382.7551              |2721                  |1.2432            |
-|Knorr 2006  |0.33333 |6.8            |5964.2673              |3644.3                |1.6366            |
-|Miyoga 2004 |1.5     |9              |4454.6433              |3629.2                |1.2274            |
-|Miyoga 2004 |0.75    |9              |4819.0816              |2470.9                |1.9503            |
+<a id="table-2-1"></a>
 
-## 2.1 Montelukast PK Ratio tables and Figures
+**Table 2-1: Measure of Overall predictivity of the montelukast PBPK model as an in vivo marker of CYP2C8 mediated clearance. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
+
+|                       |Number |Ratio [%] |
+|:----------------------|:------|:---------|
+|Points total           |56     |-        |
+|Points within 1.5 fold |36     |64.29     |
+|Points within 2 fold   |50     |89.29     |
+
+<br>
+<br>
+
+<a id="table-2-2"></a>
+
+**Table 2-2: GMFE for Overall predictivity of the montelukast PBPK model as an in vivo marker of CYP2C8 mediated clearance. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
+
+|Parameter |GMFE |
+|:---------|:----|
+|AUC       |1.40 |
+
+<br>
+<br>
+
+<a id="table-2-3"></a>
+
+**Table 2-3: Overall predictivity of the montelukast PBPK model as an in vivo marker of CYP2C8 mediated clearance. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
+
+|Study ID     |Age [month(s)] |Body Weight [kg] |Predicted AUC [µg*h/l] |Observed AUC [µg*h/l] |Pred/Obs AUC Ratio |
+|:------------|:--------------|:----------------|:----------------------|:---------------------|:------------------|
+|Kearns 2008  |0.08           |4.04             |20846.61               |30336.98              |0.69               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |29350.14              |0.71               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |19481.80              |1.07               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |15271.04              |1.37               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |14152.63              |1.47               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |19490.31              |0.52               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |17384.80              |0.58               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |16069.03              |0.63               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |14555.88              |0.69               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |12845.36              |0.78               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |10016.44              |1.00               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |10024.69              |0.88               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |8774.44               |1.00               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |6998.66               |1.26               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |5419.72               |1.62               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |5024.99               |1.75               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |3709.21               |2.37               |
+|Kearns 2008  |0.33           |5.67             |8681.58                |9835.07               |0.88               |
+|Kearns 2008  |0.33           |5.67             |8681.58                |6941.12               |1.25               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |10369.89              |0.84               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |9843.32               |0.88               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |6488.08               |1.34               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |3791.25               |2.29               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |3462.05               |2.51               |
+|Kearns 2008  |0.50           |6.75             |9614.11                |6167.91               |1.56               |
+|Kearns 2008  |0.58           |7.29             |9805.12                |11833.50              |0.83               |
+|Kearns 2008  |0.67           |7.83             |9987.51                |10986.76              |0.91               |
+|Kearns 2008  |0.67           |7.83             |9987.51                |10394.92              |0.96               |
+|Kearns 2008  |0.67           |7.83             |9987.51                |8289.15               |1.20               |
+|Kearns 2008  |0.75           |8.38             |10137.93               |10534.24              |0.96               |
+|Kearns 2008  |0.75           |8.38             |10137.93               |4612.97               |2.20               |
+|Kearns 2008  |0.83           |8.92             |10286.73               |3897.29               |2.64               |
+|Kearns 2008  |0.92           |9.46             |10426.56               |15879.40              |0.66               |
+|Kearns 2008  |0.92           |9.46             |10426.56               |13116.26              |0.79               |
+|Kearns 2008  |0.92           |9.46             |10426.56               |5155.53               |2.02               |
+|Kearns 2008  |1.00           |10.00            |10563.87               |18848.16              |0.56               |
+|Kearns 2008  |1.00           |10.00            |10563.87               |7334.83               |1.44               |
+|Kearns 2008  |1.00           |10.00            |10563.87               |5690.10               |1.86               |
+|Kearns 2008  |1.17           |10.38            |10779.51               |6167.14               |1.75               |
+|Kearns 2008  |1.42           |10.94            |11130.88               |11060.03              |1.01               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |15221.25              |0.74               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |8642.35               |1.31               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |7392.36               |1.53               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |5945.00               |1.90               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |14374.25              |0.79               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |11940.31              |0.96               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |11414.00              |1.00               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |10558.23              |1.08               |
+|Kearns 2008  |1.75           |11.69            |11520.13               |12013.84              |0.96               |
+|Kearns 2008  |1.75           |11.69            |11520.13               |9250.71               |1.25               |
+|Friesen 2004 |11.90          |40.55            |4428.28                |4387.20               |1.01               |
+|Knorr 1999   |7.00           |26.00            |3480.98                |2929.00               |1.19               |
+|Knorr 2001   |4.00           |17.00            |3382.76                |2721.00               |1.24               |
+|Knorr 2006   |0.33           |6.80             |5964.28                |3644.30               |1.64               |
+|Miyoga 2004  |1.50           |9.00             |4454.64                |3629.20               |1.23               |
+|Miyoga 2004  |0.75           |9.00             |4819.09                |2470.90               |1.95               |
+
+<br>
+<br>
+
+## 2.1 Montelukast PK Ratio tables and Figures<a id="montelukast-pk-ratios"></a>
+
 ### Montelukast model
 
 Montelukast PBPK predictions in children were evaluated using pharmacokinetic (PK) data reported in the following studies: 
@@ -161,85 +182,131 @@ Montelukast PBPK predictions in children were evaluated using pharmacokinetic (P
 
 The pediatric PBPK model predicted the clearance values of montelukast observed in pediatric studies reasonably across all available age groups, ranging from 1 month to 11.9 years old. The ratios of mean predicted over observed area under the observed plasma concentrations (AUC) are illustrated in the table below as well as in the predicted versus observed AUC ratio plot, showing that most predictions in children were within 2-fold error of observed values.
 
+<a id="figure-2-2"></a>
 
-![001_plotPKRatioAUC.png](images/002_2_Pediatric_translation_qualification/001_2_1_Montelukast_PK_Ratio_tables_and_Figures/001_plotPKRatioAUC.png)
+![](images/002_section_pediatric-translation-qualification/003_section_montelukast-pk-ratios/5_pk_ratio_plot_AUC.png)
 
-GMFE (AUC) = 1.403890 
+**Figure 2-2: Overall predictivity of the montelukast PBPK model. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of montelukast in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
 
-|AUC                   |Number|Ratio [%]|
-|---------------------:|-----:|--------:|
-|Points total          |56    |-        |
-|Points within 1.5 fold|36    |64.2857  |
-|Points within 2-fold  |50    |89.2857  |
+<br>
+<br>
 
-|Study ID    |Age [y] |BodyWeight [kg]|Predicted AUC [ng*h/ml]|Observed AUC [ng*h/ml]|Pred/Obs AUC Ratio|
-|-----------:|-------:|--------------:|----------------------:|---------------------:|-----------------:|
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |30336.98              |0.68717           |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |29350.14              |0.71027           |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |19481.8               |1.0701            |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |15271.04              |1.3651            |
-|Kearns 2008 |0.083333|4.0417         |20846.5762             |14152.63              |1.473             |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |19490.31              |0.51544           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |17384.8               |0.57786           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |16069.03              |0.62518           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |14555.88              |0.69017           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |12845.36              |0.78208           |
-|Kearns 2008 |0.16667 |4.5833         |10046.0396             |10016.44              |1.003             |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |10024.69              |0.87804           |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |8774.445              |1.0031            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |6998.658              |1.2577            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |5419.723              |1.6241            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |5024.989              |1.7517            |
-|Kearns 2008 |0.25    |5.125          |8802.0416              |3709.209              |2.373             |
-|Kearns 2008 |0.33333 |5.6667         |8681.5686              |9835.066              |0.88272           |
-|Kearns 2008 |0.33333 |5.6667         |8681.5686              |6941.125              |1.2507            |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |10369.89              |0.83884           |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |9843.322              |0.88372           |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |6488.084              |1.3407            |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |3791.252              |2.2944            |
-|Kearns 2008 |0.41667 |6.2083         |8698.7093              |3462.049              |2.5126            |
-|Kearns 2008 |0.5     |6.75           |9614.0968              |6167.911              |1.5587            |
-|Kearns 2008 |0.58333 |7.2917         |9805.1413              |11833.5               |0.82859           |
-|Kearns 2008 |0.66667 |7.8333         |9987.5036              |10986.76              |0.90905           |
-|Kearns 2008 |0.66667 |7.8333         |9987.5036              |10394.92              |0.96081           |
-|Kearns 2008 |0.66667 |7.8333         |9987.5036              |8289.154              |1.2049            |
-|Kearns 2008 |0.75    |8.375          |10137.9117             |10534.24              |0.96238           |
-|Kearns 2008 |0.75    |8.375          |10137.9117             |4612.969              |2.1977            |
-|Kearns 2008 |0.83333 |8.9167         |10286.7318             |3897.288              |2.6395            |
-|Kearns 2008 |0.91667 |9.4583         |10426.5538             |15879.4               |0.65661           |
-|Kearns 2008 |0.91667 |9.4583         |10426.5538             |13116.26              |0.79493           |
-|Kearns 2008 |0.91667 |9.4583         |10426.5538             |5155.535              |2.0224            |
-|Kearns 2008 |1       |10             |10563.8727             |18848.16              |0.56047           |
-|Kearns 2008 |1       |10             |10563.8727             |7334.827              |1.4402            |
-|Kearns 2008 |1       |10             |10563.8727             |5690.103              |1.8565            |
-|Kearns 2008 |1.1667  |10.375         |10779.5171             |6167.137              |1.7479            |
-|Kearns 2008 |1.4167  |10.9375        |11130.8847             |11060.03              |1.0064            |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |15221.25              |0.74402           |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |8642.352              |1.3104            |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |7392.36               |1.532             |
-|Kearns 2008 |1.5833  |11.3125        |11324.8699             |5945.002              |1.9049            |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |14374.25              |0.79478           |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |11940.31              |0.9568            |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |11414                 |1.0009            |
-|Kearns 2008 |1.6667  |11.5           |11424.4347             |10558.23              |1.082             |
-|Kearns 2008 |1.75    |11.6875        |11520.1486             |12013.84              |0.95891           |
-|Kearns 2008 |1.75    |11.6875        |11520.1486             |9250.706              |1.2453            |
-|Friesen 2004|11.9    |40.55          |4428.2714              |4387.2                |1.0094            |
-|Knorr 1999  |7       |26             |3480.9747              |2929                  |1.1885            |
-|Knorr 2001  |4       |17             |3382.7551              |2721                  |1.2432            |
-|Knorr 2006  |0.33333 |6.8            |5964.2673              |3644.3                |1.6366            |
-|Miyoga 2004 |1.5     |9              |4454.6433              |3629.2                |1.2274            |
-|Miyoga 2004 |0.75    |9              |4819.0816              |2470.9                |1.9503            |
+<a id="table-2-4"></a>
 
-## 2.2 Montelukast Concentration-Time profiles in Children
+**Table 2-4: Measure of Overall predictivity of the montelukast PBPK model. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of montelukast in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
+
+|                       |Number |Ratio [%] |
+|:----------------------|:------|:---------|
+|Points total           |56     |-        |
+|Points within 1.5 fold |36     |64.29     |
+|Points within 2 fold   |50     |89.29     |
+
+<br>
+<br>
+
+<a id="table-2-5"></a>
+
+**Table 2-5: GMFE for Overall predictivity of the montelukast PBPK model. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of montelukast in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
+
+|Parameter |GMFE |
+|:---------|:----|
+|AUC       |1.40 |
+
+<br>
+<br>
+
+<a id="table-2-6"></a>
+
+**Table 2-6: Overall predictivity of the montelukast PBPK model. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of montelukast in children 1 month to 11.9 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
+
+|Study ID     |Age [month(s)] |Body Weight [kg] |Predicted AUC [µg*h/l] |Observed AUC [µg*h/l] |Pred/Obs AUC Ratio |
+|:------------|:--------------|:----------------|:----------------------|:---------------------|:------------------|
+|Kearns 2008  |0.08           |4.04             |20846.61               |30336.98              |0.69               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |29350.14              |0.71               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |19481.80              |1.07               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |15271.04              |1.37               |
+|Kearns 2008  |0.08           |4.04             |20846.61               |14152.63              |1.47               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |19490.31              |0.52               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |17384.80              |0.58               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |16069.03              |0.63               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |14555.88              |0.69               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |12845.36              |0.78               |
+|Kearns 2008  |0.17           |4.58             |10046.03               |10016.44              |1.00               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |10024.69              |0.88               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |8774.44               |1.00               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |6998.66               |1.26               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |5419.72               |1.62               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |5024.99               |1.75               |
+|Kearns 2008  |0.25           |5.13             |8802.04                |3709.21               |2.37               |
+|Kearns 2008  |0.33           |5.67             |8681.58                |9835.07               |0.88               |
+|Kearns 2008  |0.33           |5.67             |8681.58                |6941.12               |1.25               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |10369.89              |0.84               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |9843.32               |0.88               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |6488.08               |1.34               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |3791.25               |2.29               |
+|Kearns 2008  |0.42           |6.21             |8698.70                |3462.05               |2.51               |
+|Kearns 2008  |0.50           |6.75             |9614.11                |6167.91               |1.56               |
+|Kearns 2008  |0.58           |7.29             |9805.12                |11833.50              |0.83               |
+|Kearns 2008  |0.67           |7.83             |9987.51                |10986.76              |0.91               |
+|Kearns 2008  |0.67           |7.83             |9987.51                |10394.92              |0.96               |
+|Kearns 2008  |0.67           |7.83             |9987.51                |8289.15               |1.20               |
+|Kearns 2008  |0.75           |8.38             |10137.93               |10534.24              |0.96               |
+|Kearns 2008  |0.75           |8.38             |10137.93               |4612.97               |2.20               |
+|Kearns 2008  |0.83           |8.92             |10286.73               |3897.29               |2.64               |
+|Kearns 2008  |0.92           |9.46             |10426.56               |15879.40              |0.66               |
+|Kearns 2008  |0.92           |9.46             |10426.56               |13116.26              |0.79               |
+|Kearns 2008  |0.92           |9.46             |10426.56               |5155.53               |2.02               |
+|Kearns 2008  |1.00           |10.00            |10563.87               |18848.16              |0.56               |
+|Kearns 2008  |1.00           |10.00            |10563.87               |7334.83               |1.44               |
+|Kearns 2008  |1.00           |10.00            |10563.87               |5690.10               |1.86               |
+|Kearns 2008  |1.17           |10.38            |10779.51               |6167.14               |1.75               |
+|Kearns 2008  |1.42           |10.94            |11130.88               |11060.03              |1.01               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |15221.25              |0.74               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |8642.35               |1.31               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |7392.36               |1.53               |
+|Kearns 2008  |1.58           |11.31            |11324.86               |5945.00               |1.90               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |14374.25              |0.79               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |11940.31              |0.96               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |11414.00              |1.00               |
+|Kearns 2008  |1.67           |11.50            |11424.61               |10558.23              |1.08               |
+|Kearns 2008  |1.75           |11.69            |11520.13               |12013.84              |0.96               |
+|Kearns 2008  |1.75           |11.69            |11520.13               |9250.71               |1.25               |
+|Friesen 2004 |11.90          |40.55            |4428.28                |4387.20               |1.01               |
+|Knorr 1999   |7.00           |26.00            |3480.98                |2929.00               |1.19               |
+|Knorr 2001   |4.00           |17.00            |3382.76                |2721.00               |1.24               |
+|Knorr 2006   |0.33           |6.80             |5964.28                |3644.30               |1.64               |
+|Miyoga 2004  |1.50           |9.00             |4454.64                |3629.20               |1.23               |
+|Miyoga 2004  |0.75           |9.00             |4819.09                |2470.90               |1.95               |
+
+<br>
+<br>
+
+## 2.2 Montelukast Concentration-Time profiles in Children<a id="montelukast-ct-profiles-in-children"></a>
+
 #### Concentration-Time Profiles
 
 Predicted versus observed plasma concentration-time profiles are listed below. Only simulations where observed data was available for comparison are shown.  Depending if the observed data were individual data or aggregated data, individual predictions or population predictions including variability are shown, respectively.
-![001_plotPopulationTimeProfile.png](images/002_2_Pediatric_translation_qualification/002_2_2_Montelukast_Concentration-Time_profiles_in_Children/001_plotPopulationTimeProfile.png)
 
-![002_plotPopulationTimeProfile.png](images/002_2_Pediatric_translation_qualification/002_2_2_Montelukast_Concentration-Time_profiles_in_Children/002_plotPopulationTimeProfile.png)
+<a id="figure-2-3"></a>
 
-# 3 References
+![](images/002_section_pediatric-translation-qualification/004_section_montelukast-ct-profiles-in-children/1_time_profile_plot_Montelukast_Pediatrics_Friesen_2004_10mg_PO_Singular_oral_mini_granules.png)
+
+**Figure 2-3: Time Profile Analysis**
+
+<br>
+<br>
+
+<a id="figure-2-4"></a>
+
+![](images/002_section_pediatric-translation-qualification/004_section_montelukast-ct-profiles-in-children/2_time_profile_plot_Montelukast_Pediatrics_Friesen_2004_10mg_PO_Singular_oral_mini_granules.png)
+
+**Figure 2-4: Time Profile Analysis 1**
+
+<br>
+<br>
+
+# 3 References<a id="main-references"></a>
+
 **Edginton 2006** Edginton AN, Schmitt W, Willmann S. Development and evaluation of a generic physiologically based pharmacokinetic model for children. Clin Pharmacokinet. 2006;45(10):1013-34.
 
 **Friesen 2004** Friesen CA, Kearns GL, Andre L, Neustrom M, Roberts CC, Abdel-Rahman SM. Clinical efficacy and pharmacokinetics of montelukast in dyspeptic children with duodenal eosinophilia. J Pediatr Gastroenterol Nutr. 2004 Mar;38(3):343-51. 
@@ -263,3 +330,4 @@ Predicted versus observed plasma concentration-time profiles are listed below. O
 **Ontogeny Database** OSPSuite.Documentation/PK-Sim Ontogeny Database Version 7.3.pdf (https://github.com/Open-Systems-Pharmacology/OSPSuite.Documentation/blob/38cf71b384cfc25cfa0ce4d2f3addfd32757e13b/PK-Sim%20Ontogeny%20Database%20Version%207.3.pdf)
 
 **Upreti 2015** Upreti VV, Wahlstrom JL. Meta-analysis of hepatic cytochrome P450 ontogeny to underwrite the prediction of pediatric pharmacokinetics using physiologically based pharmacokinetic modeling. J Clin Pharmacol. 2016 Mar;56(3):266-83. doi: 10.1002/jcph.585. Epub 2015 Oct 9.
+
