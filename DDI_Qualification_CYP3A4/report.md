@@ -141,36 +141,36 @@ To qualify the OSP suite for the prediction of the CYP3A4 DDI potential of new d
 The following perpetrator compounds were selected: 
 
 - **Rifampicin** (strong CYP3A4 inducer)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v2.0)
 - **Carbamazepine** (moderate CYP3A4 inducer)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Model/releases/tag/v2.0)
 - **Efavirenz** (moderate CYP3A4 inducer)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Efavirenz-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Efavirenz-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Efavirenz-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Efavirenz-Model/releases/tag/v2.0)
 - **Cimetidine** (weak CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Cimetidine-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Cimetidine-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Cimetidine-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Cimetidine-Model/releases/tag/v2.0)
 - **Fluvoxamine** (weak/moderate CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/v2.0)
 - **Verapamil** (moderate CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.2**): s://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.2)
+  Model snapshot and evaluation plan (*release* **v1.2**): [https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.2)
 - **Fluconazole** (moderate CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v1.0**): s://github.com/Open-Systems-Pharmacology/Fluconazole-Model/releases/tag/v1.0s://github.com/Open-Systems-Pharmacology/Fluconazole-Model/releases/tag/v1.0)
+  Model snapshot and evaluation plan (*release* **v1.0**): [https://github.com/Open-Systems-Pharmacology/Fluconazole-Model/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Fluconazole-Model/releases/tag/v1.0)
 - **Erythromycin** (moderate CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v2.0)
 - **Clarithromycin** (strong CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Clarithromycin-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Clarithromycin-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Clarithromycin-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Clarithromycin-Model/releases/tag/v2.0)
 - **Itraconazole** including metabolites (strong CYP3A4 inhibitor)
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Itraconazole-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Itraconazole-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Itraconazole-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Itraconazole-Model/releases/tag/v2.0)
 
 The following sensitive CYP3A4 substrates as victim drugs were selected:
 
 - **Midazolam**
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Midazolam-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Midazolam-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Midazolam-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Midazolam-Model/releases/tag/v2.0)
 - **Triazolam**
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Triazolam-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Triazolam-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Triazolam-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Triazolam-Model/releases/tag/v2.0)
 - **Alprazolam**
-  Model snapshot and evaluation plan (*release* **v2.0**): s://github.com/Open-Systems-Pharmacology/Alprazolam-Model/releases/tag/v2.0s://github.com/Open-Systems-Pharmacology/Alprazolam-Model/releases/tag/v2.0)
+  Model snapshot and evaluation plan (*release* **v2.0**): [https://github.com/Open-Systems-Pharmacology/Alprazolam-Model/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Alprazolam-Model/releases/tag/v2.0)
 - **Alfentanil**
-  Model snapshot and evaluation plan (*release* **v3.0**): s://github.com/Open-Systems-Pharmacology/Alfentanil-Model/releases/tag/v3.0s://github.com/Open-Systems-Pharmacology/Alfentanil-Model/releases/tag/v3.0)
+  Model snapshot and evaluation plan (*release* **v3.0**): [https://github.com/Open-Systems-Pharmacology/Alfentanil-Model/releases/tag/v3.0](https://github.com/Open-Systems-Pharmacology/Alfentanil-Model/releases/tag/v3.0)
 
 **Figure 1** shows the prespecified and developed DDI modeling network of interacting perpetrator and victim drugs for the OSP suite qualification of predicting CYP3A4-mediated DDI.
 
@@ -181,12 +181,12 @@ The following sensitive CYP3A4 substrates as victim drugs were selected:
 
 <sub>The arrows indicate where at least one clinical DDI study between the two connected substances was available and included in the model network. Red indicates inhibition and green indicates induction as the primary type of interaction. Thin arrows indicate weak, mid-thick arrows moderate and thick arrows strong CYP3A4 modulation by the perpetrator.</sub>
 
-The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report. The respective data identifier (DataID) refers to the **ID** of the dataset in the OSP PK database, version 1.7 (s://github.com/Open-Systems-Pharmacology/Database-for-observed-data/releases/tag/v1.7s://github.com/Open-Systems-Pharmacology/Database-for-observed-data/releases/tag/v1.7)).
+The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report. The respective data identifier (DataID) refers to the **ID** of the dataset in the OSP PK database, version 1.7 ([https://github.com/Open-Systems-Pharmacology/Database-for-observed-data/releases/tag/v1.7](https://github.com/Open-Systems-Pharmacology/Database-for-observed-data/releases/tag/v1.7)).
 
 ### 1.2.1 Carbamazepine - Alprazolam DDI<a id="network-carbamazepine-alprazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.1s://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.1)
+[https://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Alprazolam-DDI/releases/tag/v1.1)
 
 The carbamazepine-alprazolam interaction was evaluated using one clinical DDI study ([Furukori 1998](#4-references)).
 
@@ -197,7 +197,7 @@ The carbamazepine-alprazolam interaction was evaluated using one clinical DDI st
 ### 1.2.2 Carbamazepine - Efavirenz DDI<a id="network-carbamazepine-efavirenz-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.1s://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.1)
+[https://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Efavirenz-DDI/releases/tag/v1.1)
 
 The carbamazepine-efavirenz interaction was evaluated using one clinical DDI study ([Ji 2008](#4-references)).
 
@@ -208,7 +208,7 @@ The carbamazepine-efavirenz interaction was evaluated using one clinical DDI stu
 ### 1.2.3 Carbamazepine - Midazolam DDI<a id="network-carbamazepine-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0s://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0)
+[https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0)
 
 The carbamazepine-midazolam interaction was evaluated using three clinical DDI studies ([Lutz 2018](#4-references), [Kanefendt 2023](#4-references)).
 
@@ -221,7 +221,7 @@ The carbamazepine-midazolam interaction was evaluated using three clinical DDI s
 ### 1.2.4 Cimetidine - Alfentanil DDI<a id="network-cimetidine-alfentanil-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Cimetidine-Alfentanil-DDI/releases/tag/v1.2.s://github.com/Open-Systems-Pharmacology/Cimetidine-Alfentanil-DDI/releases/tag/v1.2.)
+[https://github.com/Open-Systems-Pharmacology/Cimetidine-Alfentanil-DDI/releases/tag/v1.2.](https://github.com/Open-Systems-Pharmacology/Cimetidine-Alfentanil-DDI/releases/tag/v1.2.)
 
 The cimetidine-alfentanil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Kienlen 1993](#4-references)).
 
@@ -232,7 +232,7 @@ The cimetidine-alfentanil interaction was evaluated using a single clinical DDI 
 ### 1.2.5 Cimetidine - Alprazolam DDI<a id="network-cimetidine-alprazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Cimetidine-Alprazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Cimetidine-Alprazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Cimetidine-Alprazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Cimetidine-Alprazolam-DDI/releases/tag/v1.2)
 
 The cimetidine-alprazolam interaction was evaluated using two clinical DDI studies quantifying the interaction following two different dosing regimens ([Pourbaix 1985](#4-references), [Abernethy 1983](#4-references)).
 
@@ -244,7 +244,7 @@ The cimetidine-alprazolam interaction was evaluated using two clinical DDI studi
 ### 1.2.6 Cimetidine - Carbamazepine DDI<a id="network-cimetidine-carbamazepine-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Cimetidine-Carbamazepine-DDI/releases/tag/v1.1s://github.com/Open-Systems-Pharmacology/Cimetidine-Carbamazepine-DDI/releases/tag/v1.1)
+[https://github.com/Open-Systems-Pharmacology/Cimetidine-Carbamazepine-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Cimetidine-Carbamazepine-DDI/releases/tag/v1.1)
 
 The cimetidine-carbamazepine interaction was evaluated using one clinical DDI study ([Dalton 1985](#4-references)).
 
@@ -255,7 +255,7 @@ The cimetidine-carbamazepine interaction was evaluated using one clinical DDI st
 ### 1.2.7 Cimetidine - Midazolam DDI<a id="network-cimetidine-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Cimetidine-Midazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Cimetidine-Midazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Cimetidine-Midazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Cimetidine-Midazolam-DDI/releases/tag/v1.2)
 
 The cimetidine-midazolam interaction was evaluated using five clinical DDI studies quantifying the interaction following six different dosing regimens ([Elliott 1984](#4-references), [Fee 1987](#4-references), [Greenblatt 1986](#4-references), [Martinez 1999](#4-references), [Salonen 1986](#4-references)).
 
@@ -271,7 +271,7 @@ The cimetidine-midazolam interaction was evaluated using five clinical DDI studi
 ### 1.2.8 Cimetidine - Triazolam DDI<a id="network-cimetidine-triazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Cimetidine-Triazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Cimetidine-Triazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Cimetidine-Triazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Cimetidine-Triazolam-DDI/releases/tag/v1.2)
 
 The cimetidine-triazolam interaction was evaluated using four clinical DDI studies quantifying the interaction following four different dosing regimens ([Pourbaix 1985](#4-references), [Abernethy 1983](#4-references), [Cox 1986](#4-references), [Friedman 1988](#4-references)).
 
@@ -285,7 +285,7 @@ The cimetidine-triazolam interaction was evaluated using four clinical DDI studi
 ### 1.2.9 Cimetidine - Verapamil DDI<a id="network-cimetidine-verapamil-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Cimetidine-Verapamil-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Cimetidine-Verapamil-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Cimetidine-Verapamil-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Cimetidine-Verapamil-DDI/releases/tag/v1.2)
 
 The cimetidine-verapamil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Smith 1984](#4-references)).
 
@@ -297,7 +297,7 @@ The cimetidine-verapamil interaction was evaluated using a single clinical DDI s
 ### 1.2.10 Clarithromycin - Midazolam DDI<a id="network-clarithromycin-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Clarithromycin-Midazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Clarithromycin-Midazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Clarithromycin-Midazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Clarithromycin-Midazolam-DDI/releases/tag/v1.2)
 
 The clarithromycin-midazolam interaction was evaluated using eight clinical DDI studies quantifying the interaction following ten different dosing regimens ([Gorski 1998](#4-references), [Gurley 2006](#4-references), [Gurley 2008a](#4-references), [Markert 2013](#4-references), [Prueksaritanont 2017](#4-references), [Quinney 2008](#4-references), [van Dyk 2018](#4-references), [Yeates 1997](#4-references)).
 
@@ -317,7 +317,7 @@ The clarithromycin-midazolam interaction was evaluated using eight clinical DDI 
 ### 1.2.11 Clarithromycin - Triazolam DDI<a id="network-clarithromycin-triazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Clarithromycin-Triazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Clarithromycin-Triazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Clarithromycin-Triazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Clarithromycin-Triazolam-DDI/releases/tag/v1.2)
 
 The clarithromycin-triazolam interaction was evaluated using one clinical DDI study ([Greenblatt 1998a](#4-references)).
 
@@ -328,7 +328,7 @@ The clarithromycin-triazolam interaction was evaluated using one clinical DDI st
 ### 1.2.12 Efavirenz - Alfentanil-DDI<a id="network-efavirenz-alfentanil-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Efavirenz-Alfentanil-DDI/releases/tag/v1.1s://github.com/Open-Systems-Pharmacology/Efavirenz-Alfentanil-DDI/releases/tag/v1.1)
+[https://github.com/Open-Systems-Pharmacology/Efavirenz-Alfentanil-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Efavirenz-Alfentanil-DDI/releases/tag/v1.1)
 
 The efavirenz-alfentanil interaction was evaluated using one clinical DDI study that includes iv and oral administration of alfentanil ([Kharasch 2012](#4-references)).
 
@@ -340,7 +340,7 @@ The efavirenz-alfentanil interaction was evaluated using one clinical DDI study 
 ### 1.2.13 Efavirenz - Carbamazepine DDI<a id="network-efavirenz-carbamazepine-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Efavirenz-Carbamazepine-DDI/releases/tag/v1.0s://github.com/Open-Systems-Pharmacology/Efavirenz-Carbamazepine-DDI/releases/tag/v1.0)
+[https://github.com/Open-Systems-Pharmacology/Efavirenz-Carbamazepine-DDI/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Efavirenz-Carbamazepine-DDI/releases/tag/v1.0)
 
 The efavirenz-carbamazepine interaction was evaluated using one clinical DDI study ([Ji 2008](#4-references)).
 
@@ -351,7 +351,7 @@ The efavirenz-carbamazepine interaction was evaluated using one clinical DDI stu
 ### 1.2.14 Efavirenz - Midazolam DDI<a id="network-efavirenz-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Efavirenz-Midazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Efavirenz-Midazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Efavirenz-Midazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Efavirenz-Midazolam-DDI/releases/tag/v1.2)
 
 The efavirenz-midazolam interaction was evaluated using two clinical DDI studies, one using single dose and one using one multiple dose administration of efavirenz ([Katzenmaier 2010](#4-references), [Mikus 2017](#4-references)).
 
@@ -372,7 +372,7 @@ The efavirenz-midazolam interaction was evaluated using two clinical DDI studies
 ### 1.2.15 Erythromycin - Alfentanil DDI<a id="network-erythromycin-alfentanil-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Erythromycin-Alfentanil-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Erythromycin-Alfentanil-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Erythromycin-Alfentanil-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Erythromycin-Alfentanil-DDI/releases/tag/v1.2)
 
 The erythromycin-alfentanil interaction was evaluated using one clinical DDI study ([Bartkowski 1989](#4-references)) quantifying the interaction following two different dosing regimens. Additionally, the plasma concentration-time profile of an individual investigated in this study was subsequently reported in a later study ([Bartkowski 1993](#4-references)).
 
@@ -384,7 +384,7 @@ The erythromycin-alfentanil interaction was evaluated using one clinical DDI stu
 ### 1.2.16 Erythromycin - Alprazolam DDI<a id="network-erythromycin-alprazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Erythromycin-Alprazolam-DDI/releases/tag/v1.3s://github.com/Open-Systems-Pharmacology/Erythromycin-Alprazolam-DDI/releases/tag/v1.3)
+[https://github.com/Open-Systems-Pharmacology/Erythromycin-Alprazolam-DDI/releases/tag/v1.3](https://github.com/Open-Systems-Pharmacology/Erythromycin-Alprazolam-DDI/releases/tag/v1.3)
 
 The erythromycin-alprazolam interaction was evaluated using one clinical DDI study ([Yasui 1996](#4-references)).
 
@@ -395,7 +395,7 @@ The erythromycin-alprazolam interaction was evaluated using one clinical DDI stu
 ### 1.2.17 Erythromycin - Carbamazepine DDI<a id="network-erythromycin-carbamazepine-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Erythromycin-Carbamazepine-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Erythromycin-Carbamazepine-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Erythromycin-Carbamazepine-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Erythromycin-Carbamazepine-DDI/releases/tag/v1.2)
 
 The erythromycin-carbamazepine interaction was evaluated using three clinical DDI studies ([Barzaghi 1987](#4-references), [Miles 1989](#4-references), [Wong 1983](#4-references)).
 
@@ -409,7 +409,7 @@ The erythromycin-carbamazepine interaction was evaluated using three clinical DD
 ### 1.2.18 Erythromycin - Midazolam DDI<a id="network-erythromycin-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Erythromycin-Midazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Erythromycin-Midazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Erythromycin-Midazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Erythromycin-Midazolam-DDI/releases/tag/v1.2)
 
 The erythromycin-midazolam interaction was evaluated using five clinical DDI studies quantifying the interaction following nine different dosing regimens ([Carls 2014](#4-references), [Okudaira 2007](#4-references), [Olkkola 1993](#4-references), [Swart 2002](#4-references), [Zimmermann 1996](#4-references)).
 
@@ -428,7 +428,7 @@ The erythromycin-midazolam interaction was evaluated using five clinical DDI stu
 ### 1.2.19 Erythromycin - Triazolam DDI<a id="network-erythromycin-triazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Erythromycin-Triazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Erythromycin-Triazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Erythromycin-Triazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Erythromycin-Triazolam-DDI/releases/tag/v1.2)
 
 The erythromycin-triazolam interaction was evaluated using two clinical DDI studies ([Greenblatt 1998](#4-references), [Phillips 1986](#4-references)).
 
@@ -440,7 +440,7 @@ The erythromycin-triazolam interaction was evaluated using two clinical DDI stud
 ### 1.2.20 Fluconazole - Alfentanil DDI<a id="network-fluconazole-alfentanil-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Fluconazole-Alfentanil-DDI/releases/tag/v1.0s://github.com/Open-Systems-Pharmacology/Fluconazole-Alfentanil-DDI/releases/tag/v1.0)
+[https://github.com/Open-Systems-Pharmacology/Fluconazole-Alfentanil-DDI/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Fluconazole-Alfentanil-DDI/releases/tag/v1.0)
 
 The fluconazole-alfentanil interaction was evaluated using a single clinical DDI study quantifying the interaction following two different dosing regimens ([Palkama 1998](#4-references)).
 
@@ -452,7 +452,7 @@ The fluconazole-alfentanil interaction was evaluated using a single clinical DDI
 ### 1.2.21 Fluconazole - Midazolam DDI<a id="network-fluconazole-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Fluconazole-Midazolam-DDI/releases/tag/v1.0s://github.com/Open-Systems-Pharmacology/Fluconazole-Midazolam-DDI/releases/tag/v1.0)
+[https://github.com/Open-Systems-Pharmacology/Fluconazole-Midazolam-DDI/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Fluconazole-Midazolam-DDI/releases/tag/v1.0)
 
 The fluconazole-midazolam interaction was evaluated using two clinical DDI studies quantifying the interaction following 5 different dosing regimens ([Ahonen 1997](#4-references), [Olkkola 1996](#4-references)).
 
@@ -467,7 +467,7 @@ The fluconazole-midazolam interaction was evaluated using two clinical DDI studi
 ### 1.2.22 Fluconazole - Triazolam DDI<a id="network-fluconazole-triazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Fluconazole-Triazolam-DDI/releases/tag/v1.0s://github.com/Open-Systems-Pharmacology/Fluconazole-Triazolam-DDI/releases/tag/v1.0)
+[https://github.com/Open-Systems-Pharmacology/Fluconazole-Triazolam-DDI/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Fluconazole-Triazolam-DDI/releases/tag/v1.0)
 
 The fluconazole-triazolam interaction was evaluated using a single clinical DDI study quantifying the interaction following three different dosing regimens ([Varhe 1996](#4-references)).
 
@@ -480,7 +480,7 @@ The fluconazole-triazolam interaction was evaluated using a single clinical DDI 
 ### 1.2.23 Fluvoxamine - Alprazolam DDI<a id="network-fluvoxamine-alprazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Fluvoxamine-Alprazolam-DDI/releases/tag/v1.1s://github.com/Open-Systems-Pharmacology/Fluvoxamine-Alprazolam-DDI/releases/tag/v1.1)
+[https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Alprazolam-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Alprazolam-DDI/releases/tag/v1.1)
 
 The fluvoxamine-alprazolam interaction was evaluated using one clinical DDI study quantifying the interaction following the first dose and in steady-state ([Fleishaker 1994](#4-references)).
 
@@ -492,7 +492,7 @@ The fluvoxamine-alprazolam interaction was evaluated using one clinical DDI stud
 ### 1.2.24 Fluvoxamine - Midazolam DDI<a id="network-fluvoxamine-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Fluvoxamine-Midazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Fluvoxamine-Midazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Midazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Midazolam-DDI/releases/tag/v1.2)
 
 The fluvoxamine / midazolam interaction was evaluated using two clinical DDI studies ([Kashuba 1998](#4-references), [Lam 2003](#4-references)).
 
@@ -504,7 +504,7 @@ The fluvoxamine / midazolam interaction was evaluated using two clinical DDI stu
 ### 1.2.25 Itraconazole - Alprazolam DDI<a id="network-itraconazole-alprazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Itraconazole-Alprazolam-DDI/releases/tag/v1.3s://github.com/Open-Systems-Pharmacology/Itraconazole-Alprazolam-DDI/releases/tag/v1.3)
+[https://github.com/Open-Systems-Pharmacology/Itraconazole-Alprazolam-DDI/releases/tag/v1.3](https://github.com/Open-Systems-Pharmacology/Itraconazole-Alprazolam-DDI/releases/tag/v1.3)
 
 The itraconazole / alprazolam interaction was evaluated using one clinical DDI study ([Yasui 1998](#4-references)).
 
@@ -515,7 +515,7 @@ The itraconazole / alprazolam interaction was evaluated using one clinical DDI s
 ### 1.2.26 Itraconazole - Midazolam DDI<a id="network-itraconazole-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Itraconazole-Midazolam-DDI/releases/tag/v1.3s://github.com/Open-Systems-Pharmacology/Itraconazole-Midazolam-DDI/releases/tag/v1.3)
+[https://github.com/Open-Systems-Pharmacology/Itraconazole-Midazolam-DDI/releases/tag/v1.3](https://github.com/Open-Systems-Pharmacology/Itraconazole-Midazolam-DDI/releases/tag/v1.3)
 
 The itraconazole / midazolam interaction was evaluated using seven clinical DDI studies including 12 different clinical settings ([Ahonen 1995](#4-references), [Backman 1998](#4-references), [Olkkola 1994](#4-references), [Olkkola 1996](#4-references), [Prueksaritanont 2017](#4-references),  [Templeton 2010](#4-references), [Yu 2004](#4-references)).
 
@@ -537,7 +537,7 @@ The itraconazole / midazolam interaction was evaluated using seven clinical DDI 
 ### 1.2.27 Itraconazole-Triazolam DDI<a id="network-itraconazole-triazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Itraconazole-Triazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Itraconazole-Triazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Itraconazole-Triazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Itraconazole-Triazolam-DDI/releases/tag/v1.2)
 
 The itraconazole / triazolam interaction was evaluated using two clinical DDI studies including 5 different clinical settings ([Neuvonen 1996](#4-references), [Varhe 1994](#4-references)).
 
@@ -552,7 +552,7 @@ The itraconazole / triazolam interaction was evaluated using two clinical DDI st
 ### 1.2.28 Rifampicin - Alfentanil DDI<a id="network-rifampicin-alfentanil-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Rifampicin-Alfentanil-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Rifampicin-Alfentanil-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Rifampicin-Alfentanil-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Rifampicin-Alfentanil-DDI/releases/tag/v1.2)
 
 The  rifampicin / alfentanil interaction was evaluated using 5 clinical DDI studies including 16 different clinical settings ([Kharasch 1997](#4-references), [Kharasch 2004](#4-references), [Kharasch 2011](#4-references), [Kharasch 2011b](#4-references), [Phimmasone 2001](#4-references)).
 
@@ -578,7 +578,7 @@ The  rifampicin / alfentanil interaction was evaluated using 5 clinical DDI stud
 ### 1.2.29 Rifampicin - Alprazolam DDI<a id="network-rifampicin-alprazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Rifampicin-Alprazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Rifampicin-Alprazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Rifampicin-Alprazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Rifampicin-Alprazolam-DDI/releases/tag/v1.2)
 
 The rifampicin-alprazolam interaction was evaluated using two clinical DDI studies quantifying the interaction in three clinical settings ([Gashaw 2003](#4-references), [Schmider 1999](#4-references)).
 
@@ -591,7 +591,7 @@ The rifampicin-alprazolam interaction was evaluated using two clinical DDI studi
 ### 1.2.30 Rifampicin - Midazolam DDI<a id="network-rifampicin-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Rifampicin-Midazolam-DDI/releases/tag/v1.3s://github.com/Open-Systems-Pharmacology/Rifampicin-Midazolam-DDI/releases/tag/v1.3)
+[https://github.com/Open-Systems-Pharmacology/Rifampicin-Midazolam-DDI/releases/tag/v1.3](https://github.com/Open-Systems-Pharmacology/Rifampicin-Midazolam-DDI/releases/tag/v1.3)
 
 The  rifampicin / midazolam interaction was evaluated using 24 clinical DDI studies including 43 different clinical settings ([Backman 1996](#4-references), [Backman 1998](#4-references), [Björkhem-Bergman 2013](#4-references), [Chattopadhyay 2018](#4-references),[Chung 2006](#4-references), [Eap 2004](#4-references), [Gorski 2003](#4-references), [Gurley 2006](#4-references), [Gurley 2008a](#4-references), [Kharasch 1997](#4-references), [Kharasch 2004](#4-references), [Kharasch 2011](#4-references), [Kim 2018](#4-references), [Link 2008](#4-references), [Lutz 2018](#4-references), [Phimmasone 2001](#4-references), [Prueksaritanont 2017](#4-references), [Reitman 2011](#4-references), [Shin 2013](#4-references), [Shin 2016](#4-references), [Szalat 2007](#4-references), [van Dyk 2018](#4-references), [Wiesinger 2011](#4-references), [Yu 2004](#4-references)).
 
@@ -647,7 +647,7 @@ In the study by [Eap 2004](#4-references), the induction of CYP3A4 by rifampicin
 ### 1.2.31 Rifampicin - Triazolam DDI<a id="network-rifampicin-triazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Rifampicin-Triazolam-DDI/releases/tag/v1.2s://github.com/Open-Systems-Pharmacology/Rifampicin-Triazolam-DDI/releases/tag/v1.2)
+[https://github.com/Open-Systems-Pharmacology/Rifampicin-Triazolam-DDI/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Rifampicin-Triazolam-DDI/releases/tag/v1.2)
 
 The rifampicin-triazolam interaction was evaluated using one clinical DDI study ([Villikka 1997](#4-references)).
 
@@ -658,7 +658,7 @@ The rifampicin-triazolam interaction was evaluated using one clinical DDI study 
 ### 1.2.32 Rifampicin - Verapamil DDI<a id="network-rifampicin-verapamil-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Rifampicin-Verapamil-DDI/releases/tag/v1.1s://github.com/Open-Systems-Pharmacology/Rifampicin-Verapamil-DDI/releases/tag/v1.1)
+[https://github.com/Open-Systems-Pharmacology/Rifampicin-Verapamil-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Rifampicin-Verapamil-DDI/releases/tag/v1.1)
 
 The  rifampicin / verapamil interaction was evaluated using 1 clinical DDI study including 2 different clinical settings ([Barbarash 1988](#4-references)).
 
@@ -667,12 +667,12 @@ The  rifampicin / verapamil interaction was evaluated using 1 clinical DDI study
 | 2056   | CYP3A4 (and CYP2C8) | Rifampicin / verapamil | Rifampicin: 600 mg QD for 15 days<br />Verapamil: 10 mg iv single dose, 12 hours after the 13<sup>th</sup> rifampicin dose |          | [Barbarash 1988](#4-references) |
 | 2058   | CYP3A4 (and CYP2C8), <br />P-gp* | Rifampicin / verapamil | Rifampicin: 600 mg QD for 15 days<br />Verapamil: 120 mg po single dose, 12 hours after the 15<sup>th</sup> rifampicin dose |          | [Barbarash 1988](#4-references) |
 
-\* The substrate characteristics of verapamil towards P-gp are not considered in the verapamil PBPK model applied in this qualification (s://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.0s://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.0)).
+\* The substrate characteristics of verapamil towards P-gp are not considered in the verapamil PBPK model applied in this qualification ([https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v1.0)).
 
 ### 1.2.33 Verapamil - Midazolam DDI<a id="network-verapamil-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-s://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.3s://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.3)
+[https://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.3](https://github.com/Open-Systems-Pharmacology/Verapamil-Midazolam-DDI/releases/tag/v1.3)
 
 The verapamil / midazolam interaction was evaluated using two clinical DDI studies including 3 different clinical settings ([Backman 1994](#4-references), [Wang 2005](#4-references)).
 
@@ -3673,7 +3673,7 @@ The following section shows concentration time profiles of the victim drugs of t
 
 **Guest 2011** Guest EJ, Aarons L, Houston JB, Rostami-Hodjegan A, Galetin A. Critique of the two-fold measure of prediction success for ratios: application for the assessment of drug-drug interactions. Drug Metab Dispos. 2011 Feb;39(2):170-3.
 
-**OSP PK Database** (s://github.com/Open-Systems-Pharmacology/Database-for-observed-datas://github.com/Open-Systems-Pharmacology/Database-for-observed-data))
+**OSP PK Database** ([https://github.com/Open-Systems-Pharmacology/Database-for-observed-data](https://github.com/Open-Systems-Pharmacology/Database-for-observed-data))
 
 ## Carbamazepine-Alprazolam-DDI
 
