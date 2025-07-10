@@ -72,7 +72,7 @@ jobs:
     - id: copy-to-wd
       name: Copy repo to working directory
       run: |
-          mkdir ${{ env.WORKING_DIR% }}
+          mkdir ${{ env.WORKING_DIR }}
           xcopy /e /h /k /y /q "$GITHUB_WORKSPACE\*" ${{ env.WORKING_DIR }}
           cd /d ${{ env.WORKING_DIR }}
       shell: cmd
