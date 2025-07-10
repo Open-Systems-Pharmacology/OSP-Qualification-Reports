@@ -4,6 +4,9 @@ name: Automated Evaluation Reports and Projects
 on:
   workflow_dispatch:
 
+env:
+  WORKING_DIR: 'D:\0'
+
 jobs:
   read_inputs:
     runs-on: ubuntu-latest
@@ -66,6 +69,14 @@ jobs:
         git rebase -Xours origin/develop
         git reset HEAD^
 
+    - id: copy-to-wd
+      name: Copy repo to working directory
+      run: |
+          mkdir ${{ env.WORKING_DIR% }}
+          xcopy /e /h /k /y /q "$GITHUB_WORKSPACE\*" ${{ env.WORKING_DIR }}
+          cd /d ${{ env.WORKING_DIR }}
+      shell: cmd
+
     - id: qualification-environment
       name: Setup Qualification Environment
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/setup-qualification-environment@main
@@ -85,6 +96,14 @@ jobs:
           qualification-framework-version: ${{ needs.read_inputs.outputs.qualification_framework_version }}
           save-model-file: false
           save-pdf: true
+
+    - id: copy-to-workspace
+      name: Copy back to workspace
+      if: always()
+      run: |
+          xcopy /e /h /k /y /q "${{ env.WORKING_DIR }}\*" "$GITHUB_WORKSPACE"
+          cd /d "$GITHUB_WORKSPACE"
+      shell: cmd
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
