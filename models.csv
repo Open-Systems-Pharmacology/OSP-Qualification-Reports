@@ -1,3 +1,3 @@
 Execute,Repository name,Released version,Snapshot name,Workflow name,Additional projects
-TRUE,Qualification-DDI-P-gp,1.0,DDI-P-gp,Qualification/workflow.R,
-TRUE,Qualification-CKD,1.0,CKD,Qualification/workflow.R,
+TRUE,Qualification-DDI-P-gp,1.0,Qualification-DDI-P-gp,,
+TRUE,Qualification-CKD,1.0,Qualification-CKD,,
