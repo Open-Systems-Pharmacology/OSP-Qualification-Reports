@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  WORKING_DIR: 'D:\0'
+  WORKING_DIR: 'D:/0'
 
 jobs:
   read_inputs:
@@ -69,14 +69,6 @@ jobs:
         git rebase -Xours origin/develop
         git reset HEAD^
 
-    - id: copy-to-wd
-      name: Copy repo to working directory
-      run: |
-          mkdir ${{ env.WORKING_DIR }}
-          xcopy /e /h /k /y /q "$GITHUB_WORKSPACE\*" ${{ env.WORKING_DIR }}
-          cd /d ${{ env.WORKING_DIR }}
-      shell: cmd
-
     - id: qualification-environment
       name: Setup Qualification Environment
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/setup-qualification-environment@main
@@ -85,25 +77,30 @@ jobs:
 
     - id: evaluate-model
       name: Run evaluation
-      uses: Open-Systems-Pharmacology/Workflows/.github/actions/report-evaluation@main
+      uses: pchelle/Workflows/.github/actions/report-evaluation@report_test
       with:
           model-repo: ${{ matrix['Repository name'] }}
           model-version: ${{ matrix['Released version'] }}
           snapshot: ${{ matrix['Snapshot name'] }}
+          evaluation: 'false'
           workflow-script: ${{ matrix['Workflow name'] }}
           additional-project-urls: ${{ matrix['Additional projects'] }}
           pk-sim-version: ${{ needs.read_inputs.outputs.pk_sim_version }}
           qualification-framework-version: ${{ needs.read_inputs.outputs.qualification_framework_version }}
-          save-model-file: false
-          save-pdf: true
+          save-model-file: 'false'
+          save-pdf: 'true'
+          run-directory: ${{ env.WORKING_DIR }}
 
     - id: copy-to-workspace
-      name: Copy back to workspace
-      if: always()
+      name: Copy back to workspace and clean working directory before PR
       run: |
-          xcopy /e /h /k /y /q "${{ env.WORKING_DIR }}\*" "$GITHUB_WORKSPACE"
-          cd /d "$GITHUB_WORKSPACE"
-      shell: cmd
+        file.copy(
+          list.files("${{ env.WORKING_DIR }}", full.names = TRUE), 
+          "${{ github.workspace }}",
+          recursive = TRUE
+          )
+        unlink("${{ env.WORKING_DIR }}", recursive = TRUE)
+      shell: Rscript {0}
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
@@ -123,12 +120,3 @@ jobs:
         assignees: ${{ github.actor }}
         reviewers: ${{ github.actor }}
         
-    - name: Upload artifact if failed
-      if: failure()
-      uses: actions/upload-artifact@v4
-      with:
-        name: failed-${{ matrix['Snapshot name'] }}
-        path: |
-          ${{ matrix['Snapshot name'] }}/**
-          **.txt
-          **.md
