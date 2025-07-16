@@ -109,9 +109,9 @@ jobs:
         branch: ${{ github.ref_name }}-${{ matrix['Snapshot name'] }}
         base: develop
         add-paths: |
-            */images/**
-            */*.pdf
-            */*.md
+            ${{ matrix['Snapshot name'] }}/images/**
+            ${{ matrix['Snapshot name'] }}/*.pdf
+            ${{ matrix['Snapshot name'] }}/*.md
         title: Update Evaluation Reports for ${{ matrix['Snapshot name'] }}
         body: |
           ## Tools
