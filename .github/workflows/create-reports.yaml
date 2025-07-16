@@ -78,7 +78,7 @@ jobs:
 
     - id: evaluate-model
       name: Run evaluation
-      uses: pchelle/Workflows/.github/actions/report-evaluation@report_test
+      uses: Open-Systems-Pharmacology/Workflows/.github/actions/report-evaluation@main
       with:
           model-repo: ${{ matrix['Repository name'] }}
           model-version: ${{ matrix['Released version'] }}
