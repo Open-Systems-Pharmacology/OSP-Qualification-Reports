@@ -2,34 +2,34 @@
 
 Qualification Reports recreated with every new OSP Release
 
-## How to create evaluation reports
+## How to create qualification reports
 
 - Create a new branch from the `create-reports` branch (for instance, `my-reports`)
   - Define the appropriate OSP environment and tools by updating `tools.csv`
   - Define the models and projects by updating `models.csv`
-  - Go to the Github Action: [Automated Evaluation Reports and Projects](https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports/actions/workflows/create-reports.yaml)
+  - Go to the Github Action: [Qualification Reports](https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports/actions/workflows/create-reports.yaml)
     - Click on the button __Run workflow__ 
-      - Select your branch (for instance, `my-reports`)
+      - Select your branch in the first step (for instance, `my-reports`)
       - Click on the green button __Run workflow__ 
   
 ## What to do when reports are created
 
-When the evaluation reports are created, a pull request is triggered toward the `develop` branch.
-The pull request will allow users to review the updates in the reports and adopt the new version.
+When the qualification reports are created, pull requests are triggered (one pull request for each qualification report) toward the `develop` branch.
+The pull requests will allow users to review the updates in the reports and adopt the new version.
 
 ## Models
 
-The `models.csv` file indicates which models should be run and qualified.
+The `models.csv` file indicates which qualification plans should be processed.
 The header includes the following fields:
 
 - __Execute__: If `TRUE` run the qualification. If `FALSE`, skip the qualification.
-- __Repository name__: Name of Github OSP repository from which to get the model, e.g. `7E3-Model` for [7E3-Model](https://github.com/Open-Systems-Pharmacology/7E3-Model)
-- __Released version__: Tag version of the model, e.g. `1.0`
-- __Snapshot name__: Name of the snapshot (`.json`) file, e.g. `7E3` for [7E3.json](https://github.com/Open-Systems-Pharmacology/7E3-Model/7E3.json)
+- __Repository name__: Name of GitHub OSP repository from which to get the qualification plan, e.g. `Qualification-CKD` for https://github.com/Open-Systems-Pharmacology/Qualification-CKD.
+- __Released version__: Tag version of the qualificaion plan repository, e.g. `1.0`
+- __Snapshot name__: OSP-Qualification-Report directory name where the qualification report will be updated, e.g. `Qualification-CKD` for https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Report/Qualification-CKD.
 - __Workflow name__: Path of workflow R script that creates the function to run the qualification if not default.
 > [!TIP]
-> Leave blank cell if default path, `evaluation/workflow.R`, is used (this path is case insensitive). 
-- __Additional projects__: Url of additional project snapshots to export as `pksim5` projects, e.g. `Propofol-Pediatrics/refs/heads/main/Propofol-Pediatrics.json`
+> Leave blank cell if default path, `Qualification/workflow.R`, is used (this path is case insensitive). 
+- __Additional projects__: Url of additional project snapshots to export as `pksim5` projects, e.g. `Propofol-Pediatrics/refs/tags/v1.0/Propofol-Pediatrics.json`
 > [!TIP]
 > If multiple projects are exported, they need to be separated by a pipe character: `|`, e.g. `X-Pediatrics.json|Y-Pediatrics.json`
 
