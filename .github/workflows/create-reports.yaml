@@ -1,4 +1,4 @@
-name: Automated Evaluation Reports and Projects 
+name: Qualification Reports
 
 # Workflow manually triggered and suggest available branches in input
 on:
@@ -50,7 +50,7 @@ jobs:
       run: echo "data={\"include\":$(cat models.json)}" >> $GITHUB_OUTPUT
       shell: bash
   
-  evaluation:
+  qualification:
     needs: read_inputs
     strategy:
       matrix: ${{ fromJSON(needs.read_inputs.outputs.models) }}
@@ -76,8 +76,8 @@ jobs:
       with:
         tools-path: tools.csv
 
-    - id: evaluate-model
-      name: Run evaluation
+    - id: run-qualification
+      name: Run qualification
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/report-evaluation@main
       with:
           model-repo: ${{ matrix['Repository name'] }}
@@ -112,7 +112,7 @@ jobs:
             ${{ matrix['Snapshot name'] }}/images/**
             ${{ matrix['Snapshot name'] }}/*.pdf
             ${{ matrix['Snapshot name'] }}/*.md
-        title: Update Evaluation Reports for ${{ matrix['Snapshot name'] }}
+        title: Update Qualification Report for ${{ matrix['Snapshot name'] }}
         body: |
           ## Tools
           ${{ needs.read_inputs.outputs.tools_table }}
