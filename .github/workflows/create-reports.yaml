@@ -31,7 +31,6 @@ jobs:
       run: |
         Rscript -e '
         modelsData <- read.csv("models.csv", check.names = FALSE, stringsAsFactors = FALSE, colClasses = c("logical", rep("character", 5)))
-        modelsData$Index <- seq.int(nrow(modelsData))
         cat(jsonlite::toJSON(modelsData, dataframe = "rows"))
         ' > models.json
       shell: bash
@@ -64,8 +63,8 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git checkout -b ${{ github.ref_name }}-${{ matrix['Snapshot name'] }}
-        git push -u origin ${{ github.ref_name }}-${{ matrix['Snapshot name'] }}
+        git checkout -b ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        git push -u origin ${{ github.ref_name }}-${{ matrix['Repository name'] }}
         git fetch origin develop
         git rebase -Xours origin/develop
         git reset HEAD^
@@ -82,7 +81,7 @@ jobs:
       with:
           model-repo: ${{ matrix['Repository name'] }}
           model-version: ${{ matrix['Released version'] }}
-          snapshot: ${{ matrix['Snapshot name'] }}
+          snapshot: ${{ matrix['Repository name'] }}
           evaluation: 'false'
           workflow-script: ${{ matrix['Workflow name'] }}
           additional-project-urls: ${{ matrix['Additional projects'] }}
@@ -106,13 +105,13 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
-        branch: ${{ github.ref_name }}-${{ matrix['Snapshot name'] }}
+        branch: ${{ github.ref_name }}-${{ matrix['Repository name'] }}
         base: develop
         add-paths: |
-            ${{ matrix['Snapshot name'] }}/images/**
-            ${{ matrix['Snapshot name'] }}/*.pdf
-            ${{ matrix['Snapshot name'] }}/*.md
-        title: Update Qualification Report for ${{ matrix['Snapshot name'] }}
+            ${{ matrix['Repository name'] }}/images/**
+            ${{ matrix['Repository name'] }}/*.pdf
+            ${{ matrix['Repository name'] }}/*.md
+        title: Update Qualification Report for ${{ matrix['Repository name'] }}
         body: |
           ## Tools
           ${{ needs.read_inputs.outputs.tools_table }}
