@@ -25,7 +25,6 @@ The header includes the following fields:
 - __Execute__: If `TRUE` run the qualification. If `FALSE`, skip the qualification.
 - __Repository name__: Name of GitHub OSP repository from which to get the qualification plan, e.g. `Qualification-CKD` for https://github.com/Open-Systems-Pharmacology/Qualification-CKD.
 - __Released version__: Tag version of the qualificaion plan repository, e.g. `1.0`
-- __Snapshot name__: OSP-Qualification-Report directory name where the qualification report will be updated, e.g. `Qualification-CKD` for https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Report/Qualification-CKD.
 - __Workflow name__: Path of workflow R script that creates the function to run the qualification if not default.
 > [!TIP]
 > Leave blank cell if default path, `Qualification/workflow.R`, is used (this path is case insensitive). 
