@@ -154,7 +154,7 @@ The itraconazole-digoxin interaction was evaluated using 2 clinical DDI studies 
 
 ### 1.2.4 Verapamil - Digoxin DDI<a id="verapamil-digoxin-ddi"></a>
 
-The release of the snapshot containing the respective simulations can be found here: <[https://github.com/Open-Systems-Pharmacology/Verapamil-Digoxin-DDI/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Verapamil-Digoxin-DDI/releases/tag/v1.0)>
+The release of the snapshot containing the respective simulations can be found here: <[https://github.com/Open-Systems-Pharmacology/Verapamil-Digoxin-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Verapamil-Digoxin-DDI/releases/tag/v1.1)>
 
 The verapamil-digoxin interaction was evaluated using a 11 clinical DDI studies including 12 different clinical settings ([Belz 1981](#references), [Belz 1983](#references), [Doering 1983](#references), [Johnson 1987](#references), [Klein 1982](#references), [Pedersen 1981](#references), [Pedersen 1982](#references), [Pedersen 1983](#references), [Rodin 1988](#references), [Schwartz 1982](#references), [Wiebe 2020](#references)).
 
