@@ -1,0 +1,122 @@
+name: Qualification Reports
+
+# Workflow manually triggered and suggest available branches in input
+on:
+  workflow_dispatch:
+
+env:
+  WORKING_DIR: 'D:/0'
+  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  read_inputs:
+    runs-on: ubuntu-latest
+    outputs:
+      tools_table: ${{ steps.tools_table.outputs.tools-table }}
+      pk_sim_version: ${{ steps.tools_table.outputs.pk-sim }}
+      qualification_framework_version: ${{ steps.tools_table.outputs.qualification-framework }}
+      models_table: ${{ steps.models_table.outputs.table }}
+      models: ${{steps.models.outputs.data}}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - id: tools_table
+      name: Get tools table
+      uses: Open-Systems-Pharmacology/Workflows/.github/actions/get-tools-versions@main
+      with:
+        tools-path: tools.csv
+        
+    - name: Read and export models as json
+      run: |
+        Rscript -e '
+        modelsData <- read.csv("models.csv", check.names = FALSE, stringsAsFactors = FALSE, colClasses = c("logical", rep("character", 4)))
+        cat(jsonlite::toJSON(modelsData, dataframe = "rows"))
+        ' > models.json
+      shell: bash
+    
+    - name: Output models data for table conversion
+      id: models_data
+      run: echo "json=$(cat models.json)" >> $GITHUB_OUTPUT
+      shell: bash
+    - name: Markdown table for models
+      uses: buildingcash/json-to-markdown-table-action@v1 
+      id: models_table
+      with: 
+        json: "${{ steps.models_data.outputs.json }}"
+    - name: Set models data as output for matrix run strategy
+      id: models
+      run: echo "data={\"include\":$(cat models.json)}" >> $GITHUB_OUTPUT
+      shell: bash
+  
+  qualification:
+    needs: read_inputs
+    strategy:
+      matrix: ${{ fromJSON(needs.read_inputs.outputs.models) }}
+      fail-fast: false
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Rebase from develop
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git checkout -b ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        git push -u origin ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        git fetch origin develop
+        git rebase -Xours origin/develop
+        git reset HEAD^
+
+    - id: qualification-environment
+      name: Setup Qualification Environment
+      uses: Open-Systems-Pharmacology/Workflows/.github/actions/setup-qualification-environment@main
+      with:
+        tools-path: tools.csv
+
+    - id: run-qualification
+      name: Run qualification
+      uses: Open-Systems-Pharmacology/Workflows/.github/actions/report-evaluation@main
+      with:
+          model-repo: ${{ matrix['Repository name'] }}
+          model-version: ${{ matrix['Released version'] }}
+          snapshot: ${{ matrix['Repository name'] }}
+          evaluation: 'false'
+          workflow-script: ${{ matrix['Workflow name'] }}
+          additional-project-urls: ${{ matrix['Additional projects'] }}
+          pk-sim-version: ${{ needs.read_inputs.outputs.pk_sim_version }}
+          qualification-framework-version: ${{ needs.read_inputs.outputs.qualification_framework_version }}
+          save-model-file: 'false'
+          save-pdf: 'true'
+          run-directory: ${{ env.WORKING_DIR }}
+
+    - id: copy-to-workspace
+      name: Copy back to workspace and clean working directory before PR
+      run: |
+        file.copy(
+          list.files("${{ env.WORKING_DIR }}", full.names = TRUE), 
+          normalizePath(Sys.getenv("GITHUB_WORKSPACE"), winslash = "/"),
+          recursive = TRUE
+          )
+        unlink("${{ env.WORKING_DIR }}", recursive = TRUE)
+      shell: Rscript {0}
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v7
+      with:
+        branch: ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        base: develop
+        add-paths: |
+            ${{ matrix['Repository name'] }}/images/**
+            ${{ matrix['Repository name'] }}/*.pdf
+            ${{ matrix['Repository name'] }}/*.md
+        title: Update Qualification Report for ${{ matrix['Repository name'] }}
+        body: |
+          ## Tools
+          ${{ needs.read_inputs.outputs.tools_table }}
+          ## All evaluated models
+          ${{ needs.read_inputs.outputs.models_table }}
+        assignees: ${{ github.actor }}
+        reviewers: ${{ github.actor }}
+        
