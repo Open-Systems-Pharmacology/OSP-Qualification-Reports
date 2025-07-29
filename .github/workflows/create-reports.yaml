@@ -113,8 +113,8 @@ jobs:
         base: develop
         add-paths: |
             ${{ matrix['Repository name'] }}/images/**
-            ${{ matrix['Repository name'] }}/*.pdf
-            ${{ matrix['Repository name'] }}/*.md
+            ${{ matrix['Repository name'] }}/report.pdf
+            ${{ matrix['Repository name'] }}/report.md
         title: Update Qualification Report for ${{ matrix['Repository name'] }}
         body: |
           ## Tools
