@@ -1,10 +1,10 @@
 Tool,Version,URL
-ospsuite-R,12.2.0,NA
-Reporting Engine,main,NA
+ospsuite-R,12.3.0,NA
+Reporting Engine,2.3.11,NA
 RUtils,1.7.0,NA
 TLF,1.6.0,NA
 rClr,NA,NA
 rSharp,1.1.2,NA
 Qualification Runner,12.0,https://github.com/Open-Systems-Pharmacology/QualificationRunner/releases/download/v12.0/qualificationrunner-portable-setup.12.0.1.zip
 Qualification Framework,3.3,NA
-PK-Sim,12.0.440,https://github.com/Open-Systems-Pharmacology/PK-Sim/releases/download/v12.0.440/pk-sim-portable-setup.12.0.440.zip
+PK-Sim,12.1.168,https://productionresultssa5.blob.core.windows.net/actions-results/60bd43fb-77d9-4729-a9d8-5e2643374434/workflow-job-run-006696fb-3ad7-5c29-ba66-c9b8294a255c/artifacts/9ff5bec38ae5d6b41b2f0adee78c6e4622f55be613feaf088a6356384de65190.zip?rscd=attachment%3B+filename%3D%22PKSim+Portable+12.1.168.zip%22&se=2025-07-29T13%3A27%3A56Z&sig=yWPET7DF4Yh%2Bhx9ni3DzeUKlOhKJUzScilp%2FozoG5OI%3D&ske=2025-07-30T00%3A20%3A39Z&skoid=ca7593d4-ee42-46cd-af88-8b886a2f84eb&sks=b&skt=2025-07-29T12%3A20%3A39Z&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skv=2025-05-05&sp=r&spr=https&sr=b&st=2025-07-29T13%3A17%3A51Z&sv=2025-05-05

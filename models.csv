@@ -1,3 +1,11 @@
 Execute,Repository name,Released version,Workflow name,Additional projects
-TRUE,Qualification-DDI-P-gp,1.0,,
+TRUE,Qualification-DDI-CYP1A2,2.0,,
+TRUE,Qualification-DDI-CYP2C19,2.0,,
+TRUE,Qualification-DDI-CYP3A4,2.0,,
+FALSE,Qualification-DDI-P-gp,N.N,,
+TRUE,Qualification-DDI-UGT,2.0,,
+TRUE,Pediatric_Qualification_Package_CYP2C8_Ontogeny,2.0,,
+TRUE,Pediatric_Qualification_Package_CYP3A4_Ontogeny,2.0,,
+TRUE,Pediatric_Qualification_Package_GFR_Ontogeny,2.0,,
 TRUE,Qualification-CKD,1.0,,
+
