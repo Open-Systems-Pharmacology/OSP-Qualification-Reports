@@ -68,6 +68,9 @@ jobs:
         git fetch origin develop
         git rebase -Xours origin/develop
         git reset HEAD^
+        rm -r ${{ matrix['Repository name'] }}/*
+        git add ${{ matrix['Repository name'] }} || echo "No file in ${{ matrix['Repository name'] }}"
+        git commit -m "Update ${{ matrix['Repository name'] }}" || echo "No changes to commit"
 
     - id: qualification-environment
       name: Setup Qualification Environment
