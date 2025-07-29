@@ -71,6 +71,7 @@ jobs:
         [ -d "${{ matrix['Repository name'] }}" ] && rm -rf ${{ matrix['Repository name'] }}/*
         git add ${{ matrix['Repository name'] }} || echo "No file in ${{ matrix['Repository name'] }}"
         git commit -m "Update ${{ matrix['Repository name'] }}" || echo "No changes to commit"
+      shell: bash
 
     - id: qualification-environment
       name: Setup Qualification Environment
