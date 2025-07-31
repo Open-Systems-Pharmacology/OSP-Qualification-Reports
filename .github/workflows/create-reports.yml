@@ -1,9 +1,13 @@
-name: Qualification Reports
+name: Create qualification reports
 
 # Workflow manually triggered and suggest available branches in input
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+  
 env:
   WORKING_DIR: 'D:/0'
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -61,6 +65,7 @@ jobs:
     
     - name: Rebase from develop
       run: |
+        git config --global core.longpaths true
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         git checkout -b ${{ github.ref_name }}-${{ matrix['Repository name'] }}
@@ -88,7 +93,6 @@ jobs:
           snapshot: ${{ matrix['Repository name'] }}
           evaluation: 'false'
           workflow-script: ${{ matrix['Workflow name'] }}
-          additional-project-urls: ${{ matrix['Additional projects'] }}
           pk-sim-version: ${{ needs.read_inputs.outputs.pk_sim_version }}
           qualification-framework-version: ${{ needs.read_inputs.outputs.qualification_framework_version }}
           save-model-file: 'false'
