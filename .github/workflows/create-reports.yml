@@ -19,8 +19,8 @@ jobs:
       tools_table: ${{ steps.tools_table.outputs.tools-table }}
       pk_sim_version: ${{ steps.tools_table.outputs.pk-sim }}
       qualification_framework_version: ${{ steps.tools_table.outputs.qualification-framework }}
-      models_table: ${{ steps.models_table.outputs.table }}
-      models: ${{steps.models.outputs.data}}
+      qualifications_table: ${{ steps.qualifications_table.outputs.table }}
+      qualifications: ${{steps.qualifications.outputs.data}}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -31,32 +31,32 @@ jobs:
       with:
         tools-path: tools.csv
         
-    - name: Read and export models as json
+    - name: Read and export qualifications as json
       run: |
         Rscript -e '
-        modelsData <- read.csv("models.csv", check.names = FALSE, stringsAsFactors = FALSE, colClasses = c("logical", rep("character", 4)))
-        cat(jsonlite::toJSON(modelsData[modelsData$Execute, ], dataframe = "rows"))
-        ' > models.json
+        qualificationsData <- read.csv("qualifications.csv", check.names = FALSE, stringsAsFactors = FALSE, colClasses = c("logical", rep("character", 4)))
+        cat(jsonlite::toJSON(qualificationsData[qualificationsData$Execute, ], dataframe = "rows"))
+        ' > qualifications.json
       shell: bash
     
-    - name: Output models data for table conversion
-      id: models_data
-      run: echo "json=$(cat models.json)" >> $GITHUB_OUTPUT
+    - name: Output qualifications data for table conversion
+      id: qualifications_data
+      run: echo "json=$(cat qualifications.json)" >> $GITHUB_OUTPUT
       shell: bash
-    - name: Markdown table for models
+    - name: Markdown table for qualifications
       uses: buildingcash/json-to-markdown-table-action@v1 
-      id: models_table
+      id: qualifications_table
       with: 
-        json: "${{ steps.models_data.outputs.json }}"
-    - name: Set models data as output for matrix run strategy
-      id: models
-      run: echo "data={\"include\":$(cat models.json)}" >> $GITHUB_OUTPUT
+        json: "${{ steps.qualifications_data.outputs.json }}"
+    - name: Set qualifications data as output for matrix run strategy
+      id: qualifications
+      run: echo "data={\"include\":$(cat qualifications.json)}" >> $GITHUB_OUTPUT
       shell: bash
   
   qualification:
     needs: read_inputs
     strategy:
-      matrix: ${{ fromJSON(needs.read_inputs.outputs.models) }}
+      matrix: ${{ fromJSON(needs.read_inputs.outputs.qualifications) }}
       fail-fast: false
     runs-on: windows-latest
     steps:
@@ -123,8 +123,8 @@ jobs:
         body: |
           ## Tools
           ${{ needs.read_inputs.outputs.tools_table }}
-          ## All evaluated models
-          ${{ needs.read_inputs.outputs.models_table }}
+          ## Qualification plans
+          ${{ needs.read_inputs.outputs.qualifications_table }}
         assignees: ${{ github.actor }}
         reviewers: ${{ github.actor }}
         
