@@ -128,4 +128,4 @@ jobs:
           ${{ needs.read_inputs.outputs.qualifications_table }}
         assignees: ${{ github.actor }}
         reviewers: ${{ github.actor }}
-  
+
