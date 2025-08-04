@@ -1,12 +1,131 @@
 name: Create qualification reports
 
+# Workflow manually triggered and suggest available branches in input
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+  
+env:
+  WORKING_DIR: 'D:/0'
+  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
-  create-reports:
+  read_inputs:
     runs-on: ubuntu-latest
-    steps: 
-    - name: Info 
-      run: echo "Please branch from create-reports to use this action"
+    outputs:
+      tools_table: ${{ steps.tools_table.outputs.tools-table }}
+      pk_sim_version: ${{ steps.tools_table.outputs.pk-sim }}
+      qualification_framework_version: ${{ steps.tools_table.outputs.qualification-framework }}
+      qualifications_table: ${{ steps.qualifications_table.outputs.table }}
+      qualifications: ${{steps.qualifications.outputs.data}}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - id: tools_table
+      name: Get tools table
+      uses: Open-Systems-Pharmacology/Workflows/.github/actions/get-tools-versions@main
+      with:
+        tools-path: tools.csv
+        
+    - name: Read and export qualifications as json
+      run: |
+        Rscript -e '
+        qualificationsData <- read.csv("qualifications.csv", check.names = FALSE, stringsAsFactors = FALSE, colClasses = c("logical", rep("character", 4)))
+        cat(jsonlite::toJSON(qualificationsData[qualificationsData$Execute, ], dataframe = "rows"))
+        ' > qualifications.json
+      shell: bash
+    
+    - name: Output qualifications data for table conversion
+      id: qualifications_data
+      run: echo "json=$(cat qualifications.json)" >> $GITHUB_OUTPUT
+      shell: bash
+    - name: Markdown table for qualifications
+      uses: buildingcash/json-to-markdown-table-action@v1 
+      id: qualifications_table
+      with: 
+        json: "${{ steps.qualifications_data.outputs.json }}"
+    - name: Set qualifications data as output for matrix run strategy
+      id: qualifications
+      run: echo "data={\"include\":$(cat qualifications.json)}" >> $GITHUB_OUTPUT
+      shell: bash
+  
+  qualification:
+    needs: read_inputs
+    strategy:
+      matrix: ${{ fromJSON(needs.read_inputs.outputs.qualifications) }}
+      fail-fast: false
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Rebase from develop
+      run: |
+        git config --global core.longpaths true
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git checkout -b ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        git push -u origin ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        git fetch origin develop
+        git rebase -Xours origin/develop
+        git reset HEAD^
+        [ -d "${{ matrix['Folder name'] }}" ] && rm -rf ${{ matrix['Folder name'] }}/*
+        git add ${{ matrix['Folder name'] }} || echo "No file in ${{ matrix['Folder name'] }}"
+        git commit -m "Update ${{ matrix['Folder name'] }}" || echo "No changes to commit"
+      shell: bash
+
+    - id: qualification-environment
+      name: Setup Qualification Environment
+      uses: Open-Systems-Pharmacology/Workflows/.github/actions/setup-qualification-environment@main
+      with:
+        tools-path: tools.csv
+
+    - id: run-qualification
+      name: Run qualification
+      uses: Open-Systems-Pharmacology/Workflows/.github/actions/report-evaluation@main
+      with:
+          model-repo: ${{ matrix['Repository name'] }}
+          model-version: ${{ matrix['Released version'] }}
+          snapshot: ${{ matrix['Folder name'] }}
+          evaluation: 'false'
+          workflow-script: ${{ matrix['Workflow name'] }}
+          pk-sim-version: ${{ needs.read_inputs.outputs.pk_sim_version }}
+          qualification-framework-version: ${{ needs.read_inputs.outputs.qualification_framework_version }}
+          save-model-file: 'false'
+          save-pdf: 'true'
+          run-directory: ${{ env.WORKING_DIR }}
+
+    - id: copy-to-workspace
+      name: Copy back to workspace and clean working directory before PR
+      run: |
+        file.copy(
+          list.files("${{ env.WORKING_DIR }}", full.names = TRUE), 
+          normalizePath(Sys.getenv("GITHUB_WORKSPACE"), winslash = "/"),
+          recursive = TRUE
+          )
+        unlink("${{ env.WORKING_DIR }}", recursive = TRUE)
+      shell: Rscript {0}
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v7
+      with:
+        token: ${{ secrets.REPO_SCOPED_TOKEN }}
+        branch: ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        base: develop
+        add-paths: |
+            ${{ matrix['Folder name'] }}/images/**
+            ${{ matrix['Folder name'] }}/report.pdf
+            ${{ matrix['Folder name'] }}/report.md
+        title: Update Qualification Report for ${{ matrix['Folder name'] }}
+        body: |
+          ## Tools
+          ${{ needs.read_inputs.outputs.tools_table }}
+          ## Qualification plans
+          ${{ needs.read_inputs.outputs.qualifications_table }}
+        assignees: ${{ github.actor }}
+        reviewers: ${{ github.actor }}
   
