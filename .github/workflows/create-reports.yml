@@ -68,8 +68,8 @@ jobs:
         git config --global core.longpaths true
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git checkout -b ${{ github.ref_name }}-${{ matrix['Folder name'] }}
-        git push -u origin ${{ github.ref_name }}-${{ matrix['Folder name'] }}
+        git checkout -b ${{ github.ref_name }}-${{ matrix['Repository name'] }}
+        git push -u origin ${{ github.ref_name }}-${{ matrix['Repository name'] }}
         git fetch origin develop
         git rebase -Xours origin/develop
         git reset HEAD^
@@ -113,7 +113,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
-        branch: ${{ github.ref_name }}-${{ matrix['Folder name'] }}
+        branch: ${{ github.ref_name }}-${{ matrix['Repository name'] }}
         base: develop
         add-paths: |
             ${{ matrix['Folder name'] }}/images/**
