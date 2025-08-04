@@ -113,6 +113,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
+        token: ${{ secrets.PAT_PR_TRIGGERED_BY_ACTIONS }}
         branch: ${{ github.ref_name }}-${{ matrix['Repository name'] }}
         base: develop
         add-paths: |
