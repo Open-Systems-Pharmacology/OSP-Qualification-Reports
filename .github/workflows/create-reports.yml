@@ -113,6 +113,8 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
+        # Use a custom PAT because GITHUB_TOKEN cannot trigger subsequent workflows (here: required checks on pull_request).
+        # S. https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
         token: ${{ secrets.PAT_PR_TRIGGERED_BY_ACTIONS }}
         branch: ${{ github.ref_name }}-${{ matrix['Repository name'] }}
         base: develop
