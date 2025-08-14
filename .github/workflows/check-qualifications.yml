@@ -1,4 +1,4 @@
-name: Validate models.csv
+name: Validate qualifications.csv
 
 on:
   workflow_dispatch:
