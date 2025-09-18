@@ -98,6 +98,12 @@ jobs:
       with:
         tools-path: tools.csv
 
+    - name: Downgrade ggplot2 to 3.5.2
+      run: |
+        Rscript -e 'remove.packages("ggplot2")'
+        Rscript -e 'remotes::install_version("ggplot2", version = "3.5.2", repos = "https://cran.r-project.org")'
+      shell: bash
+    
     - id: run-qualification
       name: Run qualification
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/report-evaluation@main
