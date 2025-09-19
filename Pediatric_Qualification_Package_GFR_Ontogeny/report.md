@@ -1,10 +1,10 @@
 # Pediatric Qualification Package: GFR Ontogeny
 
-| Version                         | 1.0-OSP12.0                                                   |
+| Version                         | 2.0-OSP12.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v1.0) |
-| OSP Version                     | 12.0                                                          |
-| Qualification Framework Version | 3.3                                                          |
+| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v2.0) |
+| OSP Version                     | 12.1                                                          |
+| Qualification Framework Version | 3.4                                                          |
 
 This qualification report is filed at:
 
