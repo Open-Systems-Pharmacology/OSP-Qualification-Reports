@@ -1,10 +1,10 @@
 # CYP2C19 DDI Qualification
 
-| Version                         | 1.0-OSP12.0                                                   |
+| Version                         | 2.0-OSP12.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP2C19/releases/tag/v1.0 |
-| OSP Version                     | 12.0                                                          |
-| Qualification Framework Version | 3.3                                                          |
+| Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP2C19/releases/tag/v2.0 |
+| OSP Version                     | 12.1                                                          |
+| Qualification Framework Version | 3.4                                                          |
 
 This qualification report is filed at:
 
@@ -293,7 +293,7 @@ In the plots,
 |11050  |Fluvoxamine, 50 mg, PO,   |Omeprazole, PO    |2.59                |5.34               |0.48               |1.98                 |3.48                |0.57                |Yasui-Furukori 2004 |
 |11052  |Fluvoxamine, 50 mg, PO,   |Omeprazole, PO    |1.00                |1.21               |0.83               |1.00                 |1.12                |0.89                |Yasui-Furukori 2004 |
 |15001  |Fluvoxamine, 27.5 mg, PO, |S-Mephenytoin, PO |3.85                |4.64               |0.83               |2.14                 |2.12                |1.01                |Yao 2003            |
-|15002  |Fluvoxamine, 45.8 mg, PO, |S-Mephenytoin, PO |6.33                |6.70               |0.95               |2.49                 |2.40                |1.04                |Yao 2003            |
+|15002  |Fluvoxamine, 45.8 mg, PO, |S-Mephenytoin, PO |6.33                |6.70               |0.94               |2.49                 |2.40                |1.04                |Yao 2003            |
 |15003  |Fluvoxamine, 64.1 mg, PO, |S-Mephenytoin, PO |8.07                |9.89               |0.82               |2.63                 |2.42                |1.09                |Yao 2003            |
 
 <br>
