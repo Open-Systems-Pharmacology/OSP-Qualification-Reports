@@ -1,8 +1,8 @@
 # CYP3A4 DDI Qualification
 
-| Version                         | 2.0-OSP12.1                                                   |
+| Version                         | 2.1-OSP12.1                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v2.0) |
+| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v2.1](https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP3A4/releases/tag/v2.1) |
 | OSP Version                     | 12.1                                                          |
 | Qualification Framework Version | 3.4                                                          |
 
@@ -208,15 +208,17 @@ The carbamazepine-efavirenz interaction was evaluated using one clinical DDI stu
 ### 1.2.3 Carbamazepine - Midazolam DDI<a id="network-carbamazepine-midazolam-ddi"></a>
 
 The release of the snapshot containing the respective simulations can be found here:
-[https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.0)
+[https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.1](https://github.com/Open-Systems-Pharmacology/Carbamazepine-Midazolam-DDI/releases/tag/v1.1)
 
-The carbamazepine-midazolam interaction was evaluated using three clinical DDI studies ([Lutz 2018](#4-references), [Kanefendt 2023](#4-references)).
+The carbamazepine-midazolam interaction was evaluated using three clinical DDI studies ([Lutz 2018](#4-references), [Kanefendt 2023](#4-references), [Datta-Mannan 2024](#4-references)).
 
-| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                        | Clinical study                  |
-| ------ | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| 1460   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po BID for 22 days<br />Midazolam: 2 mg po single dose, concomitantly with the 49<sup>th</sup> carbamazepine dose | [Lutz 2018](#4-references)      |
-| 943    | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po for 17 days<br />Midazolam: 1 mg po single dose, 10 hours after the 26<sup>th</sup> carbamazepine dose         | [Kanefendt 2023](#4-references) |
-| 1133   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po for 18 days<br />Midazolam: 1 mg po single dose, 12 hours after the 28<sup>th</sup> carbamazepine dose         | [Kanefendt 2023](#4-references) |
+| DataID | Enzyme | Perpetrator / victim      | Study design                                                                                                                                                                                                        | Clinical study                     |
+| ------ | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| 1460   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po BID for 22 days<br />Midazolam: 2 mg po single dose, concomitantly with the 49<sup>th</sup> carbamazepine dose | [Lutz 2018](#4-references)         |
+| 943    | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po BID for 17 days<br />Midazolam: 1 mg po single dose, 10 hours after the 26<sup>th</sup> carbamazepine dose     | [Kanefendt 2023](#4-references)    |
+| 1133   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 2 days, followed by 200 mg po BID for 2 days, followed by 300 mg po BID for 18 days<br />Midazolam: 1 mg po single dose, 12 hours after the 28<sup>th</sup> carbamazepine dose     | [Kanefendt 2023](#4-references)    |
+| 1464   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 3 days, followed by 200 mg po BID for 3 days, followed by 300 mg po BID for 4 days<br />Midazolam: 1 mg po single dose, concomitantly with the 19<sup>th</sup> carbamazepine dose  | [Datta-Mannan 2024](#4-references) |
+| 1465   | CYP3A4 | Carbamazepine / midazolam | Carbamazepine: 100 mg po BID for 3 days, followed by 200 mg po BID for 3 days, followed by 300 mg po BID for 7 days<br />Midazolam: 1 mg po single dose, concomitantly with the 25<sup>th</sup> carbamazepine dose  | [Datta-Mannan 2024](#4-references) |
 
 ### 1.2.4 Cimetidine - Alfentanil DDI<a id="network-cimetidine-alfentanil-ddi"></a>
 
@@ -758,7 +760,7 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC          |1.38 |
+|AUC          |1.37 |
 |CMAX         |1.33 |
 
 <br>
@@ -770,9 +772,9 @@ In the plots,
 
 |AUC                          |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |164    |-        |
-|Points within Guest *et al.* |118    |71.95     |
-|Points within 2 fold         |145    |88.41     |
+|Points total                 |166    |-        |
+|Points within Guest *et al.* |120    |72.29     |
+|Points within 2 fold         |147    |88.55     |
 
 <br>
 <br>
@@ -783,9 +785,9 @@ In the plots,
 
 |CMAX                         |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |111    |-        |
-|Points within Guest *et al.* |63     |56.76     |
-|Points within 2 fold         |101    |90.99     |
+|Points total                 |113    |-        |
+|Points within Guest *et al.* |65     |57.52     |
+|Points within 2 fold         |103    |91.15     |
 
 <br>
 <br>
@@ -939,6 +941,8 @@ In the plots,
 |1399   |Fluconazole, 400 mg, PO, SD                                                                                                                                                                                                        |Alfentanil, IV           |2.11                |1.97               |1.07               |1.01                 |1.04                |0.97                |Palkama 1998          |
 |1457   |Carbamazepine, 300 mg, PO, MD                                                                                                                                                                                                      |Alprazolam, PO           |0.58                |0.42               |1.37               |0.89                 |1.11                |0.80                |Furukori 1998         |
 |1460   |Carbamazepine, 100, then escalated to 300 mg, PO, MD                                                                                                                                                                               |Midazolam, PO            |0.23                |0.21               |1.09               |0.37                 |0.32                |1.16                |Lutz 2018b            |
+|1464   |Carbamazepine, 100/200/300 mg, PO, MD                                                                                                                                                                                              |Midazolam, PO            |0.28                |0.28               |0.98               |0.42                 |0.40                |1.06                |Datta-Mannan 2024     |
+|1465   |Carbamazepine, 100/200/300 mg, PO, MD                                                                                                                                                                                              |Midazolam, PO            |0.26                |0.26               |1.01               |0.41                 |0.37                |1.11                |Datta-Mannan 2024     |
 |2002   |Rifampicin, 300 mg, PO, MD OD (7 days)                                                                                                                                                                                             |Midazolam, PO            |0.04                |0.26               |0.16               |0.08                 |0.38                |0.22                |van Dyk 2018          |
 |2004   |Clarithromycin, 250 mg, PO, MD BID (3 days)                                                                                                                                                                                        |Midazolam, PO            |1.54                |1.90               |0.81               |1.29                 |1.75                |0.74                |van Dyk 2018          |
 |2007   |Fluvoxamine, 50/100 mg, PO, MD BID (4 weeks), dose titration to 150 mg/day over 7 days: 50 mg in the evening for 3 days, 50 mg in the morning and evening for the next 3 days, then 50 mg in the morning and 100 mg in the evening |Midazolam, IV            |1.04                |1.50               |0.69               |1.00                 |-                  |-                  |Kashuba 1998          |
@@ -1010,8 +1014,8 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC          |1.42 |
-|CMAX         |1.44 |
+|AUC          |1.41 |
+|CMAX         |1.43 |
 
 <br>
 <br>
@@ -1022,9 +1026,9 @@ In the plots,
 
 |AUC                          |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |84     |-        |
-|Points within Guest *et al.* |61     |72.62     |
-|Points within 2 fold         |72     |85.71     |
+|Points total                 |86     |-        |
+|Points within Guest *et al.* |63     |73.26     |
+|Points within 2 fold         |74     |86.05     |
 
 <br>
 <br>
@@ -1035,9 +1039,9 @@ In the plots,
 
 |CMAX                         |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |55     |-        |
-|Points within Guest *et al.* |24     |43.64     |
-|Points within 2 fold         |46     |83.64     |
+|Points total                 |57     |-        |
+|Points within Guest *et al.* |26     |45.61     |
+|Points within 2 fold         |48     |84.21     |
 
 <br>
 <br>
@@ -1240,8 +1244,8 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC          |1.25 |
-|CMAX         |1.17 |
+|AUC          |1.18 |
+|CMAX         |1.15 |
 
 <br>
 <br>
@@ -1252,9 +1256,9 @@ In the plots,
 
 |AUC                          |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |5      |-        |
-|Points within Guest *et al.* |4      |80        |
-|Points within 2 fold         |5      |100       |
+|Points total                 |7      |-        |
+|Points within Guest *et al.* |6      |85.71     |
+|Points within 2 fold         |7      |100.00    |
 
 <br>
 <br>
@@ -1265,9 +1269,9 @@ In the plots,
 
 |CMAX                         |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |5      |-        |
-|Points within Guest *et al.* |3      |60        |
-|Points within 2 fold         |5      |100       |
+|Points total                 |7      |-        |
+|Points within Guest *et al.* |5      |71.43     |
+|Points within 2 fold         |7      |100.00    |
 
 <br>
 <br>
@@ -2306,8 +2310,8 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC          |1.41 |
-|CMAX         |1.39 |
+|AUC          |1.40 |
+|CMAX         |1.38 |
 
 <br>
 <br>
@@ -2318,9 +2322,9 @@ In the plots,
 
 |AUC                          |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |104    |-        |
-|Points within Guest *et al.* |76     |73.08     |
-|Points within 2 fold         |87     |83.65     |
+|Points total                 |106    |-        |
+|Points within Guest *et al.* |78     |73.58     |
+|Points within 2 fold         |89     |83.96     |
 
 <br>
 <br>
@@ -2331,9 +2335,9 @@ In the plots,
 
 |CMAX                         |Number |Ratio [%] |
 |:----------------------------|:------|:---------|
-|Points total                 |65     |-        |
-|Points within Guest *et al.* |41     |63.08     |
-|Points within 2 fold         |56     |86.15     |
+|Points total                 |67     |-        |
+|Points within Guest *et al.* |43     |64.18     |
+|Points within 2 fold         |58     |86.57     |
 
 <br>
 <br>
@@ -2509,7 +2513,7 @@ The following section shows concentration time profiles of the victim drugs of t
 
 <a id="figure-3-2"></a>
 
-![](images/038_section_ct-profiles/040_section_carbamazepine-efavirenz-ddi/comparison_time_profile_Ji_2008__Arm_1__Perpetrator__Carbamazepine__Victim__Efavirenz__116.png)
+![](images/038_section_ct-profiles/040_section_carbamazepine-efavirenz-ddi/comparison_time_profile_Ji_2008__Arm_1__Perpetrator__Carbamazepine__Victim__Efavirenz__117.png)
 
 **Figure 3-2: Ji 2008 (Arm 1, Perpetrator: Carbamazepine, Victim: Efavirenz)**
 
@@ -2520,1149 +2524,1158 @@ The following section shows concentration time profiles of the victim drugs of t
 
 <a id="figure-3-3"></a>
 
-![](images/038_section_ct-profiles/041_section_carbamazepine-midazolam-ddi/comparison_time_profile_Kanefendt_2023__Study_1__113.png)
+![](images/038_section_ct-profiles/041_section_carbamazepine-midazolam-ddi/comparison_time_profile_Datta_Mannan_2024_113.png)
 
-**Figure 3-3: Kanefendt 2023 (Study 1)**
+**Figure 3-3: Datta-Mannan 2024**
 
 <br>
 <br>
 
 <a id="figure-3-4"></a>
 
-![](images/038_section_ct-profiles/041_section_carbamazepine-midazolam-ddi/comparison_time_profile_Kanefendt_2023__Study_2__114.png)
+![](images/038_section_ct-profiles/041_section_carbamazepine-midazolam-ddi/comparison_time_profile_Kanefendt_2023__Study_1__114.png)
 
-**Figure 3-4: Kanefendt 2023 (Study 2)**
+**Figure 3-4: Kanefendt 2023 (Study 1)**
 
 <br>
 <br>
 
 <a id="figure-3-5"></a>
 
-![](images/038_section_ct-profiles/041_section_carbamazepine-midazolam-ddi/comparison_time_profile_Lutz_2018_115.png)
+![](images/038_section_ct-profiles/041_section_carbamazepine-midazolam-ddi/comparison_time_profile_Kanefendt_2023__Study_2__115.png)
 
-**Figure 3-5: Lutz 2018**
+**Figure 3-5: Kanefendt 2023 (Study 2)**
+
+<br>
+<br>
+
+<a id="figure-3-6"></a>
+
+![](images/038_section_ct-profiles/041_section_carbamazepine-midazolam-ddi/comparison_time_profile_Lutz_2018_116.png)
+
+**Figure 3-6: Lutz 2018**
 
 <br>
 <br>
 
 ## 3.4 Cimetidine - Alfentanil DDI<a id="cimetidine-alfentanil-ddi"></a>
 
-<a id="figure-3-6"></a>
+<a id="figure-3-7"></a>
 
 ![](images/038_section_ct-profiles/042_section_cimetidine-alfentanil-ddi/comparison_time_profile_Kienlen_1993_1.png)
 
-**Figure 3-6: Kienlen 1993**
+**Figure 3-7: Kienlen 1993**
 
 <br>
 <br>
 
 ## 3.5 Cimetidine - Alprazolam DDI<a id="cimetidine-alprazolam-ddi"></a>
 
-<a id="figure-3-7"></a>
+<a id="figure-3-8"></a>
 
 ![](images/038_section_ct-profiles/043_section_cimetidine-alprazolam-ddi/comparison_time_profile_Abernethy_1983_2.png)
 
-**Figure 3-7: Abernethy 1983**
+**Figure 3-8: Abernethy 1983**
 
 <br>
 <br>
 
-<a id="figure-3-8"></a>
+<a id="figure-3-9"></a>
 
 ![](images/038_section_ct-profiles/043_section_cimetidine-alprazolam-ddi/comparison_time_profile_Pourbaix_1985_3.png)
 
-**Figure 3-8: Pourbaix 1985**
+**Figure 3-9: Pourbaix 1985**
 
 <br>
 <br>
 
 ## 3.6 Cimetidine - Carbamazepine DDI<a id="cimetidine-carbamazepine-ddi"></a>
 
-<a id="figure-3-9"></a>
+<a id="figure-3-10"></a>
 
-![](images/038_section_ct-profiles/044_section_cimetidine-carbamazepine-ddi/comparison_time_profile_Dalton_1985a_122.png)
+![](images/038_section_ct-profiles/044_section_cimetidine-carbamazepine-ddi/comparison_time_profile_Dalton_1985a_123.png)
 
-**Figure 3-9: Dalton 1985a**
+**Figure 3-10: Dalton 1985a**
 
 <br>
 <br>
 
 ## 3.7 Cimetidine - Midazolam DDI<a id="cimetidine-midazolam-ddi"></a>
 
-<a id="figure-3-10"></a>
+<a id="figure-3-11"></a>
 
 ![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Greenblatt_1986__midazolam_IV__4.png)
 
-**Figure 3-10: Greenblatt 1986 (midazolam IV)**
-
-<br>
-<br>
-
-<a id="figure-3-11"></a>
-
-![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Greenblatt_1986__midazolam_PO__5.png)
-
-**Figure 3-11: Greenblatt 1986 (midazolam PO)**
+**Figure 3-11: Greenblatt 1986 (midazolam IV)**
 
 <br>
 <br>
 
 <a id="figure-3-12"></a>
 
-![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Martinez_1999_6.png)
+![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Greenblatt_1986__midazolam_PO__5.png)
 
-**Figure 3-12: Martinez 1999**
+**Figure 3-12: Greenblatt 1986 (midazolam PO)**
 
 <br>
 <br>
 
 <a id="figure-3-13"></a>
 
-![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Fee_1987_7.png)
+![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Martinez_1999_6.png)
 
-**Figure 3-13: Fee 1987**
+**Figure 3-13: Martinez 1999**
 
 <br>
 <br>
 
 <a id="figure-3-14"></a>
 
-![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Salonen_1986_8.png)
+![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Fee_1987_7.png)
 
-**Figure 3-14: Salonen 1986**
+**Figure 3-14: Fee 1987**
 
 <br>
 <br>
 
 <a id="figure-3-15"></a>
 
+![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Salonen_1986_8.png)
+
+**Figure 3-15: Salonen 1986**
+
+<br>
+<br>
+
+<a id="figure-3-16"></a>
+
 ![](images/038_section_ct-profiles/045_section_cimetidine-midazolam-ddi/comparison_time_profile_Elliott_1984_9.png)
 
-**Figure 3-15: Elliott 1984**
+**Figure 3-16: Elliott 1984**
 
 <br>
 <br>
 
 ## 3.8 Cimetidine - Triazolam DDI<a id="cimetidine-triazolam-ddi"></a>
 
-<a id="figure-3-16"></a>
+<a id="figure-3-17"></a>
 
 ![](images/038_section_ct-profiles/046_section_cimetidine-triazolam-ddi/comparison_time_profile_Abernethy_1983_10.png)
 
-**Figure 3-16: Abernethy 1983**
-
-<br>
-<br>
-
-<a id="figure-3-17"></a>
-
-![](images/038_section_ct-profiles/046_section_cimetidine-triazolam-ddi/comparison_time_profile_Friedman_1988_11.png)
-
-**Figure 3-17: Friedman 1988**
+**Figure 3-17: Abernethy 1983**
 
 <br>
 <br>
 
 <a id="figure-3-18"></a>
 
-![](images/038_section_ct-profiles/046_section_cimetidine-triazolam-ddi/comparison_time_profile_Pourbaix_1985_12.png)
+![](images/038_section_ct-profiles/046_section_cimetidine-triazolam-ddi/comparison_time_profile_Friedman_1988_11.png)
 
-**Figure 3-18: Pourbaix 1985**
+**Figure 3-18: Friedman 1988**
 
 <br>
 <br>
 
 <a id="figure-3-19"></a>
 
+![](images/038_section_ct-profiles/046_section_cimetidine-triazolam-ddi/comparison_time_profile_Pourbaix_1985_12.png)
+
+**Figure 3-19: Pourbaix 1985**
+
+<br>
+<br>
+
+<a id="figure-3-20"></a>
+
 ![](images/038_section_ct-profiles/046_section_cimetidine-triazolam-ddi/comparison_time_profile_Cox_1986_13.png)
 
-**Figure 3-19: Cox 1986**
+**Figure 3-20: Cox 1986**
 
 <br>
 <br>
 
 ## 3.9 Cimetidine - Verapamil DDI<a id="cimetidine-verapamil-ddi"></a>
 
-<a id="figure-3-20"></a>
+<a id="figure-3-21"></a>
 
 ![](images/038_section_ct-profiles/047_section_cimetidine-verapamil-ddi/comparison_time_profile_Smith_1984__verapamil_IV__14.png)
 
-**Figure 3-20: Smith 1984 (verapamil IV)**
+**Figure 3-21: Smith 1984 (verapamil IV)**
 
 <br>
 <br>
 
-<a id="figure-3-21"></a>
+<a id="figure-3-22"></a>
 
 ![](images/038_section_ct-profiles/047_section_cimetidine-verapamil-ddi/comparison_time_profile_Smith_1984__verapamil_PO__15.png)
 
-**Figure 3-21: Smith 1984 (verapamil PO)**
+**Figure 3-22: Smith 1984 (verapamil PO)**
 
 <br>
 <br>
 
 ## 3.10 Clarithromycin - Midazolam DDI<a id="clarithromycin-midazolam-ddi"></a>
 
-<a id="figure-3-22"></a>
+<a id="figure-3-23"></a>
 
 ![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Gorski_1998__midazolam_IV__16.png)
 
-**Figure 3-22: Gorski 1998 (midazolam IV)**
-
-<br>
-<br>
-
-<a id="figure-3-23"></a>
-
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Gorski_1998__midazolam_po__17.png)
-
-**Figure 3-23: Gorski 1998 (midazolam po)**
+**Figure 3-23: Gorski 1998 (midazolam IV)**
 
 <br>
 <br>
 
 <a id="figure-3-24"></a>
 
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Gurley_2006_18.png)
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Gorski_1998__midazolam_po__17.png)
 
-**Figure 3-24: Gurley 2006**
+**Figure 3-24: Gorski 1998 (midazolam po)**
 
 <br>
 <br>
 
 <a id="figure-3-25"></a>
 
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Gurley_2008a_19.png)
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Gurley_2006_18.png)
 
-**Figure 3-25: Gurley 2008a**
+**Figure 3-25: Gurley 2006**
 
 <br>
 <br>
 
 <a id="figure-3-26"></a>
 
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Markert_2013_20.png)
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Gurley_2008a_19.png)
 
-**Figure 3-26: Markert 2013**
+**Figure 3-26: Gurley 2008a**
 
 <br>
 <br>
 
 <a id="figure-3-27"></a>
 
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Prueksaritanont_2017_21.png)
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Markert_2013_20.png)
 
-**Figure 3-27: Prueksaritanont 2017**
+**Figure 3-27: Markert 2013**
 
 <br>
 <br>
 
 <a id="figure-3-28"></a>
 
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Quinney_2008__midazolam_IV__22.png)
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Prueksaritanont_2017_21.png)
 
-**Figure 3-28: Quinney 2008 (midazolam IV)**
+**Figure 3-28: Prueksaritanont 2017**
 
 <br>
 <br>
 
 <a id="figure-3-29"></a>
 
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Quinney_2008__midazolam_po__23.png)
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Quinney_2008__midazolam_IV__22.png)
 
-**Figure 3-29: Quinney 2008 (midazolam po)**
+**Figure 3-29: Quinney 2008 (midazolam IV)**
 
 <br>
 <br>
 
 <a id="figure-3-30"></a>
 
-![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_van_Dyk_2018_24.png)
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Quinney_2008__midazolam_po__23.png)
 
-**Figure 3-30: van Dyk 2018**
+**Figure 3-30: Quinney 2008 (midazolam po)**
 
 <br>
 <br>
 
 <a id="figure-3-31"></a>
 
+![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_van_Dyk_2018_24.png)
+
+**Figure 3-31: van Dyk 2018**
+
+<br>
+<br>
+
+<a id="figure-3-32"></a>
+
 ![](images/038_section_ct-profiles/048_section_clarithromycin-midazolam-ddi/comparison_time_profile_Yeates_1996_25.png)
 
-**Figure 3-31: Yeates 1996**
+**Figure 3-32: Yeates 1996**
 
 <br>
 <br>
 
 ## 3.11 Clarithromycin - Triazolam DDI<a id="clarithromycin-triazolam-ddi"></a>
 
-<a id="figure-3-32"></a>
+<a id="figure-3-33"></a>
 
 ![](images/038_section_ct-profiles/049_section_clarithromycin-triazolam-ddi/comparison_time_profile_Greenblatt_1998a_26.png)
 
-**Figure 3-32: Greenblatt 1998a**
+**Figure 3-33: Greenblatt 1998a**
 
 <br>
 <br>
 
 ## 3.12 Efavirenz - Alfentanil DDI<a id="efavirenz-alfentanil-ddi"></a>
 
-<a id="figure-3-33"></a>
+<a id="figure-3-34"></a>
 
 ![](images/038_section_ct-profiles/050_section_efavirenz-alfentanil-ddi/comparison_time_profile_Kharasch_2012_IV_57.png)
 
-**Figure 3-33: Kharasch 2012 IV**
+**Figure 3-34: Kharasch 2012 IV**
 
 <br>
 <br>
 
-<a id="figure-3-34"></a>
+<a id="figure-3-35"></a>
 
 ![](images/038_section_ct-profiles/050_section_efavirenz-alfentanil-ddi/comparison_time_profile_Kharasch_2012_PO_58.png)
 
-**Figure 3-34: Kharasch 2012 PO**
+**Figure 3-35: Kharasch 2012 PO**
 
 <br>
 <br>
 
 ## 3.13 Efavirenz - Carbamazepine DDI<a id="efavirenz-carbamazepine-ddi"></a>
 
-<a id="figure-3-35"></a>
+<a id="figure-3-36"></a>
 
-![](images/038_section_ct-profiles/051_section_efavirenz-carbamazepine-ddi/comparison_time_profile_Ji_2008__Arm_2__Perpetrator__Efavirenz__Victim__Carbamazepine__123.png)
+![](images/038_section_ct-profiles/051_section_efavirenz-carbamazepine-ddi/comparison_time_profile_Ji_2008__Arm_2__Perpetrator__Efavirenz__Victim__Carbamazepine__124.png)
 
-**Figure 3-35: Ji 2008 (Arm 2, Perpetrator: Efavirenz, Victim: Carbamazepine)**
+**Figure 3-36: Ji 2008 (Arm 2, Perpetrator: Efavirenz, Victim: Carbamazepine)**
 
 <br>
 <br>
 
 ## 3.14 Efavirenz - Midazolam DDI<a id="efavirenz-midazolam-ddi"></a>
 
-<a id="figure-3-36"></a>
+<a id="figure-3-37"></a>
 
 ![](images/038_section_ct-profiles/052_section_efavirenz-midazolam-ddi/comparison_time_profile_Mikus_2017_IV_59.png)
 
-**Figure 3-36: Mikus 2017 IV**
-
-<br>
-<br>
-
-<a id="figure-3-37"></a>
-
-![](images/038_section_ct-profiles/052_section_efavirenz-midazolam-ddi/comparison_time_profile_Mikus_2017_PO_60.png)
-
-**Figure 3-37: Mikus 2017 PO**
+**Figure 3-37: Mikus 2017 IV**
 
 <br>
 <br>
 
 <a id="figure-3-38"></a>
 
+![](images/038_section_ct-profiles/052_section_efavirenz-midazolam-ddi/comparison_time_profile_Mikus_2017_PO_60.png)
+
+**Figure 3-38: Mikus 2017 PO**
+
+<br>
+<br>
+
+<a id="figure-3-39"></a>
+
 ![](images/038_section_ct-profiles/052_section_efavirenz-midazolam-ddi/comparison_time_profile_Katzenmaier_2010_61.png)
 
-**Figure 3-38: Katzenmaier 2010**
+**Figure 3-39: Katzenmaier 2010**
 
 <br>
 <br>
 
 ## 3.15 Erythromycin - Alfentanil DDI<a id="erythromycin-alfentanil-ddi"></a>
 
-<a id="figure-3-39"></a>
+<a id="figure-3-40"></a>
 
 ![](images/038_section_ct-profiles/053_section_erythromycin-alfentanil-ddi/comparison_time_profile_Bartkowski_1989_27.png)
 
-**Figure 3-39: Bartkowski 1989**
+**Figure 3-40: Bartkowski 1989**
 
 <br>
 <br>
 
-<a id="figure-3-40"></a>
+<a id="figure-3-41"></a>
 
 ![](images/038_section_ct-profiles/053_section_erythromycin-alfentanil-ddi/comparison_time_profile_Bartkowski_1993_28.png)
 
-**Figure 3-40: Bartkowski 1993**
+**Figure 3-41: Bartkowski 1993**
 
 <br>
 <br>
 
 ## 3.16 Erythromycin - Alprazolam DDI<a id="erythromycin-alprazolam-ddi"></a>
 
-<a id="figure-3-41"></a>
+<a id="figure-3-42"></a>
 
 ![](images/038_section_ct-profiles/054_section_erythromycin-alprazolam-ddi/comparison_time_profile_Yasui_1996_29.png)
 
-**Figure 3-41: Yasui 1996**
+**Figure 3-42: Yasui 1996**
 
 <br>
 <br>
 
 ## 3.17 Erythromycin - Carbamazepine DDI<a id="erythromycin-carbamazepine-ddi"></a>
 
-<a id="figure-3-42"></a>
-
-![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Barzaghi_1987_117.png)
-
-**Figure 3-42: Barzaghi 1987**
-
-<br>
-<br>
-
 <a id="figure-3-43"></a>
 
-![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Wong_1983_118.png)
+![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Barzaghi_1987_118.png)
 
-**Figure 3-43: Wong 1983**
+**Figure 3-43: Barzaghi 1987**
 
 <br>
 <br>
 
 <a id="figure-3-44"></a>
 
-![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Miles_1989__average_dose_of_357_mg__119.png)
+![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Wong_1983_119.png)
 
-**Figure 3-44: Miles 1989 (average dose of 357 mg)**
+**Figure 3-44: Wong 1983**
 
 <br>
 <br>
 
 <a id="figure-3-45"></a>
 
-![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Miles_1989__300_mg__120.png)
+![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Miles_1989__average_dose_of_357_mg__120.png)
 
-**Figure 3-45: Miles 1989 (300 mg)**
+**Figure 3-45: Miles 1989 (average dose of 357 mg)**
 
 <br>
 <br>
 
 <a id="figure-3-46"></a>
 
-![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Miles_1989__400_mg__121.png)
+![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Miles_1989__300_mg__121.png)
 
-**Figure 3-46: Miles 1989 (400 mg)**
+**Figure 3-46: Miles 1989 (300 mg)**
+
+<br>
+<br>
+
+<a id="figure-3-47"></a>
+
+![](images/038_section_ct-profiles/055_section_erythromycin-carbamazepine-ddi/comparison_time_profile_Miles_1989__400_mg__122.png)
+
+**Figure 3-47: Miles 1989 (400 mg)**
 
 <br>
 <br>
 
 ## 3.18 Erythromycin - Midazolam DDI<a id="erythromycin-midazolam-ddi"></a>
 
-<a id="figure-3-47"></a>
+<a id="figure-3-48"></a>
 
 ![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Carls_2014_30.png)
 
-**Figure 3-47: Carls 2014**
-
-<br>
-<br>
-
-<a id="figure-3-48"></a>
-
-![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Okudaira_2007_31.png)
-
-**Figure 3-48: Okudaira 2007**
+**Figure 3-48: Carls 2014**
 
 <br>
 <br>
 
 <a id="figure-3-49"></a>
 
-![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Olkkola_1993__midazolam_IV__32.png)
+![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Okudaira_2007_31.png)
 
-**Figure 3-49: Olkkola 1993 (midazolam IV)**
+**Figure 3-49: Okudaira 2007**
 
 <br>
 <br>
 
 <a id="figure-3-50"></a>
 
-![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Olkkola_1993__midazolam_po__33.png)
+![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Olkkola_1993__midazolam_IV__32.png)
 
-**Figure 3-50: Olkkola 1993 (midazolam po)**
+**Figure 3-50: Olkkola 1993 (midazolam IV)**
 
 <br>
 <br>
 
 <a id="figure-3-51"></a>
 
-![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Swart_2002_34.png)
+![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Olkkola_1993__midazolam_po__33.png)
 
-**Figure 3-51: Swart 2002**
+**Figure 3-51: Olkkola 1993 (midazolam po)**
 
 <br>
 <br>
 
 <a id="figure-3-52"></a>
 
+![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Swart_2002_34.png)
+
+**Figure 3-52: Swart 2002**
+
+<br>
+<br>
+
+<a id="figure-3-53"></a>
+
 ![](images/038_section_ct-profiles/056_section_erythromycin-midazolam-ddi/comparison_time_profile_Zimmermann_1996_35.png)
 
-**Figure 3-52: Zimmermann 1996**
+**Figure 3-53: Zimmermann 1996**
 
 <br>
 <br>
 
 ## 3.19 Erythromycin - Triazolam DDI<a id="erythromycin-triazolam-ddi"></a>
 
-<a id="figure-3-53"></a>
+<a id="figure-3-54"></a>
 
 ![](images/038_section_ct-profiles/057_section_erythromycin-triazolam-ddi/comparison_time_profile_Greenblatt_1998_36.png)
 
-**Figure 3-53: Greenblatt 1998**
+**Figure 3-54: Greenblatt 1998**
 
 <br>
 <br>
 
-<a id="figure-3-54"></a>
+<a id="figure-3-55"></a>
 
 ![](images/038_section_ct-profiles/057_section_erythromycin-triazolam-ddi/comparison_time_profile_Phillips_1986_37.png)
 
-**Figure 3-54: Phillips 1986**
+**Figure 3-55: Phillips 1986**
 
 <br>
 <br>
 
 ## 3.20 Fluconazole - Alfentanil DDI<a id="fluconazole-alfentanil-ddi"></a>
 
-<a id="figure-3-55"></a>
+<a id="figure-3-56"></a>
 
 ![](images/038_section_ct-profiles/058_section_fluconazole-alfentanil-ddi/comparison_time_profile_Palkama_1998_106.png)
 
-**Figure 3-55: Palkama 1998**
+**Figure 3-56: Palkama 1998**
 
 <br>
 <br>
 
 ## 3.21 Fluconazole - Midazolam DDI<a id="fluconazole-midazolam-ddi"></a>
 
-<a id="figure-3-56"></a>
+<a id="figure-3-57"></a>
 
 ![](images/038_section_ct-profiles/059_section_fluconazole-midazolam-ddi/comparison_time_profile_Ahonen_1997_107.png)
 
-**Figure 3-56: Ahonen 1997**
-
-<br>
-<br>
-
-<a id="figure-3-57"></a>
-
-![](images/038_section_ct-profiles/059_section_fluconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996_Day_1_108.png)
-
-**Figure 3-57: Olkkola 1996 Day 1**
+**Figure 3-57: Ahonen 1997**
 
 <br>
 <br>
 
 <a id="figure-3-58"></a>
 
-![](images/038_section_ct-profiles/059_section_fluconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996_Day_4_109.png)
+![](images/038_section_ct-profiles/059_section_fluconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996_Day_1_108.png)
 
-**Figure 3-58: Olkkola 1996 Day 4**
+**Figure 3-58: Olkkola 1996 Day 1**
 
 <br>
 <br>
 
 <a id="figure-3-59"></a>
 
+![](images/038_section_ct-profiles/059_section_fluconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996_Day_4_109.png)
+
+**Figure 3-59: Olkkola 1996 Day 4**
+
+<br>
+<br>
+
+<a id="figure-3-60"></a>
+
 ![](images/038_section_ct-profiles/059_section_fluconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996_Day_6_110.png)
 
-**Figure 3-59: Olkkola 1996 Day 6**
+**Figure 3-60: Olkkola 1996 Day 6**
 
 <br>
 <br>
 
 ## 3.22 Fluconazole - Triazolam DDI<a id="fluconazole-triazolam-ddi"></a>
 
-<a id="figure-3-60"></a>
+<a id="figure-3-61"></a>
 
 ![](images/038_section_ct-profiles/060_section_fluconazole-triazolam-ddi/comparison_time_profile_Varhe_1996c_111.png)
 
-**Figure 3-60: Varhe 1996c**
+**Figure 3-61: Varhe 1996c**
 
 <br>
 <br>
 
 ## 3.23 Fluvoxamine - Alprazolam DDI<a id="fluvoxamine-alprazolam-ddi"></a>
 
-<a id="figure-3-61"></a>
+<a id="figure-3-62"></a>
 
 ![](images/038_section_ct-profiles/061_section_fluvoxamine-alprazolam-ddi/comparison_time_profile_Fleishaker_1994__Day_1__first_dose__38.png)
 
-**Figure 3-61: Fleishaker 1994 (Day 1, first dose)**
+**Figure 3-62: Fleishaker 1994 (Day 1, first dose)**
 
 <br>
 <br>
 
-<a id="figure-3-62"></a>
+<a id="figure-3-63"></a>
 
 ![](images/038_section_ct-profiles/061_section_fluvoxamine-alprazolam-ddi/comparison_time_profile_Fleishaker_1994__Day_10__39.png)
 
-**Figure 3-62: Fleishaker 1994 (Day 10)**
+**Figure 3-63: Fleishaker 1994 (Day 10)**
 
 <br>
 <br>
 
 ## 3.24 Fluvoxamine - Midazolam DDI<a id="fluvoxamine-midazolam-ddi"></a>
 
-<a id="figure-3-63"></a>
+<a id="figure-3-64"></a>
 
 ![](images/038_section_ct-profiles/062_section_fluvoxamine-midazolam-ddi/comparison_time_profile_Kashuba_1998_40.png)
 
-**Figure 3-63: Kashuba 1998**
+**Figure 3-64: Kashuba 1998**
 
 <br>
 <br>
 
-<a id="figure-3-64"></a>
+<a id="figure-3-65"></a>
 
 ![](images/038_section_ct-profiles/062_section_fluvoxamine-midazolam-ddi/comparison_time_profile_Lam_2003_41.png)
 
-**Figure 3-64: Lam 2003**
+**Figure 3-65: Lam 2003**
 
 <br>
 <br>
 
 ## 3.25 Itraconazole - Alprazolam DDI<a id="itraconazole-alprazolam-ddi"></a>
 
-<a id="figure-3-65"></a>
+<a id="figure-3-66"></a>
 
 ![](images/038_section_ct-profiles/063_section_itraconazole-alprazolam-ddi/comparison_time_profile_Yasui_1998_42.png)
 
-**Figure 3-65: Yasui 1998**
+**Figure 3-66: Yasui 1998**
 
 <br>
 <br>
 
 ## 3.26 Itraconazole - Midazolam DDI<a id="itraconazole-midazolam-ddi"></a>
 
-<a id="figure-3-66"></a>
+<a id="figure-3-67"></a>
 
 ![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Ahonen_1995_43.png)
 
-**Figure 3-66: Ahonen 1995**
-
-<br>
-<br>
-
-<a id="figure-3-67"></a>
-
-![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Backman_1998_44.png)
-
-**Figure 3-67: Backman 1998**
+**Figure 3-67: Ahonen 1995**
 
 <br>
 <br>
 
 <a id="figure-3-68"></a>
 
-![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1994_45.png)
+![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Backman_1998_44.png)
 
-**Figure 3-68: Olkkola 1994**
+**Figure 3-68: Backman 1998**
 
 <br>
 <br>
 
 <a id="figure-3-69"></a>
 
-![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996__day_1_po__46.png)
+![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1994_45.png)
 
-**Figure 3-69: Olkkola 1996 (day 1 po)**
+**Figure 3-69: Olkkola 1994**
 
 <br>
 <br>
 
 <a id="figure-3-70"></a>
 
-![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996__day_4_iv__47.png)
+![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996__day_1_po__46.png)
 
-**Figure 3-70: Olkkola 1996 (day 4 iv)**
+**Figure 3-70: Olkkola 1996 (day 1 po)**
 
 <br>
 <br>
 
 <a id="figure-3-71"></a>
 
-![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996__day_6_po__48.png)
+![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996__day_4_iv__47.png)
 
-**Figure 3-71: Olkkola 1996 (day 6 po)**
+**Figure 3-71: Olkkola 1996 (day 4 iv)**
 
 <br>
 <br>
 
 <a id="figure-3-72"></a>
 
-![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Prueksaritanont_2017_49.png)
+![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Olkkola_1996__day_6_po__48.png)
 
-**Figure 3-72: Prueksaritanont 2017**
+**Figure 3-72: Olkkola 1996 (day 6 po)**
 
 <br>
 <br>
 
 <a id="figure-3-73"></a>
 
-![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Templeton_2010_50.png)
+![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Prueksaritanont_2017_49.png)
 
-**Figure 3-73: Templeton 2010**
+**Figure 3-73: Prueksaritanont 2017**
 
 <br>
 <br>
 
 <a id="figure-3-74"></a>
 
+![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Templeton_2010_50.png)
+
+**Figure 3-74: Templeton 2010**
+
+<br>
+<br>
+
+<a id="figure-3-75"></a>
+
 ![](images/038_section_ct-profiles/064_section_itraconazole-midazolam-ddi/comparison_time_profile_Yu_2004__CYP3A5_3__3__51.png)
 
-**Figure 3-74: Yu 2004 (CYP3A5*3/*3)**
+**Figure 3-75: Yu 2004 (CYP3A5*3/*3)**
 
 <br>
 <br>
 
 ## 3.27 Itraconazole - Triazolam DDI<a id="itraconazole-triazolam-ddi"></a>
 
-<a id="figure-3-75"></a>
+<a id="figure-3-76"></a>
 
 ![](images/038_section_ct-profiles/065_section_itraconazole-triazolam-ddi/comparison_time_profile_Neuvonen_1996_52.png)
 
-**Figure 3-75: Neuvonen 1996**
+**Figure 3-76: Neuvonen 1996**
 
 <br>
 <br>
 
-<a id="figure-3-76"></a>
+<a id="figure-3-77"></a>
 
 ![](images/038_section_ct-profiles/065_section_itraconazole-triazolam-ddi/comparison_time_profile_Varhe_1994_53.png)
 
-**Figure 3-76: Varhe 1994**
+**Figure 3-77: Varhe 1994**
 
 <br>
 <br>
 
 ## 3.28 Rifampicin - Alfentanil DDI<a id="rifampicin-alfentanil-ddi"></a>
 
-<a id="figure-3-77"></a>
+<a id="figure-3-78"></a>
 
 ![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_1997_62.png)
 
-**Figure 3-77: Kharasch 1997**
-
-<br>
-<br>
-
-<a id="figure-3-78"></a>
-
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2004__iv__63.png)
-
-**Figure 3-78: Kharasch 2004 (iv)**
+**Figure 3-78: Kharasch 1997**
 
 <br>
 <br>
 
 <a id="figure-3-79"></a>
 
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2004__po__64.png)
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2004__iv__63.png)
 
-**Figure 3-79: Kharasch 2004 (po)**
+**Figure 3-79: Kharasch 2004 (iv)**
 
 <br>
 <br>
 
 <a id="figure-3-80"></a>
 
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011__iv__65.png)
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2004__po__64.png)
 
-**Figure 3-80: Kharasch 2011 (iv)**
+**Figure 3-80: Kharasch 2004 (po)**
 
 <br>
 <br>
 
 <a id="figure-3-81"></a>
 
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011__po__66.png)
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011__iv__65.png)
 
-**Figure 3-81: Kharasch 2011 (po)**
+**Figure 3-81: Kharasch 2011 (iv)**
 
 <br>
 <br>
 
 <a id="figure-3-82"></a>
 
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__iv_during_sequential_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__67.png)
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011__po__66.png)
 
-**Figure 3-82: Kharasch 2011b (iv during sequential administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
+**Figure 3-82: Kharasch 2011 (po)**
 
 <br>
 <br>
 
 <a id="figure-3-83"></a>
 
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__iv_during_simultaneous_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__68.png)
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__iv_during_sequential_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__67.png)
 
-**Figure 3-83: Kharasch 2011b (iv during simultaneous administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
+**Figure 3-83: Kharasch 2011b (iv during sequential administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
 
 <br>
 <br>
 
 <a id="figure-3-84"></a>
 
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__po_during_sequential_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__69.png)
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__iv_during_simultaneous_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__68.png)
 
-**Figure 3-84: Kharasch 2011b (po during sequential administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
+**Figure 3-84: Kharasch 2011b (iv during simultaneous administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
 
 <br>
 <br>
 
 <a id="figure-3-85"></a>
 
-![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__po_during_simultaneous_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__70.png)
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__po_during_sequential_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__69.png)
 
-**Figure 3-85: Kharasch 2011b (po during simultaneous administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
+**Figure 3-85: Kharasch 2011b (po during sequential administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
 
 <br>
 <br>
 
 <a id="figure-3-86"></a>
 
+![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Kharasch_2011b__po_during_simultaneous_administration_of_iv_unlabeled_alfentanil_and_oral_deuterated_alfentanil__70.png)
+
+**Figure 3-86: Kharasch 2011b (po during simultaneous administration of iv unlabeled alfentanil and oral deuterated alfentanil)**
+
+<br>
+<br>
+
+<a id="figure-3-87"></a>
+
 ![](images/038_section_ct-profiles/066_section_rifampicin-alfentanil-ddi/comparison_time_profile_Phimmasone_2001_71.png)
 
-**Figure 3-86: Phimmasone 2001**
+**Figure 3-87: Phimmasone 2001**
 
 <br>
 <br>
 
 ## 3.29 Rifampicin - Alprazolam DDI<a id="rifampicin-alprazolam-ddi"></a>
 
-<a id="figure-3-87"></a>
+<a id="figure-3-88"></a>
 
 ![](images/038_section_ct-profiles/067_section_rifampicin-alprazolam-ddi/comparison_time_profile_Gashaw_2003__Day_7__72.png)
 
-**Figure 3-87: Gashaw 2003 (Day 7)**
-
-<br>
-<br>
-
-<a id="figure-3-88"></a>
-
-![](images/038_section_ct-profiles/067_section_rifampicin-alprazolam-ddi/comparison_time_profile_Gashaw_2003__after_washout_phase__73.png)
-
-**Figure 3-88: Gashaw 2003 (after washout phase)**
+**Figure 3-88: Gashaw 2003 (Day 7)**
 
 <br>
 <br>
 
 <a id="figure-3-89"></a>
 
+![](images/038_section_ct-profiles/067_section_rifampicin-alprazolam-ddi/comparison_time_profile_Gashaw_2003__after_washout_phase__73.png)
+
+**Figure 3-89: Gashaw 2003 (after washout phase)**
+
+<br>
+<br>
+
+<a id="figure-3-90"></a>
+
 ![](images/038_section_ct-profiles/067_section_rifampicin-alprazolam-ddi/comparison_time_profile_Schmider_1999_74.png)
 
-**Figure 3-89: Schmider 1999**
+**Figure 3-90: Schmider 1999**
 
 <br>
 <br>
 
 ## 3.30 Rifampicin - Midazolam DDI<a id="rifampicin-midazolam-ddi"></a>
 
-<a id="figure-3-90"></a>
+<a id="figure-3-91"></a>
 
 ![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Backman_1996_75.png)
 
-**Figure 3-90: Backman 1996**
-
-<br>
-<br>
-
-<a id="figure-3-91"></a>
-
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Backman_1998__Phase_IV_and_V_vs__I__76.png)
-
-**Figure 3-91: Backman 1998 (Phase IV and V vs. I)**
+**Figure 3-91: Backman 1996**
 
 <br>
 <br>
 
 <a id="figure-3-92"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Bjorkhem_Bergman_2013_77.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Backman_1998__Phase_IV_and_V_vs__I__76.png)
 
-**Figure 3-92: Björkhem-Bergman 2013**
+**Figure 3-92: Backman 1998 (Phase IV and V vs. I)**
 
 <br>
 <br>
 
 <a id="figure-3-93"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Chattopadhyay_2018_78.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Bjorkhem_Bergman_2013_77.png)
 
-**Figure 3-93: Chattopadhyay 2018**
+**Figure 3-93: Björkhem-Bergman 2013**
 
 <br>
 <br>
 
 <a id="figure-3-94"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Chung_2006_79.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Chattopadhyay_2018_78.png)
 
-**Figure 3-94: Chung 2006**
+**Figure 3-94: Chattopadhyay 2018**
 
 <br>
 <br>
 
 <a id="figure-3-95"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Eap_2004__7_5_mg__80.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Chung_2006_79.png)
 
-**Figure 3-95: Eap 2004 (7.5 mg)**
+**Figure 3-95: Chung 2006**
 
 <br>
 <br>
 
 <a id="figure-3-96"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gorski_2003__iv__81.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Eap_2004__7_5_mg__80.png)
 
-**Figure 3-96: Gorski 2003 (iv)**
+**Figure 3-96: Eap 2004 (7.5 mg)**
 
 <br>
 <br>
 
 <a id="figure-3-97"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gorski_2003__po__82.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gorski_2003__iv__81.png)
 
-**Figure 3-97: Gorski 2003 (po)**
+**Figure 3-97: Gorski 2003 (iv)**
 
 <br>
 <br>
 
 <a id="figure-3-98"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gurley_2006_83.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gorski_2003__po__82.png)
 
-**Figure 3-98: Gurley 2006**
+**Figure 3-98: Gorski 2003 (po)**
 
 <br>
 <br>
 
 <a id="figure-3-99"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gurley_2008a_84.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gurley_2006_83.png)
 
-**Figure 3-99: Gurley 2008a**
+**Figure 3-99: Gurley 2006**
 
 <br>
 <br>
 
 <a id="figure-3-100"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_1997_85.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Gurley_2008a_84.png)
 
-**Figure 3-100: Kharasch 1997**
+**Figure 3-100: Gurley 2008a**
 
 <br>
 <br>
 
 <a id="figure-3-101"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2004__iv__86.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_1997_85.png)
 
-**Figure 3-101: Kharasch 2004 (iv)**
+**Figure 3-101: Kharasch 1997**
 
 <br>
 <br>
 
 <a id="figure-3-102"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2004__po__87.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2004__iv__86.png)
 
-**Figure 3-102: Kharasch 2004 (po)**
+**Figure 3-102: Kharasch 2004 (iv)**
 
 <br>
 <br>
 
 <a id="figure-3-103"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2011__iv__88.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2004__po__87.png)
 
-**Figure 3-103: Kharasch 2011 (iv)**
+**Figure 3-103: Kharasch 2004 (po)**
 
 <br>
 <br>
 
 <a id="figure-3-104"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2011__po__89.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2011__iv__88.png)
 
-**Figure 3-104: Kharasch 2011 (po)**
+**Figure 3-104: Kharasch 2011 (iv)**
 
 <br>
 <br>
 
 <a id="figure-3-105"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kim_2018_90.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kharasch_2011__po__89.png)
 
-**Figure 3-105: Kim 2018**
+**Figure 3-105: Kharasch 2011 (po)**
 
 <br>
 <br>
 
 <a id="figure-3-106"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Link_2008__iv__91.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Kim_2018_90.png)
 
-**Figure 3-106: Link 2008 (iv)**
+**Figure 3-106: Kim 2018**
 
 <br>
 <br>
 
 <a id="figure-3-107"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Link_2008__po__92.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Link_2008__iv__91.png)
 
-**Figure 3-107: Link 2008 (po)**
+**Figure 3-107: Link 2008 (iv)**
 
 <br>
 <br>
 
 <a id="figure-3-108"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Lutz_2008_93.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Link_2008__po__92.png)
 
-**Figure 3-108: Lutz 2008**
+**Figure 3-108: Link 2008 (po)**
 
 <br>
 <br>
 
 <a id="figure-3-109"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Phimmasone_2001_94.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Lutz_2008_93.png)
 
-**Figure 3-109: Phimmasone 2001**
+**Figure 3-109: Lutz 2008**
 
 <br>
 <br>
 
 <a id="figure-3-110"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Prueksaritanont_2017_95.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Phimmasone_2001_94.png)
 
-**Figure 3-110: Prueksaritanont 2017**
+**Figure 3-110: Phimmasone 2001**
 
 <br>
 <br>
 
 <a id="figure-3-111"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Reitman_2011_96.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Prueksaritanont_2017_95.png)
 
-**Figure 3-111: Reitman 2011**
+**Figure 3-111: Prueksaritanont 2017**
 
 <br>
 <br>
 
 <a id="figure-3-112"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Shin_2013_97.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Reitman_2011_96.png)
 
-**Figure 3-112: Shin 2013**
+**Figure 3-112: Reitman 2011**
 
 <br>
 <br>
 
 <a id="figure-3-113"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Shin_2016_98.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Shin_2013_97.png)
 
-**Figure 3-113: Shin 2016**
+**Figure 3-113: Shin 2013**
 
 <br>
 <br>
 
 <a id="figure-3-114"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Szalat_2007_99.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Shin_2016_98.png)
 
-**Figure 3-114: Szalat 2007**
+**Figure 3-114: Shin 2016**
 
 <br>
 <br>
 
 <a id="figure-3-115"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_van_Dyk_2018_100.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Szalat_2007_99.png)
 
-**Figure 3-115: van Dyk 2018**
+**Figure 3-115: Szalat 2007**
 
 <br>
 <br>
 
 <a id="figure-3-116"></a>
 
-![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Wiesinger_2020_101.png)
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_van_Dyk_2018_100.png)
 
-**Figure 3-116: Wiesinger 2020**
+**Figure 3-116: van Dyk 2018**
 
 <br>
 <br>
 
 <a id="figure-3-117"></a>
 
+![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Wiesinger_2020_101.png)
+
+**Figure 3-117: Wiesinger 2020**
+
+<br>
+<br>
+
+<a id="figure-3-118"></a>
+
 ![](images/038_section_ct-profiles/068_section_rifampicin-midazolam-ddi/comparison_time_profile_Yu_2004__CYP3A5_3__3__102.png)
 
-**Figure 3-117: Yu 2004 (CYP3A5*3/*3)**
+**Figure 3-118: Yu 2004 (CYP3A5*3/*3)**
 
 <br>
 <br>
 
 ## 3.31 Rifampicin - Triazolam DDI<a id="rifampicin-triazolam-ddi"></a>
 
-<a id="figure-3-118"></a>
+<a id="figure-3-119"></a>
 
 ![](images/038_section_ct-profiles/069_section_rifampicin-triazolam-ddi/comparison_time_profile_Villikka_1997_103.png)
 
-**Figure 3-118: Villikka 1997**
+**Figure 3-119: Villikka 1997**
 
 <br>
 <br>
 
 ## 3.32 Rifampicin - Verapamil DDI<a id="rifampicin-verapamil-ddi"></a>
 
-<a id="figure-3-119"></a>
+<a id="figure-3-120"></a>
 
 ![](images/038_section_ct-profiles/070_section_rifampicin-verapamil-ddi/comparison_time_profile_Barbarash_1988__verapamil_IV__104.png)
 
-**Figure 3-119: Barbarash 1988 (verapamil IV)**
+**Figure 3-120: Barbarash 1988 (verapamil IV)**
 
 <br>
 <br>
 
-<a id="figure-3-120"></a>
+<a id="figure-3-121"></a>
 
 ![](images/038_section_ct-profiles/070_section_rifampicin-verapamil-ddi/comparison_time_profile_Barbarash_1988__verapamil_PO__105.png)
 
-**Figure 3-120: Barbarash 1988 (verapamil PO)**
+**Figure 3-121: Barbarash 1988 (verapamil PO)**
 
 <br>
 <br>
 
 ## 3.33 Verapamil - Midazolam DDI<a id="verapamil-midazolam-ddi"></a>
 
-<a id="figure-3-121"></a>
+<a id="figure-3-122"></a>
 
 ![](images/038_section_ct-profiles/071_section_verapamil-midazolam-ddi/comparison_time_profile_Backman_1994_54.png)
 
-**Figure 3-121: Backman 1994**
-
-<br>
-<br>
-
-<a id="figure-3-122"></a>
-
-![](images/038_section_ct-profiles/071_section_verapamil-midazolam-ddi/comparison_time_profile_Wang_2005__iv__55.png)
-
-**Figure 3-122: Wang 2005 (iv)**
+**Figure 3-122: Backman 1994**
 
 <br>
 <br>
 
 <a id="figure-3-123"></a>
 
+![](images/038_section_ct-profiles/071_section_verapamil-midazolam-ddi/comparison_time_profile_Wang_2005__iv__55.png)
+
+**Figure 3-123: Wang 2005 (iv)**
+
+<br>
+<br>
+
+<a id="figure-3-124"></a>
+
 ![](images/038_section_ct-profiles/071_section_verapamil-midazolam-ddi/comparison_time_profile_Wang_2005__po__56.png)
 
-**Figure 3-123: Wang 2005 (po)**
+**Figure 3-124: Wang 2005 (po)**
 
 <br>
 <br>
@@ -3684,6 +3697,8 @@ The following section shows concentration time profiles of the victim drugs of t
 **Ji 2008** Ji, P., Damle, B., Xie, J., Unger, S. E., Grasela, D. M., & Kaul, S. (2008). Pharmacokinetic interaction between efavirenz and carbamazepine after multiple‐dose administration in healthy subjects. *The Journal of Clinical Pharmacology*, *48*(8), 948-956.
 
 ## Carbamazepine-Midazolam-DDI
+
+**Datta-Mannan 2024** Datta‐Mannan, A., Shanks, E., Yuen, E., Jin, Y., Rehmel, J., & Hall, S. D. (2024). Identification of a Safe and Tolerable Carbamazepine Dosing Paradigm that Facilitates Effective Evaluation of CYP3A4 Induction. *Clinical Pharmacology & Therapeutics*, 116(4), 1034-1041.
 
 **Lutz 2018** Lutz, J. D., Kirby, B. J., Wang, L., *et al.* (2018). Cytochrome P450 3A induction predicts P‐glycoprotein induction; part 2: prediction of decreased substrate exposure after rifabutin or carbamazepine. *Clinical Pharmacology & Therapeutics*, *104*(6), 1191-1198.
 
