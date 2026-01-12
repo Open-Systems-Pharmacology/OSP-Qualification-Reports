@@ -1,10 +1,10 @@
 Execute,Repository name,Released version,Workflow name,Folder name
-FALSE,Qualification-DDI-CYP1A2,2.0,,DDI_Qualification_CYP1A2
-FALSE,Qualification-DDI-CYP2C19,2.0,,DDI_Qualification_CYP2C19
+TRUE,Qualification-DDI-CYP1A2,2.0,,DDI_Qualification_CYP1A2
+TRUE,Qualification-DDI-CYP2C19,2.0,,DDI_Qualification_CYP2C19
 TRUE,Qualification-DDI-CYP3A4,2.1,,DDI_Qualification_CYP3A4
-FALSE,Qualification-DDI-P-gp,1.1,,DDI_Qualification_P-gp
-FALSE,Qualification-DDI-UGT,2.0,,DDI_Qualification_UGT
-FALSE,Pediatric_Qualification_Package_CYP2C8_Ontogeny,2.0,,Pediatric_Qualification_Package_CYP2C8_Ontogeny
-FALSE,Pediatric_Qualification_Package_CYP3A4_Ontogeny,2.0,,Pediatric_Qualification_Package_CYP3A4_Ontogeny
-FALSE,Pediatric_Qualification_Package_GFR_Ontogeny,2.0,,Pediatric_Qualification_Package_GFR_Ontogeny
-FALSE,Qualification-CKD,1.1,,Qualification-CKD
+TRUE,Qualification-DDI-P-gp,1.1,,DDI_Qualification_P-gp
+TRUE,Qualification-DDI-UGT,2.0,,DDI_Qualification_UGT
+TRUE,Pediatric_Qualification_Package_CYP2C8_Ontogeny,2.0,,Pediatric_Qualification_Package_CYP2C8_Ontogeny
+TRUE,Pediatric_Qualification_Package_CYP3A4_Ontogeny,2.0,,Pediatric_Qualification_Package_CYP3A4_Ontogeny
+TRUE,Pediatric_Qualification_Package_GFR_Ontogeny,2.0,,Pediatric_Qualification_Package_GFR_Ontogeny
+TRUE,Qualification-CKD,1.1,,Qualification-CKD
