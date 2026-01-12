@@ -1,10 +1,10 @@
 # CYP1A2 DDI Qualification
 
-| Version                         | 2.0-OSP12.1                                                   |
+| Version                         | 2.0-OSP12.2                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP1A2/releases/tag/v2.0 |
-| OSP Version                     | 12.1                                                          |
-| Qualification Framework Version | 3.4                                                          |
+| OSP Version                     | 12.2                                                          |
+| Qualification Framework Version | 3.5                                                          |
 
 This qualification report is filed at:
 
