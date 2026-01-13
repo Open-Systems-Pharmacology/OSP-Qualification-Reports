@@ -1,10 +1,10 @@
 # UGT DDI Inhibition Qualification 
 
-| Version                         | 2.0-OSP12.1                                                   |
+| Version                         | 2.0-OSP12.2                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Qualification-DDI-UGT/releases/tag/v2.0) |
-| OSP Version                     | 12.1                                                          |
-| Qualification Framework Version | 3.4                                                          |
+| OSP Version                     | 12.2                                                          |
+| Qualification Framework Version | 3.5                                                          |
 
 This qualification report is filed at:
 
@@ -209,7 +209,7 @@ In the plots,
 |571    |Atazanavir, 400 mg, PO, MD OD (9 days)                                             |Raltegravir, PO   |1.45                |1.72               |0.84               |1.35                 |1.53                |0.89                |Iwamoto 2008        |
 |573    |Atazanavir, 400 mg, PO, MD OD (8 days)                                             |Raltegravir, PO   |1.44                |1.72               |0.84               |1.12                 |1.37                |0.82                |Neely 2010          |
 |575    |Atazanavir, 400 mg, PO, MD OD (9 days)                                             |Raltegravir, PO   |1.42                |1.67               |0.85               |1.33                 |1.16                |1.15                |Krishna 2016        |
-|579    |Atazanavir, 400 mg, PO, MD BID (14 days)                                           |Raltegravir, PO   |1.57                |1.54               |1.02               |1.39                 |1.39                |0.99                |Zhu 2010            |
+|579    |Atazanavir, 400 mg, PO, MD BID (14 days)                                           |Raltegravir, PO   |1.57                |1.54               |1.02               |1.39                 |1.39                |1.00                |Zhu 2010            |
 |642    |Mefenamic Acid, 500 / 250 mg, PO, MD QID (4 days), with first dose ad loading dose |Dapagliflozin, PO |1.41                |1.51               |0.93               |1.16                 |1.13                |1.02                |Kasichayanula 2013a |
 
 <br>
