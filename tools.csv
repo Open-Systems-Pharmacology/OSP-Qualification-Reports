@@ -1,6 +1,6 @@
 Tool,Version,URL
 R,4.5.2,NA
-ospsuite-R,13.0.0,https://github.com/Yuri05/QualificationRunner/releases/download/Test_Reduced_CLI/ospsuite_13.0.0.9000.zip
+ospsuite-R,,https://github.com/Yuri05/QualificationRunner/releases/download/Test_Reduced_CLI/ospsuite_13.0.0.9001.zip
 Reporting Engine,2.3.11,NA
 RUtils,1.11.0,NA
 TLF,1.6.2,NA
