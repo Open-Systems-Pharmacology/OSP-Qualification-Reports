@@ -1,9 +1,9 @@
 # CYP1A2 DDI Qualification
 
-| Version                         | 2.0-OSP12.2                                                   |
+| Version                         | 2.0-OSP13.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP1A2/releases/tag/v2.0 |
-| OSP Version                     | 12.2                                                          |
+| OSP Version                     | 13.0                                                          |
 | Qualification Framework Version | 3.5                                                          |
 
 This qualification report is filed at:
@@ -50,7 +50,7 @@ https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports
 
 ## 1.1 Objective<a id="objective"></a>
 
-This qualification report evaluates the developed PBPK drug-drug interactions (DDI) models network for the ability to perform simulations with the intended purpose to predict cytochrome P450 1A2 (**CYPA12**)-mediated DDI.
+This qualification report evaluates the developed PBPK drug-drug interactions (DDI) models network for the ability to perform simulations with the intended purpose to predict cytochrome P450 1A2 (**CYP1A2**)-mediated DDI.
 
 To demonstrate the level of confidence, the predictive performance of the platform for this intended purpose is assessed via a network of PBPK models of selected index CYP1A2 DDI perpetrators, and respective sensitive CYP1A2 victim drugs and a comprehensive dataset from published clinical DDI studies. All PBPK models represent whole-body PBPK models, which allow dynamic DDI simulations in organs expressing CYP1A2.
 
@@ -338,11 +338,11 @@ In the plots,
 |DataID |Perpetrator                    |Victim         |Predicted AUC Ratio |Observed AUC Ratio |Pred/Obs AUC Ratio |Predicted CMAX Ratio |Observed CMAX Ratio |Pred/Obs CMAX Ratio |Reference        |
 |:------|:------------------------------|:--------------|:-------------------|:------------------|:------------------|:--------------------|:-------------------|:-------------------|:----------------|
 |6110   |Ethinylestradiol, 0.03 mg, PO, |Caffeine, PO   |5.84                |2.13               |2.74               |1.10                 |1.15                |0.96                |Balogh 1995      |
-|13017  |Fluvoxamine, 100 mg, PO,       |Tizanidine, PO |39.12               |33.00              |1.19               |16.00                |12.10               |1.32                |Granfors 2004    |
+|13017  |Fluvoxamine, 100 mg, PO,       |Tizanidine, PO |38.77               |33.00              |1.17               |15.95                |12.10               |1.32                |Granfors 2004    |
 |13018  |Mexiletine, 50 mg, PO,         |Tizanidine, PO |2.48                |3.42               |0.73               |2.42                 |3.22                |0.75                |Momo 2010        |
 |14002  |Ethinylestradiol, 20 mg, PO,   |Tizanidine, PO |4.41                |3.92               |1.13               |3.75                 |3.02                |1.24                |Granfors 2005    |
-|14004  |Fluvoxamine, 100 mg, PO,       |Caffeine, PO   |9.97                |7.16               |1.39               |1.08                 |1.09                |0.99                |Jeppesen 1996    |
-|14006  |Fluvoxamine, 100 mg, PO,       |Caffeine, PO   |13.64               |13.71              |0.99               |1.34                 |1.40                |0.96                |Culm-Merdek 2005 |
+|14004  |Fluvoxamine, 100 mg, PO,       |Caffeine, PO   |10.02               |7.16               |1.40               |1.08                 |1.09                |0.99                |Jeppesen 1996    |
+|14006  |Fluvoxamine, 100 mg, PO,       |Caffeine, PO   |13.65               |13.71              |1.00               |1.34                 |1.40                |0.96                |Culm-Merdek 2005 |
 |14008  |Mexiletine, 200 mg, PO,        |Caffeine, PO   |1.66                |2.83               |0.59               |1.00                 |1.89                |0.53                |Joeres 1987      |
 |14010  |Fluvoxamine, 50 mg, PO,        |Mexiletine, PO |1.31                |1.55               |0.84               |1.08                 |1.16                |0.93                |Kusumoto 2001    |
 
@@ -701,7 +701,7 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC          |1.19 |
+|AUC          |1.18 |
 |CMAX         |1.07 |
 
 <br>
@@ -777,7 +777,7 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC          |1.23 |
+|AUC          |1.22 |
 |CMAX         |1.30 |
 
 <br>
