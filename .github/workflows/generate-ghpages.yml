@@ -41,19 +41,24 @@ jobs:
     steps:
       - name: Set environment variables
         id: set-vars
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_RELEASE_TITLE: ${{ inputs.release_title }}
+          RELEASE_NAME: ${{ github.event.release.name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          REF_NAME: ${{ github.ref_name }}
         run: |
-          # Set RELEASE_TITLE based on trigger type
-          if [ "${{ github.event_name }}" = "release" ]; then
-            echo "RELEASE_TITLE=${{ github.event.release.name }}" >> $GITHUB_ENV
-            echo "TAG_OR_BRANCH=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            TRIMMED_TITLE=$(echo "${{ inputs.release_title }}" | xargs)
+          if [ "$EVENT_NAME" = "release" ]; then
+            printf 'RELEASE_TITLE=%s\n' "$RELEASE_NAME" >> "$GITHUB_ENV"
+            printf 'TAG_OR_BRANCH=%s\n' "$RELEASE_TAG" >> "$GITHUB_ENV"
+          elif [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            TRIMMED_TITLE=$(echo "$INPUT_RELEASE_TITLE" | xargs)
             if [ -z "$TRIMMED_TITLE" ]; then
               echo "Error: release_title input is required when manually triggering the workflow"
               exit 1
             fi
-            echo "RELEASE_TITLE=$TRIMMED_TITLE" >> $GITHUB_ENV
-            echo "TAG_OR_BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
+            printf 'RELEASE_TITLE=%s\n' "$TRIMMED_TITLE" >> "$GITHUB_ENV"
+            printf 'TAG_OR_BRANCH=%s\n' "$REF_NAME" >> "$GITHUB_ENV"
           fi
 
       - name: Checkout repository
@@ -69,11 +74,11 @@ jobs:
       - name: Install MkDocs and dependencies
         run: |
           pip install \
-            mkdocs \
-            mkdocs-material \
-            pymdown-extensions \
-            mkdocs-meta-descriptions-plugin \
-            pyyaml
+            mkdocs==1.6.1 \
+            mkdocs-material==9.7.6 \
+            pymdown-extensions==10.21.2 \
+            mkdocs-meta-descriptions-plugin==4.1.0 \
+            pyyaml==6.0.3
 
       - name: Build docs structure
         env:
@@ -97,4 +102,4 @@ jobs:
           force_orphan: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'Deploy OSP PBPK Model Library docs'
+          commit_message: 'Deploy OSP Qualification Reports docs'

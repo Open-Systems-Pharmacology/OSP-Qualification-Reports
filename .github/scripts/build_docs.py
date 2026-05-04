@@ -10,9 +10,13 @@ import argparse
 import os
 import shutil
 import glob
+import logging
 import yaml
 import re
+from collections import defaultdict
 from urllib.parse import quote
+
+log = logging.getLogger(__name__)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DOCS_DIR = os.path.join(REPO_ROOT, "docs")
@@ -185,7 +189,8 @@ def categorize_compound(folder_path: str, md_files: list) -> str:
         if any(kw in content for kw in DISEASE_KEYWORDS):
             return "Disease"
     except Exception:
-        pass
+        log.warning("Failed to read/categorize %s, falling back to 'Other'",
+                    folder_path, exc_info=True)
 
     return "Other"
 
@@ -277,7 +282,7 @@ def process_folder(folder_path: str, folder_name: str, all_compounds: list) -> d
         if not content.startswith("---"):
             seo_frontmatter = f"""---
 title: {folder_name} Qualification Report
-description: Qualification report for {folder_name}. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite
+description: Qualification report for {folder_name}. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).
 keywords: {folder_name}, qualification report, PBPK platform qualification, PK-Sim, Open Systems Pharmacology, PBPK validation
 
 ---
@@ -317,8 +322,6 @@ def generate_index_md(chapters_data: list, docs_dir: str, repository_name: str, 
         lines = fh.read().splitlines()
     lines.append("")
 
-    # Group compounds by category
-    from collections import defaultdict
     categories = defaultdict(list)
     for ch in chapters_data:
         categories[ch["category"]].append(ch)
@@ -600,8 +603,8 @@ Sitemap: https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/s
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "{{ page.meta.title | default(page.title, true) }}",
-    "description": "{{ page.meta.description | default('PBPK model documentation', true) }}",
+    "headline": {{ page.meta.title | default(page.title, true) | tojson }},
+    "description": {{ page.meta.description | default('PBPK qualification report', true) | tojson }},
     "author": {
       "@type": "Organization",
       "name": "Open Systems Pharmacology"
@@ -615,12 +618,12 @@ Sitemap: https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/s
         "url": "https://www.open-systems-pharmacology.org/assets/images/logo.png"
       }
     },
-    "url": "{{ page.canonical_url }}",
+    "url": {{ page.canonical_url | tojson }},
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "{{ page.canonical_url }}"
+      "@id": {{ page.canonical_url | tojson }}
     },
-    "keywords": "{{ page.meta.keywords | default('PBPK platform qualification, PBPK, physiologically based pharmacokinetic modeling, drug development', true) }}"
+    "keywords": {{ page.meta.keywords | default('PBPK platform qualification, PBPK, physiologically based pharmacokinetic modeling, drug development', true) | tojson }}
   }
   </script>
   {% endif %}
