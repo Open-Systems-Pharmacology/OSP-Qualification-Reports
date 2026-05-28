@@ -8,14 +8,14 @@ keywords: PBPK, Physiologically based pharmacokinetic modelling, PBPK platform q
 
 ## PBPK Platform Qualification for Drug-Drug Interactions, Pediatric Extrapolation, and Disease Populations
 
-This library provides **qualification reports** from the [Open Systems Pharmacology](https://www.open-systems-pharmacology.org/) project that validate the predictive performance of the PBPK modeling platform **PK-Sim®** (as part of the **Open Systems Pharmacology (OSP) Suite**) for specific pharmacological use cases. Reports are regenerated with each OSP Suite release.
+This library provides **qualification reports** from the [Open Systems Pharmacology](https://www.open-systems-pharmacology.org/) project that assess the predictive performance of the PBPK modeling platform **PK-Sim®** (as part of the **Open Systems Pharmacology (OSP) Suite**) for specific pharmacological use cases. Reports are regenerated with each OSP Suite release.
 
 ### How to Use These Reports
 
 Each qualification report in this library includes:
 
 - **HTML Report**: Comprehensive qualification report with modeling details, validation data, and simulation results
-- **PDF Report**: Downloadable report for offline reference and regulatory submissions
+- **PDF Report**: Downloadable report for offline reference
 
 These reports cover the following areas:
 
