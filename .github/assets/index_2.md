@@ -2,15 +2,11 @@
 
 ### What is a qualification report?
 
-A **qualification report** documents the qualification of the PBPK modeling platform **PK-Sim®** (as part of the **Open Systems Pharmacology (OSP) Suite**) for a specific use case (e.g., predicting CYP3A4-mediated drug-drug interactions). Each report compares model predictions against observed clinical data, providing goodness-of-fit assessments and predictive performance metrics.
+A **qualification report** documents the level of qualification of the PBPK modeling platform **PK-Sim®** (as part of the **Open Systems Pharmacology (OSP) Suite**) for a specific use case (e.g., predicting CYP3A4-mediated drug-drug interactions). Each report compares model predictions against observed clinical data, providing goodness-of-fit assessments and predictive performance metrics.
 
 ### What is a PBPK model?
 
 A [**Physiologically Based Pharmacokinetic (PBPK) model**](https://en.wikipedia.org/wiki/Physiologically_based_pharmacokinetic_modelling) is a mathematical model that predicts the absorption, distribution, metabolism, and excretion (ADME) of drugs in the body. PBPK models incorporate anatomical, physiological, and biochemical information to simulate drug concentration-time profiles in various tissues and organs.
-
-### Can I use these reports for regulatory submissions?
-
-Yes, these qualification reports are developed following regulatory guidelines and best practices. They are suitable for inclusion in regulatory submissions to agencies such as the FDA and EMA as supporting evidence for PBPK platform qualification. However, you should ensure the report is appropriate for your specific use case.
 
 ### How can I cite these reports?
 
