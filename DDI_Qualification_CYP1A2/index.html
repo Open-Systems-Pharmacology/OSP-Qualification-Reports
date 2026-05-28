@@ -1,0 +1,2460 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Qualification report for DDI_Qualification_CYP1A2. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+      
+      
+        <meta name="author" content="Open Systems Pharmacology Community">
+      
+      
+        <link rel="canonical" href="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_CYP1A2/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../DDI_Qualification_CYP2C19/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>DDI_Qualification_CYP1A2 Qualification Report - OSP Qualification Reports (Version 12.2 Update 1)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_CYP1A2/">
+  <meta property="og:title" content="DDI_Qualification_CYP1A2">
+  <meta property="og:description" content="Qualification report for DDI_Qualification_CYP1A2. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+  <meta property="og:site_name" content="OSP Qualification Reports (Version 12.2 Update 1)">
+  <meta property="og:image" content="https://www.open-systems-pharmacology.org/assets/images/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_CYP1A2/">
+  <meta name="twitter:title" content="DDI_Qualification_CYP1A2">
+  <meta name="twitter:description" content="Qualification report for DDI_Qualification_CYP1A2. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+  <meta name="twitter:image" content="https://www.open-systems-pharmacology.org/assets/images/logo.png">
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "OSP Qualification Reports (Version 12.2 Update 1)",
+    "description": "Qualification reports validating the PBPK modeling platform PK-Sim\u00ae (as part of the Open Systems Pharmacology (OSP) Suite) for drug-drug interactions, pediatric extrapolation, and disease populations. Open Systems Pharmacology.",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.open-systems-pharmacology.org/assets/images/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Dataset Schema for Qualification Reports -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Open Systems Pharmacology Qualification Reports",
+    "description": "Qualification reports validating performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite) for drug-drug interactions, pediatric extrapolation, and disease populations",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "keywords": ["PBPK platform qualification", "PBPK", "pharmacokinetic modeling", "drug development", "PK-Sim", "MoBi", "systems pharmacology", "ADME"],
+    "license": "https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports#license",
+    "creator": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/"
+    },
+    "distribution": {
+      "@type": "DataDownload",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports"
+    }
+  }
+  </script>
+
+  <!-- SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PK-Sim",
+    "applicationCategory": "ScientificApplication",
+    "operatingSystem": "Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "PBPK modeling and simulation platform with validated qualification reports for drug-drug interactions, pediatric extrapolation, and disease populations",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology"
+    }
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DDI_Qualification_CYP1A2 Qualification Report",
+    "description": "Qualification report for DDI_Qualification_CYP1A2. Validation of predictive performance of the PBPK modeling platform PK-Sim\u00ae (as part of the Open Systems Pharmacology (OSP) Suite).",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.open-systems-pharmacology.org/assets/images/logo.png"
+      }
+    },
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_CYP1A2/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_CYP1A2/"
+    },
+    "keywords": "DDI_Qualification_CYP1A2, qualification report, PBPK platform qualification, PK-Sim, Open Systems Pharmacology, PBPK validation"
+  }
+  </script>
+  
+
+  
+  <meta name="keywords" content="DDI_Qualification_CYP1A2, qualification report, PBPK platform qualification, PK-Sim, Open Systems Pharmacology, PBPK validation">
+  
+
+  
+  <link rel="canonical" href="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_CYP1A2/">
+  
+
+  <!-- Language -->
+  <meta http-equiv="content-language" content="en">
+  <meta name="language" content="English">
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cyp1a2-ddi-qualification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OSP Qualification Reports (Version 12.2 Update 1)" class="md-header__button md-logo" aria-label="OSP Qualification Reports (Version 12.2 Update 1)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OSP Qualification Reports (Version 12.2 Update 1)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DDI_Qualification_CYP1A2 Qualification Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSP-Qualification-Reports
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OSP Qualification Reports (Version 12.2 Update 1)" class="md-nav__button md-logo" aria-label="OSP Qualification Reports (Version 12.2 Update 1)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OSP Qualification Reports (Version 12.2 Update 1)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSP-Qualification-Reports
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP1A2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP2C19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP2C19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP3A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP3A4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_P-gp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_P-gp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_UGT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_UGT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_CYP2C8_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_CYP2C8_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_CYP3A4_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_CYP3A4_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_GFR_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_GFR_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Qualification-CKD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualification-CKD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="cyp1a2-ddi-qualification">CYP1A2 DDI Qualification<a class="headerlink" href="#cyp1a2-ddi-qualification" title="Anchor link to this section for reference">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>2.0-OSP12.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qualification Plan Release</td>
+<td>https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP1A2/releases/tag/v2.0</td>
+</tr>
+<tr>
+<td>OSP Version</td>
+<td>12.2</td>
+</tr>
+<tr>
+<td>Qualification Framework Version</td>
+<td>3.5</td>
+</tr>
+</tbody>
+</table>
+<p>This qualification report is filed at:</p>
+<p>https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports</p>
+<h1 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Anchor link to this section for reference">&para;</a></h1>
+<ul>
+<li><a href="#introduction">1 Introduction</a></li>
+<li><a href="#objective">1.1 Objective</a></li>
+<li><a href="#cyp1a2-ddi-network">1.2 CYP1A2 DDI Network</a><ul>
+<li><a href="#caffeine-ethinylestradiol-ddi">1.2.1 Caffeine - Ethinylestradiol DDI</a></li>
+<li><a href="#tizanidine-ethinylestradiol-ddi">1.2.2 Tizanidine - Ethinylestradiol DDI</a></li>
+<li><a href="#caffeine-fluvoxamine-ddi">1.2.3 Caffeine - Fluvoxamine DDI</a></li>
+<li><a href="#tizanidine-fluvoxamine-ddi">1.2.4 Tizanidine - Fluvoxamine DDI</a></li>
+<li><a href="#tizanidine-mexiletine-ddi">1.2.5 Tizanidine - Mexiletine DDI</a></li>
+<li><a href="#caffeine-mexiletine-ddi">1.2.6 Caffeine - Mexiletine DDI</a></li>
+<li><a href="#mexiletine-fluvoxamine-ddi">1.2.7 Mexiletine - Fluvoxamine DDI</a></li>
+</ul>
+</li>
+<li><a href="#qualification-cyp1a2-ddi">2 Qualification of Use Case CYP1A2-mediated DDI</a></li>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-9">2.1 Perpetrator</a><ul>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-10">2.1.1 Ethinylestradiol</a></li>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-18">2.1.2 Fluvoxamine</a></li>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-26">2.1.3 Mexiletine</a></li>
+</ul>
+</li>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-34">2.2 Victim</a><ul>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-35">2.2.1 Caffeine</a></li>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-43">2.2.2 Mexiletine</a></li>
+<li><a href="#qualification-cyp1a2-ddi-ddi-subunit-51">2.2.3 Tizanidine</a></li>
+</ul>
+</li>
+<li><a href="#ct-profiles">3 Concentration-Time Profiles</a></li>
+<li><a href="#ct-profiles-tizanidine-ethinylestradiol-ddi">3.1 Tizanidine - Ethinylestradiol DDI</a></li>
+<li><a href="#ct-profiles-caffeine-fluvoxamine-ddi">3.2 Caffeine - Fluvoxamine DDI</a></li>
+<li><a href="#ct-profiles-tizanidine-fluvoxamine-ddi">3.3 Tizanidine - Fluvoxamine DDI</a></li>
+<li><a href="#ct-profiles-tizanidine-mexiletine-ddi">3.4 Tizanidine - Mexiletine DDI</a></li>
+<li><a href="#ct-profiles-caffeine-mexiletine-ddi">3.5 Caffeine - Mexiletine DDI</a></li>
+<li><a href="#ct-profiles-mexiletine-fluvoxamine-ddi">3.6 Mexiletine - Fluvoxamine DDI</a></li>
+<li><a href="#conclusion">4 Conclusion</a></li>
+<li><a href="#main-references">5 References</a></li>
+<li><a href="#appendix">6 Appendix</a></li>
+<li><a href="#osp-introduction">6.1 Open Systems Pharmacology Suite (OSPS) Introduction</a></li>
+<li><a href="#ddi-implementation">6.2 Mathematical Implementation of Drug-Drug Interactions</a></li>
+<li><a href="#requalification-workflow">6.3 Automatic (re)-qualification workflow</a></li>
+<li><a href="#glossary">7 Glossary</a></li>
+</ul>
+<h1 id="1-introduction">1 Introduction<a id="introduction"></a><a class="headerlink" href="#1-introduction" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="11-objective">1.1 Objective<a id="objective"></a><a class="headerlink" href="#11-objective" title="Anchor link to this section for reference">&para;</a></h2>
+<p>This qualification report evaluates the developed PBPK drug-drug interactions (DDI) models network for the ability to perform simulations with the intended purpose to predict cytochrome P450 1A2 (<strong>CYPA12</strong>)-mediated DDI.</p>
+<p>To demonstrate the level of confidence, the predictive performance of the platform for this intended purpose is assessed via a network of PBPK models of selected index CYP1A2 DDI perpetrators, and respective sensitive CYP1A2 victim drugs and a comprehensive dataset from published clinical DDI studies. All PBPK models represent whole-body PBPK models, which allow dynamic DDI simulations in organs expressing CYP1A2.</p>
+<p>The respective <em>qualification plan</em> to produce this <em>qualification report</em> is transparently documented and provided open-source (https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports). The same applies for all presented PBPK models including <em>evaluation reports</em> on model building and evaluation of each model (https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).</p>
+<p><em>Evaluation reports</em> including descriptions on model building and detailed evaluations of the included models are documented separately (see <a href="#12-cyp1a2-ddi-network">Section 1.2</a>).</p>
+<p>Please refer to the <a href="#6-appendix">Appendix</a> to learn more details:</p>
+<ul>
+<li>
+<p>An overview over the Open Systems Pharmacology Suite is given in chapter <a href="#61-open-systems-pharmacology-suite-osps-introduction">Section 6.1</a></p>
+</li>
+<li>
+<p><a href="#62-mathematical-implementation-of-drug-drug-interactions">Section 6.2</a> shows the implementation of the underlying mathematical equations for drug-drug interactions in the OSP suite.</p>
+</li>
+<li>
+<p>A detailed general description of the performed qualification workflow (<em>qualification plan</em>, <em>qualification report</em>, etc.) can be found in chapter <a href="#63-automatic-re-qualification-workflow">Section 6.3</a>.</p>
+</li>
+</ul>
+<h2 id="12-cyp1a2-ddi-network">1.2 CYP1A2 DDI Network<a id="cyp1a2-ddi-network"></a><a class="headerlink" href="#12-cyp1a2-ddi-network" title="Anchor link to this section for reference">&para;</a></h2>
+<p>CYP1A2 is involved in the elimination of about 15% of all therapeutic drugs (e.g., clozapine, tacrine, tizanidine, and theophylline), a number of procarcinogens (e.g. benzo[<em>a</em>]pyrene and aflatoxin B1), and several important endogenous compounds (e.g. steroids and arachidonic acids) (<a href="#5-references">Zhou 2009</a>, <a href="#5-references">Goldstein 2001</a>). This enzyme is exclusively expressed in the liver and can be markedly induced by smoking. Well-known substrates of CYP1A2 include caffeine and tizanidine.</p>
+<p>Like other CYPs, CYP1A2 is subject to induction and/or inhibition by a number of compounds, which can result in significant drug interactions in clinical practice. </p>
+<p>The U.S. Food and Drug Administration (FDA) lists several perpetrator and victim drugs of interactions in the CYP1A2 network (<a href="#5-references">FDA</a>). For instance, caffeine and tizanidine are classified as sensitive index substrates for CYP1A2, and fluvoxamine is listed as a strong clinical index inhibitor of CYP1A2.</p>
+<p>To qualify the developed models for the prediction of the CYP1A2 DDI potential of new drugs, a set of verified PBPK models of index perpetrators and respective CYP1A2 DDI victim drugs is specified to set up a CYP1A2-mediated DDI modeling network.</p>
+<p>The following perpetrator compounds were selected: </p>
+<ul>
+<li><strong>Fluvoxamine</strong> (strong CYP1A2 inhibitor)
+  Model snapshot and evaluation plan (<em>release</em> <strong>alt_v1.0</strong>): https://github.com/Open-Systems-Pharmacology/Fluvoxamine-Model/releases/tag/alt_v1.0</li>
+<li><strong>Ethinylestradiol</strong> (moderate CYP1A2 inhibitor)
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): https://github.com/Open-Systems-Pharmacology/Ethinylestradiol-Model/releases/tag/v2.0</li>
+<li><strong>Mexiletine</strong> (moderate CYP1A2 inhibitor)
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): https://github.com/Open-Systems-Pharmacology/Mexiletine-Model/releases/tag/v2.0</li>
+</ul>
+<p>The following sensitive CYP1A2 substrates as victim drugs were selected:</p>
+<ul>
+<li><strong>Caffeine</strong>
+  PK-Sim compound template</li>
+<li><strong>Tizanidine</strong>
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): https://github.com/Open-Systems-Pharmacology/Tizanidine-Model/releases/tag/v2.0</li>
+<li><strong>Mexiletine</strong>
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): https://github.com/Open-Systems-Pharmacology/Mexiletine-Model/releases/tag/v2.0</li>
+</ul>
+<p>The following interaction studies were predicted and used to qualify/optimize the final network:</p>
+<ul>
+<li>
+<p>Strong CYP1A2 inhibition</p>
+</li>
+<li>
+<p>Fluvoxamine - caffeine</p>
+</li>
+<li>Fluvoxamine - tizanidine</li>
+<li>Fluvoxamine - mexiletine</li>
+<li>Moderate CYP1A2 inhibition</li>
+<li>Mexiletine - caffeine</li>
+<li>Mexiletine - tizanidine</li>
+<li>Ethinylestradiol - caffeine</li>
+<li>Ethinylestradiol - tizanidine</li>
+</ul>
+<p><strong>Figure 1</strong> shows the specified and developed DDI modeling network of interacting perpetrator and victim drugs.</p>
+<p><strong>Figure</strong> <strong>1: CYP1A2 DDI modeling network</strong>
+<a id="figure-1-1"></a></p>
+<p><img alt="DDI CYP1A2 network" src="images/DDI_CYP1A2_Compound_Network.png" /></p>
+<p>The Ki values used to predict the interactions are listed in <a href="#table-1">Table 1</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Inhibitor category</strong></th>
+<th><strong>Inhibitor</strong></th>
+<th><strong>Substrate</strong></th>
+<th><strong>Ki</strong></th>
+<th><strong>Reference</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strong CYP1A2</td>
+<td>Fluvoxamine</td>
+<td>caffeine</td>
+<td>2.97 nM</td>
+<td><a href="#5-references">Iga 2016</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>tizanidine</td>
+<td>0.8697 nM</td>
+<td>Fit<sup>1</sup></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>mexiletine</td>
+<td>2.97 nM</td>
+<td><a href="#5-references">Iga 2016</a></td>
+</tr>
+<tr>
+<td>Moderate CYP1A2</td>
+<td>Mexiletine</td>
+<td>caffeine</td>
+<td>0.28 µM</td>
+<td><a href="#5-references">Wei 1999</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>tizanidine</td>
+<td>0.28 µM</td>
+<td><a href="#5-references">Wei 1999</a></td>
+</tr>
+<tr>
+<td></td>
+<td>Ethinylestradiol (EE)</td>
+<td>caffeine</td>
+<td>0.48 µM</td>
+<td>Fit<sup>2</sup></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>tizanidine</td>
+<td>0.48 µM</td>
+<td>Fit<sup>2</sup></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 1:</strong><a name="table-1"></a> Ki values used in CYP1A2 DDI network. <sup>1</sup>Lowest literature value = 0.9 nM; <sup>2</sup>Literature value = 10.6 µM</p>
+<p>The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report.</p>
+<h3 id="121-caffeine-ethinylestradiol-ddi">1.2.1 Caffeine - Ethinylestradiol DDI<a id="caffeine-ethinylestradiol-ddi"></a><a class="headerlink" href="#121-caffeine-ethinylestradiol-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>A dynamical DDI simulation with ethinylestradiol as CYP1A2 inhibitor and caffeine as victim was conducted and compared to literature data. No profiles of caffeine under this interaction were available, but <a href="#5-references">Balogh 1995</a> reported a 55% decrease in caffeine CL due to ethinylestradiol co-administration and report AUCR and CmaxR.</p>
+<h3 id="122-tizanidine-ethinylestradiol-ddi">1.2.2 Tizanidine - Ethinylestradiol DDI<a id="tizanidine-ethinylestradiol-ddi"></a><a class="headerlink" href="#122-tizanidine-ethinylestradiol-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The tizanidine-ethinylestradiol interaction was evaluated using clinical DDI studies listed in <a href="#table-2">Table 2</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Route</strong></th>
+<th><strong>Dose [mg] /</strong> <strong>Schedule *</strong></th>
+<th><strong>Pop.</strong></th>
+<th><strong>Sex</strong></th>
+<th><strong>N</strong></th>
+<th><strong>Form.</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#5-references">Granfors 2005</a></td>
+<td>p.o.</td>
+<td>EE: 0.02<br />Tizanidine: 4</td>
+<td>HV</td>
+<td>f</td>
+<td>15</td>
+<td>tablet</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 2:</strong><a name="table-2"></a> Literature sources of clinical concentration data of tizanidine used for DDI prediction qualification with ethinylestradiol. <em>EE: ethinylestradiol</em></p>
+<p>A dynamical DDI simulation with ethinylestradiol as moderate CYP1A2 inhibitor and tizanidine as victim drug was conducted and compared to literature data. Clinical observations were derived from <a href="#5-references">Granfors 2005</a> in which 15 healthy women using Oral contraceptives (OCs) (ethinylestradiol + gestodene) and 15 healthy women without OCs (control subjects) ingested a single dose of 4 mg tizanidine.</p>
+<h3 id="123-caffeine-fluvoxamine-ddi">1.2.3 Caffeine - Fluvoxamine DDI<a id="caffeine-fluvoxamine-ddi"></a><a class="headerlink" href="#123-caffeine-fluvoxamine-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The caffeine-fluvoxamine interaction was evaluated using clinical DDI studies listed in <a href="#table-3">Table 3</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Route</strong></th>
+<th><strong>Dose [mg] /</strong> <strong>Schedule *</strong></th>
+<th><strong>Pop.</strong></th>
+<th>Age [yrs] (mean)</th>
+<th>Weight [kg] (mean)</th>
+<th><strong>Sex</strong></th>
+<th><strong>N</strong></th>
+<th><strong>Form.</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#5-references">Jeppesen 1996</a></td>
+<td>p.o.</td>
+<td>200 caffeine,<br />50 mg 4 days, 100 mg 8 days fluvoxamine</td>
+<td>HV</td>
+<td>27</td>
+<td>-</td>
+<td>-</td>
+<td>8</td>
+<td>Tablet</td>
+</tr>
+<tr>
+<td><a href="#5-references">Culm-Merdek 2005</a></td>
+<td>p.o.</td>
+<td>250 caffeine,<br />100 b.i.d. fluvoxamine</td>
+<td>HV</td>
+<td>50</td>
+<td>82</td>
+<td>m/f</td>
+<td>7</td>
+<td>Capsule</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 3:</strong><a name="table-3"></a> Literature sources of clinical concentration data of caffeine used for DDI prediction qualification with fluvoxamine.</p>
+<p>A dynamical DDI simulation with fluvoxamine as CYP1A2 inhibitor and caffeine as victim was conducted and compared to literature data. For caffeine the template model included in PK-Sim was used. Two published clinical studies were found where fluvoxamine and caffeine were given together. Fluvoxamine is a strong inhibitor of CYP1A2 and increases the AUC of caffeine by 7 to 14-fold.</p>
+<p>In <a href="#5-references">Jeppesen 1996</a>, subjects in one group received 50 mg fluvoxamine-maleate on the first 4 days followed by 100 mg q.d. for 8 days. On day 8 they received a single dose of 200 mg caffeine. The other group received caffeine without fluvoxamine co-treatment.</p>
+<p>In <a href="#5-references">Culm-Merdek 2005</a>, seven healthy subjects received single 250 mg dose of caffeine (or matching placebo) together with fluvoxamine (four doses of 100 mg over 2 days) or with matching placebo in a cross-over fashion. </p>
+<p>The simulated caffeine levels with co-administered fluvoxamine were underpredicted. However, the pre-dose concentrations of caffeine were not 0 in the test group. It may be speculated that subjects may not have refrained completely from caffeine containing beverages before the test period. To investigate this hypothesis, a simulation was conducted where a dose of 100 mg caffeine (corresponding approximately to the caffeine content of one cup of coffee (<a href="#5-references">Caffeine quantities, FDA</a>)) was given 24 hours before the administration of caffeine-tablets as per the study protocol. The resulting simulation results support this hypothesis. Hence it was not deemed necessary to adjust the underlying caffeine or fluvoxamine models but rather conclude that the clinical study potentially was facing issues with subjects not compliant with the protocol rules and drank coffee the morning before the study day. The final DDI simulations were therefore conducted with administration of 100 mg caffeine 24 hours prior study protocol.</p>
+<h3 id="124-tizanidine-fluvoxamine-ddi">1.2.4 Tizanidine - Fluvoxamine DDI<a id="tizanidine-fluvoxamine-ddi"></a><a class="headerlink" href="#124-tizanidine-fluvoxamine-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The tizanidine-fluvoxamine interaction was evaluated using clinical DDI studies listed in <a href="#table-4">Table 4</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Route</strong></th>
+<th><strong>Dose [mg] /</strong> <strong>Schedule *</strong></th>
+<th><strong>Pop.</strong></th>
+<th>Age [yrs]</th>
+<th>Weight [kg]</th>
+<th><strong>Sex</strong></th>
+<th><strong>N</strong></th>
+<th><strong>Form.</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#5-references">Granfors 2004</a></td>
+<td>p.o.</td>
+<td>4 mg tizanidine,<br />100 mg fluvoxamine</td>
+<td>HV</td>
+<td>21-31</td>
+<td>65-83</td>
+<td>m</td>
+<td>10</td>
+<td>Tablet</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 4:</strong><a name="table-4"></a> Literature sources of clinical concentration data of tizanidine used for DDI prediction qualification with fluvoxamine. <em>*:single dose</em></p>
+<p>In the clinical study reported by <a href="#5-references">Granfors 2004</a>, a single oral dose of 4 mg tizanidine was given after treatment with fluvoxamine (100mg fluvoxamine-maleate ~73.3 mg free base, q.d. for 4 days).</p>
+<p>Initially, the Ki value for the inhibition of CYP1A2 by fluvoxamine reported by <a href="#5-references">Iga 2016</a> was used. While the predicted Cmax ratio matched closely the observed value, the AUC ratio was underpredicted by a factor of 2.1. Since the predictions of the tizanidine profiles without co-administration of fluvoxamine matched the observations very well, it was concluded that the most plausible reason for the under prediction was the value of Ki, as the fraction metabolized via CYP1A2 was already 99%. Hence Ki was optimized using the data from <a href="#5-references">Granfors 2004</a>. A Ki value of 0.8697 +/- 0.1935 nmol/L was estimated, which is still in line with the Ki values derived for other CYP1A2 substrates.</p>
+<h3 id="125-tizanidine-mexiletine-ddi">1.2.5 Tizanidine - Mexiletine DDI<a id="tizanidine-mexiletine-ddi"></a><a class="headerlink" href="#125-tizanidine-mexiletine-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The tizanidine-mexiletine interaction was evaluated using clinical DDI studies listed in <a href="#table-5">Table 5</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Route</strong></th>
+<th><strong>Dose [mg] /</strong> <strong>Schedule *</strong></th>
+<th><strong>Pop.</strong></th>
+<th><strong>Sex</strong></th>
+<th><strong>N</strong></th>
+<th><strong>Form.</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#5-references">Momo 2010</a></td>
+<td>p.o.</td>
+<td>2 mg tizanidine,<br />50 mg b.i.d mexiletine</td>
+<td>HV</td>
+<td>m</td>
+<td>12</td>
+<td>Tablet</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 5:</strong><a name="table-5"></a> Literature sources of clinical concentration data of tizanidine used for DDI prediction qualification with mexiletine.</p>
+<p>A dynamical DDI simulation with mexiletine as CYP1A2 inhibitor and tizanidine as victim was conducted and compared to literature data from <a href="#5-references">Momo 2010</a>. The same Ki as for the caffeine interaction simulation was used (0.28 µM). The predefined “Standard European Male for DDI” individual (age = 30 y, weight = 73 kg, height = 176 cm, BMI = 23.57 kg/m2) was used.</p>
+<p>The pharmacokinetics of tizanidine was examined in an open-label study in 12 healthy participants after a single dose of tizanidine (2 mg) with and without mexiletine co-administration (50 mg, 3 times as a pretreatment for a day and 2 times on the study day).</p>
+<h3 id="126-caffeine-mexiletine-ddi">1.2.6 Caffeine - Mexiletine DDI<a id="caffeine-mexiletine-ddi"></a><a class="headerlink" href="#126-caffeine-mexiletine-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The caffeine-mexiletine interaction was evaluated using clinical DDI studies listed in <a href="#table-6">Table 6</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Route</strong></th>
+<th><strong>Dose [mg] /</strong> <strong>Schedule *</strong></th>
+<th><strong>Pop.</strong></th>
+<th><strong>N</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#5-references">Joeres 1987</a></td>
+<td>p.o.</td>
+<td>366 caffeine,<br />200 mexiletine</td>
+<td>HV</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 6:</strong><a name="table-6"></a> Literature sources of clinical concentration data of caffeine used for DDI prediction qualification with mexiletine.</p>
+<p>A dynamical DDI simulation with mexiletine as CYP1A2 inhibitor and caffeine as victim was conducted and compared to literature data.</p>
+<p>Clinical observations of caffeine-mexiletine interaction were derived from <a href="#5-references">Joeres 1987</a> where 6 healthy volunteers received 366 mg caffeine (400 mg caffeine monohydrate) after an overnight fast, together with 200 mg mexiletine orally. One week later caffeine was administered alone. </p>
+<p>The in-built caffeine template model included in PK-Sim was used for caffeine predictions.</p>
+<p>Competitive inhibition was assumed on CYP1A2 enzyme between caffeine (substrate) and mexiletine (inhibitor) with an inhibitory constant of 0.28 µM. No reported values were found for mexiletine Ki on CYP1A2 and caffeine as substrate, so the inhibitory constant for methoxyresofurin (<a href="#5-references">Ko 1997</a>) was used [calculated in vivo, unbound Ki for methoxyresofurin].</p>
+<h3 id="127-mexiletine-fluvoxamine-ddi">1.2.7 Mexiletine - Fluvoxamine DDI<a id="mexiletine-fluvoxamine-ddi"></a><a class="headerlink" href="#127-mexiletine-fluvoxamine-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The mexiletine-fluvoxamine interaction was evaluated using clinical DDI studies listed in <a href="#table-7">Table 7</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Route</strong></th>
+<th><strong>Dose [mg] /</strong> <strong>Schedule *</strong></th>
+<th><strong>Pop.</strong></th>
+<th><strong>Sex</strong></th>
+<th><strong>N</strong></th>
+<th><strong>Form.</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#5-references">Kusumoto 2001</a></td>
+<td>p.o.</td>
+<td>166.62 mexiletine<br />50 b.i.d. fluvoxamine</td>
+<td>HV japanese</td>
+<td>m</td>
+<td>6</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7:</strong><a name="table-7"></a> Literature sources of clinical concentration data of mexiletine used for DDI prediction qualification with fluvoxamine. <em>*:single dose</em></p>
+<p>A dynamical DDI simulation with fluvoxamine as CYP1A2 inhibitor and mexiletine as victim was conducted and compared to literature data (<a href="#5-references">Kusumoto 2001</a>). A typical Japanese subject (age = 30 y, weight = 61.87 kg, height = 168.99 cm, BMI = 21.67 kg/m2) was created in PK-Sim from predefined database "Japanese (2015)" by adding CYP2D6 and CYP1A2 expressions from PK-Sim RT PCR database.</p>
+<p>A randomized crossover design with two phases was used. Each subject received an oral dose of mexiletine (200 mg) or fluvoxamine (50 mg twice a day) for 7 days, and on the eighth day they received mexiletine and fluvoxamine concomitantly.</p>
+<h1 id="2-qualification-of-use-case-cyp1a2-mediated-ddi">2 Qualification of Use Case CYP1A2-mediated DDI<a id="qualification-cyp1a2-ddi"></a><a class="headerlink" href="#2-qualification-of-use-case-cyp1a2-mediated-ddi" title="Anchor link to this section for reference">&para;</a></h1>
+<p>The following section shows the correlations between observed and model-predicted AUC and C<sub>max</sub> ratios, respectively.</p>
+<p>Specifically, the PBPK model performance for the PK parameters <strong>AUC ratio (AUCR)</strong> and <strong>C<sub>max</sub> ratio (CMAXR)</strong> is assessed via:</p>
+<ul>
+<li>
+<p>predicted (<em>Pred</em>) vs. observed (<em>Obs</em>) plots</p>
+</li>
+<li>
+<p><em>Pred</em>/<em>Obs</em> vs. <em>Obs</em> plots</p>
+</li>
+<li>
+<p>geometric mean fold error (GMFE):</p>
+</li>
+</ul>
+<p><img alt="GMFE equation" src="images/GFME_equation.PNG" /></p>
+<ul>
+<li>
+<p>number of AUCR and CMAXR falling within 2-fold error range and within the limits as suggested by <a href="#5-references">Guest et al. 2011</a></p>
+</li>
+<li>
+<p>detailed table of results for each study</p>
+</li>
+</ul>
+<p>In the plots,</p>
+<ul>
+<li>
+<p>the dotted lines denote 0.50–2.00 (2-fold) criterion,</p>
+</li>
+<li>
+<p>the solid lines denote the limits as suggested by <a href="#5-references">Guest et al. 2011</a>,</p>
+</li>
+<li>
+<p>the bold solid line denotes the unity line,</p>
+</li>
+<li>
+<p>each color represents one combination of drugs</p>
+</li>
+</ul>
+<hr />
+<p><a id="figure-2-1"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_ddi_ratio_plot_AUC_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-1: CYP1A2 DDI.  Predicted vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-2"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_ddi_ratio_plot_AUC_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-2: CYP1A2 DDI.  Predicted/Observed vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-3"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_ddi_ratio_plot_CMAX_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-3: CYP1A2 DDI.  Predicted vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-4"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_ddi_ratio_plot_CMAX_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-4: CYP1A2 DDI.  Predicted/Observed vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-1"></a></p>
+<p><strong>Table 2-1: GMFE for CYP1A2 DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">1.39</td>
+</tr>
+<tr>
+<td style="text-align: left;">CMAX</td>
+<td style="text-align: left;">1.22</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-2"></a></p>
+<p><strong>Table 2-2: Summary table for CYP1A2 DDI - AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">75.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">87.50</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-3"></a></p>
+<p><strong>Table 2-3: Summary table for CYP1A2 DDI - CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CMAX</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">87.50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-4"></a></p>
+<p><strong>Table 2-4: Summary table for CYP1A2 DDI</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">DataID</th>
+<th style="text-align: left;">Perpetrator</th>
+<th style="text-align: left;">Victim</th>
+<th style="text-align: left;">Predicted AUC Ratio</th>
+<th style="text-align: left;">Observed AUC Ratio</th>
+<th style="text-align: left;">Pred/Obs AUC Ratio</th>
+<th style="text-align: left;">Predicted CMAX Ratio</th>
+<th style="text-align: left;">Observed CMAX Ratio</th>
+<th style="text-align: left;">Pred/Obs CMAX Ratio</th>
+<th style="text-align: left;">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">6110</td>
+<td style="text-align: left;">Ethinylestradiol, 0.03 mg, PO,</td>
+<td style="text-align: left;">Caffeine, PO</td>
+<td style="text-align: left;">5.84</td>
+<td style="text-align: left;">2.13</td>
+<td style="text-align: left;">2.74</td>
+<td style="text-align: left;">1.10</td>
+<td style="text-align: left;">1.15</td>
+<td style="text-align: left;">0.96</td>
+<td style="text-align: left;">Balogh 1995</td>
+</tr>
+<tr>
+<td style="text-align: left;">13017</td>
+<td style="text-align: left;">Fluvoxamine, 100 mg, PO,</td>
+<td style="text-align: left;">Tizanidine, PO</td>
+<td style="text-align: left;">39.12</td>
+<td style="text-align: left;">33.00</td>
+<td style="text-align: left;">1.19</td>
+<td style="text-align: left;">16.00</td>
+<td style="text-align: left;">12.10</td>
+<td style="text-align: left;">1.32</td>
+<td style="text-align: left;">Granfors 2004</td>
+</tr>
+<tr>
+<td style="text-align: left;">13018</td>
+<td style="text-align: left;">Mexiletine, 50 mg, PO,</td>
+<td style="text-align: left;">Tizanidine, PO</td>
+<td style="text-align: left;">2.48</td>
+<td style="text-align: left;">3.42</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">2.42</td>
+<td style="text-align: left;">3.22</td>
+<td style="text-align: left;">0.75</td>
+<td style="text-align: left;">Momo 2010</td>
+</tr>
+<tr>
+<td style="text-align: left;">14002</td>
+<td style="text-align: left;">Ethinylestradiol, 20 mg, PO,</td>
+<td style="text-align: left;">Tizanidine, PO</td>
+<td style="text-align: left;">4.41</td>
+<td style="text-align: left;">3.92</td>
+<td style="text-align: left;">1.13</td>
+<td style="text-align: left;">3.75</td>
+<td style="text-align: left;">3.02</td>
+<td style="text-align: left;">1.24</td>
+<td style="text-align: left;">Granfors 2005</td>
+</tr>
+<tr>
+<td style="text-align: left;">14004</td>
+<td style="text-align: left;">Fluvoxamine, 100 mg, PO,</td>
+<td style="text-align: left;">Caffeine, PO</td>
+<td style="text-align: left;">9.97</td>
+<td style="text-align: left;">7.16</td>
+<td style="text-align: left;">1.39</td>
+<td style="text-align: left;">1.08</td>
+<td style="text-align: left;">1.09</td>
+<td style="text-align: left;">0.99</td>
+<td style="text-align: left;">Jeppesen 1996</td>
+</tr>
+<tr>
+<td style="text-align: left;">14006</td>
+<td style="text-align: left;">Fluvoxamine, 100 mg, PO,</td>
+<td style="text-align: left;">Caffeine, PO</td>
+<td style="text-align: left;">13.64</td>
+<td style="text-align: left;">13.71</td>
+<td style="text-align: left;">0.99</td>
+<td style="text-align: left;">1.34</td>
+<td style="text-align: left;">1.40</td>
+<td style="text-align: left;">0.96</td>
+<td style="text-align: left;">Culm-Merdek 2005</td>
+</tr>
+<tr>
+<td style="text-align: left;">14008</td>
+<td style="text-align: left;">Mexiletine, 200 mg, PO,</td>
+<td style="text-align: left;">Caffeine, PO</td>
+<td style="text-align: left;">1.66</td>
+<td style="text-align: left;">2.83</td>
+<td style="text-align: left;">0.59</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">1.89</td>
+<td style="text-align: left;">0.53</td>
+<td style="text-align: left;">Joeres 1987</td>
+</tr>
+<tr>
+<td style="text-align: left;">14010</td>
+<td style="text-align: left;">Fluvoxamine, 50 mg, PO,</td>
+<td style="text-align: left;">Mexiletine, PO</td>
+<td style="text-align: left;">1.31</td>
+<td style="text-align: left;">1.55</td>
+<td style="text-align: left;">0.84</td>
+<td style="text-align: left;">1.08</td>
+<td style="text-align: left;">1.16</td>
+<td style="text-align: left;">0.93</td>
+<td style="text-align: left;">Kusumoto 2001</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="21-perpetrator">2.1 Perpetrator<a id="qualification-cyp1a2-ddi-ddi-subunit-9"></a><a class="headerlink" href="#21-perpetrator" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="211-ethinylestradiol">2.1.1 Ethinylestradiol<a id="qualification-cyp1a2-ddi-ddi-subunit-10"></a><a class="headerlink" href="#211-ethinylestradiol" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-5"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Ethinylestradiol_ddi_ratio_plot_AUC_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-5: CYP1A2 DDI. Perpetrator: Ethinylestradiol. Predicted vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-6"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Ethinylestradiol_ddi_ratio_plot_AUC_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-6: CYP1A2 DDI. Perpetrator: Ethinylestradiol. Predicted/Observed vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-7"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Ethinylestradiol_ddi_ratio_plot_CMAX_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-7: CYP1A2 DDI. Perpetrator: Ethinylestradiol. Predicted vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-8"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Ethinylestradiol_ddi_ratio_plot_CMAX_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-8: CYP1A2 DDI. Perpetrator: Ethinylestradiol. Predicted/Observed vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-5"></a></p>
+<p><strong>Table 2-5: GMFE for CYP1A2 DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">1.76</td>
+</tr>
+<tr>
+<td style="text-align: left;">CMAX</td>
+<td style="text-align: left;">1.14</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-6"></a></p>
+<p><strong>Table 2-6: Summary table for CYP1A2 DDI - AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">50</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-7"></a></p>
+<p><strong>Table 2-7: Summary table for CYP1A2 DDI - CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CMAX</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="212-fluvoxamine">2.1.2 Fluvoxamine<a id="qualification-cyp1a2-ddi-ddi-subunit-18"></a><a class="headerlink" href="#212-fluvoxamine" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-9"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Fluvoxamine_ddi_ratio_plot_AUC_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-9: CYP1A2 DDI. Perpetrator: Fluvoxamine. Predicted vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-10"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Fluvoxamine_ddi_ratio_plot_AUC_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-10: CYP1A2 DDI. Perpetrator: Fluvoxamine. Predicted/Observed vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-11"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Fluvoxamine_ddi_ratio_plot_CMAX_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-11: CYP1A2 DDI. Perpetrator: Fluvoxamine. Predicted vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-12"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Fluvoxamine_ddi_ratio_plot_CMAX_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-12: CYP1A2 DDI. Perpetrator: Fluvoxamine. Predicted/Observed vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-8"></a></p>
+<p><strong>Table 2-8: GMFE for CYP1A2 DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">1.18</td>
+</tr>
+<tr>
+<td style="text-align: left;">CMAX</td>
+<td style="text-align: left;">1.11</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-9"></a></p>
+<p><strong>Table 2-9: Summary table for CYP1A2 DDI - AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-10"></a></p>
+<p><strong>Table 2-10: Summary table for CYP1A2 DDI - CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CMAX</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="213-mexiletine">2.1.3 Mexiletine<a id="qualification-cyp1a2-ddi-ddi-subunit-26"></a><a class="headerlink" href="#213-mexiletine" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-13"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Mexiletine_ddi_ratio_plot_AUC_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-13: CYP1A2 DDI. Perpetrator: Mexiletine. Predicted vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-14"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Mexiletine_ddi_ratio_plot_AUC_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-14: CYP1A2 DDI. Perpetrator: Mexiletine. Predicted/Observed vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-15"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Mexiletine_ddi_ratio_plot_CMAX_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-15: CYP1A2 DDI. Perpetrator: Mexiletine. Predicted vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-16"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_perpetrator_Mexiletine_ddi_ratio_plot_CMAX_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-16: CYP1A2 DDI. Perpetrator: Mexiletine. Predicted/Observed vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-11"></a></p>
+<p><strong>Table 2-11: GMFE for CYP1A2 DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">1.53</td>
+</tr>
+<tr>
+<td style="text-align: left;">CMAX</td>
+<td style="text-align: left;">1.59</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-12"></a></p>
+<p><strong>Table 2-12: Summary table for CYP1A2 DDI - AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-13"></a></p>
+<p><strong>Table 2-13: Summary table for CYP1A2 DDI - CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CMAX</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="22-victim">2.2 Victim<a id="qualification-cyp1a2-ddi-ddi-subunit-34"></a><a class="headerlink" href="#22-victim" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="221-caffeine">2.2.1 Caffeine<a id="qualification-cyp1a2-ddi-ddi-subunit-35"></a><a class="headerlink" href="#221-caffeine" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-17"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Caffeine_ddi_ratio_plot_AUC_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-17: CYP1A2 DDI. Victim: Caffeine. Predicted vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-18"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Caffeine_ddi_ratio_plot_AUC_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-18: CYP1A2 DDI. Victim: Caffeine. Predicted/Observed vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-19"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Caffeine_ddi_ratio_plot_CMAX_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-19: CYP1A2 DDI. Victim: Caffeine. Predicted vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-20"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Caffeine_ddi_ratio_plot_CMAX_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-20: CYP1A2 DDI. Victim: Caffeine. Predicted/Observed vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-14"></a></p>
+<p><strong>Table 2-14: GMFE for CYP1A2 DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">1.60</td>
+</tr>
+<tr>
+<td style="text-align: left;">CMAX</td>
+<td style="text-align: left;">1.20</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-15"></a></p>
+<p><strong>Table 2-15: Summary table for CYP1A2 DDI - AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">75</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-16"></a></p>
+<p><strong>Table 2-16: Summary table for CYP1A2 DDI - CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CMAX</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">75</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="222-mexiletine">2.2.2 Mexiletine<a id="qualification-cyp1a2-ddi-ddi-subunit-43"></a><a class="headerlink" href="#222-mexiletine" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-21"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Mexiletine_ddi_ratio_plot_AUC_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-21: CYP1A2 DDI. Victim: Mexiletine. Predicted vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-22"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Mexiletine_ddi_ratio_plot_AUC_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-22: CYP1A2 DDI. Victim: Mexiletine. Predicted/Observed vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-23"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Mexiletine_ddi_ratio_plot_CMAX_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-23: CYP1A2 DDI. Victim: Mexiletine. Predicted vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-24"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Mexiletine_ddi_ratio_plot_CMAX_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-24: CYP1A2 DDI. Victim: Mexiletine. Predicted/Observed vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-17"></a></p>
+<p><strong>Table 2-17: GMFE for CYP1A2 DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">1.19</td>
+</tr>
+<tr>
+<td style="text-align: left;">CMAX</td>
+<td style="text-align: left;">1.07</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-18"></a></p>
+<p><strong>Table 2-18: Summary table for CYP1A2 DDI - AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-19"></a></p>
+<p><strong>Table 2-19: Summary table for CYP1A2 DDI - CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CMAX</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="223-tizanidine">2.2.3 Tizanidine<a id="qualification-cyp1a2-ddi-ddi-subunit-51"></a><a class="headerlink" href="#223-tizanidine" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-25"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Tizanidine_ddi_ratio_plot_AUC_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-25: CYP1A2 DDI. Victim: Tizanidine. Predicted vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-26"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Tizanidine_ddi_ratio_plot_AUC_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-26: CYP1A2 DDI. Victim: Tizanidine. Predicted/Observed vs. Observed AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-27"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Tizanidine_ddi_ratio_plot_CMAX_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-27: CYP1A2 DDI. Victim: Tizanidine. Predicted vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-28"></a></p>
+<p><img alt="" src="images/011_section_qualification-cyp1a2-ddi/DDIRatio_1_victim_Tizanidine_ddi_ratio_plot_CMAX_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-28: CYP1A2 DDI. Victim: Tizanidine. Predicted/Observed vs. Observed CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-20"></a></p>
+<p><strong>Table 2-20: GMFE for CYP1A2 DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">1.23</td>
+</tr>
+<tr>
+<td style="text-align: left;">CMAX</td>
+<td style="text-align: left;">1.30</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-21"></a></p>
+<p><strong>Table 2-21: Summary table for CYP1A2 DDI - AUC Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-22"></a></p>
+<p><strong>Table 2-22: Summary table for CYP1A2 DDI - CMAX Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CMAX</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h1 id="3-concentration-time-profiles">3 Concentration-Time Profiles<a id="ct-profiles"></a><a class="headerlink" href="#3-concentration-time-profiles" title="Anchor link to this section for reference">&para;</a></h1>
+<p>The following section shows concentration time profiles of the victim drugs of the simulated DDI studies in comparison to observed data.</p>
+<h2 id="31-tizanidine-ethinylestradiol-ddi">3.1 Tizanidine - Ethinylestradiol DDI<a id="ct-profiles-tizanidine-ethinylestradiol-ddi"></a><a class="headerlink" href="#31-tizanidine-ethinylestradiol-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-1"></a></p>
+<p><img alt="" src="images/012_section_ct-profiles/013_section_ct-profiles-tizanidine-ethinylestradiol-ddi/comparison_time_profile_Granfors_2005__Tizanidine_4_mg_po__1.png" /></p>
+<p><strong>Figure 3-1: Granfors 2005 (Tizanidine 4 mg po)</strong></p>
+<p><br>
+<br></p>
+<h2 id="32-caffeine-fluvoxamine-ddi">3.2 Caffeine - Fluvoxamine DDI<a id="ct-profiles-caffeine-fluvoxamine-ddi"></a><a class="headerlink" href="#32-caffeine-fluvoxamine-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-2"></a></p>
+<p><img alt="" src="images/012_section_ct-profiles/014_section_ct-profiles-caffeine-fluvoxamine-ddi/comparison_time_profile_Jeppesen_1996__Caffeine_200_mg_po__2.png" /></p>
+<p><strong>Figure 3-2: Jeppesen 1996 (Caffeine 200 mg po)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-3"></a></p>
+<p><img alt="" src="images/012_section_ct-profiles/014_section_ct-profiles-caffeine-fluvoxamine-ddi/comparison_time_profile_Culm_Merdeck_2005__Caffeine_250_mg_po__3.png" /></p>
+<p><strong>Figure 3-3: Culm-Merdeck 2005 (Caffeine 250 mg po)</strong></p>
+<p><br>
+<br></p>
+<h2 id="33-tizanidine-fluvoxamine-ddi">3.3 Tizanidine - Fluvoxamine DDI<a id="ct-profiles-tizanidine-fluvoxamine-ddi"></a><a class="headerlink" href="#33-tizanidine-fluvoxamine-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-4"></a></p>
+<p><img alt="" src="images/012_section_ct-profiles/015_section_ct-profiles-tizanidine-fluvoxamine-ddi/comparison_time_profile_Granfors_2004__Tizanidine_4_mg_po__4.png" /></p>
+<p><strong>Figure 3-4: Granfors 2004 (Tizanidine 4 mg po)</strong></p>
+<p><br>
+<br></p>
+<h2 id="34-tizanidine-mexiletine-ddi">3.4 Tizanidine - Mexiletine DDI<a id="ct-profiles-tizanidine-mexiletine-ddi"></a><a class="headerlink" href="#34-tizanidine-mexiletine-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-5"></a></p>
+<p><img alt="" src="images/012_section_ct-profiles/016_section_ct-profiles-tizanidine-mexiletine-ddi/comparison_time_profile_Momo_2010__Tizanidine_2_mg_po__5.png" /></p>
+<p><strong>Figure 3-5: Momo 2010 (Tizanidine 2 mg po)</strong></p>
+<p><br>
+<br></p>
+<h2 id="35-caffeine-mexiletine-ddi">3.5 Caffeine - Mexiletine DDI<a id="ct-profiles-caffeine-mexiletine-ddi"></a><a class="headerlink" href="#35-caffeine-mexiletine-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-6"></a></p>
+<p><img alt="" src="images/012_section_ct-profiles/017_section_ct-profiles-caffeine-mexiletine-ddi/comparison_time_profile_Joeres_1987__Caffeine_336_mg_po__6.png" /></p>
+<p><strong>Figure 3-6: Joeres 1987 (Caffeine 336 mg po)</strong></p>
+<p><br>
+<br></p>
+<h2 id="36-mexiletine-fluvoxamine-ddi">3.6 Mexiletine - Fluvoxamine DDI<a id="ct-profiles-mexiletine-fluvoxamine-ddi"></a><a class="headerlink" href="#36-mexiletine-fluvoxamine-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-7"></a></p>
+<p><img alt="" src="images/012_section_ct-profiles/018_section_ct-profiles-mexiletine-fluvoxamine-ddi/comparison_time_profile_Kusumoto_2001__Mexiletine_166_62_mg_po__7.png" /></p>
+<p><strong>Figure 3-7: Kusumoto 2001 (Mexiletine 166.62 mg po)</strong></p>
+<p><br>
+<br></p>
+<h1 id="4-conclusion">4 Conclusion<a id="conclusion"></a><a class="headerlink" href="#4-conclusion" title="Anchor link to this section for reference">&para;</a></h1>
+<p>The predicted perpetrator/victim drug concentration-time profiles, DDI AUC and Cmax ratios confirmed that the developed PBPK models are well suited to characterize the CYP1A2 DDI network over the full range of reported DDI studies. The same Ki values could be used by the moderate CYP1A2 inhibitors EE (0.48 μM) and mexiletine (0.28 μM) with regards to all tested substrates (caffeine and tizanidine). For the strong inhibition of CYP1A2 by fluvoxamine, the same Ki value (2.97 nM) could be used for both caffeine and mexiletine as substrate. In contrast, for tizanidine the Ki (0.9 nM) needed to be refitted to capture the data.</p>
+<p><strong>Fluvoxamine</strong> </p>
+<ul>
+<li>CYP1A2 inhibition:</li>
+<li>DDI simulations with caffeine, tizanidine, and mexiletine demonstrate an excellent prediction (ratio pred/obs = around 1 and within 2-fold) of the inhibitory potential of fluvoxamine on CYP1A2.</li>
+</ul>
+<p><strong>Tizanidine</strong></p>
+<ul>
+<li>
+<p>Substrate:</p>
+</li>
+<li>
+<p>DDI simulations with fluvoxamine as inhibitor of tizanidine demonstrated a good prediction of tizanidine levels (pred/obs AUCR and pred/obs CmaxR within 2-fold) when using an optimized value of fluvoxamine Ki.</p>
+</li>
+<li>DDI simulations with mexiletine as inhibitor of tizanidine demonstrated an underprediction of tizanidine levels but were within 2-fold of observed ratios. Tizanidine is underpredicted both with and without mexiletine, probably due to an un-modelled food effect</li>
+<li>DDI predictions with ethinylestradiol (EE) using a TDI mechanism was necessary to describe the      observed interaction with tizanidine. DDI simulations with ethinylestradiol demonstrated a good prediction of tizanidine levels when using TDI.</li>
+</ul>
+<p><strong>Mexiletine</strong></p>
+<ul>
+<li>Perpetrator:</li>
+<li>DDI simulations with mexiletine as inhibitor of caffeine demonstrated an underprediction of caffeine levels but were within 2-fold of observed ratios.</li>
+<li>DDI simulations with mexiletine as inhibitor of tizanidine demonstrated an underprediction of      tizanidine levels but were within 2-fold of observed ratios.</li>
+<li>Overall, DDI predictions with mexiletine as an inhibitor tend to lead to underprediction of both AUCR and CmaxR but were within 2-fold of observed ratios.</li>
+<li>Substrate:</li>
+<li>DDI simulations with fluvoxamine as inhibitor of mexiletine demonstrated an excellent prediction of mexiletine levels.</li>
+</ul>
+<p><strong>Ethinylestradiol</strong></p>
+<ul>
+<li>
+<p>A TDI mechanism on CYP1A2 was introduced to describe tizanidine DDI study data.</p>
+</li>
+<li>
+<p>Perpetrator: </p>
+</li>
+<li>
+<p>DDI simulations with EE as inhibitor of caffeine demonstrated a good prediction of caffeine levels (pred/obs AUCR and pred/obs CmaxR within 2-fold).</p>
+</li>
+<li>DDI simulations with EE as inhibitor of tizanidine demonstrated a good prediction of tizanidine levels (pred/obs AUCR and pred/obs CmaxR within 2-fold).</li>
+</ul>
+<h1 id="5-references">5 References<a id="main-references"></a><a class="headerlink" href="#5-references" title="Anchor link to this section for reference">&para;</a></h1>
+<p><strong>Balogh 1995</strong> Balogh A, Boerner A, Kuhnz W, Klinger G, Vollanth R, Henschel L. Influence of ethinylestradiol-containing combination oral contraceptives with gestodene or levonorgestrel on caffeine elimination. <em>Eur J Clin Pharmacol</em>. 1995;48(2):161-166.</p>
+<p><strong>Caffeine quantities, FDA</strong>  Website: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much</p>
+<p><strong>Culm-Merdek 2005</strong> Culm-Merdek KE, Von Moltke LL, Harmatz JS, Greenblatt DJ. Fluvoxamine impairs single-dose caffeine clearance without altering caffeine pharmacodynamics. Br J Clin Pharmacol. 2005;60(5):486-493.</p>
+<p><strong>FDA</strong> U.S. Food and Drug Administration. Drug development and drug interactions: table of substrates, inhibitors and inducers. Website: https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers (2020). Accessed 06 May 2022.</p>
+<p><strong>Goldstein 2001</strong> Goldstein JA., J. A. (2001). Clinical relevance of genetic polymorphisms in the human CYP2C subfamily. <em>Br J Clin Pharmacol</em>. 2001;British journal of clinical pharmacology, 52(4):), 349-355.</p>
+<p><strong>Granfors 2004</strong> Granfors M, Backman JT, Neuvonen M. Fluvoxamine drastically increases concentrations and effects of tizanidine: a potentially hazardous interaction. <em>Clinical Pharmacology &amp; Therapeutics</em>. 2004 Apr;75(4):331–41.</p>
+<p><strong>Granfors 2005</strong> Granfors MT, Backman JT, Laitila J, Neuvonen PJ. Oral contraceptives containing ethinyl estradiol and gestodene markedly increase plasma concentrations and effects of tizanidine by inhibiting cytochrome P450 1A2. <em>Clin Pharmacol Ther</em>. 2005;78(4):400-411.</p>
+<p><strong>Guest 2011</strong> Guest EJ, Aarons L, Houston JB, Rostami-Hodjegan A, Galetin A. Critique of the two-fold measure of prediction success for ratios: application for the assessment of drug-drug interactions. Drug Metab Dispos. 2011 Feb;39(2):170-3.</p>
+<p><strong>Iga 2016</strong> Iga K. Dynamic and Static Simulations of Fluvoxamine-Perpetrated Drug-Drug Interactions Using Multiple Cytochrome P450 Inhibition Modeling, and Determination of Perpetrator-Specific CYP Isoform Inhibition Constants and Fractional CYP Isoform Contributions to Vic. <em>J Pharm Sci</em>.Victim Clearance. Journal of Pharmaceutical Sciences. 2016 Mar;105(3):1307-1317–17.</p>
+<p><strong>Jeppesen 1996</strong> Jeppesen U, Loft S, Poulsen H, Brosen K. A fluvoxamine-caffeine interaction study. Pharmacogenetics. 1996;(6):213-222.</p>
+<p><strong>Joeres 1987</strong> Joeres, R., Klinker, H., Heusler, H., Epping, J., Richter, E. (1987). Influence of mexiletine on caffeine elimination<em>. Pharmacology &amp; therapeutics</em>, 33(1), 163-169.</p>
+<p><strong>Ko 1997</strong> Ko JW, Sukhova N, Thacker D, Chen P, Flockhart DA. Evaluation of omeprazole and lansoprazole as inhibitors of cytochrome P450 isoforms. <em>Drug Metab Dispos</em>. 1997;25(7):853-862.</p>
+<p><strong>Kusumoto 2001</strong> Kusumoto M, Ueno K, Oda A, et al. Effect of fluvoxamine on the pharmacokinetics of mexiletine in healthy Japanese men. <em>Clin Pharmacol Ther</em>. 2001;69(3):104-107. </p>
+<p><strong>Momo 2010</strong> Momo K, Homma M, Osaka Y, Inomata SI, Tanaka M, Kohda Y. Effects of mexiletine, a CYP1A2 inhibitor, on tizanidine pharmacokinetics and pharmacodynamics. <em>J Clin Pharmacol</em>. 2010;50(3):331-337.</p>
+<p><strong>Wei 1999</strong> Wei X, Dai R, Zhai S, Thummel KE, Friedman FK, Vestal RE. Inhibition of human liver cytochrome P-450 1A2 by the class IB antiarrhythmics mexiletine, lidocaine, and tocainide. <em>J Pharmacol Exp Ther</em>. 1999;289(2):853-858.</p>
+<p><strong>Zhou 2009</strong> Zhou SF, Yang LP, Zhou ZW, Liu YH, Chan E. Insights into the substrate specificity, inhibitors, regulation, and polymorphisms and the clinical impact of human cytochrome P450 1A2. AAPS J. 2009 Sep;11(3):481-94. doi: 10.1208/s12248-009-9127-y. Epub 2009 Jul 10. PMID: 19590965; PMCID: PMC2758120.</p>
+<h1 id="6-appendix">6 Appendix<a id="appendix"></a><a class="headerlink" href="#6-appendix" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="61-open-systems-pharmacology-suite-osps-introduction">6.1 Open Systems Pharmacology Suite (OSPS) Introduction<a id="osp-introduction"></a><a class="headerlink" href="#61-open-systems-pharmacology-suite-osps-introduction" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [<a href="#references-osps-introduction">1</a>].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in <a href="#figure-appendix-1"><strong>Figure Appendix-1</strong></a>.</p>
+<p>Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [<a href="#references-osps-introduction">2</a>] organ partition coefficients (tissue-to-plasma partition coefficients) [<a href="#references-osps-introduction">3,4</a>], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [<a href="#references-osps-introduction">3,4</a>] or that of Rodgers and Rowland [<a href="#references-osps-introduction">5-7</a>]. </p>
+<p>Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [<a href="#references-osps-introduction">2</a>]), with the user-defined body weight and height and ethnicity of the individual [<a href="#references-osps-introduction">8</a>]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [<a href="#references-osps-introduction">2,4,8,9</a>] or the OSP Suite homepage (<a href="https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts">https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts</a>).</p>
+<p><a id="figure-appendix-1"></a>
+<a id="figure-6-1"></a></p>
+<p><img alt="generic PBPK model" src="images/PK-Sim_PBPK_generic_model_scheme.png" /></p>
+<p><strong>Figure</strong> <strong>Appendix-1: Structure of the Whole Body PBPK Model integrated in PK-Sim®</strong></p>
+<p><a id="references-osps-introduction"></a></p>
+<h2 id="references-for-osps-introduction">References for OSPS introduction<a class="headerlink" href="#references-for-osps-introduction" title="Anchor link to this section for reference">&para;</a></h2>
+<p>[1] <a href="http://www.open-systems-pharmacology.org/">www.open-systems-pharmacology.org</a></p>
+<p>[2] <a href="https://www.ncbi.nlm.nih.gov/pubmed/15267240">Willmann S, Schmitt W, Keldenich J, Lippert J, Dressman JB. A physiological model for the estimation of the fraction dose absorbed in humans.J Med Chem. 2004 Jul 29;47(16):4022-31.</a></p>
+<p>[3] <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/3527603034.ch26">Haerter MW, K.J., Schmitt W, <em>Estimation of physicochemical and ADME parameters.</em> , in <em>Handbook of Combinatorial Chemistry: Drugs, Catalysts, Materials</em>, H.W. Nicolaou KC HR, Editor. 2002, Wiley VCH Verlag GmbH: Weinheim, Germany. p. 743-60.</a></p>
+<p>[4] <a href="https://www.ncbi.nlm.nih.gov/pubmed/16922658">Willmann S, Lippert J, Schmitt W. From physicochemistry to absorption and distribution: predictive mechanistic modelling and computational tools. Expert Opin Drug Metab Toxicol. 2005 Jun;1(1):159-68.</a></p>
+<p>[5] <a href="https://www.ncbi.nlm.nih.gov/pubmed/15858854">Rodgers, T, D. Leahy, and M. Rowland. Physiologically based pharmacokinetic modeling 1: predicting the tissue distribution of moderate-to-strong bases. J Pharm Sci. 2005 Jun;94(6):1259-76.</a></p>
+<p>[6] <a href="https://www.ncbi.nlm.nih.gov/pubmed/16639716">Rodgers T, Rowland M. Physiologically based pharmacokinetic modelling 2: predicting the tissue distribution of acids, very weak bases, neutrals and zwitterions. J Pharm Sci. 2006 Jun;95(6):1238-57.</a></p>
+<p>[7] <a href="https://www.ncbi.nlm.nih.gov/pubmed/17372687">Rodgers T, Rowland M. Mechanistic approaches to volume of distribution predictions: understanding the processes. Pharm Res. 2007 May;24(5):918-33.</a></p>
+<p>[8] <a href="https://www.ncbi.nlm.nih.gov/pubmed/17431751">Willmann S, Höhn K, Edginton A, Sevestre M, Solodenko J, Weiss W, Lippert J, Schmitt W. Development of a physiology-based whole-body population model for assessing the influence of individual variability on the pharmacokinetics of drugs. J Pharmacokinet Pharmacodyn. 2007 Jun;34(3):401-31.</a></p>
+<p>[9] <a href="https://www.sciencedirect.com/science/article/pii/S1478538203023424?via%3Dihub">Willmann S, Lippert J, Sevestre M, Solodenko J, Fois F, Schmitt W. PK-Sim®: a physiologically based pharmacokinetic ‘whole-body’ model. Biosilico 2003.1(4):121-24.</a></p>
+<h2 id="62-mathematical-implementation-of-drug-drug-interactions">6.2 Mathematical Implementation of Drug-Drug Interactions<a id="ddi-implementation"></a><a class="headerlink" href="#62-mathematical-implementation-of-drug-drug-interactions" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>DDI modeling: Competitive inhibition</strong> </p>
+<p>A detailed representation of the mathematical implementation of competitive enzyme inhibition can be found in the OSP manual (<a href="https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#competitive-inhibition-simple-setting-with-one-inhibitor">https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#competitive-inhibition-simple-setting-with-one-inhibitor</a>).</p>
+<p><strong>DDI modeling: Mechanism-based inhibition</strong></p>
+<p>A detailed representation of the mathematical implementation of mechanism-based enzyme inhibition can be found in the OSP manual (<a href="https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#irreversible-inhibition">https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#irreversible-inhibition</a>).</p>
+<p><strong>DDI modeling: Induction</strong></p>
+<p>A detailed representation of the mathematical implementation of enzyme induction can be found in the OSP manual (<a href="https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#enzyme-induction">https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#enzyme-induction</a>).</p>
+<h2 id="63-automatic-re-qualification-workflow">6.3 Automatic (re)-qualification workflow<a id="requalification-workflow"></a><a class="headerlink" href="#63-automatic-re-qualification-workflow" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Open Systems Pharmacology (<a href="http://www.open-systems-pharmacology.org">https://www.open-systems-pharmacology.org/</a>) provides a dynamic landscape of model repositories and a database of observed clinical data. Additionally, a technical framework to assess confidence of a specific intended use has been developed (qualification runner and reporting engine). This framework allows for an automatic (re)-qualification workflow of the OSP suite, comprising the following steps <a href="#figure-appendix-2"><strong>Figure Appendix-2</strong></a>:</p>
+<ul>
+<li>
+<p>PBPK model development and verification with observed data,</p>
+</li>
+<li>
+<p>Qualification plan generation,</p>
+</li>
+<li>
+<p>Qualification plan execution,</p>
+</li>
+<li>
+<p>Qualification report generation.</p>
+</li>
+</ul>
+<p><a id="figure-appendix-2"></a>
+<a id="figure-6-2"></a></p>
+<p><img alt="OSP qualification workflow" src="images/OSP_Qualification_Workflow_1.png" /></p>
+<p><strong>Figure Appendix-2: OSP suite automatic (re)-qualification workflow</strong></p>
+<p>In a first step, the respective qualification scenario is saved in a special qualification repository on OSP GitHub (<a href="https://github.com/Open-Systems-Pharmacology/">https://github.com/Open-Systems-Pharmacology/</a>). This qualification scenario repository contains a detailed qualification plan that links and combines respective models and data to address the use case that shall be qualified. Therefore, the qualification plan consists of: </p>
+<ul>
+<li>PK-Sim project files,</li>
+<li>Additional model building steps (if applicable),</li>
+<li>Description of potential cross-dependencies between PK-Sim project files (if applicable),</li>
+<li>Observed data (needed for model development and verification),</li>
+<li>Qualification scenario description text modules</li>
+<li>Detailed report settings to describe the generation of charts and qualification measures. </li>
+</ul>
+<p>PK-Sim projects, observed data sets, and qualification scenario text modules are deposited in distinct repositories and are referenced by the qualification plan (<a href="#figure-appendix-3"><strong>Figure Appendix-3</strong></a>).</p>
+<p><a id="figure-appendix-3"></a>
+<a id="figure-6-3"></a></p>
+<p><img alt="OSP qualification workflow detail" src="images/OSP_Qualification_Workflow_2.png" /></p>
+<p><strong>Figure Appendix-3: Qualification scenario repository landscape on GitHub</strong></p>
+<p>In a second step the qualification runner (<a href="https://github.com/Open-Systems-Pharmacology/QualificationRunner">https://github.com/Open-Systems-Pharmacology/QualificationRunner</a>) processes the qualification plan, i.e. all project parts are exported and prepared for the reporting engine (<a href="https://github.com/Open-Systems-Pharmacology/Reporting-Engine">https://github.com/Open-Systems-Pharmacology/Reporting-Engine</a>). The reporting engine provides a validated environment (implemented in R) for model execution and finally generates the qualification report. This report contains the evaluation of the individual PBPK models with observed data (i.e. standard goodness of fit plots, visual predictive checks) and a comprehensive qualification of the specific use case assessing the predictive performance of the OSP suite by means of a predefined set of qualification measures and charts. </p>
+<p>The automated execution of the described workflow can be triggered to assess re-qualification in case new data, changes in model structure or parameterization, or new OSP suite releases arise.</p>
+<h1 id="7-glossary">7 Glossary<a id="glossary"></a><a class="headerlink" href="#7-glossary" title="Anchor link to this section for reference">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>ADME</th>
+<th>Absorption, Distribution, Metabolism,  Excretion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUC</td>
+<td>Area under the plasma concentration  versus time curve</td>
+</tr>
+<tr>
+<td>AUCinf</td>
+<td>AUC until infinity</td>
+</tr>
+<tr>
+<td>AUClast</td>
+<td>AUC until last measurable sample</td>
+</tr>
+<tr>
+<td>AUCR</td>
+<td>Area under the plasma concentration  versus time curve Ratio</td>
+</tr>
+<tr>
+<td>b.i.d.</td>
+<td>Twice daily (bis in diem)</td>
+</tr>
+<tr>
+<td>CL</td>
+<td>Clearance</td>
+</tr>
+<tr>
+<td>Clint</td>
+<td>Intrinsic liver clearance</td>
+</tr>
+<tr>
+<td>Cmax</td>
+<td>Maximum concentration</td>
+</tr>
+<tr>
+<td>CmaxR</td>
+<td>Maximum concentration Ratio</td>
+</tr>
+<tr>
+<td>CYP</td>
+<td>Cytochrome P450 oxidase</td>
+</tr>
+<tr>
+<td>CYP1A2</td>
+<td>Cytochrome P450 1A2 oxidase</td>
+</tr>
+<tr>
+<td>CYP2C19</td>
+<td>Cytochrome P450 2C19 oxidase</td>
+</tr>
+<tr>
+<td>CYP3A4</td>
+<td>Cytochrome P450 3A4 oxidase</td>
+</tr>
+<tr>
+<td>DDI</td>
+<td>Drug-drug interaction</td>
+</tr>
+<tr>
+<td>e.c.</td>
+<td>Enteric coated</td>
+</tr>
+<tr>
+<td>EE</td>
+<td>Ethinylestradiol</td>
+</tr>
+<tr>
+<td>EM</td>
+<td>Extensive metabolizers</td>
+</tr>
+<tr>
+<td>fm</td>
+<td>Fraction metabolized</td>
+</tr>
+<tr>
+<td>FMO</td>
+<td>Flavin-containing monooxygenase</td>
+</tr>
+<tr>
+<td>fu</td>
+<td>Fraction unbound</td>
+</tr>
+<tr>
+<td>FDA</td>
+<td>Food and Drug administration</td>
+</tr>
+<tr>
+<td>GFR</td>
+<td>Glomerular filtration rate</td>
+</tr>
+<tr>
+<td>HLM</td>
+<td>Human liver microsomes</td>
+</tr>
+<tr>
+<td>hm</td>
+<td>homozygous</td>
+</tr>
+<tr>
+<td>ht</td>
+<td>heterozygous</td>
+</tr>
+<tr>
+<td>IM</td>
+<td>Intermediate metabolizers</td>
+</tr>
+<tr>
+<td>i.v.</td>
+<td>Intravenous</td>
+</tr>
+<tr>
+<td>IVIVE</td>
+<td>In Vitro to In  Vivo Extrapolation</td>
+</tr>
+<tr>
+<td>Ka</td>
+<td>Absorption rate constant</td>
+</tr>
+<tr>
+<td>kcat</td>
+<td>Catalyst rate constant</td>
+</tr>
+<tr>
+<td>Ki</td>
+<td>Inhibitor constant</td>
+</tr>
+<tr>
+<td>Kinact</td>
+<td>Rate of enzyme inactivation</td>
+</tr>
+<tr>
+<td>Km</td>
+<td>Michaelis Menten constant</td>
+</tr>
+<tr>
+<td>m.d.</td>
+<td>Multiple dose</td>
+</tr>
+<tr>
+<td>OSP</td>
+<td>Open Systems Pharmacology</td>
+</tr>
+<tr>
+<td>PBPK</td>
+<td>Physiologically-based pharmacokinetics</td>
+</tr>
+<tr>
+<td>PK</td>
+<td>Pharmacokinetics</td>
+</tr>
+<tr>
+<td>PI</td>
+<td>Parameter identification</td>
+</tr>
+<tr>
+<td>PM</td>
+<td>Poor metabolizers</td>
+</tr>
+<tr>
+<td>RT-PCR</td>
+<td>Reverse transcription polymerase chain  reaction</td>
+</tr>
+<tr>
+<td>p.o.</td>
+<td>Per os</td>
+</tr>
+<tr>
+<td>q.d.</td>
+<td>Once daily (quaque diem)</td>
+</tr>
+<tr>
+<td>SD</td>
+<td>Single Dose</td>
+</tr>
+<tr>
+<td>SE</td>
+<td>Standard error</td>
+</tr>
+<tr>
+<td>s.d.SPC</td>
+<td>Single dose Summary of Product Characteristics</td>
+</tr>
+<tr>
+<td>SD</td>
+<td>Standard deviation</td>
+</tr>
+<tr>
+<td>TDI</td>
+<td>Time dependent inhibition</td>
+</tr>
+<tr>
+<td>t.i.d</td>
+<td>Three times a day (ter in die)</td>
+</tr>
+<tr>
+<td>UGT</td>
+<td>Uridine  5'-diphospho-glucuronosyltransferase</td>
+</tr>
+<tr>
+<td>UM</td>
+<td>Ultra-rapid metabolizers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="related-reports">Related Reports<a class="headerlink" href="#related-reports" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Other Drug-Drug Interaction (DDI) qualification reports:</p>
+<ul>
+<li><a href="../DDI_Qualification_CYP2C19/">DDI_Qualification_CYP2C19</a></li>
+<li><a href="../DDI_Qualification_CYP3A4/">DDI_Qualification_CYP3A4</a></li>
+<li><a href="../DDI_Qualification_P-gp/">DDI_Qualification_P-gp</a></li>
+<li><a href="../DDI_Qualification_UGT/">DDI_Qualification_UGT</a></li>
+</ul>
+<p><a href="../#drug-drug-interaction-ddi">View all Drug-Drug Interaction (DDI) →</a></p>
+<p><a href="../">← Back to Home</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Open Systems Pharmacology Community
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Open-Systems-Pharmacology" target="_blank" rel="noopener" title="Open Systems Pharmacology on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.open-systems-pharmacology.org/" target="_blank" rel="noopener" title="Open Systems Pharmacology Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.tabs.sticky", "navigation.indexes", "navigation.path", "toc.follow", "search.highlight", "search.suggest", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

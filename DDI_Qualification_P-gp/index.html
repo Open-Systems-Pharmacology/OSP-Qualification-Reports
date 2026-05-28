@@ -1,0 +1,3194 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Qualification report for DDI_Qualification_P-gp. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+      
+      
+        <meta name="author" content="Open Systems Pharmacology Community">
+      
+      
+        <link rel="canonical" href="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_P-gp/">
+      
+      
+        <link rel="prev" href="../DDI_Qualification_CYP3A4/">
+      
+      
+        <link rel="next" href="../DDI_Qualification_UGT/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>DDI_Qualification_P-gp Qualification Report - OSP Qualification Reports (Version 12.2 Update 1)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_P-gp/">
+  <meta property="og:title" content="DDI_Qualification_P-gp">
+  <meta property="og:description" content="Qualification report for DDI_Qualification_P-gp. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+  <meta property="og:site_name" content="OSP Qualification Reports (Version 12.2 Update 1)">
+  <meta property="og:image" content="https://www.open-systems-pharmacology.org/assets/images/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_P-gp/">
+  <meta name="twitter:title" content="DDI_Qualification_P-gp">
+  <meta name="twitter:description" content="Qualification report for DDI_Qualification_P-gp. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+  <meta name="twitter:image" content="https://www.open-systems-pharmacology.org/assets/images/logo.png">
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "OSP Qualification Reports (Version 12.2 Update 1)",
+    "description": "Qualification reports validating the PBPK modeling platform PK-Sim\u00ae (as part of the Open Systems Pharmacology (OSP) Suite) for drug-drug interactions, pediatric extrapolation, and disease populations. Open Systems Pharmacology.",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.open-systems-pharmacology.org/assets/images/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Dataset Schema for Qualification Reports -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Open Systems Pharmacology Qualification Reports",
+    "description": "Qualification reports validating performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite) for drug-drug interactions, pediatric extrapolation, and disease populations",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "keywords": ["PBPK platform qualification", "PBPK", "pharmacokinetic modeling", "drug development", "PK-Sim", "MoBi", "systems pharmacology", "ADME"],
+    "license": "https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports#license",
+    "creator": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/"
+    },
+    "distribution": {
+      "@type": "DataDownload",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports"
+    }
+  }
+  </script>
+
+  <!-- SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PK-Sim",
+    "applicationCategory": "ScientificApplication",
+    "operatingSystem": "Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "PBPK modeling and simulation platform with validated qualification reports for drug-drug interactions, pediatric extrapolation, and disease populations",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology"
+    }
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DDI_Qualification_P-gp Qualification Report",
+    "description": "Qualification report for DDI_Qualification_P-gp. Validation of predictive performance of the PBPK modeling platform PK-Sim\u00ae (as part of the Open Systems Pharmacology (OSP) Suite).",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.open-systems-pharmacology.org/assets/images/logo.png"
+      }
+    },
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_P-gp/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_P-gp/"
+    },
+    "keywords": "DDI_Qualification_P-gp, qualification report, PBPK platform qualification, PK-Sim, Open Systems Pharmacology, PBPK validation"
+  }
+  </script>
+  
+
+  
+  <meta name="keywords" content="DDI_Qualification_P-gp, qualification report, PBPK platform qualification, PK-Sim, Open Systems Pharmacology, PBPK validation">
+  
+
+  
+  <link rel="canonical" href="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/DDI_Qualification_P-gp/">
+  
+
+  <!-- Language -->
+  <meta http-equiv="content-language" content="en">
+  <meta name="language" content="English">
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#p-gp-ddi-qualification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OSP Qualification Reports (Version 12.2 Update 1)" class="md-header__button md-logo" aria-label="OSP Qualification Reports (Version 12.2 Update 1)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OSP Qualification Reports (Version 12.2 Update 1)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DDI_Qualification_P-gp Qualification Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSP-Qualification-Reports
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OSP Qualification Reports (Version 12.2 Update 1)" class="md-nav__button md-logo" aria-label="OSP Qualification Reports (Version 12.2 Update 1)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OSP Qualification Reports (Version 12.2 Update 1)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSP-Qualification-Reports
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP1A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP1A2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP2C19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP2C19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP3A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP3A4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_P-gp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_UGT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_UGT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_CYP2C8_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_CYP2C8_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_CYP3A4_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_CYP3A4_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_GFR_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_GFR_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Qualification-CKD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualification-CKD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="p-gp-ddi-qualification">P-gp DDI Qualification<a class="headerlink" href="#p-gp-ddi-qualification" title="Anchor link to this section for reference">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>1.1-OSP12.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qualification Plan Release</td>
+<td><a href="https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/v1.1">https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/v1.1</a></td>
+</tr>
+<tr>
+<td>OSP Version</td>
+<td>12.2</td>
+</tr>
+<tr>
+<td>Qualification Framework Version</td>
+<td>3.5</td>
+</tr>
+</tbody>
+</table>
+<p>This qualification report is filed at:</p>
+<p><a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports">https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports</a></p>
+<h1 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Anchor link to this section for reference">&para;</a></h1>
+<ul>
+<li><a href="#introduction">1 Introduction</a></li>
+<li><a href="#objective">1.1 Objective</a></li>
+<li><a href="#pgp-ddi-network">1.2 Pgp DDI Network</a><ul>
+<li><a href="#clarithromycin-digoxin-ddi">1.2.1 Clarithromycin - Digoxin DDI</a></li>
+<li><a href="#erythromycin-digoxin-ddi">1.2.2 Erythromycin - Digoxin DDI</a></li>
+<li><a href="#itraconazole-digoxin-ddi">1.2.3 Itraconazole - Digoxin DDI</a></li>
+<li><a href="#verapamil-digoxin-ddi">1.2.4 Verapamil - Digoxin DDI</a></li>
+<li><a href="#rifampicin-digoxin-ddi">1.2.5 Rifampicin - Digoxin DDI</a></li>
+</ul>
+</li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi">2 Qualification of Use Case Pgp-mediated DDI</a></li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-9">2.1 Mechanism</a><ul>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-10">2.1.1 Induction</a></li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-18">2.1.2 Mechanism-based Inactivation</a></li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-26">2.1.3 Reversible Inhibition</a></li>
+</ul>
+</li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-34">2.2 Perpetrator</a><ul>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-35">2.2.1 Clarithromycin</a></li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-43">2.2.2 Erythromycin</a></li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-51">2.2.3 Itraconazole</a></li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-59">2.2.4 Rifampicin</a></li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-67">2.2.5 Verapamil</a></li>
+</ul>
+</li>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-75">2.3 Victim</a><ul>
+<li><a href="#qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-76">2.3.1 Digoxin</a></li>
+</ul>
+</li>
+<li><a href="#concentration-time-profiles">3 Concentration-Time Profiles</a></li>
+<li><a href="#clarithromycin-digoxin-ddi-timeprofile">3.1 Clarithromycin - Digoxin DDI</a></li>
+<li><a href="#erythromycin-digoxin-ddi-timeprofile">3.2 Erythromycin - Digoxin DDI</a></li>
+<li><a href="#itraconazole-digoxin-ddi-timeprofile">3.3 Itraconazole - Digoxin DDI</a></li>
+<li><a href="#verapamil-digoxin-ddi-timeprofile">3.4 Verapamil - Digoxin DDI</a></li>
+<li><a href="#rifampicin-digoxin-ddi-timeprofile">3.5 Rifampicin - Digoxin DDI</a></li>
+<li><a href="#references">4 References</a></li>
+<li><a href="#appendix">5 Appendix</a></li>
+<li><a href="#osp-introduction">5.1 Open Systems Pharmacology Suite (OSPS) Introduction</a></li>
+<li><a href="#mathematical-implementation-of-ddi">5.2 Mathematical Implementation of Drug-Drug Interactions</a></li>
+<li><a href="#automatic-requalification-workflow">5.3 Automatic (re)-qualification workflow</a></li>
+</ul>
+<h1 id="1-introduction">1 Introduction<a id="introduction"></a><a class="headerlink" href="#1-introduction" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="11-objective">1.1 Objective<a id="objective"></a><a class="headerlink" href="#11-objective" title="Anchor link to this section for reference">&para;</a></h2>
+<p>This <strong>qualification report</strong> evaluates for the PBPK platform <strong>PK-Sim</strong> (as part of the open systems pharmacology (OSP) suite) the ability to perform simulations with the intended purpose to predict Permeability-glycoprotein (<strong>P-gp</strong>)-mediated drug-drug interactions (<strong>DDI</strong>).</p>
+<p>To demonstrate the level of confidence, the predictive performance of the platform for this indented purpose is assessed via a network of PBPK models of selected P-gp DDI perpetrators, and a respective sensitive P-gp victim drug (digoxin) and a comprehensive dataset from published clinical DDI studies. All PBPK models represent whole-body PBPK models, which allow dynamic DDI simulations in organs expressing P-gp. </p>
+<p>The respective <em>qualification plan</em> to produce this <em>qualification report</em> is transparently provided open-source (<a href="https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp">https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp</a>). The same applies for all presented PBPK models including <em>evaluation reports</em> on model building and evaluation of each model (https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).</p>
+<p><em>Evaluation reports</em> including descriptions on model building and detailed evaluations of the included models are documented separately (see <a href="#12-pgp-ddi-network">Section 1.2</a>).</p>
+<p>Please refer to the <a href="#5-appendix">Appendix</a> to learn more details:</p>
+<ul>
+<li>
+<p>An overview over the Open Systems Pharmacology Suite is given in chapter <a href="#51-open-systems-pharmacology-suite-osps-introduction">Section 5.1</a></p>
+</li>
+<li>
+<p><a href="#52-mathematical-implementation-of-drug-drug-interactions">Section 5.2</a> shows the implementation of the underlying mathematical equations for drug-drug interactions in the OSP suite.</p>
+</li>
+<li>
+<p>A detailed general description of the performed qualification workflow (<em>qualification plan</em>, <em>qualification report</em>, etc.) can be found in chapter <a href="#53-automatic-re-qualification-workflow">Section 5.3</a>.</p>
+</li>
+</ul>
+<h2 id="12-pgp-ddi-network">1.2 Pgp DDI Network<a id="pgp-ddi-network"></a><a class="headerlink" href="#12-pgp-ddi-network" title="Anchor link to this section for reference">&para;</a></h2>
+<p>To qualify the OSP suite for the prediction of the P-gp DDI potential of new drugs, a set of verified PBPK models of perpetrators, and respective P-gp DDI victim drugs is specified to set up a P-gp-mediated DDI modeling network. </p>
+<p>The following perpetrator compounds were selected: </p>
+<ul>
+<li><strong>Rifampicin</strong>
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): <a href="https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v2.0">https://github.com/Open-Systems-Pharmacology/Rifampicin-Model/releases/tag/v2.0</a></li>
+<li><strong>Verapamil</strong>
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.1</strong>): <a href="https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v2.1">https://github.com/Open-Systems-Pharmacology/Verapamil-Model/releases/tag/v2.1</a></li>
+<li><strong>Erythromycin</strong> 
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): <a href="https://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v2.0">https://github.com/Open-Systems-Pharmacology/Erythromycin-Model/releases/tag/v2.0</a></li>
+<li><strong>Clarithromycin</strong> 
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): <a href="https://github.com/Open-Systems-Pharmacology/Clarithromycin-Model/releases/tag/v2.0">https://github.com/Open-Systems-Pharmacology/Clarithromycin-Model/releases/tag/v2.0</a></li>
+<li><strong>Itraconazole</strong> including metabolites 
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): <a href="https://github.com/Open-Systems-Pharmacology/Itraconazole-Model/releases/tag/v2.0">https://github.com/Open-Systems-Pharmacology/Itraconazole-Model/releases/tag/v2.0</a></li>
+</ul>
+<p>The following sensitive P-gp substrates as victim drugs were selected:</p>
+<ul>
+<li><strong>Digoxin</strong>
+  Model snapshot and evaluation plan (<em>release</em> <strong>v2.0</strong>): <a href="https://github.com/Open-Systems-Pharmacology/Digoxin-Model/releases/tag/v2.0">https://github.com/Open-Systems-Pharmacology/Digoxin-Model/releases/tag/v2.0</a></li>
+</ul>
+<p><strong>Figure 1</strong> shows the prespecified and developed DDI modeling network of interacting perpetrator and victim drugs for the OSP suite qualification of predicting P-gp-mediated DDI.</p>
+<p><strong>Figure</strong> <strong>1: P-gp DDI modeling network</strong>
+<a id="figure-1-1"></a></p>
+<p><img alt="DDI P-gp network" src="images/DDI_P-gp_Compound_Network.png" /></p>
+<p><sub>The arrows indicate where at least one clinical DDI study between the two connected substances was available and included in the model network. Red indicates inhibition and green indicates induction as the primary type of interaction. Thin arrows indicate weak, mid-thick arrows moderate and thick arrows strong P-gp modulation by the perpetrator.</sub></p>
+<p>The published DDI studies between the respective perpetrators and victim drugs were simulated and compared to observed data. The following sections give an overview of the clinical studies being part of this qualification report. The respective data identifier (DataID) refers to the <strong>ID</strong> of the dataset in the OSP PK database, version 1.7 (<a href="https://github.com/Open-Systems-Pharmacology/Database-for-observed-data/releases/tag/v1.7">https://github.com/Open-Systems-Pharmacology/Database-for-observed-data/releases/tag/v1.7</a>).</p>
+<h3 id="121-clarithromycin-digoxin-ddi">1.2.1 Clarithromycin - Digoxin DDI<a id="clarithromycin-digoxin-ddi"></a><a class="headerlink" href="#121-clarithromycin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The release of the snapshot containing the respective simulations can be found here: <a href="https://github.com/Open-Systems-Pharmacology/Clarithromycin-Digoxin-DDI/releases/tag/v1.0">https://github.com/Open-Systems-Pharmacology/Clarithromycin-Digoxin-DDI/releases/tag/v1.0</a></p>
+<p>The Clarithromycin / digoxin interaction was evaluated using 6 clinical DDI studies including 21 different clinical settings (<a href="#references">Gurley 2006</a>, <a href="#references">Gurley 2007</a>, <a href="#references">Gurley 2008b</a>, <a href="#references">Kurata 2002</a>, <a href="#references">Rengelshausen 2003</a>, <a href="#references">Tsutsumi 2002</a>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DataID</th>
+<th style="text-align: left;">Enzyme</th>
+<th style="text-align: left;">Perpetrator / victim</th>
+<th style="text-align: left;">Study design</th>
+<th style="text-align: left;">Comment</th>
+<th style="text-align: left;">Clinical study</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">16324</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>500</strong> mg po twice daily (14 doses) <br /> Digoxin: <strong>0.4</strong> mg po single dose, simultaneous with <strong>12<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Gurley 2006</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16328</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>500</strong> mg po twice daily (14 doses) <br /> Digoxin: <strong>0.5</strong> mg po single dose, simultaneous with <strong>12<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Gurley 2007</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">229</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>500</strong> mg po twice daily (14 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, 2 hours after <strong>12<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Gurley 2008b</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16305</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16307</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg iv single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16309</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16311</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg iv single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16313</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16315</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg iv single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16333</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16334</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg iv single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16335</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16336</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg iv single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16337</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16338</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>400</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg iv single dose, simultaneous with <strong>10<sup>th</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kurata 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3025</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>250</strong> mg po twice daily (6 doses) <br /> Digoxin: <strong>0.75</strong> mg po single dose, 0.5 hours after <strong>3<sup>rd</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Rengelshausen 2003</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16409</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>250</strong> mg po twice daily (6 doses) <br /> Digoxin: <strong>0.01</strong> mg/kg iv single dose, 2 hours after <strong>3<sup>rd</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Rengelshausen 2003</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16411</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>250</strong> mg po twice daily (6 doses) <br /> Digoxin: <strong>0.75</strong> mg po single dose, 0.5 hours after <strong>3<sup>rd</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Rengelshausen 2003</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16413</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>250</strong> mg po twice daily (6 doses) <br /> Digoxin: <strong>0.75</strong> mg po single dose, 0.5 hours after <strong>3<sup>rd</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Rengelshausen 2003</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3029</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>200</strong> mg po twice daily (10 doses) <br /> Digoxin: <strong>0.5</strong> mg iv single dose, simultaneous with <strong>3<sup>rd</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Tsutsumi 2002</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3032</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Clarithromycin / digoxin</td>
+<td style="text-align: left;">Clarithromycin: <strong>200</strong> mg po twice daily (10 doses) <br /> Digoxin: <strong>0.5</strong> mg iv single dose, simultaneous with <strong>3<sup>rd</sup></strong> clarithromycin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Tsutsumi 2002</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="122-erythromycin-digoxin-ddi">1.2.2 Erythromycin - Digoxin DDI<a id="erythromycin-digoxin-ddi"></a><a class="headerlink" href="#122-erythromycin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The release of the snapshot containing the respective simulations can be found here: <a href="https://github.com/Open-Systems-Pharmacology/Erythromycin-Digoxin-DDI/releases/tag/v1.1">https://github.com/Open-Systems-Pharmacology/Erythromycin-Digoxin-DDI/releases/tag/v1.1</a></p>
+<p>The erythromycin-digoxin interaction was evaluated using one clinical DDI study (<a href="#references">Tsutsumi 2002</a>).</p>
+<table>
+<thead>
+<tr>
+<th>DataID</th>
+<th>Transporter</th>
+<th>Perpetrator / victim</th>
+<th>Study design</th>
+<th>Clinical study</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3028</td>
+<td>P-gp</td>
+<td>Erythromycin / digoxin</td>
+<td>Erythromycin: 200 mg po QID for 5 days<br />Digoxin: 0.5 mg iv, concomitantly with erythromycin on the 2<sup>nd</sup> day</td>
+<td><a href="#references">Tsutsumi 2002</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="123-itraconazole-digoxin-ddi">1.2.3 Itraconazole - Digoxin DDI<a id="itraconazole-digoxin-ddi"></a><a class="headerlink" href="#123-itraconazole-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The release of the snapshot containing the respective simulations can be found here: <a href="https://github.com/Open-Systems-Pharmacology/Itraconazole-Digoxin-DDI/releases/tag/v1.0">https://github.com/Open-Systems-Pharmacology/Itraconazole-Digoxin-DDI/releases/tag/v1.0</a></p>
+<p>The itraconazole-digoxin interaction was evaluated using 2 clinical DDI studies including 3 different clinical settings (<a href="#references">Jalava 1997</a>, <a href="#references">Partanen 1995</a>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DataID</th>
+<th style="text-align: left;">Transporter</th>
+<th style="text-align: left;">Perpetrator / victim</th>
+<th style="text-align: left;">Study design</th>
+<th style="text-align: left;">Comment</th>
+<th style="text-align: left;">Clinical study</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">271</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Itraconazole / digoxin</td>
+<td style="text-align: left;">Itraconazole: <strong>200</strong> mg po once daily (5 doses) <br /> Digoxin: <strong>0.5</strong> mg po single dose, 1 h after the <strong>3<sup>rd</sup></strong> itraconazole dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Jalava 1997</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16329</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Itraconazole / digoxin</td>
+<td style="text-align: left;">Itraconazole: <strong>200</strong> mg po once daily (10 doses) <br /> Digoxin: <strong>0.25</strong> mg po once daily (20 doses), 2 hours after <strong>12<sup>th</sup></strong> itraconazole dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Partanen 1995</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16330</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Itraconazole / digoxin</td>
+<td style="text-align: left;">Itraconazole: <strong>200</strong> mg po once daily (10 doses) starting with the  <strong>11<sup>th</sup></strong> digoxin dose<br /> Digoxin: <strong>0.25</strong> mg po once daily (20 doses), simultaneous with <strong>10<sup>th</sup></strong> itraconazole dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Partanen 1995</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="124-verapamil-digoxin-ddi">1.2.4 Verapamil - Digoxin DDI<a id="verapamil-digoxin-ddi"></a><a class="headerlink" href="#124-verapamil-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The release of the snapshot containing the respective simulations can be found here: <a href="https://github.com/Open-Systems-Pharmacology/Verapamil-Digoxin-DDI/releases/tag/v1.1">https://github.com/Open-Systems-Pharmacology/Verapamil-Digoxin-DDI/releases/tag/v1.1</a></p>
+<p>The verapamil-digoxin interaction was evaluated using a 11 clinical DDI studies including 12 different clinical settings (<a href="#references">Belz 1981</a>, <a href="#references">Belz 1983</a>, <a href="#references">Doering 1983</a>, <a href="#references">Johnson 1987</a>, <a href="#references">Klein 1982</a>, <a href="#references">Pedersen 1981</a>, <a href="#references">Pedersen 1982</a>, <a href="#references">Pedersen 1983</a>, <a href="#references">Rodin 1988</a>, <a href="#references">Schwartz 1982</a>, <a href="#references">Wiebe 2020</a>).</p>
+<table>
+<thead>
+<tr>
+<th>DataID</th>
+<th>Transporter</th>
+<th>Perpetrator / victim</th>
+<th>Study design</th>
+<th>Comment</th>
+<th>Clinical study</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16635</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po TID for 14 days<br />Digoxin: 0.125 mg po TID for 14 days</td>
+<td></td>
+<td><a href="#references">Belz 1981</a></td>
+</tr>
+<tr>
+<td>16165</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po TID for 14 days<br />Digoxin: 0.125 mg po TID for 14 days</td>
+<td></td>
+<td><a href="#references">Belz 1983</a></td>
+</tr>
+<tr>
+<td>16167</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 120 mg po TID for 14 days<br />Digoxin: 0.125 mg po TID for 14 days</td>
+<td></td>
+<td><a href="#references">Belz 1983</a></td>
+</tr>
+<tr>
+<td>16169</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po TID for 14 days<br />Digoxin: 0.125 mg po TID for 14 days</td>
+<td></td>
+<td><a href="#references">Doering 1983</a></td>
+</tr>
+<tr>
+<td>16159</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po BID for 4 days followed by TID for 10 days<br />Digoxin: 1.0 mg iv (15 min) on day 13</td>
+<td></td>
+<td><a href="#references">Johnson 1987</a></td>
+</tr>
+<tr>
+<td>16174</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po TID for 14 days<br />Digoxin: 0.25 mg PO OD for 28 days</td>
+<td></td>
+<td><a href="#references">Klein 1982</a></td>
+</tr>
+<tr>
+<td>16638</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po TID for 10 days<br />Digoxin: 0.75 mg IV SD at day 10</td>
+<td></td>
+<td><a href="#references">Pedersen 1981</a></td>
+</tr>
+<tr>
+<td>16163</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po TID followed by 120mg TID<br />Digoxin: initial dose of 1mg PO followed by 0.0625 mg po BID followed by 0.125mg BID</td>
+<td></td>
+<td><a href="#references">Pedersen 1982</a></td>
+</tr>
+<tr>
+<td>16162</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 120 mg po TID for 12 days<br />Digoxin: 1.0 mg iv (bolus) on day 8</td>
+<td></td>
+<td><a href="#references">Pedersen 1983</a></td>
+</tr>
+<tr>
+<td>3063</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80mg BID for 4 days followed by 80mg TID for 10 days<br />Digoxin: 0.25 mg PO BID for 14 days</td>
+<td></td>
+<td><a href="#references">Rodin 1988</a></td>
+</tr>
+<tr>
+<td>16175</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 80 mg po QID for 70 days<br />Digoxin: 0.46 mg PO OD for 85 days</td>
+<td>Daily dose of digoxin varied between patients between 0.25 and 1 mg/day. 0.46 is the arith. mean of all dose levels.</td>
+<td><a href="#references">Schwartz 1982</a></td>
+</tr>
+<tr>
+<td>16172</td>
+<td>P-gp</td>
+<td>Verapamil / digoxin</td>
+<td>Verapamil: 120 mg po SD<br />Digoxin: 0.25 mg PO SD 1h after verapamil dosing</td>
+<td></td>
+<td><a href="#references">Wiebe 2020</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="125-rifampicin-digoxin-ddi">1.2.5 Rifampicin - Digoxin DDI<a id="rifampicin-digoxin-ddi"></a><a class="headerlink" href="#125-rifampicin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The release of the snapshot containing the respective simulations can be found here: <a href="https://github.com/Open-Systems-Pharmacology/Rifampicin-Digoxin-DDI/releases/tag/v1.0">https://github.com/Open-Systems-Pharmacology/Rifampicin-Digoxin-DDI/releases/tag/v1.0</a></p>
+<p>The rifampicin-digoxin interaction was evaluated using 9 clinical DDI studies including 11 different clinical settings (<a href="#references">Drescher 2003</a>, <a href="#references">Gurley 2006</a>, <a href="#references">Gurley 2007</a>, <a href="#references">Gurley 2008b</a>, <a href="#references">Greiner 1999</a>, <a href="#references">Kirby 2012</a>, <a href="#references">Larsen 2007</a>, <a href="#references">Reitmann 2011</a>, <a href="#references">Wiebe 2020</a>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DataID</th>
+<th style="text-align: left;">Transporter</th>
+<th style="text-align: left;">Perpetrator / victim</th>
+<th style="text-align: left;">Study design</th>
+<th style="text-align: left;">Comment</th>
+<th style="text-align: left;">Clinical study</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">191</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (16 doses) <br /> Digoxin: <strong>1</strong> mg po single dose, simultaneous with <strong>11<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Greiner 1999</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">193</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (16 doses) <br /> Digoxin: <strong>1</strong> mg iv single dose, simultaneous with <strong>11<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Greiner 1999</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">227</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>300</strong> mg po twice daily (16 doses) <br /> Digoxin: <strong>0.25</strong> mg po single dose, 2 hours after <strong>13<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Gurley 2008b</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">314</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (14 doses) <br /> Digoxin: <strong>0.5</strong> mg po single dose, 12 hours after <strong>14<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kirby 2012</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">316</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (14 doses) <br /> Digoxin: <strong>0.5</strong> mg iv single dose, 12 hours after <strong>14<sup>th</sup></strong> rifampicin  dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Kirby 2012</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">337</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (6 doses) <br /> Digoxin: <strong>0.5</strong> mg po single dose, simultaneous with <strong>7<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Larsen 2007</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">396</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (28 doses) <br /> Digoxin: <strong>0.5</strong> mg po single dose, 1 h after the  <strong>28<sup>th</sup></strong> (last) rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Reitmann 2011</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">397</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (28 doses) <br /> Digoxin: <strong>0.5</strong> mg po single dose, 169 h (1 week +1 h) after the  <strong>28<sup>th</sup></strong> (last) rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Reitmann 2011</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">398</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (28 doses) <br /> Digoxin: <strong>0.5</strong> mg po single dose, 337 h (2 weeks +1 h) after the  <strong>28<sup>th</sup></strong> (last) rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Reitmann 2011</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16301</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po single dose <br /> Digoxin: <strong>0.25</strong> mg po single dose, simultaneous with rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Wiebe 2020</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16319</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (14 doses) <br /> Digoxin: <strong>1</strong> mg iv single dose, 12 h after the <strong>10<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Drescher 2003</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16322</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (14 doses) <br /> Digoxin: <strong>0.4</strong> mg po single dose, simultaneous with <strong>7<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Gurley 2006</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">16326</td>
+<td style="text-align: left;">P-gp</td>
+<td style="text-align: left;">Rifampicin / digoxin</td>
+<td style="text-align: left;">Rifampicin: <strong>600</strong> mg po once daily (14 doses) <br /> Digoxin: <strong>0.5</strong> mg iv single dose, simultaneous with <strong>7<sup>th</sup></strong> rifampicin dose</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="#references">Gurley 2007</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="2-qualification-of-use-case-pgp-mediated-ddi">2 Qualification of Use Case Pgp-mediated DDI<a id="qualification-of-use-case-pgp-mediated-ddi"></a><a class="headerlink" href="#2-qualification-of-use-case-pgp-mediated-ddi" title="Anchor link to this section for reference">&para;</a></h1>
+<p>The following section shows the correlations between observed and model-predicted AUC and C<sub>max</sub> ratios, respectively.</p>
+<p>Specifically, the PBPK model performance for the PK parameters <strong>AUC ratio (AUCR)</strong> and <strong>C<sub>max</sub> ratio (CMAXR)</strong> is assessed via:</p>
+<ul>
+<li>
+<p>predicted (<em>Pred</em>) vs. observed (<em>Obs</em>) plots</p>
+</li>
+<li>
+<p><em>Pred</em>/<em>Obs</em> vs. <em>Obs</em> plots</p>
+</li>
+<li>
+<p>geometric mean fold error (GMFE):</p>
+</li>
+</ul>
+<p><img alt="GMFE equation" src="images/GFME_equation.PNG" /></p>
+<ul>
+<li>
+<p>number of AUCR and CMAXR falling within 2-fold error range and within the limits as suggested by <a href="#4-references">Guest et al. 2011</a></p>
+</li>
+<li>
+<p>detailed table of results for each study</p>
+</li>
+</ul>
+<p>In the plots,</p>
+<ul>
+<li>
+<p>the dotted lines denote 0.50–2.00 (2-fold) criterion,</p>
+</li>
+<li>
+<p>the solid lines denote the limits as suggested by <a href="#4-references">Guest et al. 2011</a>,</p>
+</li>
+<li>
+<p>the bold solid line denotes the unity line,</p>
+</li>
+<li>
+<p>each color represents one combination of drugs,</p>
+</li>
+<li>
+<p>squares represent studies with intravenous administration of the victim drug and circles represent studies with oral administration of the victim drug.</p>
+</li>
+</ul>
+<hr />
+<p><a id="figure-2-1"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-1: Pgp DDI.  Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-2"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-2: Pgp DDI.  Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-3"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-3: Pgp DDI.  Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-4"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-4: Pgp DDI.  Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-1"></a></p>
+<p><strong>Table 2-1: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.24</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.25</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-2"></a></p>
+<p><strong>Table 2-2: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-3"></a></p>
+<p><strong>Table 2-3: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">62.96</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">26</td>
+<td style="text-align: left;">96.30</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-4"></a></p>
+<p><strong>Table 2-4: Summary table for Pgp DDI</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">DataID</th>
+<th style="text-align: left;">Perpetrator</th>
+<th style="text-align: left;">Victim</th>
+<th style="text-align: left;">Predicted AUC_tEnd Ratio</th>
+<th style="text-align: left;">Observed AUC_tEnd Ratio</th>
+<th style="text-align: left;">Pred/Obs AUC_tEnd Ratio</th>
+<th style="text-align: left;">Predicted C_max Ratio</th>
+<th style="text-align: left;">Observed C_max Ratio</th>
+<th style="text-align: left;">Pred/Obs C_max Ratio</th>
+<th style="text-align: left;">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">191</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (16 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.70</td>
+<td style="text-align: left;">0.70</td>
+<td style="text-align: left;">1.01</td>
+<td style="text-align: left;">1.13</td>
+<td style="text-align: left;">0.48</td>
+<td style="text-align: left;">2.34</td>
+<td style="text-align: left;">Greiner 1999</td>
+</tr>
+<tr>
+<td style="text-align: left;">193</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (16 days)</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">0.85</td>
+<td style="text-align: left;">0.86</td>
+<td style="text-align: left;">0.91</td>
+<td style="text-align: left;">0.83</td>
+<td style="text-align: left;">1.09</td>
+<td style="text-align: left;">Greiner 1999</td>
+</tr>
+<tr>
+<td style="text-align: left;">227</td>
+<td style="text-align: left;">Rifampicin, 300 mg, PO, MD BID (7 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.47</td>
+<td style="text-align: left;">0.75</td>
+<td style="text-align: left;">0.63</td>
+<td style="text-align: left;">0.49</td>
+<td style="text-align: left;">0.62</td>
+<td style="text-align: left;">0.80</td>
+<td style="text-align: left;">Gurley 2008b</td>
+</tr>
+<tr>
+<td style="text-align: left;">229</td>
+<td style="text-align: left;">Clarithromycin, 500 mg, PO, MD BID (7 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.26</td>
+<td style="text-align: left;">1.47</td>
+<td style="text-align: left;">0.86</td>
+<td style="text-align: left;">1.42</td>
+<td style="text-align: left;">1.75</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">Gurley 2008b</td>
+</tr>
+<tr>
+<td style="text-align: left;">271</td>
+<td style="text-align: left;">Itraconazole, 200 mg, PO, MD OD (5 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.26</td>
+<td style="text-align: left;">1.68</td>
+<td style="text-align: left;">0.75</td>
+<td style="text-align: left;">1.42</td>
+<td style="text-align: left;">1.34</td>
+<td style="text-align: left;">1.06</td>
+<td style="text-align: left;">Jalava 1997</td>
+</tr>
+<tr>
+<td style="text-align: left;">314</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (14 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.49</td>
+<td style="text-align: left;">0.94</td>
+<td style="text-align: left;">0.51</td>
+<td style="text-align: left;">0.52</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Kirby 2012</td>
+</tr>
+<tr>
+<td style="text-align: left;">316</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (14 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.82</td>
+<td style="text-align: left;">1.15</td>
+<td style="text-align: left;">0.72</td>
+<td style="text-align: left;">1.13</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Kirby 2012</td>
+</tr>
+<tr>
+<td style="text-align: left;">337</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (6 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.49</td>
+<td style="text-align: left;">0.82</td>
+<td style="text-align: left;">0.60</td>
+<td style="text-align: left;">0.52</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Larsen 2007</td>
+</tr>
+<tr>
+<td style="text-align: left;">396</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (28 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.11</td>
+<td style="text-align: left;">1.46</td>
+<td style="text-align: left;">0.76</td>
+<td style="text-align: left;">1.21</td>
+<td style="text-align: left;">1.49</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">Reitman 2011</td>
+</tr>
+<tr>
+<td style="text-align: left;">397</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (28 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.93</td>
+<td style="text-align: left;">0.68</td>
+<td style="text-align: left;">1.36</td>
+<td style="text-align: left;">0.92</td>
+<td style="text-align: left;">0.69</td>
+<td style="text-align: left;">1.33</td>
+<td style="text-align: left;">Reitman 2011</td>
+</tr>
+<tr>
+<td style="text-align: left;">398</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD OD (28 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">0.98</td>
+<td style="text-align: left;">1.03</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">0.88</td>
+<td style="text-align: left;">1.14</td>
+<td style="text-align: left;">Reitman 2011</td>
+</tr>
+<tr>
+<td style="text-align: left;">3028</td>
+<td style="text-align: left;">Erythromycin, 200 mg, PO, MD QID (5 days)</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">1.02</td>
+<td style="text-align: left;">0.95</td>
+<td style="text-align: left;">1.06</td>
+<td style="text-align: left;">1.01</td>
+<td style="text-align: left;">0.99</td>
+<td style="text-align: left;">1.02</td>
+<td style="text-align: left;">Tsutsumi 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">3029</td>
+<td style="text-align: left;">Clarithromycin, 200 mg, PO, MD BID (5 days)</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">1.05</td>
+<td style="text-align: left;">0.98</td>
+<td style="text-align: left;">1.08</td>
+<td style="text-align: left;">1.04</td>
+<td style="text-align: left;">0.99</td>
+<td style="text-align: left;">1.05</td>
+<td style="text-align: left;">Tsutsumi 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">3063</td>
+<td style="text-align: left;">Verapamil, 80 mg, PO, MD: 80mg BID (4 days), 80mg TID (10 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.81</td>
+<td style="text-align: left;">1.50</td>
+<td style="text-align: left;">1.20</td>
+<td style="text-align: left;">1.76</td>
+<td style="text-align: left;">1.44</td>
+<td style="text-align: left;">1.22</td>
+<td style="text-align: left;">Rodin 1988</td>
+</tr>
+<tr>
+<td style="text-align: left;">16159</td>
+<td style="text-align: left;">Verapamil, 80 mg, PO, MD BID 4days, TID 10days</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">1.46</td>
+<td style="text-align: left;">1.24</td>
+<td style="text-align: left;">1.18</td>
+<td style="text-align: left;">1.05</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Johnson et al. 1987</td>
+</tr>
+<tr>
+<td style="text-align: left;">16162</td>
+<td style="text-align: left;">Verapamil, 120 mg, PO, TID, 7 days pre-treatment</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">1.91</td>
+<td style="text-align: left;">1.42</td>
+<td style="text-align: left;">1.34</td>
+<td style="text-align: left;">1.01</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Pedersen et al. 1983</td>
+</tr>
+<tr>
+<td style="text-align: left;">16172</td>
+<td style="text-align: left;">Verapamil, 120 mg, PO, SD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.28</td>
+<td style="text-align: left;">1.01</td>
+<td style="text-align: left;">1.27</td>
+<td style="text-align: left;">1.52</td>
+<td style="text-align: left;">1.22</td>
+<td style="text-align: left;">1.25</td>
+<td style="text-align: left;">Wiebe 2020</td>
+</tr>
+<tr>
+<td style="text-align: left;">16301</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, SD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.97</td>
+<td style="text-align: left;">1.31</td>
+<td style="text-align: left;">0.74</td>
+<td style="text-align: left;">1.39</td>
+<td style="text-align: left;">2.18</td>
+<td style="text-align: left;">0.64</td>
+<td style="text-align: left;">Wiebe 2020</td>
+</tr>
+<tr>
+<td style="text-align: left;">16305</td>
+<td style="text-align: left;">Clarithromycin, 400 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.65</td>
+<td style="text-align: left;">0.74</td>
+<td style="text-align: left;">0.87</td>
+<td style="text-align: left;">0.67</td>
+<td style="text-align: left;">1.02</td>
+<td style="text-align: left;">0.65</td>
+<td style="text-align: left;">Kurata 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">16307</td>
+<td style="text-align: left;">Clarithromycin, 400 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">0.54</td>
+<td style="text-align: left;">0.57</td>
+<td style="text-align: left;">0.93</td>
+<td style="text-align: left;">0.51</td>
+<td style="text-align: left;">0.66</td>
+<td style="text-align: left;">0.78</td>
+<td style="text-align: left;">Kurata 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">16309</td>
+<td style="text-align: left;">Clarithromycin, 400 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.65</td>
+<td style="text-align: left;">0.64</td>
+<td style="text-align: left;">1.01</td>
+<td style="text-align: left;">0.67</td>
+<td style="text-align: left;">0.91</td>
+<td style="text-align: left;">0.74</td>
+<td style="text-align: left;">Kurata 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">16311</td>
+<td style="text-align: left;">Clarithromycin, 400 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">0.54</td>
+<td style="text-align: left;">0.54</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">0.51</td>
+<td style="text-align: left;">0.66</td>
+<td style="text-align: left;">0.77</td>
+<td style="text-align: left;">Kurata 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">16313</td>
+<td style="text-align: left;">Clarithromycin, 400 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.65</td>
+<td style="text-align: left;">0.78</td>
+<td style="text-align: left;">0.83</td>
+<td style="text-align: left;">0.67</td>
+<td style="text-align: left;">0.92</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">Kurata 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">16315</td>
+<td style="text-align: left;">Clarithromycin, 400 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">0.54</td>
+<td style="text-align: left;">0.56</td>
+<td style="text-align: left;">0.97</td>
+<td style="text-align: left;">0.51</td>
+<td style="text-align: left;">0.63</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">Kurata 2002</td>
+</tr>
+<tr>
+<td style="text-align: left;">16319</td>
+<td style="text-align: left;">Rifampicin, 600 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">0.68</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">0.93</td>
+<td style="text-align: left;">0.88</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">1.09</td>
+<td style="text-align: left;">Drescher 2003</td>
+</tr>
+<tr>
+<td style="text-align: left;">16322</td>
+<td style="text-align: left;">Rifampicin, 300 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.61</td>
+<td style="text-align: left;">0.84</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">0.72</td>
+<td style="text-align: left;">0.77</td>
+<td style="text-align: left;">0.94</td>
+<td style="text-align: left;">Gurley 2006</td>
+</tr>
+<tr>
+<td style="text-align: left;">16324</td>
+<td style="text-align: left;">Clarithromycin, 500 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.27</td>
+<td style="text-align: left;">1.35</td>
+<td style="text-align: left;">0.94</td>
+<td style="text-align: left;">1.42</td>
+<td style="text-align: left;">1.48</td>
+<td style="text-align: left;">0.95</td>
+<td style="text-align: left;">Gurley 2006</td>
+</tr>
+<tr>
+<td style="text-align: left;">16326</td>
+<td style="text-align: left;">Rifampicin, 300 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">0.61</td>
+<td style="text-align: left;">0.84</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">0.72</td>
+<td style="text-align: left;">0.72</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">Gurley 2007</td>
+</tr>
+<tr>
+<td style="text-align: left;">16328</td>
+<td style="text-align: left;">Clarithromycin, 500 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.27</td>
+<td style="text-align: left;">1.57</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">1.42</td>
+<td style="text-align: left;">1.95</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">Gurley 2007</td>
+</tr>
+<tr>
+<td style="text-align: left;">16329</td>
+<td style="text-align: left;">Itraconazole, 200 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.35</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.39</td>
+<td style="text-align: left;">1.63</td>
+<td style="text-align: left;">0.85</td>
+<td style="text-align: left;">Partanen 1996</td>
+</tr>
+<tr>
+<td style="text-align: left;">16330</td>
+<td style="text-align: left;">Itraconazole, 200 mg, PO, MD</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.37</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.40</td>
+<td style="text-align: left;">1.97</td>
+<td style="text-align: left;">0.71</td>
+<td style="text-align: left;">Partanen 1996</td>
+</tr>
+<tr>
+<td style="text-align: left;">16409</td>
+<td style="text-align: left;">Clarithromycin, 250 mg, PO, MD BID (3 days)</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">1.06</td>
+<td style="text-align: left;">1.19</td>
+<td style="text-align: left;">0.89</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Rengelshausen 2003</td>
+</tr>
+<tr>
+<td style="text-align: left;">16411</td>
+<td style="text-align: left;">Clarithromycin, 250 mg, PO, MD BID (3 days)</td>
+<td style="text-align: left;">Digoxin, PO</td>
+<td style="text-align: left;">1.24</td>
+<td style="text-align: left;">1.64</td>
+<td style="text-align: left;">0.76</td>
+<td style="text-align: left;">1.42</td>
+<td style="text-align: left;">1.83</td>
+<td style="text-align: left;">0.78</td>
+<td style="text-align: left;">Rengelshausen 2003</td>
+</tr>
+<tr>
+<td style="text-align: left;">16638</td>
+<td style="text-align: left;">Verapamil, 80 mg, PO, TID</td>
+<td style="text-align: left;">Digoxin, IV</td>
+<td style="text-align: left;">1.03</td>
+<td style="text-align: left;">1.61</td>
+<td style="text-align: left;">0.64</td>
+<td style="text-align: left;">0.83</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Pedersen 1981</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="21-mechanism">2.1 Mechanism<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-9"></a><a class="headerlink" href="#21-mechanism" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="211-induction">2.1.1 Induction<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-10"></a><a class="headerlink" href="#211-induction" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-5"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Induction_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-5: Pgp DDI. Mechanism: Induction. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-6"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Induction_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-6: Pgp DDI. Mechanism: Induction. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-7"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Induction_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-7: Pgp DDI. Mechanism: Induction. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-8"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Induction_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-8: Pgp DDI. Mechanism: Induction. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-5"></a></p>
+<p><strong>Table 2-5: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.33</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.27</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-6"></a></p>
+<p><strong>Table 2-6: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">15.38</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-7"></a></p>
+<p><strong>Table 2-7: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">60</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">90</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="212-mechanism-based-inactivation">2.1.2 Mechanism-based Inactivation<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-18"></a><a class="headerlink" href="#212-mechanism-based-inactivation" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-9"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Mechanism_based_Inactivation_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-9: Pgp DDI. Mechanism: Mechanism-based Inactivation. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-10"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Mechanism_based_Inactivation_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-10: Pgp DDI. Mechanism: Mechanism-based Inactivation. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-11"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Mechanism_based_Inactivation_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-11: Pgp DDI. Mechanism: Mechanism-based Inactivation. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-12"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Mechanism_based_Inactivation_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-12: Pgp DDI. Mechanism: Mechanism-based Inactivation. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-8"></a></p>
+<p><strong>Table 2-8: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.28</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.24</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-9"></a></p>
+<p><strong>Table 2-9: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-10"></a></p>
+<p><strong>Table 2-10: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">66.67</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="213-reversible-inhibition">2.1.3 Reversible Inhibition<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-26"></a><a class="headerlink" href="#213-reversible-inhibition" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-13"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Reversible_Inhibition_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-13: Pgp DDI. Mechanism: Reversible Inhibition. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-14"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Reversible_Inhibition_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-14: Pgp DDI. Mechanism: Reversible Inhibition. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-15"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Reversible_Inhibition_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-15: Pgp DDI. Mechanism: Reversible Inhibition. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-16"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_mechanism_Reversible_Inhibition_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-16: Pgp DDI. Mechanism: Reversible Inhibition. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-11"></a></p>
+<p><strong>Table 2-11: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.12</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.24</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-12"></a></p>
+<p><strong>Table 2-12: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">84.62</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-13"></a></p>
+<p><strong>Table 2-13: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">64.29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="22-perpetrator">2.2 Perpetrator<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-34"></a><a class="headerlink" href="#22-perpetrator" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="221-clarithromycin">2.2.1 Clarithromycin<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-35"></a><a class="headerlink" href="#221-clarithromycin" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-17"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Clarithromycin_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-17: Pgp DDI. Perpetrator: Clarithromycin. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-18"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Clarithromycin_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-18: Pgp DDI. Perpetrator: Clarithromycin. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-19"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Clarithromycin_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-19: Pgp DDI. Perpetrator: Clarithromycin. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-20"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Clarithromycin_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-20: Pgp DDI. Perpetrator: Clarithromycin. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-14"></a></p>
+<p><strong>Table 2-14: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.12</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.27</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-15"></a></p>
+<p><strong>Table 2-15: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">91.67</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-16"></a></p>
+<p><strong>Table 2-16: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">63.64</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="222-erythromycin">2.2.2 Erythromycin<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-43"></a><a class="headerlink" href="#222-erythromycin" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-21"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Erythromycin_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-21: Pgp DDI. Perpetrator: Erythromycin. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-22"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Erythromycin_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-22: Pgp DDI. Perpetrator: Erythromycin. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-23"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Erythromycin_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-23: Pgp DDI. Perpetrator: Erythromycin. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-24"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Erythromycin_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-24: Pgp DDI. Perpetrator: Erythromycin. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-17"></a></p>
+<p><strong>Table 2-17: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.06</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.02</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-18"></a></p>
+<p><strong>Table 2-18: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-19"></a></p>
+<p><strong>Table 2-19: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="223-itraconazole">2.2.3 Itraconazole<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-51"></a><a class="headerlink" href="#223-itraconazole" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-25"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Itraconazole_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-25: Pgp DDI. Perpetrator: Itraconazole. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-26"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Itraconazole_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-26: Pgp DDI. Perpetrator: Itraconazole. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-27"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Itraconazole_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-27: Pgp DDI. Perpetrator: Itraconazole. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-28"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Itraconazole_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-28: Pgp DDI. Perpetrator: Itraconazole. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-20"></a></p>
+<p><strong>Table 2-20: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.33</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.20</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-21"></a></p>
+<p><strong>Table 2-21: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-22"></a></p>
+<p><strong>Table 2-22: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="224-rifampicin">2.2.4 Rifampicin<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-59"></a><a class="headerlink" href="#224-rifampicin" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-29"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Rifampicin_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-29: Pgp DDI. Perpetrator: Rifampicin. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-30"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Rifampicin_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-30: Pgp DDI. Perpetrator: Rifampicin. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-31"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Rifampicin_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-31: Pgp DDI. Perpetrator: Rifampicin. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-32"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Rifampicin_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-32: Pgp DDI. Perpetrator: Rifampicin. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-23"></a></p>
+<p><strong>Table 2-23: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.33</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.27</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-24"></a></p>
+<p><strong>Table 2-24: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">15.38</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-25"></a></p>
+<p><strong>Table 2-25: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">60</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">90</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="225-verapamil">2.2.5 Verapamil<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-67"></a><a class="headerlink" href="#225-verapamil" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-33"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Verapamil_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-33: Pgp DDI. Perpetrator: Verapamil. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-34"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Verapamil_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-34: Pgp DDI. Perpetrator: Verapamil. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-35"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Verapamil_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-35: Pgp DDI. Perpetrator: Verapamil. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-36"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_perpetrator_Verapamil_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-36: Pgp DDI. Perpetrator: Verapamil. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-26"></a></p>
+<p><strong>Table 2-26: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.31</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.23</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-27"></a></p>
+<p><strong>Table 2-27: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">40</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-28"></a></p>
+<p><strong>Table 2-28: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="23-victim">2.3 Victim<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-75"></a><a class="headerlink" href="#23-victim" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="231-digoxin">2.3.1 Digoxin<a id="qualification-of-use-case-pgp-mediated-ddi-ddi-subunit-76"></a><a class="headerlink" href="#231-digoxin" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a id="figure-2-37"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_victim_Digoxin_ddi_ratio_plot_AUC_tEnd_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-37: Pgp DDI. Victim: Digoxin. Predicted vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-38"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_victim_Digoxin_ddi_ratio_plot_AUC_tEnd_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-38: Pgp DDI. Victim: Digoxin. Predicted/Observed vs. Observed AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-39"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_victim_Digoxin_ddi_ratio_plot_C_max_predictedVsObserved.png" /></p>
+<p><strong>Figure 2-39: Pgp DDI. Victim: Digoxin. Predicted vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-40"></a></p>
+<p><img alt="" src="images/009_section_qualification-of-use-case-pgp-mediated-ddi/DDIRatio_1_victim_Digoxin_ddi_ratio_plot_C_max_residualsVsObserved.png" /></p>
+<p><strong>Figure 2-40: Pgp DDI. Victim: Digoxin. Predicted/Observed vs. Observed C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-29"></a></p>
+<p><strong>Table 2-29: GMFE for Pgp DDI Ratio</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PK parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AUC_tEnd</td>
+<td style="text-align: left;">1.24</td>
+</tr>
+<tr>
+<td style="text-align: left;">C_max</td>
+<td style="text-align: left;">1.25</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-30"></a></p>
+<p><strong>Table 2-30: Summary table for Pgp DDI - AUC_tEnd Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AUC_tEnd</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-31"></a></p>
+<p><strong>Table 2-31: Summary table for Pgp DDI - C_max Ratio. (&delta; = 1 in Guest <em>et al.</em> formula)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">C_max</th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within Guest <em>et al.</em></td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">62.96</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">26</td>
+<td style="text-align: left;">96.30</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h1 id="3-concentration-time-profiles">3 Concentration-Time Profiles<a id="concentration-time-profiles"></a><a class="headerlink" href="#3-concentration-time-profiles" title="Anchor link to this section for reference">&para;</a></h1>
+<p>The following section shows concentration time profiles of the victim drugs of the simulated DDI studies in comparison to observed data (if available).</p>
+<h2 id="31-clarithromycin-digoxin-ddi">3.1 Clarithromycin - Digoxin DDI<a id="clarithromycin-digoxin-ddi-timeprofile"></a><a class="headerlink" href="#31-clarithromycin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-1"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Rengelshausen_2003__0_01_mg_kg_IV____Plasma_1.png" /></p>
+<p><strong>Figure 3-1: Rengelshausen 2003 (0.01 mg/kg IV) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-2"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Rengelshausen_2003__0_75_mg_PO____Plasma_2.png" /></p>
+<p><strong>Figure 3-2: Rengelshausen 2003 (0.75 mg PO) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-3"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Tsutsumi_2002__0_5mg_IV____Plasma_3.png" /></p>
+<p><strong>Figure 3-3: Tsutsumi 2002 (0.5mg IV) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-4"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Gurley_2008__0_25_mg_PO____Plasma_4.png" /></p>
+<p><strong>Figure 3-4: Gurley 2008 (0.25 mg PO) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-5"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Gurley_2006__0_4_mg_PO____Plasma_5.png" /></p>
+<p><strong>Figure 3-5: Gurley 2006 (0.4 mg PO) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-6"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Gurley_2007__0_5_mg_PO____Plasma_6.png" /></p>
+<p><strong>Figure 3-6: Gurley 2007 (0.5 mg PO) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-7"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Kurata_2002__0_5_mg_IV____Plasma_7.png" /></p>
+<p><strong>Figure 3-7: Kurata 2002 (0.5 mg IV) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-8"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Kurata_2002__0_5_mg_PO____Plasma_8.png" /></p>
+<p><strong>Figure 3-8: Kurata 2002 (0.5 mg PO) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-9"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Kurata_2002__0_25_mg_IV____Plasma_9.png" /></p>
+<p><strong>Figure 3-9: Kurata 2002 (0.25 mg IV) - Plasma</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-10"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/011_section_clarithromycin-digoxin-ddi-timeprofile/comparison_time_profile_Kurata_2002__0_25_mg_PO____Plasma_10.png" /></p>
+<p><strong>Figure 3-10: Kurata 2002 (0.25 mg PO) - Plasma</strong></p>
+<p><br>
+<br></p>
+<h2 id="32-erythromycin-digoxin-ddi">3.2 Erythromycin - Digoxin DDI<a id="erythromycin-digoxin-ddi-timeprofile"></a><a class="headerlink" href="#32-erythromycin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-11"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/012_section_erythromycin-digoxin-ddi-timeprofile/comparison_time_profile_Tsutsumi_2002___Plasma_11.png" /></p>
+<p><strong>Figure 3-11: Tsutsumi 2002 - Plasma</strong></p>
+<p><br>
+<br></p>
+<h2 id="33-itraconazole-digoxin-ddi">3.3 Itraconazole - Digoxin DDI<a id="itraconazole-digoxin-ddi-timeprofile"></a><a class="headerlink" href="#33-itraconazole-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-12"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/013_section_itraconazole-digoxin-ddi-timeprofile/comparison_time_profile_Jalava_1997_12.png" /></p>
+<p><strong>Figure 3-12: Jalava 1997</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-13"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/013_section_itraconazole-digoxin-ddi-timeprofile/comparison_time_profile_Partanen_1996___Group_1_13.png" /></p>
+<p><strong>Figure 3-13: Partanen 1996 - Group 1</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-14"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/013_section_itraconazole-digoxin-ddi-timeprofile/comparison_time_profile_Partanen_1996___Group_2_14.png" /></p>
+<p><strong>Figure 3-14: Partanen 1996 - Group 2</strong></p>
+<p><br>
+<br></p>
+<h2 id="34-verapamil-digoxin-ddi">3.4 Verapamil - Digoxin DDI<a id="verapamil-digoxin-ddi-timeprofile"></a><a class="headerlink" href="#34-verapamil-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-15"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Johnson_1987_15.png" /></p>
+<p><strong>Figure 3-15: Johnson 1987</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-16"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Rodin_1988_16.png" /></p>
+<p><strong>Figure 3-16: Rodin 1988</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-17"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Wiebe_2020_17.png" /></p>
+<p><strong>Figure 3-17: Wiebe 2020</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-18"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Klein_1982_18.png" /></p>
+<p><strong>Figure 3-18: Klein 1982</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-19"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Schwartz_1982_19.png" /></p>
+<p><strong>Figure 3-19: Schwartz 1982</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-20"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Belz_1983_20.png" /></p>
+<p><strong>Figure 3-20: Belz 1983</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-21"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Doering_1983_21.png" /></p>
+<p><strong>Figure 3-21: Doering 1983</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-22"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Pedersen_1983_22.png" /></p>
+<p><strong>Figure 3-22: Pedersen 1983</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-23"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Pedersen_1982_23.png" /></p>
+<p><strong>Figure 3-23: Pedersen 1982</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-24"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/014_section_verapamil-digoxin-ddi-timeprofile/comparison_time_profile_Belz_1981_24.png" /></p>
+<p><strong>Figure 3-24: Belz 1981</strong></p>
+<p><br>
+<br></p>
+<h2 id="35-rifampicin-digoxin-ddi">3.5 Rifampicin - Digoxin DDI<a id="rifampicin-digoxin-ddi-timeprofile"></a><a class="headerlink" href="#35-rifampicin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a id="figure-3-25"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Drescher_2003_25.png" /></p>
+<p><strong>Figure 3-25: Drescher 2003</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-26"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Greiner_1999__iv__26.png" /></p>
+<p><strong>Figure 3-26: Greiner 1999 (iv)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-27"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Greiner_1999__po__27.png" /></p>
+<p><strong>Figure 3-27: Greiner 1999 (po)</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-28"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Gurley_2006_28.png" /></p>
+<p><strong>Figure 3-28: Gurley 2006</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-29"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Gurley_2007_29.png" /></p>
+<p><strong>Figure 3-29: Gurley 2007</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-30"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Gurley_2008_30.png" /></p>
+<p><strong>Figure 3-30: Gurley 2008</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-31"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Kirby_2012_31.png" /></p>
+<p><strong>Figure 3-31: Kirby 2012</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-32"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Larsen_2007_32.png" /></p>
+<p><strong>Figure 3-32: Larsen 2007</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-33"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Reitman_2011_33.png" /></p>
+<p><strong>Figure 3-33: Reitman 2011</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-3-34"></a></p>
+<p><img alt="" src="images/010_section_concentration-time-profiles/015_section_rifampicin-digoxin-ddi-timeprofile/comparison_time_profile_Wiebe_2020_34.png" /></p>
+<p><strong>Figure 3-34: Wiebe 2020</strong></p>
+<p><br>
+<br></p>
+<h1 id="4-references">4 References<a id="references"></a><a class="headerlink" href="#4-references" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="clarithromycin-digoxin-ddi">Clarithromycin - Digoxin DDI<a class="headerlink" href="#clarithromycin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>Gurley 2006</strong> Gurley BJ, Barone GW, Williams DK, Carrier J, Breen P, Yates CR, Song PF, Hubbard MA, Tong Y, Cheboyina S Effect of milk thistle (Silybum marianum) and black cohosh (Cimicifuga racemosa) supplementation on digoxin pharmacokinetics in humans. Drug Metab Dispos. 2006 Jan;34(1):69-74. doi: 10.1124/dmd.105.006312. Epub 2005   </p>
+<p><strong>Gurley 2007</strong> Gurley BJ, Swain A, Barone GW, Williams DK, Breen P, Yates CR, Stuart LB, Hubbard MA, Tong Y, Cheboyina S Effect of goldenseal (Hydrastis canadensis) and kava kava (Piper methysticum) supplementation on digoxin pharmacokinetics in humans. Drug Metab Dispos. 2007 Feb;35(2):240-5. doi: 10.1124/dmd.106.012708. Epub 2006   </p>
+<p><strong>Gurley 2008b</strong> Gurley BJ, Swain A, Williams DK, Barone G, Battu SK Gauging the clinical significance of P-glycoprotein-mediated herb-drug interactions: comparative effects of St. John's wort, Echinacea, clarithromycin, and rifampin on digoxin pharmacokinetics. Mol Nutr Food Res. 2008 Jul;52(7):772-9. doi: 10.1002/mnfr.200700081.  </p>
+<p><strong>Kurata 2002</strong> Kurata Y, Ieiri I, Kimura M, Morita T, Irie S, Urae A, Ohdo S, Ohtani H, Sawada Y, Higuchi S, Otsubo K Role of human MDR1 gene polymorphism in bioavailability and interaction of digoxin, a substrate of P-glycoprotein. Clin Pharmacol Ther. 2002 Aug;72(2):209-19. doi: 10.1067/mcp.2002.126177.  </p>
+<p><strong>Rengelshausen 2003</strong> Rengelshausen J, Goggelmann C, Burhenne J, Riedel KD, Ludwig J, Weiss J, Mikus G, Walter-Sack I, Haefeli WE Contribution of increased oral bioavailability and reduced nonglomerular renal clearance of digoxin to the digoxin-clarithromycin interaction. Br J Clin Pharmacol. 2003 Jul;56(1):32-8. doi: 10.1046/j.1365-2125.2003.01824.x.  </p>
+<p><strong>Tsutsumi 2002</strong> Tsutsumi K, Kotegawa T, Kuranari M, Otani Y, Morimoto T, Matsuki S, Nakano S The effect of erythromycin and clarithromycin on the pharmacokinetics of intravenous digoxin in healthy volunteers. J Clin Pharmacol. 2002 Oct;42(10):1159-64. doi: 10.1177/009127002401382641.  </p>
+<h2 id="erythromycin-digoxin-ddi">Erythromycin-Digoxin-DDI<a class="headerlink" href="#erythromycin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>Tsutsumi 2002</strong> Tsutsumi K, Kotegawa T, Kuranari M, Otani Y, Morimoto T, Matsuki S, Nakano S. The effect of erythromycin and clarithromycin on the pharmacokinetics of intravenous digoxin in healthy volunteers. <em>J Clin Pharmacol</em>. 2002 Oct;42(10):1159-64. doi: 10.1177/009127002401382641. PMID: 12362931.</p>
+<h2 id="itraconazole-digoxin-ddi">Itraconazole-Digoxin-DDI<a class="headerlink" href="#itraconazole-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>Jalava 1997</strong> Jalava KM, Partanen J, Neuvonen PJ. Itraconazole decreases renal clearance of digoxin. Ther Drug Monit. 1997 Dec;19(6):609-13. doi: 10.1097/00007691-199712000-00001. PMID: 9421099.</p>
+<p><strong>Partanen 1995</strong> Partanen J, Jalava KM, Neuvonen PJ. Itraconazole increases serum digoxin concentration. Pharmacol Toxicol. 1996 Nov;79(5):274-6. doi: 10.1111/j.1600-0773.1996.tb00273.x. PMID: 8936563.</p>
+<h2 id="rifampicin-digoxin-ddi">Rifampicin-Digoxin-DDI<a class="headerlink" href="#rifampicin-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>Drescher 2003</strong> Drescher S, Glaeser H, Mürdter T, Hitzl M, Eichelbaum M, Fromm MF. P-glycoprotein-mediated intestinal and biliary digoxin transport in humans. Clin Pharmacol Ther. 2003 Mar;73(3):223-31. doi: 10.1067/mcp.2003.27. PMID: 12621387.</p>
+<p><strong>Gurley 2006</strong> Gurley BJ, Barone GW, Williams DK, Carrier J, Breen P, Yates CR, Song PF, Hubbard MA, Tong Y, Cheboyina S. Effect of milk thistle (Silybum marianum) and black cohosh (Cimicifuga racemosa) supplementation on digoxin pharmacokinetics in humans. Drug Metab Dispos. 2006 Jan;34(1):69-74. doi: 10.1124/dmd.105.006312. Epub 2005 Oct 12. PMID: 16221754; PMCID: PMC1865121.</p>
+<p><strong>Gurley 2007</strong> Gurley BJ, Swain A, Barone GW, Williams DK, Breen P, Yates CR, Stuart LB, Hubbard MA, Tong Y, Cheboyina S. Effect of goldenseal (Hydrastis canadensis) and kava kava (Piper methysticum) supplementation on digoxin pharmacokinetics in humans. Drug Metab Dispos. 2007 Feb;35(2):240-5. doi: 10.1124/dmd.106.012708. Epub 2006 Nov 1. PMID: 17079360; PMCID: PMC1868501.</p>
+<p><strong>Gurley 2008b</strong> Gurley BJ, Swain A, Williams DK, Barone G, Battu SK. Gauging the clinical significance of P-glycoprotein-mediated herb-drug interactions: comparative effects of St. John's wort, Echinacea, clarithromycin, and rifampin on digoxin pharmacokinetics. Mol Nutr Food Res. 2008 Jul;52(7):772-9. doi: 10.1002/mnfr.200700081. PMID: 18214850; PMCID: PMC2562898.</p>
+<p><strong>Greiner 1999</strong> Greiner B, Eichelbaum M, Fritz P, Kreichgauer HP, von Richter O, Zundler J, Kroemer HK. The role of intestinal P-glycoprotein in the interaction of digoxin and rifampin. J Clin Invest. 1999 Jul;104(2):147-53. doi: 10.1172/JCI6663. Erratum in: J Clin Invest 2002 Aug;110(4):571. PMID: 10411543; PMCID: PMC408477.</p>
+<p><strong>Kirby 2012</strong> Kirby BJ, Collier AC, Kharasch ED, Whittington D, Thummel KE, Unadkat JD. Complex drug interactions of the HIV protease inhibitors 3: effect of simultaneous or staggered dosing of digoxin and ritonavir, nelfinavir, rifampin, or bupropion. Drug Metab Dispos. 2012 Mar;40(3):610-6. doi: 10.1124/dmd.111.042705. Epub 2011 Dec 21. PMID: 22190694; PMCID: PMC3286266.</p>
+<p><strong>Larsen 2007</strong> Larsen UL, Hyldahl Olesen L, Guldborg Nyvold C, Eriksen J, Jakobsen P, Østergaard M, Autrup H, Andersen V. Human intestinal P-glycoprotein activity estimated by the model substrate digoxin. Scand J Clin Lab Invest. 2007;67(2):123-34. doi: 10.1080/00365510600986084. PMID: 17365992.</p>
+<p><strong>Reitmann 2011</strong> Reitman ML, Chu X, Cai X, Yabut J, Venkatasubramanian R, Zajic S, Stone JA, Ding Y, Witter R, Gibson C, Roupe K, Evers R, Wagner JA, Stoch A. Rifampin's acute inhibitory and chronic inductive drug interactions: experimental and model-based approaches to drug-drug interaction trial design. Clin Pharmacol Ther. 2011 Feb;89(2):234-42. doi: 10.1038/clpt.2010.271. Epub 2010 Dec 29. PMID: 21191377.</p>
+<p><strong>Wiebe 2020</strong> Wiebe ST, Giessmann T, Hohl K, Schmidt-Gerets S, Hauel E, Jambrecina A, Bader K, Ishiguro N, Taub ME, Sharma A, Ebner T, Mikus G, Fromm MF, Müller F, Stopfer P. Validation of a Drug Transporter Probe Cocktail Using the Prototypical Inhibitors Rifampin, Probenecid, Verapamil, and Cimetidine. Clin Pharmacokinet. 2020 Dec;59(12):1627-1639. doi: 10.1007/s40262-020-00907-w. PMID: 32504272; PMCID: PMC7716890.</p>
+<h2 id="verapamil-digoxin-ddi">Verapamil - Digoxin DDI<a class="headerlink" href="#verapamil-digoxin-ddi" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>Belz 1981</strong> Belz GG, Aust PE, Munkes R. Digoxin plasma concentrations and nifedipine. Lancet. 1981 Apr 11;1(8224):844-5. doi: 10.1016/s0140-6736(81)92727-6. PMID: 6111709.</p>
+<p><strong>Belz 1983</strong> Belz GG, Doering W, Munkes R, Matthews J. Interaction between digoxin and calcium antagonists and antiarrhythmic drugs. Clin Pharmacol Ther. 1983 Apr;33(4):410-7. doi: 10.1038/clpt.1983.55. PMID: 6831819.</p>
+<p><strong>Doering 1983</strong> Doering W. Effect of coadministration of verapamil and quinidine on serum digoxin concentration. Eur J Clin Pharmacol. 1983;25(4):517-21. doi: 10.1007/BF00542121. PMID: 6653647.</p>
+<p><strong>Johnson 1987</strong> Johnson BF, Wilson J, Marwaha R, Hoch K, Johnson J. The comparative effects of verapamil and a new dihydropyridine calcium channel blocker on digoxin pharmacokinetics. Clin Pharmacol Ther. 1987 Jul;42(1):66-71. doi: 10.1038/clpt.1987.109. PMID: 2954736.</p>
+<p><strong>Klein 1982</strong> Klein HO, Lang R, Weiss E, Di Segni E, Libhaber C, Guerrero J, Kaplinsky E. The influence of verapamil on serum digoxin concentration. Circulation. 1982 May;65(5):998-1003. doi: 10.1161/01.cir.65.5.998. PMID: 7074765.</p>
+<p><strong>Pedersen 1981</strong> Pedersen KE, Dorph-Pedersen A, Hvidt S, Klitgaard NA, Nielsen-Kudsk F. Digoxin-verapamil interaction. Clin Pharmacol Ther. 1981 Sep;30(3):311-6. doi: 10.1038/clpt.1981.165. PMID: 7273594.</p>
+<p><strong>Pedersen 1982</strong> Pedersen KE, Dorph-Pedersen A, Hvidt S, Klitgaard NA, Pedersen KK. The long-term effect of verapamil on plasma digoxin concentration and renal digoxin clearance in healthy subjects. Eur J Clin Pharmacol. 1982;22(2):123-7. doi: 10.1007/BF00542456. PMID: 7094982.</p>
+<p><strong>Pedersen 1983</strong> Pedersen KE, Thayssen P, Klitgaard NA, Christiansen BD, Nielsen-Kudsk F. Influence of verapamil on the inotropism and pharmacokinetics of digoxin. Eur J Clin Pharmacol. 1983;25(2):199-206. doi: 10.1007/BF00543791. PMID: 6628501.</p>
+<p><strong>Rodin 1988</strong> Rodin SM, Johnson BF, Wilson J, Ritchie P, Johnson J. Comparative effects of verapamil and isradipine on steady-state digoxin kinetics. Clin Pharmacol Ther. 1988 Jun;43(6):668-72. doi: 10.1038/clpt.1988.93. PMID: 2967742.</p>
+<p><strong>Schwartz 1982</strong> Schwartz JB, Keefe D, Kates RE, Kirsten E, Harrison DC. Acute and chronic pharmacodynamic interaction of verapamil and digoxin in atrial fibrillation. Circulation. 1982 Jun;65(6):1163-70. doi: 10.1161/01.cir.65.6.1163. PMID: 7074776.</p>
+<p><strong>Wiebe 2020</strong> Wiebe ST, Giessmann T, Hohl K, Schmidt-Gerets S, Hauel E, Jambrecina A, Bader K, Ishiguro N, Taub ME, Sharma A, Ebner T, Mikus G, Fromm MF, Müller F, Stopfer P. Validation of a Drug Transporter Probe Cocktail Using the Prototypical Inhibitors Rifampin, Probenecid, Verapamil, and Cimetidine. Clin Pharmacokinet. 2020 Dec;59(12):1627-1639. doi: 10.1007/s40262-020-00907-w. PMID: 32504272; PMCID: PMC7716890.</p>
+<h1 id="5-appendix">5 Appendix<a id="appendix"></a><a class="headerlink" href="#5-appendix" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="51-open-systems-pharmacology-suite-osps-introduction">5.1 Open Systems Pharmacology Suite (OSPS) Introduction<a id="osp-introduction"></a><a class="headerlink" href="#51-open-systems-pharmacology-suite-osps-introduction" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Open Systems Pharmacology Suite (OSP suite) is a tool for PBPK modeling and simulation of drugs in laboratory animals and humans. PK-Sim® and MoBi® are part of the OSP suite [<a href="#references-osps-introduction">1</a>].  PK-Sim® is based on a generic PBPK-model with 18 organs and tissues. One of the main assumptions is that all compartments are well-stirred. Represented organs/tissues include arterial and venous blood, adipose tissue (separable adipose, excluding yellow marrow), brain, lung, bone (including yellow marrow), gonads, heart, kidneys, large intestine, liver, muscle, portal vein, pancreas, skin, small intestine, spleen and stomach, as shown in <a href="#figure-appendix-1"><strong>Figure Appendix-1</strong></a>.</p>
+<p>Each organ consists of four sub-compartments namely the plasma, blood cells (which together build the vascular space), interstitial space, and cellular space. Distribution between the plasma and blood cells as well as between the interstitial and cellular compartments can be permeability-limited. In the brain, the permeation barrier is located between the vascular and the interstitial space. PK-Sim® estimates model parameters (intestinal permeability [<a href="#references-osps-introduction">2</a>] organ partition coefficients (tissue-to-plasma partition coefficients) [<a href="#references-osps-introduction">3,4</a>], and permeabilities) from physico-chemical properties of compounds (molecular weight, pKa, acid/base properties) and the composition of each tissue compartment (lipids, water and proteins). Partition coefficients can be calculated using a variety of methods available in PK-Sim®, for example the internal PK-Sim® method [<a href="#references-osps-introduction">3,4</a>] or that of Rodgers and Rowland [<a href="#references-osps-introduction">5-7</a>]. </p>
+<p>Physiological databases included in the software incorporate the dependencies of organ composition, organ weights, organ blood flows and gastrointestinal parameters (gastrointestinal length, radius of each section, intestinal surface area, gastrointestinal transit times, and pH in different intestinal segments [<a href="#references-osps-introduction">2</a>]), with the user-defined body weight and height and ethnicity of the individual [<a href="#references-osps-introduction">8</a>]. Thereby, PK Sim® allows generating realistic virtual populations. For a detailed description of the PBPK model structure implemented in PK Sim®, see Willmann et al. [<a href="#references-osps-introduction">2,4,8,9</a>] or the OSP Suite homepage (<a href="https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts">https://docs.open-systems-pharmacology.org/mechanistic-modeling-of-pharmacokinetics-and-dynamics/modeling-concepts</a>).</p>
+<p><a id="figure-appendix-1"></a>
+<a id="figure-5-1"></a></p>
+<p><img alt="generic PBPK model" src="images/PK-Sim_PBPK_generic_model_scheme.png" /></p>
+<p><strong>Figure</strong> <strong>Appendix-1: Structure of the Whole Body PBPK Model integrated in PK-Sim®</strong></p>
+<p><a id="references-osps-introduction"></a></p>
+<h2 id="references-for-osps-introduction">References for OSPS introduction<a class="headerlink" href="#references-for-osps-introduction" title="Anchor link to this section for reference">&para;</a></h2>
+<p>[1] <a href="http://www.open-systems-pharmacology.org/">www.open-systems-pharmacology.org</a></p>
+<p>[2] <a href="https://www.ncbi.nlm.nih.gov/pubmed/15267240">Willmann S, Schmitt W, Keldenich J, Lippert J, Dressman JB. A physiological model for the estimation of the fraction dose absorbed in humans.J Med Chem. 2004 Jul 29;47(16):4022-31.</a></p>
+<p>[3] <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/3527603034.ch26">Haerter MW, K.J., Schmitt W, <em>Estimation of physicochemical and ADME parameters.</em> , in <em>Handbook of Combinatorial Chemistry: Drugs, Catalysts, Materials</em>, H.W. Nicolaou KC HR, Editor. 2002, Wiley VCH Verlag GmbH: Weinheim, Germany. p. 743-60.</a></p>
+<p>[4] <a href="https://www.ncbi.nlm.nih.gov/pubmed/16922658">Willmann S, Lippert J, Schmitt W. From physicochemistry to absorption and distribution: predictive mechanistic modelling and computational tools. Expert Opin Drug Metab Toxicol. 2005 Jun;1(1):159-68.</a></p>
+<p>[5] <a href="https://www.ncbi.nlm.nih.gov/pubmed/15858854">Rodgers, T, D. Leahy, and M. Rowland. Physiologically based pharmacokinetic modeling 1: predicting the tissue distribution of moderate-to-strong bases. J Pharm Sci. 2005 Jun;94(6):1259-76.</a></p>
+<p>[6] <a href="https://www.ncbi.nlm.nih.gov/pubmed/16639716">Rodgers T, Rowland M. Physiologically based pharmacokinetic modelling 2: predicting the tissue distribution of acids, very weak bases, neutrals and zwitterions. J Pharm Sci. 2006 Jun;95(6):1238-57.</a></p>
+<p>[7] <a href="https://www.ncbi.nlm.nih.gov/pubmed/17372687">Rodgers T, Rowland M. Mechanistic approaches to volume of distribution predictions: understanding the processes. Pharm Res. 2007 May;24(5):918-33.</a></p>
+<p>[8] <a href="https://www.ncbi.nlm.nih.gov/pubmed/17431751">Willmann S, Höhn K, Edginton A, Sevestre M, Solodenko J, Weiss W, Lippert J, Schmitt W. Development of a physiology-based whole-body population model for assessing the influence of individual variability on the pharmacokinetics of drugs. J Pharmacokinet Pharmacodyn. 2007 Jun;34(3):401-31.</a></p>
+<p>[9] <a href="https://www.sciencedirect.com/science/article/pii/S1478538203023424?via%3Dihub">Willmann S, Lippert J, Sevestre M, Solodenko J, Fois F, Schmitt W. PK-Sim®: a physiologically based pharmacokinetic ‘whole-body’ model. Biosilico 2003.1(4):121-24.</a></p>
+<h2 id="52-mathematical-implementation-of-drug-drug-interactions">5.2 Mathematical Implementation of Drug-Drug Interactions<a id="mathematical-implementation-of-ddi"></a><a class="headerlink" href="#52-mathematical-implementation-of-drug-drug-interactions" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>DDI modeling: Competitive inhibition</strong> </p>
+<p>A detailed representation of the mathematical implementation of competitive enzyme inhibition can be found in the OSP manual (<a href="https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#competitive-inhibition-simple-setting-with-one-inhibitor">https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#competitive-inhibition-simple-setting-with-one-inhibitor</a>).</p>
+<p><strong>DDI modeling: Mechanism-based inhibition</strong></p>
+<p>A detailed representation of the mathematical implementation of mechanism-based enzyme inhibition can be found in the OSP manual (<a href="https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#irreversible-inhibition">https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#irreversible-inhibition</a>).</p>
+<p><strong>DDI modeling: Induction</strong></p>
+<p>A detailed representation of the mathematical implementation of enzyme induction can be found in the OSP manual (<a href="https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#enzyme-induction">https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-defining-inhibition-induction-processes#enzyme-induction</a>).</p>
+<h2 id="53-automatic-re-qualification-workflow">5.3 Automatic (re)-qualification workflow<a id="automatic-requalification-workflow"></a><a class="headerlink" href="#53-automatic-re-qualification-workflow" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Open Systems Pharmacology (<a href="http://www.open-systems-pharmacology.org">https://www.open-systems-pharmacology.org/</a>) provides a dynamic landscape of model repositories and a database of observed clinical data. Additionally, a technical framework to assess confidence of a specific intended use has been developed (qualification runner and reporting engine). This framework allows for an automatic (re)-qualification workflow of the OSP suite, comprising the following steps <a href="#figure-appendix-2"><strong>Figure Appendix-2</strong></a>:</p>
+<ul>
+<li>
+<p>PBPK model development and verification with observed data,</p>
+</li>
+<li>
+<p>Qualification plan generation,</p>
+</li>
+<li>
+<p>Qualification plan execution,</p>
+</li>
+<li>
+<p>Qualification report generation.</p>
+</li>
+</ul>
+<p><a id="figure-appendix-2"></a>
+<a id="figure-5-2"></a></p>
+<p><img alt="OSP qualification workflow" src="images/OSP_Qualification_Workflow_1.png" /></p>
+<p><strong>Figure Appendix-2: OSP suite automatic (re)-qualification workflow</strong></p>
+<p>In a first step, the respective qualification scenario is saved in a special qualification repository on OSP GitHub (<a href="https://github.com/Open-Systems-Pharmacology/">https://github.com/Open-Systems-Pharmacology/</a>). This qualification scenario repository contains a detailed qualification plan that links and combines respective models and data to address the use case that shall be qualified. Therefore, the qualification plan consists of: </p>
+<ul>
+<li>PK-Sim project files,</li>
+<li>Additional model building steps (if applicable),</li>
+<li>Description of potential cross-dependencies between PK-Sim project files (if applicable),</li>
+<li>Observed data (needed for model development and verification),</li>
+<li>Qualification scenario description text modules</li>
+<li>Detailed report settings to describe the generation of charts and qualification measures. </li>
+</ul>
+<p>PK-Sim projects, observed data sets, and qualification scenario text modules are deposited in distinct repositories and are referenced by the qualification plan (<a href="#figure-appendix-3"><strong>Figure Appendix-3</strong></a>).</p>
+<p><a id="figure-appendix-3"></a>
+<a id="figure-5-3"></a></p>
+<p><img alt="OSP qualification workflow detail" src="images/OSP_Qualification_Workflow_2.png" /></p>
+<p><strong>Figure Appendix-3: Qualification scenario repository landscape on GitHub</strong></p>
+<p>In a second step the qualification runner (<a href="https://github.com/Open-Systems-Pharmacology/QualificationRunner">https://github.com/Open-Systems-Pharmacology/QualificationRunner</a>) processes the qualification plan, i.e. all project parts are exported and prepared for the reporting engine (<a href="https://github.com/Open-Systems-Pharmacology/Reporting-Engine">https://github.com/Open-Systems-Pharmacology/Reporting-Engine</a>). The reporting engine provides a validated environment (implemented in R) for model execution and finally generates the qualification report. This report contains the evaluation of the individual PBPK models with observed data (i.e. standard goodness of fit plots, visual predictive checks) and a comprehensive qualification of the specific use case assessing the predictive performance of the OSP suite by means of a predefined set of qualification measures and charts. </p>
+<p>The automated execution of the described workflow can be triggered to assess re-qualification in case new data, changes in model structure or parameterization, or new OSP suite releases arise.</p>
+<hr />
+<h2 id="related-reports">Related Reports<a class="headerlink" href="#related-reports" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Other Drug-Drug Interaction (DDI) qualification reports:</p>
+<ul>
+<li><a href="../DDI_Qualification_CYP1A2/">DDI_Qualification_CYP1A2</a></li>
+<li><a href="../DDI_Qualification_CYP2C19/">DDI_Qualification_CYP2C19</a></li>
+<li><a href="../DDI_Qualification_CYP3A4/">DDI_Qualification_CYP3A4</a></li>
+<li><a href="../DDI_Qualification_UGT/">DDI_Qualification_UGT</a></li>
+</ul>
+<p><a href="../#drug-drug-interaction-ddi">View all Drug-Drug Interaction (DDI) →</a></p>
+<p><a href="../">← Back to Home</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Open Systems Pharmacology Community
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Open-Systems-Pharmacology" target="_blank" rel="noopener" title="Open Systems Pharmacology on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.open-systems-pharmacology.org/" target="_blank" rel="noopener" title="Open Systems Pharmacology Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.tabs.sticky", "navigation.indexes", "navigation.path", "toc.follow", "search.highlight", "search.suggest", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

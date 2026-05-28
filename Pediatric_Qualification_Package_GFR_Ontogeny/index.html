@@ -1,0 +1,1812 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Qualification report for Pediatric_Qualification_Package_GFR_Ontogeny. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+      
+      
+        <meta name="author" content="Open Systems Pharmacology Community">
+      
+      
+        <link rel="canonical" href="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/Pediatric_Qualification_Package_GFR_Ontogeny/">
+      
+      
+        <link rel="prev" href="../Pediatric_Qualification_Package_CYP3A4_Ontogeny/">
+      
+      
+        <link rel="next" href="../Qualification-CKD/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Pediatric_Qualification_Package_GFR_Ontogeny Qualification Report - OSP Qualification Reports (Version 12.2 Update 1)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/Pediatric_Qualification_Package_GFR_Ontogeny/">
+  <meta property="og:title" content="Pediatric_Qualification_Package_GFR_Ontogeny">
+  <meta property="og:description" content="Qualification report for Pediatric_Qualification_Package_GFR_Ontogeny. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+  <meta property="og:site_name" content="OSP Qualification Reports (Version 12.2 Update 1)">
+  <meta property="og:image" content="https://www.open-systems-pharmacology.org/assets/images/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/Pediatric_Qualification_Package_GFR_Ontogeny/">
+  <meta name="twitter:title" content="Pediatric_Qualification_Package_GFR_Ontogeny">
+  <meta name="twitter:description" content="Qualification report for Pediatric_Qualification_Package_GFR_Ontogeny. Validation of predictive performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite).">
+  <meta name="twitter:image" content="https://www.open-systems-pharmacology.org/assets/images/logo.png">
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "OSP Qualification Reports (Version 12.2 Update 1)",
+    "description": "Qualification reports validating the PBPK modeling platform PK-Sim\u00ae (as part of the Open Systems Pharmacology (OSP) Suite) for drug-drug interactions, pediatric extrapolation, and disease populations. Open Systems Pharmacology.",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.open-systems-pharmacology.org/assets/images/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Dataset Schema for Qualification Reports -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Open Systems Pharmacology Qualification Reports",
+    "description": "Qualification reports validating performance of the PBPK modeling platform PK-Sim® (as part of the Open Systems Pharmacology (OSP) Suite) for drug-drug interactions, pediatric extrapolation, and disease populations",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "keywords": ["PBPK platform qualification", "PBPK", "pharmacokinetic modeling", "drug development", "PK-Sim", "MoBi", "systems pharmacology", "ADME"],
+    "license": "https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports#license",
+    "creator": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/"
+    },
+    "distribution": {
+      "@type": "DataDownload",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports"
+    }
+  }
+  </script>
+
+  <!-- SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PK-Sim",
+    "applicationCategory": "ScientificApplication",
+    "operatingSystem": "Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "PBPK modeling and simulation platform with validated qualification reports for drug-drug interactions, pediatric extrapolation, and disease populations",
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology"
+    }
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Pediatric_Qualification_Package_GFR_Ontogeny Qualification Report",
+    "description": "Qualification report for Pediatric_Qualification_Package_GFR_Ontogeny. Validation of predictive performance of the PBPK modeling platform PK-Sim\u00ae (as part of the Open Systems Pharmacology (OSP) Suite).",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Systems Pharmacology",
+      "url": "https://www.open-systems-pharmacology.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.open-systems-pharmacology.org/assets/images/logo.png"
+      }
+    },
+    "url": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/Pediatric_Qualification_Package_GFR_Ontogeny/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/Pediatric_Qualification_Package_GFR_Ontogeny/"
+    },
+    "keywords": "Pediatric_Qualification_Package_GFR_Ontogeny, qualification report, PBPK platform qualification, PK-Sim, Open Systems Pharmacology, PBPK validation"
+  }
+  </script>
+  
+
+  
+  <meta name="keywords" content="Pediatric_Qualification_Package_GFR_Ontogeny, qualification report, PBPK platform qualification, PK-Sim, Open Systems Pharmacology, PBPK validation">
+  
+
+  
+  <link rel="canonical" href="https://open-systems-pharmacology.github.io/OSP-Qualification-Reports/Pediatric_Qualification_Package_GFR_Ontogeny/">
+  
+
+  <!-- Language -->
+  <meta http-equiv="content-language" content="en">
+  <meta name="language" content="English">
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pediatric-qualification-package-gfr-ontogeny" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OSP Qualification Reports (Version 12.2 Update 1)" class="md-header__button md-logo" aria-label="OSP Qualification Reports (Version 12.2 Update 1)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OSP Qualification Reports (Version 12.2 Update 1)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pediatric_Qualification_Package_GFR_Ontogeny Qualification Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSP-Qualification-Reports
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OSP Qualification Reports (Version 12.2 Update 1)" class="md-nav__button md-logo" aria-label="OSP Qualification Reports (Version 12.2 Update 1)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OSP Qualification Reports (Version 12.2 Update 1)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSP-Qualification-Reports
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP1A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP1A2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP2C19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP2C19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_CYP3A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_CYP3A4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_P-gp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_P-gp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDI_Qualification_UGT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDI_Qualification_UGT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_CYP2C8_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_CYP2C8_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pediatric_Qualification_Package_CYP3A4_Ontogeny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_CYP3A4_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pediatric_Qualification_Package_GFR_Ontogeny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Qualification-CKD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualification-CKD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="pediatric-qualification-package-gfr-ontogeny">Pediatric Qualification Package: GFR Ontogeny<a class="headerlink" href="#pediatric-qualification-package-gfr-ontogeny" title="Anchor link to this section for reference">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>2.0-OSP12.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qualification Plan Release</td>
+<td><a href="https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v2.0">https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny/releases/tag/v2.0</a></td>
+</tr>
+<tr>
+<td>OSP Version</td>
+<td>12.2</td>
+</tr>
+<tr>
+<td>Qualification Framework Version</td>
+<td>3.5</td>
+</tr>
+</tbody>
+</table>
+<p>This qualification report is filed at:</p>
+<p><a href="https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports">https://github.com/Open-Systems-Pharmacology/OSP-Qualification-Reports</a></p>
+<h1 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Anchor link to this section for reference">&para;</a></h1>
+<ul>
+<li><a href="#introduction">1 Introduction to Pediatric Translation</a></li>
+<li><a href="#pediatric-translation-qualification">2 Pediatric translation qualification</a></li>
+<li><a href="#amikacin-pk-ratios">2.1 Amikacin PK Ratio tables and Figures</a></li>
+<li><a href="#amikacin-ct-profiles">2.2 Amikacin Concentration-Time profiles in Children</a></li>
+<li><a href="#vancomycin-pk-ratios">2.3 Vancomycin PK Ratio tables and Figures</a></li>
+<li><a href="#vancomycin-ct-profiles">2.4 Vancomycin Concentration-Time profiles in Children</a></li>
+<li><a href="#main-references">3 References</a></li>
+</ul>
+<h1 id="1-introduction-to-pediatric-translation">1 Introduction to Pediatric Translation<a id="introduction"></a><a class="headerlink" href="#1-introduction-to-pediatric-translation" title="Anchor link to this section for reference">&para;</a></h1>
+<p>The presented qualification report evaluates the predictive performance of the OSP suite to predict glomerular filtration rate (GFR)-mediated drug clearance in children.</p>
+<p>Therefore, PBPK models of specific <em>in vivo</em> probe substances covering children aged below 6 months up to adolescents were built and evaluated. All models are whole-body PBPK models, allowing for pediatric translation in all organs. The qualification report demonstrates the level of confidence of the OSP suite with regard to reliable PBPK predictions of age related GFR-mediated drug clearance during model-informed drug development. The presented PBPK models as well as the respective qualification plan and qualification report are provided open-source and transparently documented (<a href="https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny">https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_GFR_Ontogeny</a>). </p>
+<h2 id="translation-of-adult-pbpk-to-children">Translation of Adult PBPK to Children<a class="headerlink" href="#translation-of-adult-pbpk-to-children" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Using a developed and validated (adult) PBPK model for an <em>in vivo</em> probe substance, a pediatric PBPK model can be established for children at different ages by translating physiology, clearance processes (as parameterized in the adult model) and age-dependent protein binding including the variability therein.[<a href="#3-references">Maharaj 2013</a>] </p>
+<p>The PBPK models are developed with clinical data of healthy adult subjects obtained from the literature. Plasma concentrations following multiple-dose application, mass balance information and other clinical measurements need to be included for model development, if available. During model translation from adults to children for a specific substance, uncertainties in data-quality caused by impact of disease or the target study population, inaccurate in vitro assay-techniques regarding mass balance, as well as study differences may cause not being able to adequately predict the PK in children for all reported studies. </p>
+<p>Prediction performance of the PBPK model for these probe substances in children are then shown by means of e.g. predicted versus observed clearance-ratio plots, of which the results support an adequate prediction of the ontogeny function for the application of PBPK model translation of adult PBPK to children.</p>
+<p>For qualification purpose, during the translation of adult PBPK to children the following assumptions and considerations were made: </p>
+<ul>
+<li>when translating an adult model to children, it was assumed that the metabolism and excretion pathways are qualitatively the same in children as in adults.</li>
+<li>no further changes to input parameters other than those for the physiology and protein binding. All other parameters (e.g. lipophilicity) were kept unchanged. </li>
+</ul>
+<h2 id="anthropometric-and-physiological-information">Anthropometric and Physiological Information<a class="headerlink" href="#anthropometric-and-physiological-information" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Regarding the age-dependencies of the relevant anthropometric (height, weight) and physiological parameters (e.g. blood flows, organ volumes, binding protein concentrations, hematocrit, cardiac output) in children was gathered from the literature and has been previously published. [<a href="#3-references">Edginton 2006</a>] The information was incorporated into PK-Sim® and was used as default values for the simulations in children.</p>
+<p>The  applied ontogeny and variability of plasma proteins that are integrated into PK-Sim® for translation to children are described in the publicly available ‘PK-Sim® Ontogeny Database Version 7.3' [<a href="#3-references">Ontogeny Database</a>] or otherwise referenced for the specific process.</p>
+<h3 id="qualification-of-gfr-ontogeny">Qualification of <strong>GFR ontogeny</strong><a class="headerlink" href="#qualification-of-gfr-ontogeny" title="Anchor link to this section for reference">&para;</a></h3>
+<p>For the qualification of the GFR elimination of compounds, the following probe substances were included:</p>
+<ul>
+<li>Amikacin [<a href="#3-references">Amikacin-Model</a>]</li>
+<li>Vancomycin [<a href="#3-references">Vancomycin-Model</a>]</li>
+</ul>
+<p>The adult PBPK model reports and the corresponding PK-Sim project files are filed at: <a href="https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library/">https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library/</a></p>
+<h1 id="2-pediatric-translation-qualification">2 Pediatric translation qualification<a id="pediatric-translation-qualification"></a><a class="headerlink" href="#2-pediatric-translation-qualification" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="evaluation-of-pediatric-translation">Evaluation of Pediatric translation<a class="headerlink" href="#evaluation-of-pediatric-translation" title="Anchor link to this section for reference">&para;</a></h2>
+<p>All pediatric translations are pure retrospective predictions, no pediatric pharmacokinetic studies were used to inform model parameters. All parameters necessary to model the pediatric populations, such as demographics (age, weight, height), as well as dosing formulation information were taken from the respective pediatrics studies from literature in order to evaluate their predictive performance. </p>
+<p>The models were evaluated by ratio plots of area under the plasma concentration-time curve (AUC), or clearance (CL) values resulting from our predictions to the values observed during clinical studies, and by comparison of concentration-time profiles if available. As a quantitative measure of the descriptive and predictive performance of each model, the geometric mean fold error was calculated according to Eq. 1:</p>
+<p>Eq. 1: GMFE=10^((Σ|log10(pred PK parameter∕obs PK parameter)|)∕n)</p>
+<p>with GMFE = geometric mean fold error of all AUC or CL predictions of the respective model, pred PK parameter = predicted AUC or CL, obs PK parameter = observed AUC or CL, and n = number of observed values.</p>
+<p>The ratios of predicted over observed mean AUC or CL values from all compound were also plotted across all age groups in the figure below. As illustrated, most of the prediction were within the 0.5 to 2.0 range (2-fold error). </p>
+<p>In the next sections the demographics as well as the evaluation results of the predictive performance of the specific compound PBPK models in children can be found.  </p>
+<p><a id="figure-2-1"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/1_pk_ratio_plot_CL.png" /></p>
+<p><strong>Figure 2-1: Overall predictivity of the PBPK models. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of all drugs in children 0.085 month to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-1"></a></p>
+<p><strong>Table 2-1: Measure of Overall predictivity of the PBPK models. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of all drugs in children 0.085 month to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">39</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 1.5 fold</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">82.05</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">38</td>
+<td style="text-align: left;">97.44</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-2"></a></p>
+<p><strong>Table 2-2: GMFE for Overall predictivity of the PBPK models. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of all drugs in children 0.085 month to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CL</td>
+<td style="text-align: left;">1.26</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-3"></a></p>
+<p><strong>Table 2-3: Overall predictivity of the PBPK models. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of all drugs in children 0.085 month to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Study ID</th>
+<th style="text-align: left;">Age [year(s)]</th>
+<th style="text-align: left;">Body Weight [kg]</th>
+<th style="text-align: left;">Predicted CL [ml/min/kg]</th>
+<th style="text-align: left;">Observed CL [ml/min/kg]</th>
+<th style="text-align: left;">Pred/Obs CL Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">15.00</td>
+<td style="text-align: left;">77.00</td>
+<td style="text-align: left;">1.24</td>
+<td style="text-align: left;">1.74</td>
+<td style="text-align: left;">0.71</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">15.00</td>
+<td style="text-align: left;">62.50</td>
+<td style="text-align: left;">1.37</td>
+<td style="text-align: left;">1.44</td>
+<td style="text-align: left;">0.95</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">9.00</td>
+<td style="text-align: left;">21.50</td>
+<td style="text-align: left;">2.14</td>
+<td style="text-align: left;">2.56</td>
+<td style="text-align: left;">0.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">13.00</td>
+<td style="text-align: left;">51.00</td>
+<td style="text-align: left;">1.37</td>
+<td style="text-align: left;">1.35</td>
+<td style="text-align: left;">1.02</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">12.00</td>
+<td style="text-align: left;">27.19</td>
+<td style="text-align: left;">2.48</td>
+<td style="text-align: left;">2.64</td>
+<td style="text-align: left;">0.94</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">27.40</td>
+<td style="text-align: left;">1.78</td>
+<td style="text-align: left;">2.19</td>
+<td style="text-align: left;">0.81</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">4.00</td>
+<td style="text-align: left;">14.00</td>
+<td style="text-align: left;">2.44</td>
+<td style="text-align: left;">4.22</td>
+<td style="text-align: left;">0.58</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">6.00</td>
+<td style="text-align: left;">17.30</td>
+<td style="text-align: left;">2.49</td>
+<td style="text-align: left;">2.63</td>
+<td style="text-align: left;">0.95</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">6.00</td>
+<td style="text-align: left;">15.50</td>
+<td style="text-align: left;">2.60</td>
+<td style="text-align: left;">4.26</td>
+<td style="text-align: left;">0.61</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">15.90</td>
+<td style="text-align: left;">2.74</td>
+<td style="text-align: left;">2.30</td>
+<td style="text-align: left;">1.19</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">14.00</td>
+<td style="text-align: left;">39.50</td>
+<td style="text-align: left;">1.83</td>
+<td style="text-align: left;">1.91</td>
+<td style="text-align: left;">0.96</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">10.00</td>
+<td style="text-align: left;">32.80</td>
+<td style="text-align: left;">1.93</td>
+<td style="text-align: left;">2.30</td>
+<td style="text-align: left;">0.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">14.00</td>
+<td style="text-align: left;">45.50</td>
+<td style="text-align: left;">1.80</td>
+<td style="text-align: left;">2.23</td>
+<td style="text-align: left;">0.81</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">11.00</td>
+<td style="text-align: left;">35.20</td>
+<td style="text-align: left;">1.90</td>
+<td style="text-align: left;">2.58</td>
+<td style="text-align: left;">0.74</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">13.00</td>
+<td style="text-align: left;">27.70</td>
+<td style="text-align: left;">2.22</td>
+<td style="text-align: left;">2.86</td>
+<td style="text-align: left;">0.77</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">8.00</td>
+<td style="text-align: left;">20.80</td>
+<td style="text-align: left;">2.48</td>
+<td style="text-align: left;">2.88</td>
+<td style="text-align: left;">0.86</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">6.00</td>
+<td style="text-align: left;">15.50</td>
+<td style="text-align: left;">2.57</td>
+<td style="text-align: left;">3.31</td>
+<td style="text-align: left;">0.78</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">13.00</td>
+<td style="text-align: left;">49.00</td>
+<td style="text-align: left;">1.43</td>
+<td style="text-align: left;">1.88</td>
+<td style="text-align: left;">0.76</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">20.60</td>
+<td style="text-align: left;">2.36</td>
+<td style="text-align: left;">2.06</td>
+<td style="text-align: left;">1.14</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">16.00</td>
+<td style="text-align: left;">35.08</td>
+<td style="text-align: left;">2.21</td>
+<td style="text-align: left;">2.47</td>
+<td style="text-align: left;">0.89</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.01</td>
+<td style="text-align: left;">3.59</td>
+<td style="text-align: left;">1.17</td>
+<td style="text-align: left;">0.88</td>
+<td style="text-align: left;">1.32</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.04</td>
+<td style="text-align: left;">3.76</td>
+<td style="text-align: left;">1.34</td>
+<td style="text-align: left;">1.22</td>
+<td style="text-align: left;">1.10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.07</td>
+<td style="text-align: left;">3.93</td>
+<td style="text-align: left;">1.54</td>
+<td style="text-align: left;">1.58</td>
+<td style="text-align: left;">0.97</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.08</td>
+<td style="text-align: left;">4.01</td>
+<td style="text-align: left;">1.65</td>
+<td style="text-align: left;">1.77</td>
+<td style="text-align: left;">0.93</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.11</td>
+<td style="text-align: left;">4.19</td>
+<td style="text-align: left;">1.85</td>
+<td style="text-align: left;">1.97</td>
+<td style="text-align: left;">0.94</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.15</td>
+<td style="text-align: left;">4.45</td>
+<td style="text-align: left;">2.10</td>
+<td style="text-align: left;">2.00</td>
+<td style="text-align: left;">1.05</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.52</td>
+<td style="text-align: left;">6.85</td>
+<td style="text-align: left;">2.44</td>
+<td style="text-align: left;">2.12</td>
+<td style="text-align: left;">1.15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.77</td>
+<td style="text-align: left;">8.49</td>
+<td style="text-align: left;">2.40</td>
+<td style="text-align: left;">2.50</td>
+<td style="text-align: left;">0.96</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">2.02</td>
+<td style="text-align: left;">12.30</td>
+<td style="text-align: left;">2.24</td>
+<td style="text-align: left;">3.02</td>
+<td style="text-align: left;">0.74</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">4.06</td>
+<td style="text-align: left;">16.89</td>
+<td style="text-align: left;">2.10</td>
+<td style="text-align: left;">3.17</td>
+<td style="text-align: left;">0.66</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">6.08</td>
+<td style="text-align: left;">21.82</td>
+<td style="text-align: left;">2.02</td>
+<td style="text-align: left;">3.27</td>
+<td style="text-align: left;">0.62</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">7.09</td>
+<td style="text-align: left;">24.43</td>
+<td style="text-align: left;">2.00</td>
+<td style="text-align: left;">2.95</td>
+<td style="text-align: left;">0.68</td>
+</tr>
+<tr>
+<td style="text-align: left;">Belfayol 1996</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">23.50</td>
+<td style="text-align: left;">1.98</td>
+<td style="text-align: left;">2.40</td>
+<td style="text-align: left;">0.83</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">0.01</td>
+<td style="text-align: left;">3.07</td>
+<td style="text-align: left;">1.31</td>
+<td style="text-align: left;">1.19</td>
+<td style="text-align: left;">1.11</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">0.26</td>
+<td style="text-align: left;">4.90</td>
+<td style="text-align: left;">2.14</td>
+<td style="text-align: left;">1.65</td>
+<td style="text-align: left;">1.29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">0.36</td>
+<td style="text-align: left;">5.20</td>
+<td style="text-align: left;">2.27</td>
+<td style="text-align: left;">2.70</td>
+<td style="text-align: left;">0.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">3.92</td>
+<td style="text-align: left;">15.50</td>
+<td style="text-align: left;">1.83</td>
+<td style="text-align: left;">3.95</td>
+<td style="text-align: left;">0.46</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">5.58</td>
+<td style="text-align: left;">20.00</td>
+<td style="text-align: left;">1.70</td>
+<td style="text-align: left;">2.95</td>
+<td style="text-align: left;">0.58</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">7.58</td>
+<td style="text-align: left;">26.70</td>
+<td style="text-align: left;">1.56</td>
+<td style="text-align: left;">2.78</td>
+<td style="text-align: left;">0.56</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="21-amikacin-pk-ratio-tables-and-figures">2.1 Amikacin PK Ratio tables and Figures<a id="amikacin-pk-ratios"></a><a class="headerlink" href="#21-amikacin-pk-ratio-tables-and-figures" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="amikacin-model">Amikacin model<a class="headerlink" href="#amikacin-model" title="Anchor link to this section for reference">&para;</a></h3>
+<p>Amikacin PBPK predictions in children were evaluated using pharmacokinetic (PK) data reported in the following studies: </p>
+<ul>
+<li>Tréluyer JM, Merlé Y, Tonnelier S, Rey E, Pons G. Nonparametric population pharmacokinetic analysis of amikacin in neonates, infants, and children. Antimicrob Agents Chemother. 2002 May;46(5):1381-7.[<a href="#3-references">Tréluyer 2002</a>]</li>
+<li>Vogelstein B, Kowarski A, Lietman PS. The pharmacokinetics of amikacin in children. J Pediatr. 1977 Aug;91(2):333-9.<a href="#3-references">Vogelstein 1977</a>]</li>
+<li>Belfayol L, Talon P, Eveillard M, Alet P, Fauvelle F. Pharmacokinetics of once-daily amikacin in pediatric patients. Clin Microbiol Infect. 1996 Feb;2(3):186-191.[<a href="#3-references">Belfayol 1996</a>]</li>
+</ul>
+<p>The pediatric PBPK model reasonably well predicted the clearance values of amikacin  pediatric studies across all available age groups, ranging from 0.16 months to 16 years old. The ratios of mean predicted over observed clearance values are illustrated in the table below as well as in the predicted versus observed clearance ratio plot, showing that all predictions in children were within 2-fold error of observed values.</p>
+<p><a id="figure-2-2"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/003_section_amikacin-pk-ratios/5_pk_ratio_plot_CL.png" /></p>
+<p><strong>Figure 2-2: Overall predictivity of the amikacin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of amikacin in children 0.16 months to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-4"></a></p>
+<p><strong>Table 2-4: Measure of Overall predictivity of the amikacin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of amikacin in children 0.16 months to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 1.5 fold</td>
+<td style="text-align: left;">29</td>
+<td style="text-align: left;">87.88</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-5"></a></p>
+<p><strong>Table 2-5: GMFE for Overall predictivity of the amikacin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of amikacin in children 0.16 months to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CL</td>
+<td style="text-align: left;">1.22</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-6"></a></p>
+<p><strong>Table 2-6: Overall predictivity of the amikacin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of amikacin in children 0.16 months to 16 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Study ID</th>
+<th style="text-align: left;">Age [year(s)]</th>
+<th style="text-align: left;">Body Weight [kg]</th>
+<th style="text-align: left;">Predicted CL [ml/min/kg]</th>
+<th style="text-align: left;">Observed CL [ml/min/kg]</th>
+<th style="text-align: left;">Pred/Obs CL Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">15.00</td>
+<td style="text-align: left;">77.00</td>
+<td style="text-align: left;">1.24</td>
+<td style="text-align: left;">1.74</td>
+<td style="text-align: left;">0.71</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">15.00</td>
+<td style="text-align: left;">62.50</td>
+<td style="text-align: left;">1.37</td>
+<td style="text-align: left;">1.44</td>
+<td style="text-align: left;">0.95</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">9.00</td>
+<td style="text-align: left;">21.50</td>
+<td style="text-align: left;">2.14</td>
+<td style="text-align: left;">2.56</td>
+<td style="text-align: left;">0.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">13.00</td>
+<td style="text-align: left;">51.00</td>
+<td style="text-align: left;">1.37</td>
+<td style="text-align: left;">1.35</td>
+<td style="text-align: left;">1.02</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">12.00</td>
+<td style="text-align: left;">27.19</td>
+<td style="text-align: left;">2.48</td>
+<td style="text-align: left;">2.64</td>
+<td style="text-align: left;">0.94</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">27.40</td>
+<td style="text-align: left;">1.78</td>
+<td style="text-align: left;">2.19</td>
+<td style="text-align: left;">0.81</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">4.00</td>
+<td style="text-align: left;">14.00</td>
+<td style="text-align: left;">2.44</td>
+<td style="text-align: left;">4.22</td>
+<td style="text-align: left;">0.58</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">6.00</td>
+<td style="text-align: left;">17.30</td>
+<td style="text-align: left;">2.49</td>
+<td style="text-align: left;">2.63</td>
+<td style="text-align: left;">0.95</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">6.00</td>
+<td style="text-align: left;">15.50</td>
+<td style="text-align: left;">2.60</td>
+<td style="text-align: left;">4.26</td>
+<td style="text-align: left;">0.61</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">15.90</td>
+<td style="text-align: left;">2.74</td>
+<td style="text-align: left;">2.30</td>
+<td style="text-align: left;">1.19</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">14.00</td>
+<td style="text-align: left;">39.50</td>
+<td style="text-align: left;">1.83</td>
+<td style="text-align: left;">1.91</td>
+<td style="text-align: left;">0.96</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">10.00</td>
+<td style="text-align: left;">32.80</td>
+<td style="text-align: left;">1.93</td>
+<td style="text-align: left;">2.30</td>
+<td style="text-align: left;">0.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">14.00</td>
+<td style="text-align: left;">45.50</td>
+<td style="text-align: left;">1.80</td>
+<td style="text-align: left;">2.23</td>
+<td style="text-align: left;">0.81</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">11.00</td>
+<td style="text-align: left;">35.20</td>
+<td style="text-align: left;">1.90</td>
+<td style="text-align: left;">2.58</td>
+<td style="text-align: left;">0.74</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">13.00</td>
+<td style="text-align: left;">27.70</td>
+<td style="text-align: left;">2.22</td>
+<td style="text-align: left;">2.86</td>
+<td style="text-align: left;">0.77</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">8.00</td>
+<td style="text-align: left;">20.80</td>
+<td style="text-align: left;">2.48</td>
+<td style="text-align: left;">2.88</td>
+<td style="text-align: left;">0.86</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">6.00</td>
+<td style="text-align: left;">15.50</td>
+<td style="text-align: left;">2.57</td>
+<td style="text-align: left;">3.31</td>
+<td style="text-align: left;">0.78</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">13.00</td>
+<td style="text-align: left;">49.00</td>
+<td style="text-align: left;">1.43</td>
+<td style="text-align: left;">1.88</td>
+<td style="text-align: left;">0.76</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">20.60</td>
+<td style="text-align: left;">2.36</td>
+<td style="text-align: left;">2.06</td>
+<td style="text-align: left;">1.14</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vogelstein 1977</td>
+<td style="text-align: left;">16.00</td>
+<td style="text-align: left;">35.08</td>
+<td style="text-align: left;">2.21</td>
+<td style="text-align: left;">2.47</td>
+<td style="text-align: left;">0.89</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.01</td>
+<td style="text-align: left;">3.59</td>
+<td style="text-align: left;">1.17</td>
+<td style="text-align: left;">0.88</td>
+<td style="text-align: left;">1.32</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.04</td>
+<td style="text-align: left;">3.76</td>
+<td style="text-align: left;">1.34</td>
+<td style="text-align: left;">1.22</td>
+<td style="text-align: left;">1.10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.07</td>
+<td style="text-align: left;">3.93</td>
+<td style="text-align: left;">1.54</td>
+<td style="text-align: left;">1.58</td>
+<td style="text-align: left;">0.97</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.08</td>
+<td style="text-align: left;">4.01</td>
+<td style="text-align: left;">1.65</td>
+<td style="text-align: left;">1.77</td>
+<td style="text-align: left;">0.93</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.11</td>
+<td style="text-align: left;">4.19</td>
+<td style="text-align: left;">1.85</td>
+<td style="text-align: left;">1.97</td>
+<td style="text-align: left;">0.94</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.15</td>
+<td style="text-align: left;">4.45</td>
+<td style="text-align: left;">2.10</td>
+<td style="text-align: left;">2.00</td>
+<td style="text-align: left;">1.05</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.52</td>
+<td style="text-align: left;">6.85</td>
+<td style="text-align: left;">2.44</td>
+<td style="text-align: left;">2.12</td>
+<td style="text-align: left;">1.15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">0.77</td>
+<td style="text-align: left;">8.49</td>
+<td style="text-align: left;">2.40</td>
+<td style="text-align: left;">2.50</td>
+<td style="text-align: left;">0.96</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">2.02</td>
+<td style="text-align: left;">12.30</td>
+<td style="text-align: left;">2.24</td>
+<td style="text-align: left;">3.02</td>
+<td style="text-align: left;">0.74</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">4.06</td>
+<td style="text-align: left;">16.89</td>
+<td style="text-align: left;">2.10</td>
+<td style="text-align: left;">3.17</td>
+<td style="text-align: left;">0.66</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">6.08</td>
+<td style="text-align: left;">21.82</td>
+<td style="text-align: left;">2.02</td>
+<td style="text-align: left;">3.27</td>
+<td style="text-align: left;">0.62</td>
+</tr>
+<tr>
+<td style="text-align: left;">Treluyer 2002</td>
+<td style="text-align: left;">7.09</td>
+<td style="text-align: left;">24.43</td>
+<td style="text-align: left;">2.00</td>
+<td style="text-align: left;">2.95</td>
+<td style="text-align: left;">0.68</td>
+</tr>
+<tr>
+<td style="text-align: left;">Belfayol 1996</td>
+<td style="text-align: left;">7.00</td>
+<td style="text-align: left;">23.50</td>
+<td style="text-align: left;">1.98</td>
+<td style="text-align: left;">2.40</td>
+<td style="text-align: left;">0.83</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="22-amikacin-concentration-time-profiles-in-children">2.2 Amikacin Concentration-Time profiles in Children<a id="amikacin-ct-profiles"></a><a class="headerlink" href="#22-amikacin-concentration-time-profiles-in-children" title="Anchor link to this section for reference">&para;</a></h2>
+<h4 id="concentration-time-profiles">Concentration-Time Profiles<a class="headerlink" href="#concentration-time-profiles" title="Anchor link to this section for reference">&para;</a></h4>
+<p>For Amikacin, there were no reported plasma concentration-time data available from literature. Therefore only a comparison of predicted versus observed PK-parameters was made to evaluate the predictive performance of the Amikacin PBPK model in children. [<a href="#21-amikacin-pk-ratio-tables-and-figures">Section 2.1</a>]</p>
+<h2 id="23-vancomycin-pk-ratio-tables-and-figures">2.3 Vancomycin PK Ratio tables and Figures<a id="vancomycin-pk-ratios"></a><a class="headerlink" href="#23-vancomycin-pk-ratio-tables-and-figures" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="vancomycin-model">Vancomycin model<a class="headerlink" href="#vancomycin-model" title="Anchor link to this section for reference">&para;</a></h3>
+<p>Vancomycin PBPK predictions in children were evaluated using pharmacokinetic (PK) data reported in the following studies: </p>
+<ul>
+<li>Schaad UB, McCracken GH Jr, Nelson JD. Clinical pharmacology and efficacy of vancomycin in pediatric patients. J Pediatr. 1980 Jan;96(1):119-26.[<a href="#3-references">Schaad 1980</a>]</li>
+</ul>
+<p>The pediatric PBPK model predicted the clearance values of vancomycin observed in pediatric studies reasonably across all available age groups, ranging from 0.085 months to 7.58 years old. The ratios of mean predicted over observed clearance values are illustrated in the table below as well as in the predicted versus observed clearance ratio plot, showing that all predictions in children were within 2-fold error of observed values.</p>
+<p><a id="figure-2-3"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/005_section_vancomycin-pk-ratios/9_pk_ratio_plot_CL.png" /></p>
+<p><strong>Figure 2-3: Overall predictivity of the vancomycin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of vancomycin in children 0.085 months to 7.58 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<p><br>
+<br></p>
+<p><a id="table-2-7"></a></p>
+<p><strong>Table 2-7: Measure of Overall predictivity of the vancomycin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of vancomycin in children 0.085 months to 7.58 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Ratio [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Points total</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 1.5 fold</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">50.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Points within 2 fold</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">83.33</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-8"></a></p>
+<p><strong>Table 2-8: GMFE for Overall predictivity of the vancomycin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of vancomycin in children 0.085 months to 7.58 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">GMFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CL</td>
+<td style="text-align: left;">1.50</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<p><a id="table-2-9"></a></p>
+<p><strong>Table 2-9: Overall predictivity of the vancomycin PBPK model. Open circles represent mean ratios of PBPK predicted clearance over observed clearance of vancomycin in children 0.085 months to 7.58 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Study ID</th>
+<th style="text-align: left;">Age [year(s)]</th>
+<th style="text-align: left;">Body Weight [kg]</th>
+<th style="text-align: left;">Predicted CL [ml/min/kg]</th>
+<th style="text-align: left;">Observed CL [ml/min/kg]</th>
+<th style="text-align: left;">Pred/Obs CL Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">0.01</td>
+<td style="text-align: left;">3.07</td>
+<td style="text-align: left;">1.31</td>
+<td style="text-align: left;">1.19</td>
+<td style="text-align: left;">1.11</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">0.26</td>
+<td style="text-align: left;">4.90</td>
+<td style="text-align: left;">2.14</td>
+<td style="text-align: left;">1.65</td>
+<td style="text-align: left;">1.29</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">0.36</td>
+<td style="text-align: left;">5.20</td>
+<td style="text-align: left;">2.27</td>
+<td style="text-align: left;">2.70</td>
+<td style="text-align: left;">0.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">3.92</td>
+<td style="text-align: left;">15.50</td>
+<td style="text-align: left;">1.83</td>
+<td style="text-align: left;">3.95</td>
+<td style="text-align: left;">0.46</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">5.58</td>
+<td style="text-align: left;">20.00</td>
+<td style="text-align: left;">1.70</td>
+<td style="text-align: left;">2.95</td>
+<td style="text-align: left;">0.58</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schaad 1980</td>
+<td style="text-align: left;">7.58</td>
+<td style="text-align: left;">26.70</td>
+<td style="text-align: left;">1.56</td>
+<td style="text-align: left;">2.78</td>
+<td style="text-align: left;">0.56</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="24-vancomycin-concentration-time-profiles-in-children">2.4 Vancomycin Concentration-Time profiles in Children<a id="vancomycin-ct-profiles"></a><a class="headerlink" href="#24-vancomycin-concentration-time-profiles-in-children" title="Anchor link to this section for reference">&para;</a></h2>
+<h4 id="concentration-time-profiles_1">Concentration-Time Profiles<a class="headerlink" href="#concentration-time-profiles_1" title="Anchor link to this section for reference">&para;</a></h4>
+<p>Predicted versus observed plasma concentration-time profiles are listed below. Only simulations where observed data was available for comparison are shown.  Depending if the observed data were individual data or aggregated data, individual predictions or population predictions including variability are shown, respectively.</p>
+<p><a id="figure-2-4"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/1_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_1c_POP.png" /></p>
+<p><strong>Figure 2-4: Time Profile Analysis</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-5"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/2_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_1c_POP.png" /></p>
+<p><strong>Figure 2-5: Time Profile Analysis 1</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-6"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/3_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_2a_POP.png" /></p>
+<p><strong>Figure 2-6: Time Profile Analysis</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-7"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/4_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_2a_POP.png" /></p>
+<p><strong>Figure 2-7: Time Profile Analysis 1</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-8"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/5_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_2b_POP.png" /></p>
+<p><strong>Figure 2-8: Time Profile Analysis</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-9"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/6_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_2b_POP.png" /></p>
+<p><strong>Figure 2-9: Time Profile Analysis 1</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-10"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/7_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_3a_POP.png" /></p>
+<p><strong>Figure 2-10: Time Profile Analysis</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-11"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/8_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_3a_POP.png" /></p>
+<p><strong>Figure 2-11: Time Profile Analysis 1</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-12"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/9_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_3b_POP.png" /></p>
+<p><strong>Figure 2-12: Time Profile Analysis</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-13"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/10_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_3b_POP.png" /></p>
+<p><strong>Figure 2-13: Time Profile Analysis 1</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-14"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/11_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_3c_POP.png" /></p>
+<p><strong>Figure 2-14: Time Profile Analysis</strong></p>
+<p><br>
+<br></p>
+<p><a id="figure-2-15"></a></p>
+<p><img alt="" src="images/002_section_pediatric-translation-qualification/006_section_vancomycin-ct-profiles/12_time_profile_plot_Vancomycin_Pediatrics_Schaad_1980_Fig_3c_POP.png" /></p>
+<p><strong>Figure 2-15: Time Profile Analysis 1</strong></p>
+<p><br>
+<br></p>
+<h1 id="3-references">3 References<a id="main-references"></a><a class="headerlink" href="#3-references" title="Anchor link to this section for reference">&para;</a></h1>
+<p><strong>Amikacin-Model</strong> Amikacin-Model, Whole-body PBPK model of Amikacin. (<a href="https://github.com/Open-Systems-Pharmacology/Amikacin-Model">https://github.com/Open-Systems-Pharmacology/Amikacin-Model</a>)</p>
+<p><strong>Belfayol 1996 </strong>Belfayol L, Talon P, Eveillard M, Alet P, Fauvelle F. Pharmacokinetics of once-daily amikacin in pediatric patients. Clin Microbiol Infect. 1996 Feb;2(3):186-191.</p>
+<p><strong>Edginton 2006</strong> Edginton AN, Schmitt W, Willmann S. Development and evaluation of a generic physiologically based pharmacokinetic model for children. Clin Pharmacokinet. 2006;45(10):1013-34.</p>
+<p><strong>Maharaj 2013</strong> Maharaj AR, Barrett JS, Edginton AN. A workflow example of PBPK modeling to support pediatric research and development: case study with lorazepam. The AAPS journal. 2013;15(2): 455-464.</p>
+<p><strong>Ontogeny Database</strong> OSPSuite.Documentation/PK-Sim Ontogeny Database Version 7.3.pdf (<a href="https://github.com/Open-Systems-Pharmacology/OSPSuite.Documentation/blob/38cf71b384cfc25cfa0ce4d2f3addfd32757e13b/PK-Sim%20Ontogeny%20Database%20Version%207.3.pdf">https://github.com/Open-Systems-Pharmacology/OSPSuite.Documentation/blob/38cf71b384cfc25cfa0ce4d2f3addfd32757e13b/PK-Sim%20Ontogeny%20Database%20Version%207.3.pdf</a>)</p>
+<p><strong>Schaad 1980</strong> Schaad UB, McCracken GH Jr, Nelson JD. Clinical pharmacology and efficacy of vancomycin in pediatric patients. J Pediatr. 1980 Jan;96(1):119-26.</p>
+<p><strong>Tréluyer 2002</strong> Tréluyer JM, Merlé Y, Tonnelier S, Rey E, Pons G. Nonparametric population pharmacokinetic analysis of amikacin in neonates, infants, and children. Antimicrob Agents Chemother. 2002 May;46(5):1381-7.</p>
+<p><strong>Vancomycin-Model</strong> Vancomycin-Model, Whole-body PBPK model of Vancomycin. (<a href="https://github.com/Open-Systems-Pharmacology/Vancomycin-Model">https://github.com/Open-Systems-Pharmacology/Vancomycin-Model</a>) </p>
+<p><strong>Vogelstein 1977</strong> Vogelstein B, Kowarski A, Lietman PS. The pharmacokinetics of amikacin in children. J Pediatr. 1977 Aug;91(2):333-9.</p>
+<hr />
+<h2 id="related-reports">Related Reports<a class="headerlink" href="#related-reports" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Other Pediatric Extrapolation qualification reports:</p>
+<ul>
+<li><a href="../Pediatric_Qualification_Package_CYP2C8_Ontogeny/">Pediatric_Qualification_Package_CYP2C8_Ontogeny</a></li>
+<li><a href="../Pediatric_Qualification_Package_CYP3A4_Ontogeny/">Pediatric_Qualification_Package_CYP3A4_Ontogeny</a></li>
+</ul>
+<p><a href="../#pediatric-extrapolation">View all Pediatric Extrapolation →</a></p>
+<p><a href="../">← Back to Home</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Open Systems Pharmacology Community
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Open-Systems-Pharmacology" target="_blank" rel="noopener" title="Open Systems Pharmacology on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.open-systems-pharmacology.org/" target="_blank" rel="noopener" title="Open Systems Pharmacology Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.tabs.sticky", "navigation.indexes", "navigation.path", "toc.follow", "search.highlight", "search.suggest", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
