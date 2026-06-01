@@ -1,10 +1,10 @@
 # CYP2C19 DDI Qualification
 
-| Version                         | 2.0-OSP12.2                                                   |
+| Version                         | 2.0-OSP12.3                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | https://github.com/Open-Systems-Pharmacology/Qualification-DDI-CYP2C19/releases/tag/v2.0 |
-| OSP Version                     | 12.2                                                          |
-| Qualification Framework Version | 3.5                                                          |
+| OSP Version                     | 12.3                                                          |
+| Qualification Framework Version | 3.6                                                          |
 
 This qualification report is filed at:
 
