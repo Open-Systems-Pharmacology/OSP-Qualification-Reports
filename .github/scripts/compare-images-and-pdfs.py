@@ -151,14 +151,14 @@ class ImagePDFComparator:
                 return {
                     'filename': filename,
                     'status': 'removed',
-                    'similarity': 0.0,
+                    'similarity': None,
                     'error': None
                 }
             elif file_info['status'] == 'added':
                 return {
                     'filename': filename,
                     'status': 'added',
-                    'similarity': 0.0,
+                    'similarity': None,
                     'error': None
                 }
 
@@ -192,7 +192,7 @@ class ImagePDFComparator:
                 return {
                     'filename': filename,
                     'status': 'added',
-                    'similarity': 0.0,
+                    'similarity': None,
                     'error': None
                 }
 
