@@ -350,13 +350,7 @@ class ImagePDFComparator:
             report += "| Image | Similarity Score |\n"
             report += "|-------|------------------|\n"
 
-            # Sort by similarity (low to high), with None values first
-            sorted_image_results = sorted(
-                image_results,
-                key=lambda r: (r['similarity'] is not None, r['similarity'] if r['similarity'] is not None else 0)
-            )
-
-            for result in sorted_image_results:
+            for result in image_results:
                 filename = result['filename']
                 pr_file_url = f"https://github.com/{self.repo}/pull/{self.pr_number}/files#diff-{self.get_file_hash(filename)}"
 
