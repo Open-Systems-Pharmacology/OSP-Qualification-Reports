@@ -1,0 +1,45 @@
+name: Compare Images and PDFs
+# Compares images visually using SSIM and PDFs text content in pull requests
+
+# Use pull_request_target so the job is granted a token with write access to
+# pull-requests/issues even for PRs opened from forks. With the plain
+# pull_request trigger the GITHUB_TOKEN is downgraded to read-only for fork
+# PRs, which makes posting the comparison comment fail with
+# "403 Resource not accessible by integration".
+# Note: the checkout below intentionally checks out the base branch (the
+# default for pull_request_target), so no untrusted PR code is executed.
+on:
+  pull_request_target:
+    branches:
+      - develop
+
+jobs:
+  compare-files:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v7
+      with:
+        fetch-depth: 2
+
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install Pillow numpy scikit-image pdfplumber requests
+
+    - name: Run image and PDF comparison
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+      run: python .github/scripts/compare-images-and-pdfs.py
