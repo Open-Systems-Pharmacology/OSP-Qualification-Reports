@@ -3,6 +3,8 @@ name: Compare Images and PDFs
 
 on:
   pull_request: 
+    branches:
+      - develop
 
 jobs:
   compare-files:
@@ -10,6 +12,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      issues: write
 
     steps:
     - name: Checkout repository
