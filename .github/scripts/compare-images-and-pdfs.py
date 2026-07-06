@@ -30,6 +30,11 @@ except ImportError:
     pdfplumber = None
 
 
+# Timeout (in seconds) applied to every network request so the script fails
+# fast instead of hanging indefinitely on network issues.
+REQUEST_TIMEOUT = 30
+
+
 class ImagePDFComparator:
     """Compares images and PDFs from a pull request"""
 
@@ -46,25 +51,56 @@ class ImagePDFComparator:
             'Accept': 'application/vnd.github.v3+json'
         }
         self.base_url = f'https://api.github.com/repos/{self.repo}'
+        self._base_sha = None
 
     def get_pr_files(self) -> List[Dict[str, Any]]:
-        """Get list of changed files in the PR"""
+        """Get list of changed files in the PR.
+
+        Paginates through every page of the files endpoint so large PRs do not
+        silently miss changed files.
+        """
         url = f'{self.base_url}/pulls/{self.pr_number}/files'
-        response = requests.get(url, headers=self.headers)
+        files: List[Dict[str, Any]] = []
+        page = 1
 
-        if response.status_code != 200:
-            raise Exception(f"Failed to fetch PR files: {response.status_code} {response.text}")
+        while True:
+            response = requests.get(
+                url,
+                headers=self.headers,
+                params={'per_page': 100, 'page': page},
+                timeout=REQUEST_TIMEOUT,
+            )
 
-        return response.json()
+            if response.status_code != 200:
+                raise Exception(f"Failed to fetch PR files: {response.status_code} {response.text}")
+
+            batch = response.json()
+            if not batch:
+                break
+
+            files.extend(batch)
+            page += 1
+
+        return files
 
     def download_file(self, url: str) -> bytes:
         """Download a file from a URL"""
-        response = requests.get(url, headers=self.headers)
+        response = requests.get(url, headers=self.headers, timeout=REQUEST_TIMEOUT)
+
+        if response.status_code == 404:
+            raise FileNotFoundError(f"File not found at {url}")
 
         if response.status_code != 200:
             raise Exception(f"Failed to download file from {url}: {response.status_code}")
 
         return response.content
+
+    def get_base_sha(self) -> str:
+        """Return the PR base SHA, fetching PR data only once per run."""
+        if self._base_sha is None:
+            pr_data = self.get_pr_data()
+            self._base_sha = pr_data['base']['sha']
+        return self._base_sha
 
     def normalize_image_size(self, img1: Image.Image, img2: Image.Image) -> Tuple[np.ndarray, np.ndarray]:
         """Normalize two images to the same size and convert to grayscale"""
@@ -78,13 +114,26 @@ class ImagePDFComparator:
         w1, h1 = img1.size
         w2, h2 = img2.size
 
-        # Use the larger dimensions for comparison
+        # Use a common canvas sized to the larger dimensions. Each image is
+        # scaled proportionally to fit within that canvas and then padded
+        # (letterboxed) so aspect ratios are preserved and SSIM is not skewed
+        # by non-uniform stretching.
         target_width = max(w1, w2)
         target_height = max(h1, h2)
 
-        # Resize both images to target size
-        img1_resized = img1.resize((target_width, target_height), Image.LANCZOS)
-        img2_resized = img2.resize((target_width, target_height), Image.LANCZOS)
+        def fit_to_canvas(img: Image.Image) -> Image.Image:
+            w, h = img.size
+            scale = min(target_width / w, target_height / h)
+            new_size = (max(1, round(w * scale)), max(1, round(h * scale)))
+            resized = img.resize(new_size, Image.LANCZOS)
+            canvas = Image.new('RGB', (target_width, target_height), (255, 255, 255))
+            offset = ((target_width - new_size[0]) // 2,
+                      (target_height - new_size[1]) // 2)
+            canvas.paste(resized, offset)
+            return canvas
+
+        img1_resized = fit_to_canvas(img1)
+        img2_resized = fit_to_canvas(img2)
 
         # Convert to grayscale numpy arrays
         img1_gray = np.array(img1_resized.convert('L'))
@@ -127,19 +176,19 @@ class ImagePDFComparator:
             new_content = self.download_file(raw_url)
             new_img = Image.open(BytesIO(new_content))
 
-            # Get the old version (from previous commit)
-            # Construct URL for previous version
-            previous_raw_url = file_info.get('previous_filename', filename)
-            # We need to get this from the base ref
-            pr_data = self.get_pr_data()
-            base_sha = pr_data['base']['sha']
+            # Get the old version (from previous commit). For renamed files the
+            # previous content lives under previous_filename, so use that when
+            # present to avoid comparing against a 404.
+            old_filename = file_info.get('previous_filename') or filename
+            base_sha = self.get_base_sha()
 
-            old_url = f"https://raw.githubusercontent.com/{self.repo}/{base_sha}/{filename}"
+            old_url = f"https://raw.githubusercontent.com/{self.repo}/{base_sha}/{old_filename}"
             try:
                 old_content = self.download_file(old_url)
                 old_img = Image.open(BytesIO(old_content))
-            except Exception as e:
-                # File might be new
+            except FileNotFoundError:
+                # The old file genuinely does not exist, so treat it as added.
+                # Auth, rate-limit, and network errors are left to surface.
                 return {
                     'filename': filename,
                     'status': 'added',
@@ -226,15 +275,18 @@ class ImagePDFComparator:
             new_content = self.download_file(raw_url)
             new_text = self.extract_pdf_text(new_content)
 
-            # Get old version
-            pr_data = self.get_pr_data()
-            base_sha = pr_data['base']['sha']
-            old_url = f"https://raw.githubusercontent.com/{self.repo}/{base_sha}/{filename}"
+            # Get old version. For renamed files the previous content lives
+            # under previous_filename, so use that when present.
+            old_filename = file_info.get('previous_filename') or filename
+            base_sha = self.get_base_sha()
+            old_url = f"https://raw.githubusercontent.com/{self.repo}/{base_sha}/{old_filename}"
 
             try:
                 old_content = self.download_file(old_url)
                 old_text = self.extract_pdf_text(old_content)
-            except Exception:
+            except FileNotFoundError:
+                # The old file genuinely does not exist, so treat it as added.
+                # Auth, rate-limit, and network errors are left to surface.
                 return {
                     'filename': filename,
                     'status': 'added',
@@ -269,7 +321,7 @@ class ImagePDFComparator:
     def get_pr_data(self) -> Dict[str, Any]:
         """Get PR data including base and head SHA"""
         url = f'{self.base_url}/pulls/{self.pr_number}'
-        response = requests.get(url, headers=self.headers)
+        response = requests.get(url, headers=self.headers, timeout=REQUEST_TIMEOUT)
 
         if response.status_code != 200:
             raise Exception(f"Failed to fetch PR data: {response.status_code}")
@@ -353,11 +405,15 @@ class ImagePDFComparator:
         return report
 
     def get_file_hash(self, filename: str) -> str:
-        """Generate a simple hash for file linking (simplified version)"""
-        # This is a simplified version - GitHub uses a complex hash
-        # For now, we'll use the filename directly in the URL
+        """Return the GitHub diff anchor hash for a file.
+
+        GitHub builds the `#diff-<hash>` anchor on the Files Changed view from
+        the SHA256 digest of the file path. Returning the full digest keeps the
+        anchor links working instead of navigating to the generic Files Changed
+        view.
+        """
         import hashlib
-        return hashlib.sha256(filename.encode()).hexdigest()[:16]
+        return hashlib.sha256(filename.encode()).hexdigest()
 
     def write_job_summary(self, comment_body: str):
         """Write the report to the GitHub Actions job summary if available.
@@ -387,29 +443,48 @@ class ImagePDFComparator:
         """
         url = f'{self.base_url}/issues/{self.pr_number}/comments'
 
-        # Check if we already posted a comment
+        # Check if we already posted a comment. Paginate through all issue
+        # comments so older bot comments are found and updated instead of
+        # posting a duplicate.
         existing_comments_url = f'{self.base_url}/issues/{self.pr_number}/comments'
-        response = requests.get(existing_comments_url, headers=self.headers)
-
         comment_marker = "# Image and PDF Comparison Report"
         existing_comment_id = None
+        page = 1
 
-        if response.status_code == 200:
-            for comment in response.json():
+        while existing_comment_id is None:
+            response = requests.get(
+                existing_comments_url,
+                headers=self.headers,
+                params={'per_page': 100, 'page': page},
+                timeout=REQUEST_TIMEOUT,
+            )
+
+            if response.status_code != 200:
+                break
+
+            batch = response.json()
+            if not batch:
+                break
+
+            for comment in batch:
                 if comment_marker in comment.get('body', ''):
                     existing_comment_id = comment['id']
                     break
+
+            page += 1
 
         # Update existing comment or create new one
         if existing_comment_id:
             update_url = f'{self.base_url}/issues/comments/{existing_comment_id}'
             response = requests.patch(update_url,
                                      headers=self.headers,
-                                     json={'body': comment_body})
+                                     json={'body': comment_body},
+                                     timeout=REQUEST_TIMEOUT)
         else:
             response = requests.post(url,
                                     headers=self.headers,
-                                    json={'body': comment_body})
+                                    json={'body': comment_body},
+                                    timeout=REQUEST_TIMEOUT)
 
         if response.status_code in (401, 403):
             # The token is not allowed to write comments. This is expected for
