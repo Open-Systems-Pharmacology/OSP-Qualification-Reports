@@ -359,8 +359,32 @@ class ImagePDFComparator:
         import hashlib
         return hashlib.sha256(filename.encode()).hexdigest()[:16]
 
-    def post_pr_comment(self, comment_body: str):
-        """Post a comment to the PR"""
+    def write_job_summary(self, comment_body: str):
+        """Write the report to the GitHub Actions job summary if available.
+
+        This keeps the results visible even when the workflow cannot post a
+        comment to the PR (for example when it runs with a read-only token).
+        """
+        summary_path = os.environ.get('GITHUB_STEP_SUMMARY')
+        if not summary_path:
+            return
+
+        try:
+            with open(summary_path, 'a', encoding='utf-8') as summary_file:
+                summary_file.write(comment_body + "\n")
+            print("Wrote comparison report to the job summary")
+        except OSError as e:
+            print(f"Warning: failed to write job summary: {e}")
+
+    def post_pr_comment(self, comment_body: str) -> bool:
+        """Post (or update) a comment on the PR.
+
+        Returns True when the comment was posted/updated successfully and
+        False when the API rejected the request because the token is not
+        permitted to write comments (this happens for pull requests opened
+        from forks when the workflow runs with a read-only GITHUB_TOKEN).
+        Any other failure is raised so it is surfaced to the caller.
+        """
         url = f'{self.base_url}/issues/{self.pr_number}/comments'
 
         # Check if we already posted a comment
@@ -387,10 +411,22 @@ class ImagePDFComparator:
                                     headers=self.headers,
                                     json={'body': comment_body})
 
-        if response.status_code not in [200, 201]:
+        if response.status_code in (401, 403):
+            # The token is not allowed to write comments. This is expected for
+            # pull requests from forks running with a read-only token, so treat
+            # it as a non-fatal condition instead of failing the whole job.
+            print(
+                "Warning: not permitted to post a PR comment "
+                f"({response.status_code} {response.text}). "
+                "Skipping comment; see the job summary for the report."
+            )
+            return False
+
+        if response.status_code not in (200, 201):
             raise Exception(f"Failed to post comment: {response.status_code} {response.text}")
 
         print("Successfully posted comment to PR")
+        return True
 
     def run(self):
         """Main execution function"""
@@ -433,7 +469,9 @@ class ImagePDFComparator:
         # Generate report
         report = self.format_report(image_results, pdf_results)
 
-        # Post to PR
+        # Always make the report available in the job summary, then try to post
+        # it as a PR comment. A missing comment permission must not fail the job.
+        self.write_job_summary(report)
         self.post_pr_comment(report)
 
         print("\n" + "="*50)
