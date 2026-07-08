@@ -4,7 +4,7 @@
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP3A4_Ontogeny/releases/tag/v2.0](https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_CYP3A4_Ontogeny/releases/tag/v2.0) |
 | OSP Version                     | 12.3                                                          |
-| Qualification Framework Version | 3.6                                                          |
+| Qualification Framework Version | 3.7                                                          |
 
 This qualification report is filed at:
 
@@ -201,29 +201,29 @@ The pediatric PBPK model predicted the clearance values of sufentanil observed i
 
 **Table 2-6: Overall predictivity of the sufentanil PBPK model. Open circles represent mean ratios of PBPK predicted AUC over observed AUC of sufentanil in children 5 months to 8.75 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
 
-|Study ID   |Age [month(s)] |Body Weight [kg] |Predicted AUC [µg*h/l] |Observed AUC [µg*h/l] |Pred/Obs AUC Ratio |
-|:----------|:--------------|:----------------|:----------------------|:---------------------|:------------------|
-|Davis 1987 |1.29           |8.90             |7.47                   |13.81                 |0.54               |
-|Davis 1987 |0.43           |5.30             |9.35                   |9.09                  |1.03               |
-|Guay 1991  |2.08           |12.10            |1.09                   |1.81                  |0.60               |
-|Guay 1991  |2.58           |16.00            |0.66                   |0.77                  |0.86               |
-|Guay 1991  |2.67           |11.30            |1.68                   |1.49                  |1.13               |
-|Guay 1991  |3.25           |16.00            |1.45                   |1.38                  |1.05               |
-|Guay 1991  |3.83           |14.20            |0.93                   |1.10                  |0.84               |
-|Guay 1991  |4.58           |15.00            |0.74                   |1.12                  |0.66               |
-|Guay 1991  |4.58           |19.00            |1.42                   |2.25                  |0.63               |
-|Guay 1991  |4.83           |17.50            |1.46                   |1.16                  |1.25               |
-|Guay 1991  |5.25           |18.50            |0.75                   |0.73                  |1.04               |
-|Guay 1991  |5.25           |19.65            |1.47                   |1.42                  |1.04               |
-|Guay 1991  |5.33           |24.00            |1.89                   |2.26                  |0.83               |
-|Guay 1991  |5.33           |24.00            |1.06                   |1.26                  |0.84               |
-|Guay 1991  |5.75           |14.50            |1.26                   |2.53                  |0.50               |
-|Guay 1991  |5.92           |28.20            |1.55                   |2.13                  |0.73               |
-|Guay 1991  |5.92           |25.00            |0.80                   |0.95                  |0.84               |
-|Guay 1991  |6.92           |29.60            |1.04                   |1.03                  |1.01               |
-|Guay 1991  |7.50           |23.50            |0.45                   |0.58                  |0.77               |
-|Guay 1991  |7.50           |15.20            |1.22                   |1.23                  |0.99               |
-|Guay 1991  |8.75           |22.60            |0.87                   |0.94                  |0.93               |
+|Study ID   |Age [year(s)] |Body Weight [kg] |Predicted AUC [µg*h/l] |Observed AUC [µg*h/l] |Pred/Obs AUC Ratio |
+|:----------|:-------------|:----------------|:----------------------|:---------------------|:------------------|
+|Davis 1987 |1.29          |8.90             |7.47                   |13.81                 |0.54               |
+|Davis 1987 |0.43          |5.30             |9.35                   |9.09                  |1.03               |
+|Guay 1991  |2.08          |12.10            |1.09                   |1.81                  |0.60               |
+|Guay 1991  |2.58          |16.00            |0.66                   |0.77                  |0.86               |
+|Guay 1991  |2.67          |11.30            |1.68                   |1.49                  |1.13               |
+|Guay 1991  |3.25          |16.00            |1.45                   |1.38                  |1.05               |
+|Guay 1991  |3.83          |14.20            |0.93                   |1.10                  |0.84               |
+|Guay 1991  |4.58          |15.00            |0.74                   |1.12                  |0.66               |
+|Guay 1991  |4.58          |19.00            |1.42                   |2.25                  |0.63               |
+|Guay 1991  |4.83          |17.50            |1.46                   |1.16                  |1.25               |
+|Guay 1991  |5.25          |18.50            |0.75                   |0.73                  |1.04               |
+|Guay 1991  |5.25          |19.65            |1.47                   |1.42                  |1.04               |
+|Guay 1991  |5.33          |24.00            |1.89                   |2.26                  |0.83               |
+|Guay 1991  |5.33          |24.00            |1.06                   |1.26                  |0.84               |
+|Guay 1991  |5.75          |14.50            |1.26                   |2.53                  |0.50               |
+|Guay 1991  |5.92          |28.20            |1.55                   |2.13                  |0.73               |
+|Guay 1991  |5.92          |25.00            |0.80                   |0.95                  |0.84               |
+|Guay 1991  |6.92          |29.60            |1.04                   |1.03                  |1.01               |
+|Guay 1991  |7.50          |23.50            |0.45                   |0.58                  |0.77               |
+|Guay 1991  |7.50          |15.20            |1.22                   |1.23                  |0.99               |
+|Guay 1991  |8.75          |22.60            |0.87                   |0.94                  |0.93               |
 
 <br>
 <br>
