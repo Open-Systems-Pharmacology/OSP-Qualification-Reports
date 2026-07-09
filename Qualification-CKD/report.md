@@ -3,7 +3,7 @@
 | Version                                         | 1.1-OSP12.3                                                   |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 | OSP Version                                     | 12.3                                                          |
-| Qualification Framework Version                 | 3.6                                                          |
+| Qualification Framework Version                 | 3.7                                                          |
 
 This qualification report and the corresponding PK-Sim project file are filed at:
 

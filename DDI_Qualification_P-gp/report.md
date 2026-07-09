@@ -4,7 +4,7 @@
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/v1.2) |
 | OSP Version                     | 12.3                                                          |
-| Qualification Framework Version | 3.6                                                          |
+| Qualification Framework Version | 3.7                                                          |
 
 This qualification report is filed at:
 
