@@ -1,9 +1,9 @@
 # P-gp DDI Qualification
 
-| Version                         | 1.2-OSP12.3                                                   |
+| Version                         | 1.2-OSP13.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/v1.2](https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/v1.2) |
-| OSP Version                     | 12.3                                                          |
+| OSP Version                     | 13.0                                                          |
 | Qualification Framework Version | 3.7                                                          |
 
 This qualification report is filed at:
@@ -271,7 +271,7 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC_tEnd     |1.24 |
+|AUC_tEnd     |1.23 |
 |C_max        |1.25 |
 
 <br>
@@ -309,39 +309,39 @@ In the plots,
 
 |DataID |Perpetrator                                                     |Victim      |Predicted AUC_tEnd Ratio |Observed AUC_tEnd Ratio |Pred/Obs AUC_tEnd Ratio |Predicted C_max Ratio |Observed C_max Ratio |Pred/Obs C_max Ratio |Reference            |
 |:------|:---------------------------------------------------------------|:-----------|:------------------------|:-----------------------|:-----------------------|:---------------------|:--------------------|:--------------------|:--------------------|
-|191    |Rifampicin, 600 mg, PO, MD OD (16 days)                         |Digoxin, PO |0.70                     |0.70                    |1.01                    |1.13                  |0.48                 |2.34                 |Greiner 1999         |
-|193    |Rifampicin, 600 mg, PO, MD OD (16 days)                         |Digoxin, IV |0.73                     |0.85                    |0.86                    |0.91                  |0.83                 |1.09                 |Greiner 1999         |
+|191    |Rifampicin, 600 mg, PO, MD OD (16 days)                         |Digoxin, PO |0.70                     |0.70                    |1.00                    |1.13                  |0.48                 |2.35                 |Greiner 1999         |
+|193    |Rifampicin, 600 mg, PO, MD OD (16 days)                         |Digoxin, IV |0.73                     |0.85                    |0.86                    |0.91                  |0.83                 |1.10                 |Greiner 1999         |
 |227    |Rifampicin, 300 mg, PO, MD BID (7 days)                         |Digoxin, PO |0.47                     |0.75                    |0.63                    |0.49                  |0.62                 |0.80                 |Gurley 2008b         |
-|229    |Clarithromycin, 500 mg, PO, MD BID (7 days)                     |Digoxin, PO |1.26                     |1.47                    |0.86                    |1.42                  |1.75                 |0.81                 |Gurley 2008b         |
+|229    |Clarithromycin, 500 mg, PO, MD BID (7 days)                     |Digoxin, PO |1.28                     |1.47                    |0.87                    |1.41                  |1.75                 |0.81                 |Gurley 2008b         |
 |271    |Itraconazole, 200 mg, PO, MD OD (5 days)                        |Digoxin, PO |1.26                     |1.68                    |0.75                    |1.42                  |1.34                 |1.06                 |Jalava 1997          |
-|314    |Rifampicin, 600 mg, PO, MD OD (14 days)                         |Digoxin, PO |0.49                     |0.94                    |0.51                    |0.52                  |-                   |-                   |Kirby 2012           |
-|316    |Rifampicin, 600 mg, PO, MD OD (14 days)                         |Digoxin, PO |0.82                     |1.15                    |0.72                    |1.13                  |-                   |-                   |Kirby 2012           |
+|314    |Rifampicin, 600 mg, PO, MD OD (14 days)                         |Digoxin, PO |0.48                     |0.94                    |0.51                    |0.52                  |-                   |-                   |Kirby 2012           |
+|316    |Rifampicin, 600 mg, PO, MD OD (14 days)                         |Digoxin, PO |0.82                     |1.15                    |0.71                    |1.13                  |-                   |-                   |Kirby 2012           |
 |337    |Rifampicin, 600 mg, PO, MD OD (6 days)                          |Digoxin, PO |0.49                     |0.82                    |0.60                    |0.52                  |-                   |-                   |Larsen 2007          |
-|396    |Rifampicin, 600 mg, PO, MD OD (28 days)                         |Digoxin, PO |1.11                     |1.46                    |0.76                    |1.21                  |1.49                 |0.81                 |Reitman 2011         |
+|396    |Rifampicin, 600 mg, PO, MD OD (28 days)                         |Digoxin, PO |1.10                     |1.46                    |0.75                    |1.20                  |1.49                 |0.81                 |Reitman 2011         |
 |397    |Rifampicin, 600 mg, PO, MD OD (28 days)                         |Digoxin, PO |0.93                     |0.68                    |1.36                    |0.92                  |0.69                 |1.33                 |Reitman 2011         |
 |398    |Rifampicin, 600 mg, PO, MD OD (28 days)                         |Digoxin, PO |1.00                     |0.98                    |1.03                    |1.00                  |0.88                 |1.14                 |Reitman 2011         |
 |3028   |Erythromycin, 200 mg, PO, MD QID (5 days)                       |Digoxin, IV |1.02                     |0.95                    |1.06                    |1.01                  |0.99                 |1.02                 |Tsutsumi 2002        |
-|3029   |Clarithromycin, 200 mg, PO, MD BID (5 days)                     |Digoxin, IV |1.05                     |0.98                    |1.08                    |1.04                  |0.99                 |1.05                 |Tsutsumi 2002        |
+|3029   |Clarithromycin, 200 mg, PO, MD BID (5 days)                     |Digoxin, IV |1.06                     |0.98                    |1.08                    |1.04                  |0.99                 |1.05                 |Tsutsumi 2002        |
 |3063   |Verapamil, 80 mg, PO, MD: 80mg BID (4 days), 80mg TID (10 days) |Digoxin, PO |1.81                     |1.50                    |1.20                    |1.76                  |1.44                 |1.22                 |Rodin 1988           |
 |16159  |Verapamil, 80 mg, PO, MD BID 4days, TID 10days                  |Digoxin, IV |1.46                     |1.24                    |1.18                    |1.05                  |-                   |-                   |Johnson et al. 1987  |
 |16162  |Verapamil, 120 mg, PO, TID, 7 days pre-treatment                |Digoxin, IV |1.91                     |1.42                    |1.34                    |1.01                  |-                   |-                   |Pedersen et al. 1983 |
 |16172  |Verapamil, 120 mg, PO, SD                                       |Digoxin, PO |1.28                     |1.01                    |1.27                    |1.52                  |1.22                 |1.25                 |Wiebe 2020           |
 |16301  |Rifampicin, 600 mg, PO, SD                                      |Digoxin, PO |0.97                     |1.31                    |0.74                    |1.39                  |2.18                 |0.64                 |Wiebe 2020           |
 |16305  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, PO |0.65                     |0.74                    |0.87                    |0.67                  |1.02                 |0.65                 |Kurata 2002          |
-|16307  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, IV |0.54                     |0.57                    |0.93                    |0.51                  |0.66                 |0.78                 |Kurata 2002          |
-|16309  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, PO |0.65                     |0.64                    |1.01                    |0.67                  |0.91                 |0.74                 |Kurata 2002          |
+|16307  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, IV |0.54                     |0.57                    |0.94                    |0.51                  |0.66                 |0.78                 |Kurata 2002          |
+|16309  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, PO |0.65                     |0.64                    |1.01                    |0.67                  |0.91                 |0.73                 |Kurata 2002          |
 |16311  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, IV |0.54                     |0.54                    |1.00                    |0.51                  |0.66                 |0.77                 |Kurata 2002          |
-|16313  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, PO |0.65                     |0.78                    |0.83                    |0.67                  |0.92                 |0.73                 |Kurata 2002          |
+|16313  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, PO |0.65                     |0.78                    |0.82                    |0.67                  |0.92                 |0.73                 |Kurata 2002          |
 |16315  |Clarithromycin, 400 mg, PO, MD                                  |Digoxin, IV |0.54                     |0.56                    |0.97                    |0.51                  |0.63                 |0.81                 |Kurata 2002          |
-|16319  |Rifampicin, 600 mg, PO, MD                                      |Digoxin, IV |0.68                     |0.73                    |0.93                    |0.88                  |0.81                 |1.09                 |Drescher 2003        |
-|16322  |Rifampicin, 300 mg, PO, MD                                      |Digoxin, PO |0.61                     |0.84                    |0.73                    |0.72                  |0.77                 |0.94                 |Gurley 2006          |
-|16324  |Clarithromycin, 500 mg, PO, MD                                  |Digoxin, PO |1.27                     |1.35                    |0.94                    |1.42                  |1.48                 |0.95                 |Gurley 2006          |
+|16319  |Rifampicin, 600 mg, PO, MD                                      |Digoxin, IV |0.67                     |0.73                    |0.92                    |0.88                  |0.81                 |1.09                 |Drescher 2003        |
+|16322  |Rifampicin, 300 mg, PO, MD                                      |Digoxin, PO |0.61                     |0.84                    |0.72                    |0.72                  |0.77                 |0.94                 |Gurley 2006          |
+|16324  |Clarithromycin, 500 mg, PO, MD                                  |Digoxin, PO |1.29                     |1.35                    |0.95                    |1.41                  |1.48                 |0.95                 |Gurley 2006          |
 |16326  |Rifampicin, 300 mg, PO, MD                                      |Digoxin, PO |0.61                     |0.84                    |0.73                    |0.72                  |0.72                 |1.00                 |Gurley 2007          |
-|16328  |Clarithromycin, 500 mg, PO, MD                                  |Digoxin, PO |1.27                     |1.57                    |0.81                    |1.42                  |1.95                 |0.73                 |Gurley 2007          |
-|16329  |Itraconazole, 200 mg, PO, MD                                    |Digoxin, PO |1.35                     |-                      |-                      |1.39                  |1.63                 |0.85                 |Partanen 1996        |
-|16330  |Itraconazole, 200 mg, PO, MD                                    |Digoxin, PO |1.37                     |-                      |-                      |1.40                  |1.97                 |0.71                 |Partanen 1996        |
-|16409  |Clarithromycin, 250 mg, PO, MD BID (3 days)                     |Digoxin, IV |1.06                     |1.19                    |0.89                    |1.00                  |-                   |-                   |Rengelshausen 2003   |
-|16411  |Clarithromycin, 250 mg, PO, MD BID (3 days)                     |Digoxin, PO |1.24                     |1.64                    |0.76                    |1.42                  |1.83                 |0.78                 |Rengelshausen 2003   |
+|16328  |Clarithromycin, 500 mg, PO, MD                                  |Digoxin, PO |1.29                     |1.57                    |0.82                    |1.41                  |1.95                 |0.72                 |Gurley 2007          |
+|16329  |Itraconazole, 200 mg, PO, MD                                    |Digoxin, PO |1.43                     |-                      |-                      |1.43                  |1.63                 |0.88                 |Partanen 1996        |
+|16330  |Itraconazole, 200 mg, PO, MD                                    |Digoxin, PO |1.47                     |-                      |-                      |1.46                  |1.97                 |0.74                 |Partanen 1996        |
+|16409  |Clarithromycin, 250 mg, PO, MD BID (3 days)                     |Digoxin, IV |1.06                     |1.19                    |0.90                    |1.00                  |-                   |-                   |Rengelshausen 2003   |
+|16411  |Clarithromycin, 250 mg, PO, MD BID (3 days)                     |Digoxin, PO |1.26                     |1.64                    |0.77                    |1.42                  |1.83                 |0.78                 |Rengelshausen 2003   |
 |16638  |Verapamil, 80 mg, PO, TID                                       |Digoxin, IV |1.03                     |1.61                    |0.64                    |0.83                  |-                   |-                   |Pedersen 1981        |
 
 <br>
@@ -393,7 +393,7 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC_tEnd     |1.33 |
+|AUC_tEnd     |1.34 |
 |C_max        |1.27 |
 
 <br>
@@ -623,8 +623,8 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC_tEnd     |1.12 |
-|C_max        |1.27 |
+|AUC_tEnd     |1.11 |
+|C_max        |1.28 |
 
 <br>
 <br>
@@ -776,7 +776,7 @@ In the plots,
 |PK parameter |GMFE |
 |:------------|:----|
 |AUC_tEnd     |1.33 |
-|C_max        |1.20 |
+|C_max        |1.18 |
 
 <br>
 <br>
@@ -851,7 +851,7 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC_tEnd     |1.33 |
+|AUC_tEnd     |1.34 |
 |C_max        |1.27 |
 
 <br>
@@ -1005,7 +1005,7 @@ In the plots,
 
 |PK parameter |GMFE |
 |:------------|:----|
-|AUC_tEnd     |1.24 |
+|AUC_tEnd     |1.23 |
 |C_max        |1.25 |
 
 <br>
