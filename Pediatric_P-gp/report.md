@@ -1,9 +1,9 @@
 # Pediatric Qualification Package: P-gp Ontogeny
 
-| Version                         | 1.0-OSP12.3                                                   |
+| Version                         | 1.0-OSP13.0                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
 | Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_P-gp_Ontogeny/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_P-gp_Ontogeny/releases/tag/v1.0) |
-| OSP Version                     | 12.3                                                          |
+| OSP Version                     | 13.0                                                          |
 | Qualification Framework Version | 3.7                                                          |
 
 This qualification report is filed at:
