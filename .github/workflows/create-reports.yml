@@ -72,7 +72,7 @@ jobs:
     strategy:
       matrix: ${{ fromJSON(needs.read_inputs.outputs.qualifications) }}
       fail-fast: false
-    runs-on: windows-2022
+    runs-on: windows-2025-vs2026
     steps:
 
     - name: Install MS-MPI (runtime + SDK)
